@@ -25,6 +25,8 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
+untrusted = ["Russian Trusted", "SberCA", "St. Petersburg", "VTB Group"]
+
 
 def check_link(link, index):
     link = link.strip()
@@ -45,17 +47,17 @@ def check_link(link, index):
     except requests.exceptions.SSLError as e:
         cert = ssl.get_server_certificate((link.split("//")[1], 443))
         x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert)
+        # get issuer of the certificate
         issuer = x509.get_issuer().get_components()[2][1].decode()
 
-        print(f'Root CA name: {issuer}')
-        if issuer == 'Russian Trusted Sub CA':
+        if any(untrust in issuer for untrust in untrusted):
             print(
-                f'{index}/{len(website_links)}: {link}: Russian CA certificate error')
+                f'{index}/{len(website_links)}: {link}: Russian affiliated certificate error – {issuer}')
             with open('ssl_cert_err.txt', 'a') as f:
                 f.write(link + ' – CA: {}'.format(issuer) + '\n')
         else:
             print(
-                f'{index}/{len(website_links)}: {link}: Other SSL certificate error')
+                f'{index}/{len(website_links)}: {link}: Other SSL certificate error – {issuer}')
             with open('other_ssl_cert_err.txt', 'a') as f:
                 f.write(link + ' – CA: {}'.format(issuer) + '\n')
 
