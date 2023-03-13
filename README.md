@@ -48,6 +48,14 @@ Links format:
 
 ## Additional tools
 
+### Save links
+
 [save_links.py](save_links.py) – this script can parse any links at provided url
 
 `python3 save_links.py <url>`
+
+### Deduplication
+
+[dedup.py](dedup.py)
+
+`python3 dedup.py <source_file> <deduplicated_file>`
