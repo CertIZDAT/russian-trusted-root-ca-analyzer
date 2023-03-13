@@ -41,3 +41,9 @@ Note: Approximate analysis time with 8 arm64 cores and fast VPN is 5.7 hours.
 ## Contributions
 
 The input is really valuable, especially if you can add relevant sites for analysis.
+
+## Additional tools
+
+[save_links.py](save_links.py) – this script can parse any links at provided url
+
+`python3 save_links.py <url>`
