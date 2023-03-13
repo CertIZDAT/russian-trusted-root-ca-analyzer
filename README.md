@@ -4,7 +4,7 @@ IN ACTIVE DEVELOPMENT: SOME RESULTS ARE OUTDATED!
 
 This script allows you to analyze which sites require a Russian Trusted CA certificate to work properly. Also checks for strange certificates issued by Russia.
 
-The [list](tls_list_cleaned.txt) of sites to check was taken (and slightly updated) from [koenrh's repository](https://github.com/koenrh/russian-trusted-root-ca), thx. This list is definitely not complete yet.
+[tls_list_cleaned.txt](tls_list_cleaned.txt) list is definitely not complete yet, PR's are welcome.
 
 ## Summary
 
@@ -61,3 +61,8 @@ Links format:
 [dedup.py](dedup.py)
 
 `python3 dedup.py <source_file> <deduplicated_file>`
+
+## Used resourses
+
+* The initial [list](tls_list_cleaned.txt) of sites to check was taken (and slightly updated) from [koenrh's repository](https://github.com/koenrh/russian-trusted-root-ca).
+* Big government associated domains was taken from [govdomains](https://github.com/infoculture/govdomains)
