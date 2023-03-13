@@ -1,0 +1,337 @@
+https://acquiring.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://expobank.org – CA: GlobalSign RSA OV SSL CA 2018
+https://npf-sng.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ift-chat-sharing.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://online.rshbins-life.ru – CA: AlphaSSL CA - SHA256 - G4
+https://privet-uat.sber.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://mail.olabank.ru – CA: R3
+https://mx2.nslvtec.ru – CA: UserGate
+https://hr-uat.sber.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://mcbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ldskapustin.ru – CA: GoGetSSL
+https://owa.spar-nn.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://admoblkaluga.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://finproinvest.com – CA: AlphaSSL CA - SHA256 - G4
+https://hr-uat.sberbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://pulse-uat.sber.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://k3-vo.vtb24.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://zolla.com – CA: Salford
+https://ifcongress.ru – CA: R3
+https://3ds.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://job.smpbank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://quikm.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://k4-vo.vtb24.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://dbo.ofc.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://esphere-ip.sber-solutions.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://info.apps.sberbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://smpgroup.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://3ds.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://esphere-ip.sber-solutions.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://acs2.sbrf.ru – CA: R3
+https://mcbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ibank.bankmaxima.ru – CA: AlphaSSL CA - SHA256 - G2
+https://mx1.nslvtec.ru – CA: UserGate
+https://sip.nslvtec.ru – CA: UserGate
+https://webext.nslvtec.ru – CA: UserGate
+https://privet-uat.sberbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://feonet.net – CA: AlphaSSL CA - SHA256 - G2
+https://finproinvest.com – CA: AlphaSSL CA - SHA256 - G4
+https://csr43.ru – CA: AlphaSSL CA - SHA256 - G2
+https://1elecsnet.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://apimw.apps.sberbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://bonus.vtb.ru – CA: R3
+https://fosedu.rshbins-life.ru – CA: AlphaSSL CA - SHA256 - G4
+https://npf-sng.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://psati.ru – CA: R3
+https://dachatbot.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ibank2.bankmaxima.ru – CA: AlphaSSL CA - SHA256 - G2
+https://csr43.ru – CA: AlphaSSL CA - SHA256 - G2
+https://meet.nslvtec.ru – CA: UserGate
+https://ldskapustin.ru – CA: GoGetSSL
+https://dialin.nslvtec.ru – CA: UserGate
+https://admoblkaluga.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://vpn.bspb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://lyncdiscover.nslvtec.ru – CA: UserGate
+https://ldskapustin.ru – CA: GoGetSSL
+https://vo.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://fos.rshbins-life.ru – CA: AlphaSSL CA - SHA256 - G4
+https://sbnk.ru – CA: ddos-guard
+https://vtbnpf.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://friend.sber.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ks.moscow – CA: XX
+https://friend-psi.sber.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://senat.cloud – CA: GlobalSign RSA OV SSL CA 2018
+https://migrakvota.gov.ru – CA: R3
+https://iitrust.online – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://infinite.kubankredit.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://rosmintrud.ru – CA: R3
+https://mosoblbank.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://tax23.ru – CA: R3
+https://open.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://moesk.ru – CA: R3
+https://delo.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://rosmintrud.ru – CA: R3
+https://start.kubankredit.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://npazsnso.ru – CA: UserGate
+https://vip.kubankredit.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://express.kubankredit.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://rosminzdrav.ru – CA: Salford
+https://psi.sberprime.sber.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://monitoring.ift2.sbercrm.com – CA: R3
+https://ippay.ru – CA: Salford
+https://logging.sbercrm.com – CA: R3
+https://rosminzdrav.ru – CA: Salford
+https://tax23.ru – CA: R3
+https://lti-gti.ru – CA: R3
+https://plg.sbrf.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://migrakvota.gov.ru – CA: R3
+https://business-class.sberbusiness.live – CA: AlphaSSL CA - SHA256 - G4
+https://rus-telecom.ru – CA: R3
+https://onlineapi.gpb.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://novokib.ru – CA: R3
+https://nkkdc.ru – CA: Salford
+https://demodbo.ofc.ru – CA: Salford
+https://prim-edu.ru – CA: AlphaSSL CA - SHA256 - G2
+https://smartapp-code.sberdevices.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://workext.open.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://open.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://npazsnso.ru – CA: UserGate
+https://delo.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://api.spasibosberbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://asfk-support.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://prim-edu.ru – CA: AlphaSSL CA - SHA256 - G2
+https://ggnp-sales.ru – CA: R3
+https://ltraveler.tamcomsys.ru – CA: R3
+https://camunda.ift2.sbercrm.com – CA: R3
+https://vseplatezhi.ru – CA: VP
+https://voffice.tigersoft.ru – CA: R3
+https://nginx.sbercrm.com – CA: R3
+https://rosminzdrav.ru – CA: Salford
+https://pervbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://integration.ift2.sbercrm.com – CA: R3
+https://lk.zagorodtelecom.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://uat.api.sberbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://lmail.tamcomsys.ru – CA: R3
+https://grafana.sbercrm.com – CA: R3
+https://grafana.ift2.sbercrm.com – CA: R3
+https://prometheus.ift2.sbercrm.com – CA: R3
+https://raiffeisencapital.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://gebank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://zskuzbass.ru – CA: R3
+https://quikm.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ibank-nbsrf.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://minstroyrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mosoblbank.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://moesk.ru – CA: R3
+https://demobk.smpbank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://ikb-rs.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://promo.kubankredit.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://senat.cloud – CA: GlobalSign RSA OV SSL CA 2018
+https://nkkdc.ru – CA: Salford
+https://onlineapi.gpb.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://partizansk.org – CA: XX
+https://open.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://asfk-support.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://mosoblbank.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://partizansk.org – CA: XX
+https://kbdemo.kubankredit.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://kb.kubankredit.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://minstroyrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://minstroyrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://red-people.com – CA: R3
+https://ikb-rs.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://tax23.ru – CA: R3
+https://vpn.vbank.ru – CA: www.digicert.com
+https://mx.icbru.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://portal.kubankredit.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://psi.promo.sber.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://prometheus.sbercrm.com – CA: R3
+https://kamaz.org – CA: GlobalSign RSA OV SSL CA 2018
+https://conceptgroup.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://buhphone.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sbp.rshb.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://ift-chat-sharing.vtb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://pay.ivi.ru – CA: www.digicert.com
+https://kiosk.rostatus.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sberbank-factoring.ru – CA: www.digicert.com
+https://rshbins.ru – CA: AlphaSSL CA - SHA256 - G2
+https://conceptgroup.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://platform.rostatus.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://test.ivi.ru – CA: R3
+https://lk.gazfond-pn.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sos112prim.ru – CA: R3
+https://gazfond-pn.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://erul.gov.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://gazfond-pn.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://cespi.directum.ru – CA: AlphaSSL CA - SHA256 - G2
+https://kamaz.org – CA: GlobalSign RSA OV SSL CA 2018
+https://sberbank-factoring.ru – CA: www.digicert.com
+https://sovlink.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sovlink.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://csdnevnik.ru – CA: AlphaSSL CA - SHA256 - G2
+https://digital.rostatus.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://vozvratnalogov.online – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://booking.rostatus.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://buhphone.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://vozvratnalogov.online – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://conf.vniigaz.ru – CA: R3
+https://dogovor.gazfond-pn.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sos112prim.ru – CA: R3
+https://fixa.mts.ivi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://erul.gov.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://vseplatezhi.ru – CA: VP
+https://ift2.sbercrm.com – CA: R3
+https://dialog.sberbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://pervbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://halva.express – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mon.sberdevices.ru – CA: R3
+https://bankline.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://target.sber.ru – CA: AlphaSSL CA - SHA256 - G2
+https://nginx.ift2.sbercrm.com – CA: R3
+https://dbo.pervbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://bankline.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://zskuzbass.ru – CA: R3
+https://camunda.sbercrm.com – CA: R3
+https://n1.mlnt.ru – CA: AlphaSSL CA - SHA256 - G2
+https://gcup.spb.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://raiffeisencapital.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://pervbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ift.sbercrm.com – CA: R3
+https://mail.ggnp-sales.ru – CA: R3
+https://integration.sbercrm.com – CA: R3
+https://ggnp-sales.ru – CA: R3
+https://logging.ift2.sbercrm.com – CA: R3
+https://halva.express – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://gebank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://dialog.sberbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rcmru.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://rcmru.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://dialin.s-t.ru – CA: s-t-ORK-CA
+https://media.s-t.ru – CA: s-t-ORK-CA
+https://novokib.ru – CA: R3
+https://vgasu.vrn.ru – CA: AlphaSSL CA - SHA256 - G2
+https://stlync2013.s-t.ru – CA: s-t-ORK-CA
+https://geliuscap.ru – CA: Magnitogorsk
+https://vgasu.vrn.ru – CA: AlphaSSL CA - SHA256 - G2
+https://webapp.s-t.ru – CA: s-t-ORK-CA
+https://repo.s-t.ru – CA: s-t-ORK-CA
+https://lyncdiscover.s-t.ru – CA: s-t-ORK-CA
+https://gisogdro.ru – CA: SomeLocation
+https://meet.s-t.ru – CA: s-t-ORK-CA
+https://skc-fmba.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://ezsadmin.sevesk.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://skc-fmba.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://tkbip.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://ulregion.ru – CA: Houston
+https://gkp1.ru – CA: R3
+https://sberbank-university.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://gdou26skazka.ru – CA: GoGetSSL
+https://xn--90axl.xn--p1ai – CA: GlobalSign RSA OV SSL CA 2018
+https://xn--80ablwmcepr1b.xn--p1ai – CA: R3
+https://xn--80abwairipka.xn--p1ai – CA: R3
+https://xn--80aacovidocd0ax3c9dn.xn--p1ai – CA: R3
+https://xn--90axl.xn--p1ai – CA: GlobalSign RSA OV SSL CA 2018
+https://xn--80aacgvulkfjl.xn--p1ai – CA: Let's Encrypt Authority X3
+https://xn--80aa2abfodnqc1e7a6c.xn--80asehdb – CA: R3
+https://xn--80aa2abfodnqc1e7a6c.xn--80asehdb – CA: R3
+https://novokib.ru – CA: R3
+https://s-t.ru – CA: s-t-ORK-CA
+https://vdi.krsk-sbit.ru – CA: UserGate
+https://gate.s-t.ru – CA: s-t-ORK-CA
+https://helpdesk.s-t.ru – CA: s-t-ORK-CA
+https://rgsbank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://dis.s-t.ru – CA: s-t-ORK-CA
+https://rgsbank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://sber.me – CA: www.digicert.com
+https://gisogdro.ru – CA: SomeLocation
+https://gisogdro.ru – CA: SomeLocation
+https://gkp1.ru – CA: R3
+https://cmirit.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://sberbank-university.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ulregion.ru – CA: Houston
+https://sberbank-university.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sberbank-factoring.ru – CA: www.digicert.com
+https://csdnevnik.ru – CA: AlphaSSL CA - SHA256 - G2
+https://sos112prim.ru – CA: R3
+https://ns1.ihordns.net – CA: AlphaSSL CA - SHA256 - G2
+https://rshbins.ru – CA: AlphaSSL CA - SHA256 - G2
+https://beemail.rostatus.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sovlink.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://doc.rostatus.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://gazfond-pn.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rshbins.ru – CA: AlphaSSL CA - SHA256 - G2
+https://buhphone.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://mdas.uralsib.ru – CA: www.digicert.com
+https://app.gazeks.com – CA: GazRootCA1
+https://events-conferences.sberbank-cib.ru – CA: www.digicert.com
+https://api.sber.insure – CA: GlobalSign RSA OV SSL CA 2018
+https://mail.sber.insure – CA: GlobalSign RSA OV SSL CA 2018
+https://sber.me – CA: www.digicert.com
+https://sber.me – CA: www.digicert.com
+https://events-conferences.sberbank-cib.ru – CA: www.digicert.com
+https://al.id.sber.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://mail.nsg-ins.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://gis-tek.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://t-tel.ru – CA: AlphaSSL CA - SHA256 - G2
+https://kapmed.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://gis-tek.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://t-tel.ru – CA: AlphaSSL CA - SHA256 - G2
+https://vito.sbrf.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://gis-tek.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://elearning.ppfinsurance.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://podzemng.ru – CA: AlphaSSL CA - SHA256 - G2
+https://rrbank.ru – CA: AlphaSSL CA - SHA256 - G2
+https://web.infteh.ru – CA: R3
+https://podzemng.ru – CA: AlphaSSL CA - SHA256 - G2
+https://ext2cs.cardstandard.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://amelia-st.ru – CA: R3
+https://vtsprod.banksoyuz.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://rrb.ru – CA: AlphaSSL CA - SHA256 - G2
+https://vtsprod.banksoyuz.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://gdou26skazka.ru – CA: GoGetSSL
+https://mnpf-akvilon.ru – CA: AlphaSSL CA - SHA256 - G4
+https://mnpf-akvilon.ru – CA: AlphaSSL CA - SHA256 - G4
+https://mnpf-akvilon.ru – CA: AlphaSSL CA - SHA256 - G4
+https://sberavtopark.ru – CA: www.digicert.com
+https://amelia-st.ru – CA: R3
+https://sberavtopark.ru – CA: www.digicert.com
+https://api.2gis.com – CA: AlphaSSL CA - SHA256 - G2
+https://amelia-st.ru – CA: R3
+https://api.2gis.com – CA: AlphaSSL CA - SHA256 - G2
+https://rrb.ru – CA: AlphaSSL CA - SHA256 - G2
+https://gdou26skazka.ru – CA: GoGetSSL
+https://open-s.su – CA: R3
+https://upravlyaem.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://sbnk.ru – CA: ddos-guard
+https://smartc-sbrf.ru – CA: www.digicert.com
+https://sbnk.ru – CA: ddos-guard
+https://open-s.su – CA: R3
+https://groteck.ru – CA: Salford
+https://upravlyaem.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://smartc-sbrf.ru – CA: www.digicert.com
+https://autodiscovery.barus.ooo – CA: R3
+https://open-s.su – CA: R3
+https://smartc-sbrf.ru – CA: www.digicert.com
+https://markhotel.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://markhotel.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://uc.kadastr.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://uc.kadastr.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://groteck.ru – CA: Salford
+https://upravlyaem.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://markhotel.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://t-tel.ru – CA: AlphaSSL CA - SHA256 - G2
+https://kapmed.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rrbank.ru – CA: AlphaSSL CA - SHA256 - G2
+https://maritimebank.com – CA: GlobalSign RSA OV SSL CA 2018
+https://maritimebank.com – CA: GlobalSign RSA OV SSL CA 2018
+https://podzemng.ru – CA: AlphaSSL CA - SHA256 - G2
+https://ibank.rentabank.ru – CA: GlobalSign Extended Validation CA - SHA256 - G3
+https://advert-technology.com – CA: R3
+https://b2b.solbum.ru – CA: AlphaSSL CA - SHA256 - G2
+https://advert-technology.com – CA: R3
+https://rcitsakha.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rcitsakha.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rcitsakha.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://gidapteka.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://gidapteka.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://gidapteka.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
