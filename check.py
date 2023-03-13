@@ -68,7 +68,7 @@ def check_link(link, index):
 
 
 # create thread pool
-with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count()) as executor:
+with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count() * 4) as executor:
     # submit tasks to thread pool
     futures = [executor.submit(check_link, link, i+1)
                for i, link in enumerate(website_links)]
