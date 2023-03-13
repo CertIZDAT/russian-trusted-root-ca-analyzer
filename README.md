@@ -41,6 +41,10 @@ Note: Approximate analysis time with 8 arm64 cores and fast VPN is 5.7 hours.
 ## Contributions
 
 The input is really valuable, especially if you can add relevant sites for analysis.
+Links format:
+
+* without `http://` or `https://` or `www.`;
+* without `/` or any additional path at the end of the link.
 
 ## Additional tools
 
