@@ -1,5 +1,7 @@
 # Russian sites what require Russian Trusted CA
 
+IN ACTIVE DEVELOPMENT: SOME RESULTS ARE OUTDATED!
+
 This script allows you to analyze which sites require a Russian Trusted CA certificate to work properly. Also checks for strange certificates issued by Russia.
 
 The [list](tls_list_cleaned.txt) of sites to check was taken (and slightly updated) from [koenrh's repository](https://github.com/koenrh/russian-trusted-root-ca), thx. This list is definitely not complete yet.
