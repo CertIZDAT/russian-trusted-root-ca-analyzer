@@ -1,0 +1,146 @@
+https://ios-up7-asbs.online.sberbank.ru – CA: SberCA Ext
+https://psi-spkk-api.testonline.sberbank.ru – CA: SberCA Ext Web
+https://and-upgf-asbs.online.sberbank.ru – CA: SberCA Ext
+https://sberkids-t.sberbank.ru – CA: SberCA Ext Web
+https://ios-up2-asbs.online.sberbank.ru – CA: SberCA Ext
+https://ift.mobincash.sberbank.ru – CA: SberCA Ext Web
+https://ios-up6-asbs.online.sberbank.ru – CA: SberCA Ext
+https://ios-upgf-asbs.online.sberbank.ru – CA: SberCA Ext
+https://cbro.online.sberbank.ru – CA: SberCA Ext Web
+https://ios-upsi-asbs.online.sberbank.ru – CA: SberCA Ext
+https://nlp2vps.online.sberbank.ru – CA: SberCA Ext Web
+https://and-up2-asbs.online.sberbank.ru – CA: SberCA Ext
+https://ios-up5-asbs.online.sberbank.ru – CA: SberCA Ext
+https://sbercrm-test.sber.ru – CA: SberCA Test Ext
+https://and-up1-asbs.online.sberbank.ru – CA: SberCA Ext
+https://smartmarket.online.sberbank.ru – CA: SberCA Ext Web
+https://ios-up4-asbs.online.sberbank.ru – CA: SberCA Ext
+https://b2evps.online.sberbank.ru – CA: SberCA Ext Web
+https://psi-spkk-static.testonline.sberbank.ru – CA: SberCA Ext Web
+https://messenger.sberbank.ru – CA: SberCA Ext Web
+https://uat.android.encashment.sberbank.ru – CA: SberCA Test Int
+https://messenger-t.sberbank.ru – CA: SberCA Test Ext
+https://nlp2vpspsi.online.sberbank.ru – CA: SberCA Ext Web
+https://and-up4-asbs.online.sberbank.ru – CA: SberCA Ext
+https://and-upsi-asbs.online.sberbank.ru – CA: SberCA Ext
+https://ios-up1-asbs.online.sberbank.ru – CA: SberCA Ext
+https://uat.ios.encashment.sberbank.ru – CA: SberCA Test Int
+https://cbro.sberbank.ru – CA: SberCA Ext Web
+https://sbercrm.sber.ru – CA: SberCA Ext
+https://integration.sbercrm.sber.ru – CA: SberCA Ext
+https://and-up7-asbs.online.sberbank.ru – CA: SberCA Ext
+https://geo-t.geoapi.sberbank.ru – CA: SberCA Test Ext
+https://and-up6-asbs.online.sberbank.ru – CA: SberCA Ext
+https://al-psi.id.sber.ru – CA: SberCA Test Int
+https://profile-uat.sber.ru – CA: SberCA Test Ext
+https://ddp-stg.sberbank.ru – CA: SberCA Test Ext
+https://spkk-api.online.sberbank.ru – CA: SberCA Ext Web
+https://test.stat.online.sberbank.ru – CA: SberCA Ext Web
+https://ios-upsi2-asbs.online.sberbank.ru – CA: SberCA Ext
+https://and-up5-asbs.online.sberbank.ru – CA: SberCA Ext
+https://and-up3-asbs.online.sberbank.ru – CA: SberCA Ext
+https://geo-t.online.sberbank.ru – CA: SberCA Test Ext
+https://spkk-static.online.sberbank.ru – CA: SberCA Ext Web
+https://ios-up3-asbs.online.sberbank.ru – CA: SberCA Ext
+https://and-upsi2-asbs.online.sberbank.ru – CA: SberCA Ext
+https://uat.web.encashment.sberbank.ru – CA: SberCA Test Int
+https://geo1.online.sberbank.ru – CA: SberCA Ext Web
+https://majorcheck.mailapp.sber.ru – CA: SberCA Test Ext
+https://api-ift.sberfriend.sbrf.ru – CA: SberCA Test Ext
+https://auth-si20-uat.mobile-sbe-dev.sbrf.ru – CA: SberCA Test Ext
+https://cdnvideo.sberbank.ru – CA: SberCA Ext Web
+https://web-si20-uat.mobile-sbe-dev.sbrf.ru – CA: SberCA Test Ext
+https://ift.sberfriend.sbrf.ru – CA: SberCA Test Ext
+https://sberfriend-ift.sbrf.ru – CA: SberCA Test Ext
+https://mailapp.sber.ru – CA: SberCA Ext
+https://mpclickstream.online.sberbank.ru – CA: SberCA Ext Web
+https://cdn.sberbank.ru – CA: SberCA Ext Web
+https://nlp2vpsift.online.sberbank.ru – CA: SberCA Ext Web
+https://spb112.ru – CA: St. Petersburg
+https://reserve.mb.vtb.ru – CA: VTB Group CA 2
+https://bcmc.gazprombank.ru – CA: Bank GPB (JSC)
+https://jabbermra.gazprombank.ru – CA: Bank GPB (JSC)
+https://mbk.online.gazprombank.ru – CA: Bank GPB (JSC)
+https://partizansk.primorsky.ru – CA: Администрация Партизанского городского округа
+https://bag.test.dvinaland.ru – CA: Kaliningrad
+https://www.fsa.gov.ru – CA: Kaliningrad
+https://site1.test.dvinaland.ru – CA: Kaliningrad
+https://pravitelstvori.ru – CA: Kaliningrad
+https://gb2-bsk.zdravalt.ru – CA: Kaliningrad
+https://tarif29.test.dvinaland.ru – CA: Kaliningrad
+https://roads.test.dvinaland.ru – CA: Kaliningrad
+https://sro.gosnadzor.ru – CA: Kaliningrad
+https://fcpkultura.ru – CA: Kaliningrad
+https://www.pravitelstvori.ru – CA: Kaliningrad
+https://arhdeti.test.dvinaland.ru – CA: Kaliningrad
+https://gkh.test.dvinaland.ru – CA: Kaliningrad
+https://dolschiki.admhmao.ru – CA: Kaliningrad
+https://my.krskstate.ru – CA: Kaliningrad
+https://old.fcpkultura.ru – CA: Kaliningrad
+https://stokehold.test.dvinaland.ru – CA: Kaliningrad
+https://www.fcpkultura.ru – CA: Kaliningrad
+https://detstvo.gokrk.ru – CA: Kaliningrad
+https://lkp.bashgaz.ru – CA: Kaliningrad
+https://dvinainvest2.test.dvinaland.ru – CA: Kaliningrad
+https://test.test.dvinaland.ru – CA: Kaliningrad
+https://dev.regul.test.dvinaland.ru – CA: Kaliningrad
+https://test2.test.dvinaland.ru – CA: Kaliningrad
+https://thlotos.com – CA: Sigma-REZERV1-CA
+
+
+
+
+
+
+
+
+
+https://mail.ookn.ru – CA: Moscow
+https://sch89.kalin.gov.spb.ru – CA: Moscow
+https://sc432.kolp.gov.spb.ru – CA: Moscow
+https://sc588.kolp.gov.spb.ru – CA: Moscow
+https://dou3spb.kalin.gov.spb.ru – CA: Moscow
+https://ksp-orel.ru – CA: Moscow
+https://www.my.krskstate.ru – CA: Moscow
+https://ombudsman57.ru – CA: Moscow
+https://smo.yarregion.ru – CA: Moscow
+https://spb21.aptrg.gov.spb.ru – CA: Moscow
+https://www.112.krskstate.ru – CA: Moscow
+https://www.ombudsman57.ru – CA: Moscow
+https://cev-k.kalin.gov.spb.ru – CA: Moscow
+https://karchiv.gov.spb.ru – CA: Moscow
+https://karchiv.gov.spb.ru – CA: Moscow
+https://www.ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
+https://zagschr.ru – CA: Saint Petersburg
+https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
+https://guzgp76om.kalin.gov.spb.ru – CA: Saint Petersburg
+https://www.gousosh347uiayanr.tunev.gov.spb.ru – CA: Saint Petersburg
+https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
+https://suotacis.krc.karelia.ru – CA: Petrozavodsk
+https://fond.karelia.ru – CA: Petrozavodsk
+https://ib.krc.karelia.ru – CA: Petrozavodsk
+https://cluster.krc.karelia.ru – CA: Petrozavodsk
+https://create.karelia.ru – CA: Petrozavodsk
+https://forestry.krc.karelia.ru – CA: Petrozavodsk
+https://resources.krc.karelia.ru – CA: Petrozavodsk
+https://crafts.karelia.ru – CA: Petrozavodsk
+https://www.krc.karelia.ru – CA: Petrozavodsk
+https://dl.krc.karelia.ru – CA: Petrozavodsk
+https://ig.krc.karelia.ru – CA: Petrozavodsk
+https://elibrary.krc.karelia.ru – CA: Petrozavodsk
+https://muetacis.krc.karelia.ru – CA: Petrozavodsk
+https://transactions.krc.karelia.ru – CA: Petrozavodsk
+https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
+https://water.krc.karelia.ru – CA: Petrozavodsk
+https://geobotany.krc.karelia.ru – CA: Petrozavodsk
+https://journals.krc.karelia.ru – CA: Petrozavodsk
+https://economy.krc.karelia.ru – CA: Petrozavodsk
+https://printcom.karelia.ru – CA: Petrozavodsk
+https://illhportal.krc.karelia.ru – CA: Petrozavodsk
+https://info.krc.karelia.ru – CA: Petrozavodsk
+https://mathem.krc.karelia.ru – CA: Petrozavodsk
+https://biochemistry.krc.karelia.ru – CA: Petrozavodsk
+https://ladoga.krc.karelia.ru – CA: Petrozavodsk
+https://vepsian.krc.karelia.ru – CA: Petrozavodsk
+https://arhitektura32.ru – CA: Bryansk
+https://g.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
