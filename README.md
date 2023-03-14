@@ -17,6 +17,7 @@ A dataset of 4105 sites was examined. Of these, 321 sites were found to require 
 There are five files with results:
 
 * [ssl_cert_err.txt](ssl_cert_err.txt) – Failed request due to Russian Trusted Sub CA requirement;
+* [ssl_self_sign_err.txt](ssl_self_sign_err.txt) – Failed request due to Russian self signed certificate;
 * [request_errors.txt](request_errors.txt) – Unsuccessful requests (Python RequestException);
 * [unsuccessful.txt](unsuccessful.txt) – Unsuccessful requests and their status codes;
 * [successful.txt](successful.txt) – List of successful requests;
@@ -62,7 +63,7 @@ Links format:
 
 `python3 dedup.py <source_file> <deduplicated_file>`
 
-## Used resourses
+## Used resources
 
 * The initial [list](tls_list_cleaned.txt) of sites to check was taken (and slightly updated) from [koenrh's repository](https://github.com/koenrh/russian-trusted-root-ca).
 * Big government associated domains was taken from [govdomains](https://github.com/infoculture/govdomains)

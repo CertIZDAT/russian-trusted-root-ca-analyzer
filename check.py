@@ -16,6 +16,8 @@ if os.path.exists('request_errors.txt'):
     os.remove('request_errors.txt')
 if os.path.exists('other_ssl_cert_err.txt'):
     os.remove('other_ssl_cert_err.txt')
+if os.path.exists('ssl_self_sign_err.txt'):
+    os.remove('ssl_self_sign_err.txt')
 
 with open('tls_list_cleaned.txt', 'r') as f:
     website_links = f.readlines()
@@ -25,7 +27,10 @@ headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
 }
 
-untrusted = ["Russian Trusted", "SberCA", "St. Petersburg", "VTB Group", "Bank GPB", "Администрация Партизанского городского округа", "Kaliningrad", "Sigma-REZERV"]
+untrusted = ["Russian Trusted"]
+
+self_signed = ["SberCA", "St. Petersburg", "VTB Group", "Bank GPB", "Администрация Партизанского городского округа",
+               "Kaliningrad", "Sigma-REZERV", "Moscow", "Stavrolop", "Saint Petersburg", "Petrozavodsk", "Bryansk", "sklif"]
 
 
 def check_link(link, index):
@@ -54,6 +59,11 @@ def check_link(link, index):
             print(
                 f'{index}/{len(website_links)}: {link}: Russian affiliated certificate error – {issuer}')
             with open('ssl_cert_err.txt', 'a') as f:
+                f.write(link + ' – CA: {}'.format(issuer) + '\n')
+        elif any(untrust in issuer for untrust in self_signed):
+            print(
+                f'{index}/{len(website_links)}: {link}: Russian self signed certificate error – {issuer}')
+            with open('ssl_self_sign_err.txt', 'a') as f:
                 f.write(link + ' – CA: {}'.format(issuer) + '\n')
         else:
             print(
