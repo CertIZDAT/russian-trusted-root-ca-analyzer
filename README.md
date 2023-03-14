@@ -27,7 +27,7 @@ There are five files with results:
 
 ### Get total count of all sites with Russian Trusted CA
 
-    grep "Russian Trusted" ssl_cert_err.txt | wc -l
+    cat ssl_cert_err.txt | wc -l
 
 ## Running
 
