@@ -31,6 +31,7 @@ There are five files with results:
 
 ## Running
 
+Before running you should understand that many resources allow income traffic only from Russian IP's addresses.
 Run the following commands in terminal:
 
 ```bash
