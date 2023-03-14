@@ -39,7 +39,7 @@ python3 check.py                    # start analysis
 deactivate                          # to deactivate python environment
 ```
 
-Note: Approximate analysis time with 8 arm64 cores and fast VPN is 5.7 hours.
+Note: Approximate analysis time with 8 cores (with 5 multiplier) and fast VPN is ~12 hours.
 
 ## Contributions
 
