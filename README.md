@@ -10,7 +10,9 @@ This script allows you to analyze which sites require a Russian Trusted CA certi
 
 Russian banks and other companies, including Sberbank, are facing severe sanctions causing reputable companies to avoid receiving or paying money to/from companies banks to avoid being investigated for circumventing sanctions. Certification authorities (CAs), which issue encryption keys to websites, are among the companies that have refused to work with Sberbank due to the sanctions. As a result, Sberbank had to use a self-signed certificate from the Ministry of Communications, which no browser outside of Russia accepts. Using Russian certificates is risky as it is unclear if they meet the standards for a normal CA, and they may create additional private keys for authorities like FSB.
 
-A dataset of 4105 sites was examined. Of these, 321 sites were found to require a Russian Trusted CA. In addition, 61 sites were found to be using self-signed certificates.
+### TLDR
+
+A dataset of 24163 sites was examined. Of these, 851 sites were found to require a Russian Trusted CA. In addition, 137 sites were found to be using self-signed certificates.
 
 ## Results
 
