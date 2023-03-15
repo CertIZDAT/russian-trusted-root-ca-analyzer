@@ -3,6 +3,7 @@
 IN ACTIVE DEVELOPMENT: SOME RESULTS ARE OUTDATED!
 
 This script allows you to analyze which sites require a Russian Trusted CA certificate to work properly. Also checks for strange certificates issued by Russia.
+Results of each run saved to sqlite database at end of the analysis.
 
 [tls_list_cleaned.txt](tls_list_cleaned.txt) list is definitely not complete yet, PR's are welcome.
 
@@ -54,14 +55,14 @@ deactivate                          # to deactivate python environment
 
 - `--timeout`, default=15, timeout for each web request, in seconds.
 - `--name`, default='statistics.db', type=str, database name, if it does not exist - it will be created.
-- `--dataset_updated`, default=False, flag signalling that the dataset has been updated. This flag must be set to true if the dataset has been.
+- `--updated`, default=False, flag signalling that the dataset has been updated. This flag must be set to true if the dataset has been.
 - `--delete`, type=str, delete existed database with name.
 
 #### Examples
 
 - Run analysis with standard params (db name: `statistic.db`, `timeout`: 15 secs) – `python3 check.py`
 - Run analysis with custom db name and timeout – `python3 check.py --name=test.db --timeout=5`
-- Run analysis with standard params, run dataset was updated before run – `python3 check.py --dataset_updated=True`
+- Run analysis with standard params, set dataset was updated before run – `python3 check.py --updated=True`
 - Delete db with custom name – `python3 check.py  --delete=test_db.db`
 - Get help – python3 check.py --help
 

@@ -2,7 +2,7 @@ import sys
 
 # Check if the correct number of arguments were provided
 if len(sys.argv) != 3:
-    print("Usage: python deduplicate.py input_file output_file")
+    print('Usage: python deduplicate.py input_file output_file')
     sys.exit()
 
 # Get the input and output file names from the command line arguments

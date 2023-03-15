@@ -16,10 +16,10 @@ def check_link(link, index, website_links, timeout):
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     }
 
-    untrusted = ["Russian Trusted"]
+    untrusted = ['Russian Trusted']
 
-    self_signed = ["SberCA", "St. Petersburg", "VTB Group", "Bank GPB", "Администрация Партизанского городского округа",
-                   "Kaliningrad", "Sigma-REZERV", "Moscow", "Stavrolop", "Saint Petersburg", "Petrozavodsk", "Bryansk", "sklif"]
+    self_signed = ['SberCA', 'St. Petersburg', 'VTB Group', 'Bank GPB', 'Администрация Партизанского городского округа',
+                   'Kaliningrad', 'Sigma-REZERV', 'Moscow', 'Stavrolop', 'Saint Petersburg', 'Petrozavodsk', 'Bryansk', 'sklif']
 
     link = link.strip()
     if not link.startswith('http'):
@@ -42,7 +42,7 @@ def check_link(link, index, website_links, timeout):
             f.write(
                 link + ' – Request timed out' + '\n')
     except requests.exceptions.SSLError as e:
-        cert = ssl.get_server_certificate((link.split("//")[1], 443))
+        cert = ssl.get_server_certificate((link.split('//')[1], 443))
         x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert)
         # get issuer of the certificate
         issuer = x509.get_issuer().get_components()[2][1].decode()
@@ -69,6 +69,9 @@ def check_link(link, index, website_links, timeout):
         print(f'{index}/{len(website_links)}: {link}: {e}')
 
 
+timeout = 0
+
+
 def main():
     # Parse args
     parser = argparse.ArgumentParser(
@@ -77,7 +80,7 @@ def main():
                         help='Timeout for each web request, in seconds.')
     parser.add_argument('--name', default='statistics.db', type=str,
                         help='Database name, if it does not exist - it will be created.')
-    parser.add_argument('--dataset_updated', default=False,
+    parser.add_argument('--updated', default=False,
                         help='Flag signalling that the dataset has been updated.')
     parser.add_argument('--delete', type=str,
                         help='Delete existed database with name.')
@@ -90,7 +93,7 @@ def main():
     # Get values for all args
     timeout = int(args.timeout)
     db_name = args.name
-    is_dataset_updated = args.dataset_updated
+    is_dataset_updated = args.updated
 
     common.delete_old_res()
 
@@ -132,7 +135,8 @@ if __name__ == '__main__':
     end_time = time()
     execution_time = end_time - start_time
 
-    print(f"Execution time:\n\
+    print('timeout={}'.format(timeout))
+    print(f'Execution time:\n\
         {execution_time:.2f} seconds,\n\
         {execution_time / 60:.2f} minutes, \n\
-        {execution_time / 60 / 60:.2f} hours.")
+        {execution_time / 60 / 60:.2f} hours.')

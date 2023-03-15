@@ -6,7 +6,7 @@ from os.path import abspath, exists, expanduser
 def create_db_with_name(db_name):
     full_path_to_db = path.abspath(path.expanduser(db_name))
     if path.exists(full_path_to_db):
-        print("Database with name {} already exists".format(db_name))
+        print('Database with name {} already exists'.format(db_name))
         return
 
     connection = sqlite3.connect(db_name)
@@ -39,9 +39,19 @@ def write_batch(db_name, trusted_count, self_count, path_to_trusted, path_to_sel
     cursor = connection.cursor()
 
     # Read the contents of the trusted and self text files into string arrays
-    with open(full_path_to_trusted, 'r') as trusted_ca, open(full_path_to_self_sign, 'r') as self_signed:
-        trusted_entries = [line.strip() for line in trusted_ca.readlines()]
-        self_entries = [line.strip() for line in self_signed.readlines()]
+    try:
+        with open(full_path_to_trusted, 'r') as trusted_ca:
+            trusted_entries = [line.strip() for line in trusted_ca.readlines()]
+    except FileNotFoundError:
+        print('No such file or directory: {}'.format(full_path_to_trusted))
+        trusted_entries = []
+
+    try:
+        with open(full_path_to_self_sign, 'r') as self_signed:
+            self_entries = [line.strip() for line in self_signed.readlines()]
+    except FileNotFoundError:
+        print('No such file or directory: {}'.format(full_path_to_self_sign))
+        self_entries = []
 
     # Convert the string arrays to comma-separated strings
     trusted_entries_str = ','.join(trusted_entries)
@@ -54,10 +64,10 @@ def write_batch(db_name, trusted_count, self_count, path_to_trusted, path_to_sel
 
     try:
         cursor.execute(insert_query, (trusted_count, self_count,
-                                      trusted_entries_str, self_entries_str, int(is_new_dataset)))
+                                      trusted_entries_str, self_entries_str, int(is_new_dataset == 'True')))
         connection.commit()
     except sqlite3.Error as e:
-        print(f"Error executing SQL statement: {e}")
+        print(f'Error executing SQL statement: {e}')
     finally:
         connection.close()
 
@@ -71,7 +81,7 @@ def delete_db_with_name(db_name):
 
 
 class __InvalidDataBaseProvided(Exception):
-    "Can't find database!"
+    'Can\'t find database!'
 
 
 def need_to_del_db(need_to_del_db):
@@ -79,7 +89,7 @@ def need_to_del_db(need_to_del_db):
         full_path_to_db = abspath(expanduser(need_to_del_db))
         if exists(full_path_to_db):
             remove(full_path_to_db)
-            print("Database at {} deleted".format(full_path_to_db))
+            print('Database at {} deleted'.format(full_path_to_db))
         else:
             print('Can\'t delete database at {}!'.format(full_path_to_db))
             exit(1)

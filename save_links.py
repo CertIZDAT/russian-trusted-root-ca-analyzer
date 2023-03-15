@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 
 # Get the URL from the command-line argument
 if len(sys.argv) < 2:
-    print("Usage: python script.py url")
+    print('Usage: python script.py url')
     sys.exit(1)
 
 url = sys.argv[1]
