@@ -1,11 +1,13 @@
-import os
-import ssl
 import argparse
-import requests
-from time import time
 import concurrent.futures
-from OpenSSL import crypto
+import ssl
 from multiprocessing import cpu_count
+from time import time
+
+import requests
+from OpenSSL import crypto
+
+from utils import common, db
 
 
 def check_link(link, index, website_links, timeout):
@@ -72,6 +74,12 @@ def main():
         description='This script allows you to analyse which sites require a Russian Trusted CA certificate to work properly.')
     parser.add_argument('--timeout', default=15, type=int,
                         help='Timeout for each web request, in seconds.')
+    parser.add_argument('--db_name', default='statistics', type=str,
+                        help='Database name, if it does not exist - it will be created.')
+    parser.add_argument('--dataset_updated', default=False,
+                        help='Flag signalling that the dataset has been updated.')
+    parser.add_argument('--delete', type=str,
+                        help='Delete existed database with name.')
     args = parser.parse_args()
 
     need_to_del_db = args.delete

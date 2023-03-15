@@ -4,7 +4,11 @@ from os.path import abspath, exists, expanduser
 
 
 def create_db_with_name(db_name):
-    # delete_db_with_name(db_name)
+    full_path_to_db = path.abspath(path.expanduser(db_name))
+    if path.exists(full_path_to_db):
+        print("Database with name {} already exists".format(db_name))
+        return
+
     connection = sqlite3.connect(db_name)
     cursor = connection.cursor()
 
@@ -68,3 +72,15 @@ def delete_db_with_name(db_name):
 
 class __InvalidDataBaseProvided(Exception):
     "Can't find database!"
+
+
+def need_to_del_db(need_to_del_db):
+    if need_to_del_db:
+        full_path_to_db = abspath(expanduser(need_to_del_db))
+        if exists(full_path_to_db):
+            remove(full_path_to_db)
+            print("Database with at {} deleted".format(full_path_to_db))
+        else:
+            print('Can\'t delete database at {}!'.format(full_path_to_db))
+            exit(1)
+        exit(0)
