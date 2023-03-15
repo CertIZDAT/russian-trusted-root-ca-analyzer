@@ -1,5 +1,6 @@
 import sqlite3
 from os import path, remove
+from os.path import abspath, exists, expanduser
 
 
 def create_db_with_name(db_name):
@@ -49,13 +50,12 @@ def write_batch(db_name, trusted_count, self_count, path_to_trusted, path_to_sel
 
     try:
         cursor.execute(insert_query, (trusted_count, self_count,
-                    trusted_entries_str, self_entries_str, int(is_new_dataset)))
+                                      trusted_entries_str, self_entries_str, int(is_new_dataset)))
         connection.commit()
     except sqlite3.Error as e:
         print(f"Error executing SQL statement: {e}")
     finally:
         connection.close()
-
 
 
 def delete_db_with_name(db_name):

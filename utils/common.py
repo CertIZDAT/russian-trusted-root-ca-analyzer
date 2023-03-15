@@ -1,4 +1,4 @@
-from os import path
+from os import path, remove
 
 
 def count_strings_in_file(file_path):

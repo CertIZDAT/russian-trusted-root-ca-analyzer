@@ -2,9 +2,10 @@
 # https://www.garant.ru/doc/busref/spr_gos_site/
 
 import sys
+from urllib.parse import urlparse
+
 import requests
 from bs4 import BeautifulSoup
-from urllib.parse import urlparse
 
 # Get the URL from the command-line argument
 if len(sys.argv) < 2:

@@ -1,5 +1,4 @@
-from utils import db
-from utils import common
+from utils import common, db
 
 db_name = 'test.db'
 db.create_db_with_name(db_name)
