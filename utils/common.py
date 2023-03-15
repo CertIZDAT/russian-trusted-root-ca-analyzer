@@ -8,7 +8,7 @@ def count_strings_in_file(file_path):
         for line in f:
             if line.strip():
                 count += 1
-    print(full_path + ' – count: ' + str(count))
+    print(full_path + ' – total lines: ' + str(count))
     return count
 
 

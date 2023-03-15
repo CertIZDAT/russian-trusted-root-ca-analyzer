@@ -70,11 +70,12 @@ def check_link(link, index, website_links, timeout):
 
 
 def main():
+    # Parse args
     parser = argparse.ArgumentParser(
         description='This script allows you to analyse which sites require a Russian Trusted CA certificate to work properly.')
     parser.add_argument('--timeout', default=15, type=int,
                         help='Timeout for each web request, in seconds.')
-    parser.add_argument('--db_name', default='statistics', type=str,
+    parser.add_argument('--name', default='statistics.db', type=str,
                         help='Database name, if it does not exist - it will be created.')
     parser.add_argument('--dataset_updated', default=False,
                         help='Flag signalling that the dataset has been updated.')
@@ -82,11 +83,13 @@ def main():
                         help='Delete existed database with name.')
     args = parser.parse_args()
 
+    # Check is db should be deleted
     need_to_del_db = args.delete
     db.need_to_del_db(need_to_del_db)
 
+    # Get values for all args
     timeout = int(args.timeout)
-    db_name = args.db_name
+    db_name = args.name
     is_dataset_updated = args.dataset_updated
 
     common.delete_old_res()
@@ -106,6 +109,19 @@ def main():
                 _ = future.result()  # get result of task (not used in this case)
             except Exception as e:
                 print(f'Error: {e}')
+
+    # Save results to sqlite database
+    db.create_db_with_name(db_name)
+
+    ssl_cert_err_filename = 'ssl_cert_err.txt'
+    ssl_self_sign_err_filename = 'ssl_self_sign_err.txt'
+
+    trusted_count = common.count_strings_in_file(ssl_cert_err_filename)
+    self_count = common.count_strings_in_file(ssl_self_sign_err_filename)
+
+    db.write_batch(db_name, trusted_count, self_count,
+                   ssl_cert_err_filename, ssl_self_sign_err_filename, is_dataset_updated)
+    print('Results successfully saved to db: {}'.format(db_name))
 
 
 if __name__ == '__main__':

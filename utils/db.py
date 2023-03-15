@@ -79,7 +79,7 @@ def need_to_del_db(need_to_del_db):
         full_path_to_db = abspath(expanduser(need_to_del_db))
         if exists(full_path_to_db):
             remove(full_path_to_db)
-            print("Database with at {} deleted".format(full_path_to_db))
+            print("Database at {} deleted".format(full_path_to_db))
         else:
             print('Can\'t delete database at {}!'.format(full_path_to_db))
             exit(1)
