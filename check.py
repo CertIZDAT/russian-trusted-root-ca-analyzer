@@ -5,35 +5,18 @@ import concurrent.futures
 from OpenSSL import crypto
 from multiprocessing import cpu_count
 
-# remove output files from previous runs
-if os.path.exists('successful.txt'):
-    os.remove('successful.txt')
-if os.path.exists('unsuccessful.txt'):
-    os.remove('unsuccessful.txt')
-if os.path.exists('ssl_cert_err.txt'):
-    os.remove('ssl_cert_err.txt')
-if os.path.exists('request_errors.txt'):
-    os.remove('request_errors.txt')
-if os.path.exists('other_ssl_cert_err.txt'):
-    os.remove('other_ssl_cert_err.txt')
-if os.path.exists('ssl_self_sign_err.txt'):
-    os.remove('ssl_self_sign_err.txt')
 
-with open('tls_list_cleaned.txt', 'r') as f:
-    website_links = f.readlines()
+def check_link(link, index, website_links):
+    # define headers to send with each request
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
+    }
 
-# define headers to send with each request
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
-}
+    untrusted = ["Russian Trusted"]
 
-untrusted = ["Russian Trusted"]
+    self_signed = ["SberCA", "St. Petersburg", "VTB Group", "Bank GPB", "Администрация Партизанского городского округа",
+                   "Kaliningrad", "Sigma-REZERV", "Moscow", "Stavrolop", "Saint Petersburg", "Petrozavodsk", "Bryansk", "sklif"]
 
-self_signed = ["SberCA", "St. Petersburg", "VTB Group", "Bank GPB", "Администрация Партизанского городского округа",
-               "Kaliningrad", "Sigma-REZERV", "Moscow", "Stavrolop", "Saint Petersburg", "Petrozavodsk", "Bryansk", "sklif"]
-
-
-def check_link(link, index):
     link = link.strip()
     if not link.startswith('http'):
         link = f'https://{link}'
@@ -77,15 +60,36 @@ def check_link(link, index):
         print(f'{index}/{len(website_links)}: {link}: {e}')
 
 
-# create thread pool
-with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count() * 6) as executor:
-    # submit tasks to thread pool
-    futures = [executor.submit(check_link, link, i+1)
-               for i, link in enumerate(website_links)]
+def main():
+    # remove output files from previous runs
+    if os.path.exists('successful.txt'):
+        os.remove('successful.txt')
+    if os.path.exists('unsuccessful.txt'):
+        os.remove('unsuccessful.txt')
+    if os.path.exists('ssl_cert_err.txt'):
+        os.remove('ssl_cert_err.txt')
+    if os.path.exists('request_errors.txt'):
+        os.remove('request_errors.txt')
+    if os.path.exists('other_ssl_cert_err.txt'):
+        os.remove('other_ssl_cert_err.txt')
+    if os.path.exists('ssl_self_sign_err.txt'):
+        os.remove('ssl_self_sign_err.txt')
+    with open('tls_list_cleaned.txt', 'r') as f:
+        website_links = f.readlines()
 
-    # wait for tasks to complete
-    for future in concurrent.futures.as_completed(futures):
-        try:
-            _ = future.result()  # get result of task (not used in this case)
-        except Exception as e:
-            print(f'Error: {e}')
+    # create thread pool
+    with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count() * 6) as executor:
+        # submit tasks to thread pool
+        futures = [executor.submit(check_link, link, i+1, website_links)
+                   for i, link in enumerate(website_links)]
+
+        # wait for tasks to complete
+        for future in concurrent.futures.as_completed(futures):
+            try:
+                _ = future.result()  # get result of task (not used in this case)
+            except Exception as e:
+                print(f'Error: {e}')
+
+
+if __name__ == '__main__':
+    main()
