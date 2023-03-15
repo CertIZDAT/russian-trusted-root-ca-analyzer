@@ -38,9 +38,16 @@ Run the following commands in terminal:
 python3 -m venv env                 # create virtual python environment
 source env/bin/activate             # start virtual python environment
 pip3 install -r requirements.txt    # install necessary packages
-python3 check.py                    # start analysis
+
+# Default param value is 15 seconds
+python3 check.py --timeout <value>  # start analysis with specified timeout param
+
 deactivate                          # to deactivate python environment
 ```
+
+### Get help
+
+    python3 check.py --help
 
 Note: Approximate analysis time with 8 cores (with 5 multiplier) and fast VPN is ~12 hours.
 
