@@ -85,6 +85,7 @@ class __InvalidDataBaseProvided(Exception):
 
 
 def need_to_del_db(need_to_del_db):
+    '''This function deletes the database with the specified name. After deletion, this function sends an exit code of 0 or 1.'''
     if need_to_del_db:
         full_path_to_db = abspath(expanduser(need_to_del_db))
         if exists(full_path_to_db):
