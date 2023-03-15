@@ -1,4 +1,5 @@
 # https://ruxpert.ru/Список_государственных_сайтов_России
+# https://www.garant.ru/doc/busref/spr_gos_site/
 
 import sys
 import requests
