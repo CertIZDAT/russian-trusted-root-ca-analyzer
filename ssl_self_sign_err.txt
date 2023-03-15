@@ -1,137 +1,118 @@
-https://partizansk.primorsky.ru – CA: Администрация Партизанского городского округа
-https://ksp-orel.ru – CA: Moscow
-https://ddp-stg.sberbank.ru – CA: SberCA Test Ext
-https://cbro.sberbank.ru – CA: SberCA Ext Web
-https://geobotany.krc.karelia.ru – CA: Petrozavodsk
-https://nlp2vpsift.online.sberbank.ru – CA: SberCA Ext Web
-https://api-ift.sberfriend.sbrf.ru – CA: SberCA Test Ext
-https://thlotos.com – CA: Sigma-REZERV1-CA
-https://spb112.ru – CA: St. Petersburg
-https://tarif29.test.dvinaland.ru – CA: Kaliningrad
-https://pravitelstvori.ru – CA: Kaliningrad
-https://ig.krc.karelia.ru – CA: Petrozavodsk
-https://spb21.aptrg.gov.spb.ru – CA: Moscow
-https://biochemistry.krc.karelia.ru – CA: Petrozavodsk
-https://and-up7-asbs.online.sberbank.ru – CA: SberCA Ext
-https://smo.yarregion.ru – CA: Moscow
-https://ios-up1-asbs.online.sberbank.ru – CA: SberCA Ext
-https://illhportal.krc.karelia.ru – CA: Petrozavodsk
-https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
-https://messenger.sberbank.ru – CA: SberCA Ext Web
-https://ios-up3-asbs.online.sberbank.ru – CA: SberCA Ext
 https://vepsian.krc.karelia.ru – CA: Petrozavodsk
-https://dou3spb.kalin.gov.spb.ru – CA: Moscow
-https://stokehold.test.dvinaland.ru – CA: Kaliningrad
-https://and-up1-asbs.online.sberbank.ru – CA: SberCA Ext
-https://www.fsa.gov.ru – CA: Kaliningrad
-https://old.fcpkultura.ru – CA: Kaliningrad
-https://www.my.krskstate.ru – CA: Moscow
-https://auth-si20-uat.mobile-sbe-dev.sbrf.ru – CA: SberCA Test Ext
-https://suotacis.krc.karelia.ru – CA: Petrozavodsk
-https://uat.android.encashment.sberbank.ru – CA: SberCA Test Int
+https://biochemistry.krc.karelia.ru – CA: Petrozavodsk
+https://and-upsi2-asbs.online.sberbank.ru – CA: SberCA Ext
+https://ift.mobincash.sberbank.ru – CA: SberCA Ext Web
+https://messenger-t.sberbank.ru – CA: SberCA Test Ext
+https://crafts.karelia.ru – CA: Petrozavodsk
+https://uat.web.encashment.sberbank.ru – CA: SberCA Test Int
+https://mailapp.sber.ru – CA: SberCA Ext
+https://psi-spkk-static.testonline.sberbank.ru – CA: SberCA Ext Web
+https://info.krc.karelia.ru – CA: Petrozavodsk
+https://mbk.online.gazprombank.ru – CA: Bank GPB (JSC)
+https://ios-up4-asbs.online.sberbank.ru – CA: SberCA Ext
+https://and-up5-asbs.online.sberbank.ru – CA: SberCA Ext
+https://detstvo.gokrk.ru – CA: Kaliningrad
+https://psi-spkk-api.testonline.sberbank.ru – CA: SberCA Ext Web
+https://and-up7-asbs.online.sberbank.ru – CA: SberCA Ext
+https://mpclickstream.online.sberbank.ru – CA: SberCA Ext Web
 https://arhitektura32.ru – CA: Bryansk
 https://cdn.sberbank.ru – CA: SberCA Ext Web
-https://sro.gosnadzor.ru – CA: Kaliningrad
-https://geo-t.online.sberbank.ru – CA: SberCA Test Ext
-https://integration.sbercrm.sber.ru – CA: SberCA Ext
-https://ios-up2-asbs.online.sberbank.ru – CA: SberCA Ext
-https://sberkids-t.sberbank.ru – CA: SberCA Ext Web
-https://zagschr.ru – CA: Saint Petersburg
-https://nlp2vpspsi.online.sberbank.ru – CA: SberCA Ext Web
-https://karchiv.gov.spb.ru – CA: Moscow
-https://test.stat.online.sberbank.ru – CA: SberCA Ext Web
-https://and-upsi-asbs.online.sberbank.ru – CA: SberCA Ext
-https://b2evps.online.sberbank.ru – CA: SberCA Ext Web
-
-https://cluster.krc.karelia.ru – CA: Petrozavodsk
-https://sc588.kolp.gov.spb.ru – CA: Moscow
-https://www.gousosh347uiayanr.tunev.gov.spb.ru – CA: Saint Petersburg
-https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
-https://sc432.kolp.gov.spb.ru – CA: Moscow
-https://create.karelia.ru – CA: Petrozavodsk
-https://ios-upsi2-asbs.online.sberbank.ru – CA: SberCA Ext
-https://www.112.krskstate.ru – CA: Moscow
-https://water.krc.karelia.ru – CA: Petrozavodsk
-https://ios-upsi-asbs.online.sberbank.ru – CA: SberCA Ext
-https://web-si20-uat.mobile-sbe-dev.sbrf.ru – CA: SberCA Test Ext
-https://and-up3-asbs.online.sberbank.ru – CA: SberCA Ext
-https://test.test.dvinaland.ru – CA: Kaliningrad
-https://printcom.karelia.ru – CA: Petrozavodsk
-https://info.krc.karelia.ru – CA: Petrozavodsk
-https://mathem.krc.karelia.ru – CA: Petrozavodsk
-https://majorcheck.mailapp.sber.ru – CA: SberCA Test Ext
-https://geo1.online.sberbank.ru – CA: SberCA Ext Web
-https://my.krskstate.ru – CA: Kaliningrad
-https://mbk.online.gazprombank.ru – CA: Bank GPB (JSC)
-https://uat.web.encashment.sberbank.ru – CA: SberCA Test Int
-https://www.ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
-https://roads.test.dvinaland.ru – CA: Kaliningrad
-https://sbercrm-test.sber.ru – CA: SberCA Test Ext
-https://www.krc.karelia.ru – CA: Petrozavodsk
-https://and-up6-asbs.online.sberbank.ru – CA: SberCA Ext
-https://profile-uat.sber.ru – CA: SberCA Test Ext
-https://jabbermra.gazprombank.ru – CA: Bank GPB (JSC)
-https://transactions.krc.karelia.ru – CA: Petrozavodsk
-https://mpclickstream.online.sberbank.ru – CA: SberCA Ext Web
-https://ios-upgf-asbs.online.sberbank.ru – CA: SberCA Ext
-https://ift.mobincash.sberbank.ru – CA: SberCA Ext Web
-https://test2.test.dvinaland.ru – CA: Kaliningrad
-https://ib.krc.karelia.ru – CA: Petrozavodsk
-https://messenger-t.sberbank.ru – CA: SberCA Test Ext
-https://reserve.mb.vtb.ru – CA: VTB Group CA 2
-https://uat.ios.encashment.sberbank.ru – CA: SberCA Test Int
-https://lkp.bashgaz.ru – CA: Kaliningrad
-https://www.ombudsman57.ru – CA: Moscow
-https://cev-k.kalin.gov.spb.ru – CA: Moscow
-https://bcmc.gazprombank.ru – CA: Bank GPB (JSC)
-https://fond.karelia.ru – CA: Petrozavodsk
-https://crafts.karelia.ru – CA: Petrozavodsk
-https://forestry.krc.karelia.ru – CA: Petrozavodsk
-https://dl.krc.karelia.ru – CA: Petrozavodsk
-https://mail.ookn.ru – CA: Moscow
-https://psi-spkk-api.testonline.sberbank.ru – CA: SberCA Ext Web
-https://ift.sberfriend.sbrf.ru – CA: SberCA Test Ext
-https://site1.test.dvinaland.ru – CA: Kaliningrad
-https://guzgp76om.kalin.gov.spb.ru – CA: Saint Petersburg
-https://al-psi.id.sber.ru – CA: SberCA Test Int
-https://www.pravitelstvori.ru – CA: Kaliningrad
-https://www.fcpkultura.ru – CA: Kaliningrad
-https://geo-t.geoapi.sberbank.ru – CA: SberCA Test Ext
-https://ios-up6-asbs.online.sberbank.ru – CA: SberCA Ext
-https://gkh.test.dvinaland.ru – CA: Kaliningrad
-https://arhdeti.test.dvinaland.ru – CA: Kaliningrad
-https://ombudsman57.ru – CA: Moscow
-https://and-up2-asbs.online.sberbank.ru – CA: SberCA Ext
-https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
-https://gb2-bsk.zdravalt.ru – CA: Kaliningrad
-https://sberfriend-ift.sbrf.ru – CA: SberCA Test Ext
-https://dolschiki.admhmao.ru – CA: Kaliningrad
+https://spb21.aptrg.gov.spb.ru – CA: Moscow
 https://economy.krc.karelia.ru – CA: Petrozavodsk
-https://and-up5-asbs.online.sberbank.ru – CA: SberCA Ext
-https://mailapp.sber.ru – CA: SberCA Ext
-https://sbercrm.sber.ru – CA: SberCA Ext
+https://uat.android.encashment.sberbank.ru – CA: SberCA Test Int
 https://cdnvideo.sberbank.ru – CA: SberCA Ext Web
-https://journals.krc.karelia.ru – CA: Petrozavodsk
-https://smartmarket.online.sberbank.ru – CA: SberCA Ext Web
-https://dev.regul.test.dvinaland.ru – CA: Kaliningrad
+https://lkp.bashgaz.ru – CA: Kaliningrad
+https://web-si20-uat.mobile-sbe-dev.sbrf.ru – CA: SberCA Test Ext
+https://ios-upsi-asbs.online.sberbank.ru – CA: SberCA Ext
 https://and-upgf-asbs.online.sberbank.ru – CA: SberCA Ext
-https://detstvo.gokrk.ru – CA: Kaliningrad
-https://ladoga.krc.karelia.ru – CA: Petrozavodsk
-https://resources.krc.karelia.ru – CA: Petrozavodsk
-https://g.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
-https://dvinainvest2.test.dvinaland.ru – CA: Kaliningrad
-https://sch89.kalin.gov.spb.ru – CA: Moscow
-https://spkk-static.online.sberbank.ru – CA: SberCA Ext Web
-https://psi-spkk-static.testonline.sberbank.ru – CA: SberCA Ext Web
+https://smo.yarregion.ru – CA: Moscow
+https://messenger.sberbank.ru – CA: SberCA Ext Web
+https://guzgp76om.kalin.gov.spb.ru – CA: Saint Petersburg
+https://nlp2vpspsi.online.sberbank.ru – CA: SberCA Ext Web
+https://bcmc.gazprombank.ru – CA: Bank GPB (JSC)
+https://spb112.ru – CA: St. Petersburg
+https://nlp2vpsift.online.sberbank.ru – CA: SberCA Ext Web
+https://mail.ookn.ru – CA: Moscow
 https://nlp2vps.online.sberbank.ru – CA: SberCA Ext Web
-https://and-up4-asbs.online.sberbank.ru – CA: SberCA Ext
-https://bag.test.dvinaland.ru – CA: Kaliningrad
-https://ios-up5-asbs.online.sberbank.ru – CA: SberCA Ext
-https://muetacis.krc.karelia.ru – CA: Petrozavodsk
+https://sc432.kolp.gov.spb.ru – CA: Moscow
+https://and-up1-asbs.online.sberbank.ru – CA: SberCA Ext
+https://pravitelstvori.ru – CA: Kaliningrad
+https://mathem.krc.karelia.ru – CA: Petrozavodsk
 https://spkk-api.online.sberbank.ru – CA: SberCA Ext Web
-https://ios-up7-asbs.online.sberbank.ru – CA: SberCA Ext
-https://fcpkultura.ru – CA: Kaliningrad
-https://and-upsi2-asbs.online.sberbank.ru – CA: SberCA Ext
-https://cbro.online.sberbank.ru – CA: SberCA Ext Web
+https://my.krskstate.ru – CA: Kaliningrad
+https://spkk-static.online.sberbank.ru – CA: SberCA Ext Web
+https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
+https://sberfriend-ift.sbrf.ru – CA: SberCA Test Ext
+https://gousosh347uiayanr.tunev.gov.spb.ru – CA: Saint Petersburg
+https://gb2-bsk.zdravalt.ru – CA: Kaliningrad
+https://ios-up1-asbs.online.sberbank.ru – CA: SberCA Ext
+https://smartmarket.online.sberbank.ru – CA: SberCA Ext Web
+https://zagschr.ru – CA: Saint Petersburg
+https://al-psi.id.sber.ru – CA: SberCA Test Int
+https://cluster.krc.karelia.ru – CA: Petrozavodsk
+https://muetacis.krc.karelia.ru – CA: Petrozavodsk
+https://create.karelia.ru – CA: Petrozavodsk
+https://cev-k.kalin.gov.spb.ru – CA: Moscow
+https://sro.gosnadzor.ru – CA: Kaliningrad
+https://auth-si20-uat.mobile-sbe-dev.sbrf.ru – CA: SberCA Test Ext
+https://water.krc.karelia.ru – CA: Petrozavodsk
+https://api-ift.sberfriend.sbrf.ru – CA: SberCA Test Ext
 https://elibrary.krc.karelia.ru – CA: Petrozavodsk
-https://ios-up4-asbs.online.sberbank.ru – CA: SberCA Ext
+https://fcpkultura.ru – CA: Kaliningrad
+https://reserve.mb.vtb.ru – CA: VTB Group CA 2
+https://profile-uat.sber.ru – CA: SberCA Test Ext
+https://suotacis.krc.karelia.ru – CA: Petrozavodsk
+https://geo-t.geoapi.sberbank.ru – CA: SberCA Test Ext
+https://geobotany.krc.karelia.ru – CA: Petrozavodsk
+https://old.fcpkultura.ru – CA: Kaliningrad
+https://printcom.karelia.ru – CA: Petrozavodsk
+https://ig.krc.karelia.ru – CA: Petrozavodsk
+https://sberkids-t.sberbank.ru – CA: SberCA Ext Web
+https://resources.krc.karelia.ru – CA: Petrozavodsk
+https://integration.sbercrm.sber.ru – CA: SberCA Ext
+https://ios-up6-asbs.online.sberbank.ru – CA: SberCA Ext
+https://ksp-orel.ru – CA: Moscow
+https://geo-t.online.sberbank.ru – CA: SberCA Test Ext
+https://ios-up2-asbs.online.sberbank.ru – CA: SberCA Ext
+https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
+https://and-up4-asbs.online.sberbank.ru – CA: SberCA Ext
+https://transactions.krc.karelia.ru – CA: Petrozavodsk
+https://ios-upgf-asbs.online.sberbank.ru – CA: SberCA Ext
+https://test.stat.online.sberbank.ru – CA: SberCA Ext Web
+https://geo1.online.sberbank.ru – CA: SberCA Ext Web
+https://and-up3-asbs.online.sberbank.ru – CA: SberCA Ext
+https://ios-up5-asbs.online.sberbank.ru – CA: SberCA Ext
+https://thlotos.com – CA: Sigma-REZERV1-CA
+https://sbercrm.sber.ru – CA: SberCA Ext
+https://dolschiki.admhmao.ru – CA: Kaliningrad
+https://fond.karelia.ru – CA: Petrozavodsk
+https://ios-up3-asbs.online.sberbank.ru – CA: SberCA Ext
+https://cbro.online.sberbank.ru – CA: SberCA Ext Web
+https://and-up6-asbs.online.sberbank.ru – CA: SberCA Ext
+https://cbro.sberbank.ru – CA: SberCA Ext Web
+https://ddp-stg.sberbank.ru – CA: SberCA Test Ext
+https://partizansk.primorsky.ru – CA: Администрация Партизанского городского округа
+https://ios-up7-asbs.online.sberbank.ru – CA: SberCA Ext
+https://jabbermra.gazprombank.ru – CA: Bank GPB (JSC)
+https://sch89.kalin.gov.spb.ru – CA: Moscow
+https://forestry.krc.karelia.ru – CA: Petrozavodsk
+https://journals.krc.karelia.ru – CA: Petrozavodsk
+https://illhportal.krc.karelia.ru – CA: Petrozavodsk
+https://majorcheck.mailapp.sber.ru – CA: SberCA Test Ext
+https://ios-upsi2-asbs.online.sberbank.ru – CA: SberCA Ext
+https://sbercrm-test.sber.ru – CA: SberCA Test Ext
+https://dou3spb.kalin.gov.spb.ru – CA: Moscow
+https://karchiv.gov.spb.ru – CA: Moscow
+https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
+https://b2evps.online.sberbank.ru – CA: SberCA Ext Web
+https://ombudsman57.ru – CA: Moscow
+https://and-upsi-asbs.online.sberbank.ru – CA: SberCA Ext
+https://ift.sberfriend.sbrf.ru – CA: SberCA Test Ext
+https://ladoga.krc.karelia.ru – CA: Petrozavodsk
+https://sc588.kolp.gov.spb.ru – CA: Moscow
+https://ib.krc.karelia.ru – CA: Petrozavodsk
+https://g.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
+https://and-up2-asbs.online.sberbank.ru – CA: SberCA Ext
+https://dl.krc.karelia.ru – CA: Petrozavodsk
+https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
+https://uat.ios.encashment.sberbank.ru – CA: SberCA Test Int

@@ -13,7 +13,7 @@ Russian banks and other companies, including Sberbank, are facing severe sanctio
 
 ### TLDR
 
-A dataset of 24163 sites was examined. Of these, 851 sites were found to require a Russian Trusted CA. In addition, 137 sites were found to be using self-signed certificates.
+~~A dataset of 24163 sites was examined. Of these, 851 sites were found to require a Russian Trusted CA. In addition, 137 sites were found to be using self-signed certificates.~~
 
 ## Results
 
@@ -34,7 +34,7 @@ There are five files with results:
 
 Before running you should understand that many resources allow income traffic only from Russian IP's addresses.
 
-Note: Approximate analysis time with 8 cores, `timeout=10` and fast VPN is 30 minutes.
+Note: Approximate analysis time with 8 cores, `timeout=15` and fast VPN is 30 minutes.
 
 ### Analysis
 
