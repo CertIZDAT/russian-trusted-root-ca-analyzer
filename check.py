@@ -74,21 +74,15 @@ def main():
                         help='Timeout for each web request, in seconds.')
     args = parser.parse_args()
 
-    timeout = int(args.timeout)
+    need_to_del_db = args.delete
+    db.need_to_del_db(need_to_del_db)
 
-    # remove output files from previous runs
-    if os.path.exists('successful.txt'):
-        os.remove('successful.txt')
-    if os.path.exists('unsuccessful.txt'):
-        os.remove('unsuccessful.txt')
-    if os.path.exists('ssl_cert_err.txt'):
-        os.remove('ssl_cert_err.txt')
-    if os.path.exists('request_errors.txt'):
-        os.remove('request_errors.txt')
-    if os.path.exists('other_ssl_cert_err.txt'):
-        os.remove('other_ssl_cert_err.txt')
-    if os.path.exists('ssl_self_sign_err.txt'):
-        os.remove('ssl_self_sign_err.txt')
+    timeout = int(args.timeout)
+    db_name = args.db_name
+    is_dataset_updated = args.dataset_updated
+
+    common.delete_old_res()
+
     with open('tls_list_cleaned.txt', 'r') as f:
         website_links = f.readlines()
 

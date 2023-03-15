@@ -10,3 +10,19 @@ def count_strings_in_file(file_path):
                 count += 1
     print(full_path + ' – count: ' + str(count))
     return count
+
+
+def delete_old_res():
+    # remove output files from previous runs
+    if path.exists('successful.txt'):
+        remove('successful.txt')
+    if path.exists('unsuccessful.txt'):
+        remove('unsuccessful.txt')
+    if path.exists('ssl_cert_err.txt'):
+        remove('ssl_cert_err.txt')
+    if path.exists('request_errors.txt'):
+        remove('request_errors.txt')
+    if path.exists('other_ssl_cert_err.txt'):
+        remove('other_ssl_cert_err.txt')
+    if path.exists('ssl_self_sign_err.txt'):
+        remove('ssl_self_sign_err.txt')
