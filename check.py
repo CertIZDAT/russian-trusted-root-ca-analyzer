@@ -2,7 +2,7 @@ import argparse
 import concurrent.futures
 import ssl
 from multiprocessing import cpu_count
-from time import time, sleep
+from time import sleep, time
 
 import requests
 from OpenSSL import crypto
@@ -69,9 +69,6 @@ def check_link(link, index, website_links, timeout):
         print(f'{index}/{len(website_links)}: {link}: {e}')
 
 
-timeout = 0
-
-
 def main():
     # Parse args
     parser = argparse.ArgumentParser(
@@ -91,8 +88,9 @@ def main():
     db.need_to_del_db(need_to_del_db)
 
     # Get values for all args
-    if int(args.timeout) <= 0:
-        print('WARN: timeout can\'t be less than 0, timeout was set to 15')
+    timeout = int(args.timeout)
+    if args.timeout <= 0:
+        print(f'WARN: provided timeout – {timeout} lees or equals to zero')
         sleep(3)
         timeout = 15
     db_name = args.name
