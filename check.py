@@ -124,7 +124,7 @@ def main():
 
     db.write_batch(db_name, trusted_count, self_count,
                    ssl_cert_err_filename, ssl_self_sign_err_filename, is_dataset_updated)
-    print('Results successfully saved to db: {}'.format(db_name))
+    print(f'Results successfully saved to db: {db_name}')
 
 
 if __name__ == '__main__':
@@ -135,7 +135,7 @@ if __name__ == '__main__':
     end_time = time()
     execution_time = end_time - start_time
 
-    print('timeout={}'.format(timeout))
+    print(f'timeout={timeout}')
     print(f'Execution time:\n\
         {execution_time:.2f} seconds,\n\
         {execution_time / 60:.2f} minutes, \n\

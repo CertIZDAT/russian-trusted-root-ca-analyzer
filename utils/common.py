@@ -9,10 +9,10 @@ def count_strings_in_file(file_path):
             for line in f:
                 if line.strip():
                     count += 1
-        print(full_path + ' – total lines: ' + str(count))
+        print(f'{full_path} – total lines: {str(count)}')
         return count
     except FileNotFoundError as e:
-        print('No such file or directory: {}'.format(full_path))
+        print(f'No such file or directory: {full_path}')
         return 0
 
 

@@ -6,7 +6,7 @@ from os.path import abspath, exists, expanduser
 def create_db_with_name(db_name):
     full_path_to_db = path.abspath(path.expanduser(db_name))
     if path.exists(full_path_to_db):
-        print('Database with name {} already exists'.format(db_name))
+        print(f'Database with name {db_name} already exists')
         return
 
     connection = sqlite3.connect(db_name)
@@ -43,14 +43,14 @@ def write_batch(db_name, trusted_count, self_count, path_to_trusted, path_to_sel
         with open(full_path_to_trusted, 'r') as trusted_ca:
             trusted_entries = [line.strip() for line in trusted_ca.readlines()]
     except FileNotFoundError:
-        print('No such file or directory: {}'.format(full_path_to_trusted))
+        print(f'No such file or directory: {full_path_to_trusted}')
         trusted_entries = []
 
     try:
         with open(full_path_to_self_sign, 'r') as self_signed:
             self_entries = [line.strip() for line in self_signed.readlines()]
     except FileNotFoundError:
-        print('No such file or directory: {}'.format(full_path_to_self_sign))
+        print(f'No such file or directory: {full_path_to_self_sign}')
         self_entries = []
 
     # Convert the string arrays to comma-separated strings
@@ -89,8 +89,8 @@ def need_to_del_db(need_to_del_db):
         full_path_to_db = abspath(expanduser(need_to_del_db))
         if exists(full_path_to_db):
             remove(full_path_to_db)
-            print('Database at {} deleted'.format(full_path_to_db))
+            print(f'Database at {full_path_to_db} deleted')
         else:
-            print('Can\'t delete database at {}!'.format(full_path_to_db))
+            print(f'Can\'t delete database at {full_path_to_db}!')
             exit(1)
         exit(0)
