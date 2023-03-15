@@ -2,7 +2,7 @@ import argparse
 import concurrent.futures
 import ssl
 from multiprocessing import cpu_count
-from time import time
+from time import time, sleep
 
 import requests
 from OpenSSL import crypto
@@ -91,7 +91,10 @@ def main():
     db.need_to_del_db(need_to_del_db)
 
     # Get values for all args
-    timeout = int(args.timeout)
+    if int(args.timeout) <= 0:
+        print('WARN: timeout can\'t be less than 0, timeout was set to 15')
+        sleep(3)
+        timeout = 15
     db_name = args.name
     is_dataset_updated = args.updated
 
