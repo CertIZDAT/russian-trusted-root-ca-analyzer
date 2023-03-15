@@ -136,7 +136,6 @@ if __name__ == '__main__':
     end_time = time()
     execution_time = end_time - start_time
 
-    print(f'timeout={timeout}')
     print(f'Execution time:\n\
         {execution_time:.2f} seconds,\n\
         {execution_time / 60:.2f} minutes, \n\
