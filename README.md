@@ -34,7 +34,7 @@ There are five files with results:
 
 Before running you should understand that many resources allow income traffic only from Russian IP's addresses.
 
-Note: Approximate analysis time with 8 cores, `timeout=15` and fast VPN is 30 minutes.
+Note: Approximate analysis time with 8 cores, `timeout=15` and fast VPN is 30 minutes and 50 minutes with `timeout=30`. Note: The higher the timeout value, the more accurate but slower the analysis.
 
 ### Analysis
 
