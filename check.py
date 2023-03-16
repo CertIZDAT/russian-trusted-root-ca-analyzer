@@ -31,17 +31,23 @@ def check_link(link, index, website_links, timeout):
                 f.write(link + '\n')
             print(
                 f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: HTTPS request successful')
+            return
         else:
             with open('unsuccessful.txt', 'a') as f:
                 f.write(
-                    link + ' – status code: {}'.format(response.status_code) + '\n')
+                    f'{link} – status code: {response.status_code}\n')
             print(
                 f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: HTTPS request failed with status code {response.status_code}')
-    except requests.exceptions.Timeout as e:
-        print(f'{index}/{len(website_links)}: {link}: Request timed out')
+            return
+
+    except (requests.exceptions.Timeout, requests.exceptions.ConnectTimeout) as e:
+        print(
+            f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Request timed out')
         with open('unsuccessful.txt', 'a') as f:
             f.write(
                 link + ' – Request timed out' + '\n')
+            return
+
     except requests.exceptions.SSLError as e:
         cert = ssl.get_server_certificate((link.split('//')[1], 443))
         x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert)
@@ -52,22 +58,34 @@ def check_link(link, index, website_links, timeout):
             print(
                 f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Russian affiliated certificate error – {issuer}')
             with open('ssl_cert_err.txt', 'a') as f:
-                f.write(link + ' – CA: {}'.format(issuer) + '\n')
+                f.write(f'{link} – CA: {issuer}\n')
+            return
         elif any(untrust in issuer for untrust in self_signed):
             print(
                 f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Russian self signed certificate error – {issuer}')
             with open('ssl_self_sign_err.txt', 'a') as f:
-                f.write(link + ' – CA: {}'.format(issuer) + '\n')
+                f.write(f'{link} – CA: {issuer}\n')
+            return
         else:
             print(
                 f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Other SSL certificate error – {issuer}')
             with open('other_ssl_cert_err.txt', 'a') as f:
-                f.write(link + ' – CA: {}'.format(issuer) + '\n')
+                f.write(f'{link} – CA: {issuer}\n')
+            return
 
-    except requests.exceptions.RequestException as e:
+    except (requests.exceptions.RequestException, ssl.SSLError, ssl.CertificateError, ssl.SSLError, ssl.SSLZeroReturnError, ssl.SSLWantReadError, ssl.SSLWantWriteError,
+            ssl.SSLSyscallError, ssl.SSLEOFError, ssl.SSLCertVerificationError) as e:
         with open('request_errors.txt', 'a') as f:
-            f.write(link + ' – error: {}'.format(e) + '\n')
-        print(f'{index}/{len(website_links)}: {link}: {e}')
+            f.write(f'{link} – error: {e}\n')
+        print(
+            f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: {e}')
+        return
+
+    except Exception as e:
+        print(f'FATAL REQUEST ERROR: {link}')
+        with open('request_errors.txt', 'a') as f:
+            f.write(f'{link} FATAL ERROR: {e}\n')
+        return
 
 
 def main():
@@ -103,7 +121,7 @@ def main():
         website_links = f.readlines()
 
     # create thread pool
-    with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count() * 6) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count() * 4) as executor:
         # submit tasks to thread pool
         futures = [executor.submit(check_link, link, i+1, website_links, timeout)
                    for i, link in enumerate(website_links)]
@@ -116,15 +134,19 @@ def main():
                 print(f'Error: {e}')
 
     # Save results to sqlite database
+    print('Creating db')
     db.create_db_with_name(db_name)
+    print('db created')
 
     ssl_cert_err_filename = 'ssl_cert_err.txt'
     ssl_self_sign_err_filename = 'ssl_self_sign_err.txt'
 
     trusted_count = common.count_strings_in_file(ssl_cert_err_filename)
     self_count = common.count_strings_in_file(ssl_self_sign_err_filename)
+    total_ds_size = common.count_strings_in_file('tls_list_cleaned.txt')
 
-    db.write_batch(db_name, trusted_count, self_count,
+    print('before write batch')
+    db.write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
                    ssl_cert_err_filename, ssl_self_sign_err_filename, is_dataset_updated)
     print(f'Results successfully saved to db: {db_name}')
 

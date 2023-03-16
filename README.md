@@ -78,6 +78,8 @@ Links format:
 
     id INTEGER PRIMARY KEY,                 # primary key
     date_time TEXT NOT NULL,                # current date and time (UTC)
+    timeout INTEGER NOT NULL                # timeout value for each run
+    total_ds_size INTEGER NOT NULL,         # total size of the dataset
     trusted_ca_count INTEGER NOT NULL,      # total sites count with Russian Trusted CA
     self_signed_count INTEGER NOT NULL,     # total sites count with self signed certificates
     list_of_trusted_ca TEXT NOT NULL,       # list of links contains sites with Russian Trusted CA

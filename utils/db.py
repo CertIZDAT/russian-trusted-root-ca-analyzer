@@ -17,6 +17,8 @@ def create_db_with_name(db_name):
     CREATE TABLE IF NOT EXISTS statistic_table (
         id INTEGER PRIMARY KEY,
         date_time TEXT NOT NULL,
+        timeout INTEGER NOT NULL,
+        total_ds_size INTEGER NOT NULL,
         trusted_ca_count INTEGER NOT NULL,
         self_signed_count INTEGER NOT NULL,
         list_of_trusted_ca TEXT NOT NULL,
@@ -28,10 +30,10 @@ def create_db_with_name(db_name):
     cursor.execute(create_table)
 
     connection.commit()
-    connection.close()
+    connection.close
 
 
-def write_batch(db_name, trusted_count, self_count, path_to_trusted, path_to_self, is_new_dataset=False):
+def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count, path_to_trusted, path_to_self, is_new_dataset=False):
     full_path_to_trusted = path.abspath(path.expanduser(path_to_trusted))
     full_path_to_self_sign = path.abspath(path.expanduser(path_to_self))
 
@@ -58,12 +60,12 @@ def write_batch(db_name, trusted_count, self_count, path_to_trusted, path_to_sel
     self_entries_str = ','.join(self_entries)
 
     insert_query = '''
-        INSERT INTO statistic_table (date_time, trusted_ca_count, self_signed_count, list_of_trusted_ca, list_of_self_sign, is_dataset_updated)
-        VALUES (DATETIME('now'), ?, ?, ?, ?, ?)
+        INSERT INTO statistic_table (date_time, timeout, total_ds_size, trusted_ca_count, self_signed_count, list_of_trusted_ca, list_of_self_sign, is_dataset_updated)
+        VALUES (DATETIME('now'), ?, ?, ?, ?, ?, ?, ?)
     '''
 
     try:
-        cursor.execute(insert_query, (trusted_count, self_count,
+        cursor.execute(insert_query, (timeout, total_ds_size, trusted_count, self_count,
                                       trusted_entries_str, self_entries_str, int(is_new_dataset == 'True')))
         connection.commit()
     except sqlite3.Error as e:
