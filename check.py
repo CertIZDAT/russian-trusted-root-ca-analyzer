@@ -30,13 +30,13 @@ def check_link(link, index, website_links, timeout):
             with open('successful.txt', 'a') as f:
                 f.write(link + '\n')
             print(
-                f'timeout: {timeout}, {index}/{len(website_links)}: {link}: HTTPS request successful')
+                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: HTTPS request successful')
         else:
             with open('unsuccessful.txt', 'a') as f:
                 f.write(
                     link + ' – status code: {}'.format(response.status_code) + '\n')
             print(
-                f'timeout: {timeout}, {index}/{len(website_links)}: {link}: HTTPS request failed with status code {response.status_code}')
+                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: HTTPS request failed with status code {response.status_code}')
     except requests.exceptions.Timeout as e:
         print(f'{index}/{len(website_links)}: {link}: Request timed out')
         with open('unsuccessful.txt', 'a') as f:
@@ -50,17 +50,17 @@ def check_link(link, index, website_links, timeout):
 
         if any(untrust in issuer for untrust in untrusted):
             print(
-                f'timeout: {timeout}, {index}/{len(website_links)}: {link}: Russian affiliated certificate error – {issuer}')
+                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Russian affiliated certificate error – {issuer}')
             with open('ssl_cert_err.txt', 'a') as f:
                 f.write(link + ' – CA: {}'.format(issuer) + '\n')
         elif any(untrust in issuer for untrust in self_signed):
             print(
-                f'timeout: {timeout}, {index}/{len(website_links)}: {link}: Russian self signed certificate error – {issuer}')
+                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Russian self signed certificate error – {issuer}')
             with open('ssl_self_sign_err.txt', 'a') as f:
                 f.write(link + ' – CA: {}'.format(issuer) + '\n')
         else:
             print(
-                f'timeout: {timeout}, {index}/{len(website_links)}: {link}: Other SSL certificate error – {issuer}')
+                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Other SSL certificate error – {issuer}')
             with open('other_ssl_cert_err.txt', 'a') as f:
                 f.write(link + ' – CA: {}'.format(issuer) + '\n')
 
