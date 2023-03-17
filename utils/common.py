@@ -17,19 +17,18 @@ def count_strings_in_file(file_path):
 
 
 def delete_old_res():
-    # remove output files from previous runs
-    if path.exists('successful.txt'):
-        remove('successful.txt')
-    if path.exists('unsuccessful.txt'):
-        remove('unsuccessful.txt')
-    if path.exists('ssl_cert_err.txt'):
-        remove('ssl_cert_err.txt')
-    if path.exists('request_errors.txt'):
-        remove('request_errors.txt')
-    if path.exists('other_ssl_cert_err.txt'):
-        remove('other_ssl_cert_err.txt')
-    if path.exists('ssl_self_sign_err.txt'):
-        remove('ssl_self_sign_err.txt')
+    # Remove output files from previous runs
+    files_to_delete = [
+        'successful.txt',
+        'unsuccessful.txt',
+        'ssl_cert_err.txt',
+        'request_errors.txt',
+        'other_ssl_cert_err.txt',
+        'ssl_self_sign_err.txt'
+    ]
+    for file in files_to_delete:
+        if path.exists(file):
+            remove(file)
 
 
 def read_entries_from_file(file_path):
