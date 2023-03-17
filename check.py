@@ -23,6 +23,9 @@ def check_link(link, index, website_links, timeout):
                    'SAMARA', 'Samara', 'SPb', 'Vladimir', 's-t-ORK', 'Donetsk', 'Karelia', 'favr.ru', 'Plesk']
 
     link = link.strip()
+    if link == '':
+        return
+
     if not link.startswith('http'):
         link = f'https://{link}'
     try:
@@ -31,19 +34,19 @@ def check_link(link, index, website_links, timeout):
             with open('successful.txt', 'a') as f:
                 f.write(link + '\n')
             print(
-                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: HTTPS request successful')
+                f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: HTTPS request successful')
             return
         else:
             with open('unsuccessful.txt', 'a') as f:
                 f.write(
                     f'{link} – status code: {response.status_code}\n')
             print(
-                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: HTTPS request failed with status code {response.status_code}')
+                f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: HTTPS request failed with status code {response.status_code}')
             return
 
     except (requests.exceptions.Timeout, requests.exceptions.ConnectTimeout) as e:
         print(
-            f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Request timed out')
+            f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: Request timed out')
         with open('unsuccessful.txt', 'a') as f:
             f.write(
                 link + ' – Request timed out' + '\n')
@@ -66,7 +69,7 @@ def check_link(link, index, website_links, timeout):
             error_message = 'Other SSL certificate error'
 
         print(
-            f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: {error_message} – {issuer}')
+            f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: {error_message} – {issuer}')
         with open(file_name, 'a') as f:
             f.write(f'{link} – CA: {issuer}\n')
         return
@@ -80,7 +83,7 @@ def check_link(link, index, website_links, timeout):
         with open('request_errors.txt', 'a') as f:
             f.write(f'{link} – error: {e}\n')
         print(
-            f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: {e}')
+            f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: {e}')
         return
 
     except Exception as e:
@@ -119,30 +122,35 @@ def main():
 
     common.delete_old_res()
 
-    with open('tls_list_cleaned.txt', 'r') as f:
-        website_links = f.readlines()
+    link_batches = common.read_links('tls_list_cleaned.txt')
 
-    # create thread pool
-    with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count() * 4) as executor:
-        # submit tasks to thread pool
-        futures = [executor.submit(check_link, link, i+1, website_links, timeout)
-                   for i, link in enumerate(website_links)]
+    last_idx = len(link_batches)
+    for idx, content in enumerate(link_batches):
+        print(f'\nProcessing: {idx + 1}/{last_idx} batch')
+        sleep(1)
 
-    # wait for tasks to complete with a timeout
-    completed, not_completed = concurrent.futures.wait(futures, timeout + 2)
+        # create thread pool
+        with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count() * 4) as executor:
+            # submit tasks to thread pool
+            futures = [executor.submit(check_link, link, i+1, content, timeout)
+                       for i, link in enumerate(content)]
 
-    # process completed tasks
-    for future in completed:
-        try:
-            _ = future.result()  # get result of task (not used in this case)
+        # wait for tasks to complete with a timeout
+        completed, not_completed = concurrent.futures.wait(
+            futures, timeout + 2)
 
-        except Exception as e:
-            print(f'Error: {e}')
+        # process completed tasks
+        for future in completed:
+            try:
+                _ = future.result()  # get result of task (not used in this case)
 
-    # process not completed tasks
-    for future in not_completed:
-        print('Future processing is cancelled')
-        future.cancel()
+            except Exception as e:
+                print(f'Error: {e}')
+
+        # process not completed tasks
+        for future in not_completed:
+            print('Future processing is cancelled')
+            future.cancel()
 
     # Save results to sqlite database
     db.create_db_with_name(db_name)

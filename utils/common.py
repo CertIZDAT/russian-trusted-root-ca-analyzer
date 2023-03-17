@@ -29,3 +29,22 @@ def delete_old_res():
     for file in files_to_delete:
         if path.exists(file):
             remove(file)
+
+
+def read_links(filename):
+    max_batch_size = 8000
+    with open(filename, 'r') as f:
+        website_links = f.readlines()
+
+    link_groups = []
+    current_group = []
+    for link in website_links:
+        current_group.append(link.strip())
+        if len(current_group) == max_batch_size:
+            link_groups.append(current_group)
+            current_group = []
+
+    if current_group:
+        link_groups.append(current_group)
+
+    return link_groups
