@@ -134,9 +134,7 @@ def main():
                 print(f'Error: {e}')
 
     # Save results to sqlite database
-    print('Creating db')
     db.create_db_with_name(db_name)
-    print('db created')
 
     ssl_cert_err_filename = 'ssl_cert_err.txt'
     ssl_self_sign_err_filename = 'ssl_self_sign_err.txt'
@@ -145,7 +143,6 @@ def main():
     self_count = common.count_strings_in_file(ssl_self_sign_err_filename)
     total_ds_size = common.count_strings_in_file('tls_list_cleaned.txt')
 
-    print('before write batch')
     db.write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
                    ssl_cert_err_filename, ssl_self_sign_err_filename, is_dataset_updated)
     print(f'Results successfully saved to db: {db_name}')
@@ -154,7 +151,9 @@ def main():
 if __name__ == '__main__':
     start_time = time()
 
+    print('Starting analysis pipeline...')
     main()
+    print('Analysis pipeline done')
 
     end_time = time()
     execution_time = end_time - start_time
