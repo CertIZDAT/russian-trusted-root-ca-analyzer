@@ -20,7 +20,7 @@ def check_link(link, index, website_links, timeout):
 
     self_signed = ['SberCA', 'St. Petersburg', 'VTB Group', 'Bank GPB', 'Администрация Партизанского городского округа',
                    'Kaliningrad', 'Sigma-REZERV', 'Moscow', 'Stavrolop', 'Saint Petersburg', 'Petrozavodsk', 'Bryansk', 'sklif',
-                   'SAMARA', 'Samara', 'SPb', 'Vladimir', 's-t-ORK', 'Donetsk', 'Karelia', 'favr.ru', 'Plesk']
+                   'SAMARA', 'Samara', 'SPb', 'Vladimir', 's-t-ORK', 'Donetsk', 'Karelia', 'favr.ru', 'Plesk', 'Stavropol']
 
     link = link.strip()
     if link == '':
