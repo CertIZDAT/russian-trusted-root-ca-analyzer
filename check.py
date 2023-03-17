@@ -1,8 +1,8 @@
 import argparse
-import concurrent.futures
 import ssl
 from multiprocessing import cpu_count
 from time import sleep, time
+import multiprocessing as mp
 
 import requests
 from OpenSSL import crypto
@@ -93,6 +93,17 @@ def check_link(link, index, website_links, timeout):
         return
 
 
+def process_batch(batch, timeout):
+    results = []
+    thread_multiplier = 8
+    with mp.Pool(mp.cpu_count() * thread_multiplier) as pool:
+        for i, link in enumerate(batch):
+            results.append(pool.apply_async(check_link, (link, i+1, batch, timeout)))
+        pool.close()
+        pool.join()
+    return results
+
+
 def main():
     # Parse args
     parser = argparse.ArgumentParser(
@@ -129,28 +140,16 @@ def main():
         print(f'\nProcessing: {idx + 1}/{last_idx} batch')
         sleep(1)
 
-        # create thread pool
-        with concurrent.futures.ThreadPoolExecutor(max_workers=cpu_count() * 4) as executor:
-            # submit tasks to thread pool
-            futures = [executor.submit(check_link, link, i+1, content, timeout)
-                       for i, link in enumerate(content)]
+        # process batch with multiprocessing
+        results = process_batch(content, timeout + 1)
 
-        # wait for tasks to complete with a timeout
-        completed, not_completed = concurrent.futures.wait(
-            futures, timeout + 2)
-
-        # process completed tasks
-        for future in completed:
+        # process completed and not completed tasks
+        for future in results:
             try:
-                _ = future.result()  # get result of task (not used in this case)
-
+                # get result of task (not used in this case)
+                _ = future.get(timeout=timeout + 1)
             except Exception as e:
                 print(f'Error: {e}')
-
-        # process not completed tasks
-        for future in not_completed:
-            print('Future processing is cancelled')
-            future.cancel()
 
     # Save results to sqlite database
     db.create_db_with_name(db_name)
