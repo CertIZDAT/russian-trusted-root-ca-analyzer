@@ -30,3 +30,12 @@ def delete_old_res():
         remove('other_ssl_cert_err.txt')
     if path.exists('ssl_self_sign_err.txt'):
         remove('ssl_self_sign_err.txt')
+
+
+def read_entries_from_file(file_path):
+    try:
+        with open(file_path, 'r') as f:
+            return [line.strip() for line in f.readlines()]
+    except FileNotFoundError:
+        print(f'No such file or directory: {file_path}')
+        return []
