@@ -84,6 +84,9 @@ Links format:
     self_signed_count INTEGER NOT NULL,     # total sites count with self signed certificates
     list_of_trusted_ca TEXT NOT NULL,       # list of links contains sites with Russian Trusted CA
     list_of_self_sign TEXT NOT NULL,        # list of links contains sites with self signed certificates
+    list_of_request_error TEXT NOT NULL,    # list of request errors
+    list_of_successful TEXT NOT NULL,       # list of successful requests
+    list_of_unsuccessful TEXT NOT NULL      # list of unsuccessful requests
     is_dataset_updated INTEGER NOT NULL     # bool flag, which must be set to true if the dataset has been updated
 
 ## Additional tools

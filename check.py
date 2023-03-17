@@ -73,8 +73,12 @@ def check_link(link, index, website_links, timeout):
                 f.write(f'{link} – CA: {issuer}\n')
             return
 
-    except (requests.exceptions.RequestException, ssl.SSLError, ssl.CertificateError, ssl.SSLError, ssl.SSLZeroReturnError, ssl.SSLWantReadError, ssl.SSLWantWriteError,
-            ssl.SSLSyscallError, ssl.SSLEOFError, ssl.SSLCertVerificationError) as e:
+    except (requests.exceptions.RequestException,
+            ssl.SSLError, ssl.CertificateError,
+            ssl.SSLError, ssl.SSLZeroReturnError,
+            ssl.SSLWantReadError, ssl.SSLWantWriteError,
+            ssl.SSLSyscallError, ssl.SSLEOFError,
+            ssl.SSLCertVerificationError) as e:
         with open('request_errors.txt', 'a') as f:
             f.write(f'{link} – error: {e}\n')
         print(
@@ -139,12 +143,25 @@ def main():
     ssl_cert_err_filename = 'ssl_cert_err.txt'
     ssl_self_sign_err_filename = 'ssl_self_sign_err.txt'
 
+    request_errors_filename = 'request_errors.txt'
+    successful_request_filename = 'successful.txt'
+    unsuccessful_requests_filename = 'unsuccessful.txt'
+
     trusted_count = common.count_strings_in_file(ssl_cert_err_filename)
     self_count = common.count_strings_in_file(ssl_self_sign_err_filename)
     total_ds_size = common.count_strings_in_file('tls_list_cleaned.txt')
 
-    db.write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
-                   ssl_cert_err_filename, ssl_self_sign_err_filename, is_dataset_updated)
+    db.write_batch(db_name=db_name,
+                   timeout=timeout,
+                   total_ds_size=total_ds_size,
+                   trusted_count=trusted_count,
+                   self_count=self_count,
+                   path_to_trusted=ssl_cert_err_filename,
+                   path_to_self=ssl_self_sign_err_filename,
+                   list_of_request_error=request_errors_filename,
+                   list_of_successful=successful_request_filename,
+                   list_of_unsuccessful=unsuccessful_requests_filename,
+                   is_new_dataset=is_dataset_updated)
     print(f'Results successfully saved to db: {db_name}')
 
 
