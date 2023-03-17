@@ -63,8 +63,9 @@ def check_link(link, index, website_links, timeout):
         else:
             file_name = 'other_ssl_cert_err.txt'
             error_message = 'Other SSL certificate error'
-        
-        print(f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: {error_message} – {issuer}')
+
+        print(
+            f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: {error_message} – {issuer}')
         with open(file_name, 'a') as f:
             f.write(f'{link} – CA: {issuer}\n')
 
