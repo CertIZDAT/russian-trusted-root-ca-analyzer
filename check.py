@@ -55,23 +55,18 @@ def check_link(link, index, website_links, timeout):
         issuer = x509.get_issuer().get_components()[2][1].decode()
 
         if any(untrust in issuer for untrust in untrusted):
-            print(
-                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Russian affiliated certificate error – {issuer}')
-            with open('ssl_cert_err.txt', 'a') as f:
-                f.write(f'{link} – CA: {issuer}\n')
-            return
+            file_name = 'ssl_cert_err.txt'
+            error_message = 'Russian affiliated certificate error'
         elif any(untrust in issuer for untrust in self_signed):
-            print(
-                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Russian self signed certificate error – {issuer}')
-            with open('ssl_self_sign_err.txt', 'a') as f:
-                f.write(f'{link} – CA: {issuer}\n')
-            return
+            file_name = 'ssl_self_sign_err.txt'
+            error_message = 'Russian self signed certificate error'
         else:
-            print(
-                f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: Other SSL certificate error – {issuer}')
-            with open('other_ssl_cert_err.txt', 'a') as f:
-                f.write(f'{link} – CA: {issuer}\n')
-            return
+            file_name = 'other_ssl_cert_err.txt'
+            error_message = 'Other SSL certificate error'
+        
+        print(f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: {error_message} – {issuer}')
+        with open(file_name, 'a') as f:
+            f.write(f'{link} – CA: {issuer}\n')
 
     except (requests.exceptions.RequestException,
             ssl.SSLError, ssl.CertificateError,
