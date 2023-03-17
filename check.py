@@ -1,8 +1,8 @@
 import argparse
+import multiprocessing as mp
 import ssl
 from multiprocessing import cpu_count
 from time import sleep, time
-import multiprocessing as mp
 
 import requests
 from OpenSSL import crypto
@@ -98,7 +98,8 @@ def process_batch(batch, timeout):
     thread_multiplier = 8
     with mp.Pool(mp.cpu_count() * thread_multiplier) as pool:
         for i, link in enumerate(batch):
-            results.append(pool.apply_async(check_link, (link, i+1, batch, timeout)))
+            results.append(pool.apply_async(
+                check_link, (link, i+1, batch, timeout)))
         pool.close()
         pool.join()
     return results
