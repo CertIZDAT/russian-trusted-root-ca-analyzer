@@ -127,12 +127,22 @@ def main():
         futures = [executor.submit(check_link, link, i+1, website_links, timeout)
                    for i, link in enumerate(website_links)]
 
-        # wait for tasks to complete
-        for future in concurrent.futures.as_completed(futures):
-            try:
-                _ = future.result()  # get result of task (not used in this case)
-            except Exception as e:
-                print(f'Error: {e}')
+    # wait for tasks to complete with a timeout
+    completed, not_completed = concurrent.futures.wait(futures, timeout + 2)
+
+    # process completed tasks
+    for future in completed:
+        try:
+            _ = future.result()  # get result of task (not used in this case)
+            print('Future processing is finished')
+
+        except Exception as e:
+            print(f'Error: {e}')
+
+    # process not completed tasks
+    for future in not_completed:
+        print('Future processing is cancelled')
+        future.cancel()
 
     # Save results to sqlite database
     db.create_db_with_name(db_name)
