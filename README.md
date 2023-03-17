@@ -17,6 +17,8 @@ Russian banks and other companies, including Sberbank, are facing severe sanctio
 
 ## Results
 
+Note: You should only run the analysis from Russian IP's.
+
 There are five files with results:
 
 - [ssl_cert_err.txt](ssl_cert_err.txt) – Failed request due to Russian Trusted Sub CA requirement;
