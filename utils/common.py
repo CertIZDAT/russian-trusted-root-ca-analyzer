@@ -29,12 +29,3 @@ def delete_old_res():
     for file in files_to_delete:
         if path.exists(file):
             remove(file)
-
-
-def read_entries_from_file(file_path):
-    try:
-        with open(file_path, 'r') as f:
-            return [line.strip() for line in f.readlines()]
-    except FileNotFoundError:
-        print(f'No such file or directory: {file_path}')
-        return []

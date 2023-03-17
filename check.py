@@ -68,6 +68,7 @@ def check_link(link, index, website_links, timeout):
             f'timeout: {timeout},\t{index}/{len(website_links)}: {link}: {error_message} – {issuer}')
         with open(file_name, 'a') as f:
             f.write(f'{link} – CA: {issuer}\n')
+        return
 
     except (requests.exceptions.RequestException,
             ssl.SSLError, ssl.CertificateError,

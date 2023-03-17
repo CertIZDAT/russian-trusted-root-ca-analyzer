@@ -2,8 +2,6 @@ import sqlite3
 from os import path, remove
 from os.path import abspath, exists, expanduser
 
-from utils import common
-
 
 def create_db_with_name(db_name):
     full_path_to_db = path.abspath(path.expanduser(db_name))
@@ -46,24 +44,55 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
     cursor = connection.cursor()
 
     # Read the data from the analysis pipeline
-    file_paths = {
-        path_to_trusted: 'trusted_entries',
-        path_to_trusted: 'self_entries',
-        list_of_request_error: 'request_errors_entries',
-        list_of_successful: 'successful_entries',
-        list_of_unsuccessful: 'unsuccessful_entries'
-    }
+  # Read the contents of the trusted text files into string arrays
+    try:
+        with open(path_to_trusted, 'r') as trusted_ca:
+            trusted_entries = [line.strip() for line in trusted_ca.readlines()]
+    except FileNotFoundError:
+        print(f'No such file or directory: {path_to_trusted}')
+        trusted_entries = []
 
-    entries = {}
-    for file_path, var_name in file_paths.items():
-        entries[var_name] = common.read_entries_from_file(file_path)
+    # Read the contents of the self signed text files into string arrays
+    try:
+        with open(path_to_self, 'r') as self_signed:
+            self_entries = [line.strip() for line in self_signed.readlines()]
+    except FileNotFoundError:
+        print(f'No such file or directory: {path_to_self}')
+        self_entries = []
 
-    trusted_entries_str = ','.join(entries['trusted_entries'])
-    self_entries_str = ','.join(entries['self_entries'])
-    request_error_entries_str = ','.join(entries['request_errors_entries'])
-    list_of_successful_entries_str = ','.join(entries['successful_entries'])
-    list_of_unsuccessful_entries_str = ','.join(
-        entries['unsuccessful_entries'])
+    # Read the contents of the request errors text files into string arrays
+    try:
+        with open(list_of_request_error, 'r') as self_signed:
+            request_errors_entries = [line.strip()
+                                      for line in self_signed.readlines()]
+    except FileNotFoundError:
+        print(f'No such file or directory: {list_of_request_error}')
+        request_errors_entries = []
+
+     # Read the contents of the successful request text files into string arrays
+    try:
+        with open(list_of_successful, 'r') as self_signed:
+            successful_entries = [line.strip()
+                                  for line in self_signed.readlines()]
+    except FileNotFoundError:
+        print(f'No such file or directory: {list_of_successful}')
+        successful_entries = []
+
+    # Read the contents of the unsuccessful request text files into string arrays
+    try:
+        with open(list_of_unsuccessful, 'r') as self_signed:
+            unsuccessful_entries = [line.strip()
+                                    for line in self_signed.readlines()]
+    except FileNotFoundError:
+        print(f'No such file or directory: {list_of_unsuccessful}')
+        unsuccessful_entries = []
+
+    # Convert the string arrays to comma-separated strings
+    trusted_entries_str = ','.join(trusted_entries)
+    self_entries_str = ','.join(self_entries)
+    request_error_entries_str = ','.join(request_errors_entries)
+    list_of_successful_entries_str = ','.join(successful_entries)
+    list_of_unsuccessful_entries_str = ','.join(unsuccessful_entries)
 
     # Add entries to database
     insert_query = '''
