@@ -135,7 +135,6 @@ def main():
     for future in completed:
         try:
             _ = future.result()  # get result of task (not used in this case)
-            print('Future processing is finished')
 
         except Exception as e:
             print(f'Error: {e}')
