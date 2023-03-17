@@ -42,16 +42,13 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
                 path_to_trusted, path_to_self, list_of_request_error,
                 list_of_successful, list_of_unsuccessful, is_new_dataset=False):
 
-    full_path_to_trusted = path.abspath(path.expanduser(path_to_trusted))
-    full_path_to_self_sign = path.abspath(path.expanduser(path_to_self))
-
     connection = sqlite3.connect(db_name)
     cursor = connection.cursor()
 
     # Read the data from the analysis pipeline
     file_paths = {
-        full_path_to_trusted: 'trusted_entries',
-        full_path_to_self_sign: 'self_entries',
+        path_to_trusted: 'trusted_entries',
+        path_to_trusted: 'self_entries',
         list_of_request_error: 'request_errors_entries',
         list_of_successful: 'successful_entries',
         list_of_unsuccessful: 'unsuccessful_entries'
