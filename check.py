@@ -33,7 +33,7 @@ def check_link(link, index, website_links, timeout, batch_idx, total_batch):
             with open('successful.txt', 'a') as f:
                 f.write(link + '\n')
             logger.logger.info(
-                f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: HTTPS request successf')
+                f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: HTTPS request successful')
             return
         else:
             with open('unsuccessful.txt', 'a') as f:
