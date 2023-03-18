@@ -1,12 +1,11 @@
 import argparse
-import multiprocessing as mp
 import ssl
 from time import sleep, time
 
 import requests
 from OpenSSL import crypto
 
-from utils import common, db, logger
+from utils import common, db, logger, threading
 
 
 def check_link(link, index, website_links, timeout, batch_idx, total_batch):
@@ -92,18 +91,6 @@ def check_link(link, index, website_links, timeout, batch_idx, total_batch):
         return
 
 
-def process_batch(batch, timeout, batch_idx, total_batch):
-    results = []
-    thread_multiplier = 8
-    with mp.Pool(mp.cpu_count() * thread_multiplier) as pool:
-        for i, link in enumerate(batch):
-            results.append(pool.apply_async(
-                check_link, (link, i+1, batch, timeout, batch_idx, total_batch)))
-        pool.close()
-        pool.join()
-    return results
-
-
 def main():
     # Parse args
     parser = argparse.ArgumentParser(
@@ -125,7 +112,8 @@ def main():
     # Get values for all args
     timeout = int(args.timeout)
     if args.timeout <= 0:
-        logger.logger.warn(f'WARN: provided timeout – {timeout} lees or equals to zero')
+        logger.logger.warn(
+            f'WARN: provided timeout – {timeout} lees or equals to zero')
         sleep(3)
         timeout = 15
     db_name = args.name
@@ -141,7 +129,11 @@ def main():
         sleep(1)
 
         # process batch with multiprocessing
-        results = process_batch(content, timeout + 1, idx + 1, last_idx)
+        results = threading.process_batch(target_func=check_link,
+                                          batch=content,
+                                          timeout=timeout + 1,
+                                          batch_idx=idx + 1,
+                                          total_batch=last_idx)
 
         # process completed and not completed tasks
         for future in results:
