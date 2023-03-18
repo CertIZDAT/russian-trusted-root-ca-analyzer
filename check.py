@@ -135,7 +135,7 @@ def main():
         # process batch with multiprocessing
         results = threading.process_batch(target_func=check_link,
                                           batch=content,
-                                          timeout=timeout + 1,
+                                          timeout=timeout,
                                           batch_idx=idx + 1,
                                           total_batch=last_idx)
 
@@ -143,7 +143,7 @@ def main():
         for future in results:
             try:
                 # get result of task (not used in this case)
-                _ = future.get(timeout=timeout + 1)
+                _ = future.get(timeout=timeout)
             except Exception as e:
                 logger.logger.error(f'Error: {e}')
 
