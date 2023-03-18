@@ -49,3 +49,8 @@ console_handler.setFormatter(__RemoveNewlineFormatter(formatter._fmt))
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
 sys.stdout = __StdoutToLogger(logger)
+
+
+def signal_handler(sig, _):
+    logger.warn('Signal %s received, exiting...', sig)
+    exit(0)

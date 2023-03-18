@@ -1,4 +1,5 @@
 import argparse
+import signal
 import ssl
 from time import sleep, time
 
@@ -92,6 +93,9 @@ def check_link(link, index, website_links, timeout, batch_idx, total_batch):
 
 
 def main():
+    # Register SIGINT signal handler
+    signal.signal(signal.SIGINT, logger.signal_handler)
+
     # Parse args
     parser = argparse.ArgumentParser(
         description='This script allows you to analyse which sites require a Russian Trusted CA certificate to work properly.')
