@@ -32,20 +32,20 @@ def check_link(link, index, website_links, timeout, batch_idx, total_batch):
         if response.status_code == 200:
             with open('successful.txt', 'a') as f:
                 f.write(link + '\n')
-            print(
-                f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: HTTPS request successful')
+            logger.logger.info(
+                f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: HTTPS request successf')
             return
         else:
             with open('unsuccessful.txt', 'a') as f:
                 f.write(
                     f'{link} – status code: {response.status_code}\n')
-            print(
-                f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: HTTPS request failed with status code {response.status_code}')
+            logger.logger.info(
+                f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: HTTPS request failed with status code {response.status_code}')
             return
 
     except (requests.exceptions.Timeout, requests.exceptions.ConnectTimeout) as e:
-        print(
-            f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: Request timed out')
+        logger.logger.info(
+            f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: Request timed out')
         with open('unsuccessful.txt', 'a') as f:
             f.write(
                 link + ' – Request timed out' + '\n')
@@ -67,8 +67,8 @@ def check_link(link, index, website_links, timeout, batch_idx, total_batch):
             file_name = 'other_ssl_cert_err.txt'
             error_message = 'Other SSL certificate error'
 
-        print(
-            f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: {error_message} – {issuer}')
+        logger.logger.info(
+            f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: {error_message} – {issuer}')
         with open(file_name, 'a') as f:
             f.write(f'{link} – CA: {issuer}\n')
         return
@@ -81,12 +81,12 @@ def check_link(link, index, website_links, timeout, batch_idx, total_batch):
             ssl.SSLCertVerificationError) as e:
         with open('request_errors.txt', 'a') as f:
             f.write(f'{link} – error: {e}\n')
-        print(
-            f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: {e}')
+        logger.logger.info(
+            f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: {e}')
         return
 
     except Exception as e:
-        print(f'FATAL REQUEST ERROR: {link}')
+        logger.logger.info(f'FATAL REQUEST ERROR: {link}')
         with open('request_errors.txt', 'a') as f:
             f.write(f'{link} FATAL ERROR: {e}\n')
         return
@@ -125,7 +125,7 @@ def main():
     # Get values for all args
     timeout = int(args.timeout)
     if args.timeout <= 0:
-        print(f'WARN: provided timeout – {timeout} lees or equals to zero')
+        logger.logger.warn(f'WARN: provided timeout – {timeout} lees or equals to zero')
         sleep(3)
         timeout = 15
     db_name = args.name
@@ -137,7 +137,7 @@ def main():
 
     last_idx = len(link_batches)
     for idx, content in enumerate(link_batches):
-        print(f'\nProcessing: {idx + 1}/{last_idx} batch')
+        logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
         sleep(1)
 
         # process batch with multiprocessing
@@ -149,7 +149,7 @@ def main():
                 # get result of task (not used in this case)
                 _ = future.get(timeout=timeout + 1)
             except Exception as e:
-                print(f'Error: {e}')
+                logger.logger.error(f'Error: {e}')
 
     # Save results to sqlite database
     db.create_db_with_name(db_name)
@@ -176,21 +176,21 @@ def main():
                    list_of_successful=successful_request_filename,
                    list_of_unsuccessful=unsuccessful_requests_filename,
                    is_new_dataset=is_dataset_updated)
-    print(f'Results successfully saved to db: {db_name}')
+    logger.logger.info(f'Results successfully saved to db: {db_name}')
 
 
 if __name__ == '__main__':
 
     start_time = time()
 
-    print('Starting analysis pipeline...')
+    logger.logger.info('Starting analysis pipeline...')
     main()
-    print('Analysis pipeline done')
+    logger.logger.info('Analysis pipeline done')
 
     end_time = time()
     execution_time = end_time - start_time
 
-    print(f'Execution time:\n\
+    logger.logger.info(f'Execution time:\n\
         {execution_time:.2f} seconds,\n\
         {execution_time / 60:.2f} minutes, \n\
         {execution_time / 60 / 60:.2f} hours.')

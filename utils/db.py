@@ -2,11 +2,13 @@ import sqlite3
 from os import path, remove
 from os.path import abspath, exists, expanduser
 
+from utils import logger
+
 
 def create_db_with_name(db_name):
     full_path_to_db = path.abspath(path.expanduser(db_name))
     if path.exists(full_path_to_db):
-        print(f'Database with name {db_name} already exists')
+        logger.logger.info(f'Database with name {db_name} already exists')
         return
 
     connection = sqlite3.connect(db_name)
@@ -44,12 +46,12 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
     cursor = connection.cursor()
 
     # Read the data from the analysis pipeline
-  # Read the contents of the trusted text files into string arrays
+    # Read the contents of the trusted text files into string arrays
     try:
         with open(path_to_trusted, 'r') as trusted_ca:
             trusted_entries = [line.strip() for line in trusted_ca.readlines()]
     except FileNotFoundError:
-        print(f'No such file or directory: {path_to_trusted}')
+        logger.logger.warn(f'No such file or directory: {path_to_trusted}')
         trusted_entries = []
 
     # Read the contents of the self signed text files into string arrays
@@ -57,7 +59,7 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
         with open(path_to_self, 'r') as self_signed:
             self_entries = [line.strip() for line in self_signed.readlines()]
     except FileNotFoundError:
-        print(f'No such file or directory: {path_to_self}')
+        logger.logger.warn(f'No such file or directory: {path_to_self}')
         self_entries = []
 
     # Read the contents of the request errors text files into string arrays
@@ -66,7 +68,8 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
             request_errors_entries = [line.strip()
                                       for line in self_signed.readlines()]
     except FileNotFoundError:
-        print(f'No such file or directory: {list_of_request_error}')
+        logger.logger.warn(
+            f'No such file or directory: {list_of_request_error}')
         request_errors_entries = []
 
      # Read the contents of the successful request text files into string arrays
@@ -75,7 +78,7 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
             successful_entries = [line.strip()
                                   for line in self_signed.readlines()]
     except FileNotFoundError:
-        print(f'No such file or directory: {list_of_successful}')
+        logger.logger.warn(f'No such file or directory: {list_of_successful}')
         successful_entries = []
 
     # Read the contents of the unsuccessful request text files into string arrays
@@ -84,7 +87,8 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
             unsuccessful_entries = [line.strip()
                                     for line in self_signed.readlines()]
     except FileNotFoundError:
-        print(f'No such file or directory: {list_of_unsuccessful}')
+        logger.logger.warn(
+            f'No such file or directory: {list_of_unsuccessful}')
         unsuccessful_entries = []
 
     # Convert the string arrays to comma-separated strings
@@ -109,7 +113,7 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
                                       int(is_new_dataset == 'True')))
         connection.commit()
     except sqlite3.Error as e:
-        print(f'Error executing SQL statement: {e}')
+        logger.logger.error(f'Error executing SQL statement: {e}')
         connection.close()
         exit(1)
     finally:
@@ -134,8 +138,9 @@ def need_to_del_db(need_to_del_db):
         full_path_to_db = abspath(expanduser(need_to_del_db))
         if exists(full_path_to_db):
             remove(full_path_to_db)
-            print(f'Database at {full_path_to_db} deleted')
+            logger.logger.info(f'Database at {full_path_to_db} deleted')
         else:
-            print(f'Can\'t delete database at {full_path_to_db}!')
+            logger.logger.error(
+                f'Can\'t delete database at {full_path_to_db}!')
             exit(1)
         exit(0)

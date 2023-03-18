@@ -1,5 +1,7 @@
 import sys
 
+from utils import logger
+
 # Check if the correct number of arguments were provided
 if len(sys.argv) != 3:
     print('Usage: python deduplicate.py input_file output_file')
@@ -24,3 +26,6 @@ with open(output_file_name, 'w') as output_file:
     # Write the unique links to the output file, one per line
     for link in unique_links:
         output_file.write(link)
+
+logger.logger.info(
+    f'Deduplication of the {input_file_name} completed successfully')

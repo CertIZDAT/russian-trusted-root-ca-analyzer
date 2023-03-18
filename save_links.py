@@ -7,6 +7,8 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 
+from utils import logger
+
 # Get the URL from the command-line argument
 if len(sys.argv) < 2:
     print('Usage: python script.py url')
@@ -33,3 +35,5 @@ with open('links.txt', 'w') as file:
             # If the netloc is not empty and ends with .ru, keep only the netloc
             if parsed_href.netloc and parsed_href.netloc.endswith('.ru'):
                 file.write(parsed_href.netloc + '\n')
+
+logger.logger.info('All links parsed successfully')

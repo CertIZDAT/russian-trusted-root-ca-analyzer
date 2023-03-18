@@ -1,5 +1,7 @@
 from os import path, remove
 
+from utils import logger
+
 
 def count_strings_in_file(file_path):
     try:
@@ -9,10 +11,10 @@ def count_strings_in_file(file_path):
             for line in f:
                 if line.strip():
                     count += 1
-        print(f'{full_path} – total lines: {str(count)}')
+        logger.logger.info(f'{full_path} – total lines: {str(count)}')
         return count
     except FileNotFoundError as e:
-        print(f'No such file or directory: {full_path}')
+        logger.logger.error(f'No such file or directory: {full_path}')
         return 0
 
 
