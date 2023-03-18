@@ -1,6 +1,7 @@
 import logging
 import sys
 from datetime import datetime
+from os import path, mkdir
 
 
 class __RemoveNewlineFormatter(logging.Formatter):
@@ -25,9 +26,16 @@ class __StdoutToLogger:
         pass
 
 
+def __create_logs_folder():
+    if not path.exists("logs"):
+        mkdir("logs")
+
+
 # create logger
 logger = logging.getLogger('CA-LOGGER')
 logger.setLevel(logging.DEBUG)
+
+__create_logs_folder()
 
 # create formatter
 formatter = logging.Formatter(
@@ -36,6 +44,7 @@ formatter = logging.Formatter(
 # create file handler and set level to INFO
 filename = datetime.now().strftime(
     "%Y-%m-%d %H:%M:%S") + '_logfile.log'
+
 file_handler = logging.FileHandler(f'logs/{filename}')
 file_handler.setLevel(logging.INFO)
 file_handler.setFormatter(__RemoveNewlineFormatter(formatter._fmt))
