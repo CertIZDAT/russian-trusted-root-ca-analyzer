@@ -99,7 +99,7 @@ def main():
     # Parse args
     parser = argparse.ArgumentParser(
         description='This script allows you to analyse which sites require a Russian Trusted CA certificate to work properly.')
-    parser.add_argument('--timeout', default=15, type=int,
+    parser.add_argument('--timeout', default=30, type=int,
                         help='Timeout for each web request, in seconds.')
     parser.add_argument('--name', default='statistics.db', type=str,
                         help='Database name, if it does not exist - it will be created.')
@@ -119,7 +119,7 @@ def main():
         logger.logger.warn(
             f'WARN: provided timeout – {timeout} lees or equals to zero')
         sleep(3)
-        timeout = 15
+        timeout = 30
     db_name = args.name
     is_dataset_updated = args.updated
 

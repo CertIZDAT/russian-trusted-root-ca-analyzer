@@ -36,7 +36,7 @@ There are five files with results:
 
 Before running you should understand that many resources allow income traffic only from Russian IP's addresses.
 
-Note: Approximate analysis time with 8 cores, `timeout=15` and fast VPN is 30 minutes and 50 minutes with `timeout=30`. Note: The higher the timeout value, the more accurate but slower the analysis.
+Note: Approximate analysis time with 8 cores, `timeout=30` and fast VPN is 40 minutes. Note: The higher the timeout value, the more accurate but slower the analysis.
 
 ### Analysis
 
@@ -55,14 +55,14 @@ deactivate                          # to deactivate python environment
 
 ### Parameters
 
-- `--timeout`, default=15, timeout for each web request, in seconds.
+- `--timeout`, default=30, timeout for each web request, in seconds.
 - `--name`, default='statistics.db', type=str, database name, if it does not exist - it will be created.
 - `--updated`, default=False, flag signalling that the dataset has been updated. This flag must be set to true if the dataset has been.
 - `--delete`, type=str, delete existed database with name.
 
 #### Examples
 
-- Run analysis with standard params (db name: `statistic.db`, `timeout`: 15 secs) – `python3 check.py`
+- Run analysis with standard params (db name: `statistic.db`, `timeout`: 30 secs) – `python3 check.py`
 - Run analysis with custom db name and timeout – `python3 check.py --name=test.db --timeout=5`
 - Run analysis with standard params, set dataset was updated before run – `python3 check.py --updated=True`
 - Delete db with custom name – `python3 check.py  --delete=test_db.db`
