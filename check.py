@@ -10,7 +10,7 @@ from OpenSSL import crypto
 from utils import common, db
 
 
-def check_link(link, index, website_links, timeout):
+def check_link(link, index, website_links, timeout, batch_idx, total_batch):
     # define headers to send with each request
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
@@ -34,19 +34,19 @@ def check_link(link, index, website_links, timeout):
             with open('successful.txt', 'a') as f:
                 f.write(link + '\n')
             print(
-                f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: HTTPS request successful')
+                f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: HTTPS request successful')
             return
         else:
             with open('unsuccessful.txt', 'a') as f:
                 f.write(
                     f'{link} – status code: {response.status_code}\n')
             print(
-                f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: HTTPS request failed with status code {response.status_code}')
+                f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: HTTPS request failed with status code {response.status_code}')
             return
 
     except (requests.exceptions.Timeout, requests.exceptions.ConnectTimeout) as e:
         print(
-            f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: Request timed out')
+            f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: Request timed out')
         with open('unsuccessful.txt', 'a') as f:
             f.write(
                 link + ' – Request timed out' + '\n')
@@ -69,7 +69,7 @@ def check_link(link, index, website_links, timeout):
             error_message = 'Other SSL certificate error'
 
         print(
-            f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: {error_message} – {issuer}')
+            f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: {error_message} – {issuer}')
         with open(file_name, 'a') as f:
             f.write(f'{link} – CA: {issuer}\n')
         return
@@ -83,7 +83,7 @@ def check_link(link, index, website_links, timeout):
         with open('request_errors.txt', 'a') as f:
             f.write(f'{link} – error: {e}\n')
         print(
-            f'TO: {timeout},\t{index}/{len(website_links)}:\t{link}: {e}')
+            f'TO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: {e}')
         return
 
     except Exception as e:
@@ -93,13 +93,13 @@ def check_link(link, index, website_links, timeout):
         return
 
 
-def process_batch(batch, timeout):
+def process_batch(batch, timeout, batch_idx, total_batch):
     results = []
     thread_multiplier = 8
     with mp.Pool(mp.cpu_count() * thread_multiplier) as pool:
         for i, link in enumerate(batch):
             results.append(pool.apply_async(
-                check_link, (link, i+1, batch, timeout)))
+                check_link, (link, i+1, batch, timeout, batch_idx, total_batch)))
         pool.close()
         pool.join()
     return results
@@ -142,7 +142,7 @@ def main():
         sleep(1)
 
         # process batch with multiprocessing
-        results = process_batch(content, timeout + 1)
+        results = process_batch(content, timeout + 1, idx + 1, last_idx)
 
         # process completed and not completed tasks
         for future in results:
