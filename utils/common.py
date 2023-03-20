@@ -9,7 +9,7 @@ def count_strings_in_file(file_path):
         count = 0
         with open(full_path, 'r') as f:
             for line in f:
-                if line.strip():
+                if line.strip() and not line == '\n':
                     count += 1
         logger.logger.info(f'{full_path} – total lines: {str(count)}')
         return count
