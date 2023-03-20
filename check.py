@@ -150,27 +150,41 @@ def main():
     # Save results to sqlite database
     db.create_db_with_name(db_name)
 
+    total_ds_size = common.count_strings_in_file('tls_list_cleaned.txt')
+
     ssl_cert_err_filename = 'ssl_cert_err.txt'
     ssl_self_sign_err_filename = 'ssl_self_sign_err.txt'
+    ssl_other_cert_err_filename = 'other_ssl_cert_err.txt'
 
-    request_errors_filename = 'request_errors.txt'
     successful_request_filename = 'successful.txt'
     unsuccessful_requests_filename = 'unsuccessful.txt'
+    request_errors_filename = 'request_errors.txt'
 
     trusted_count = common.count_strings_in_file(ssl_cert_err_filename)
     self_count = common.count_strings_in_file(ssl_self_sign_err_filename)
-    total_ds_size = common.count_strings_in_file('tls_list_cleaned.txt')
+    other_ssl_count = common.count_strings_in_file(ssl_other_cert_err_filename)
+
+    successful_count = common.count_strings_in_file(
+        successful_request_filename)
+    unsuccessful_count = common.count_strings_in_file(
+        unsuccessful_requests_filename)
+    error_count = common.count_strings_in_file(request_errors_filename)
 
     db.write_batch(db_name=db_name,
                    timeout=timeout,
                    total_ds_size=total_ds_size,
-                   trusted_count=trusted_count,
-                   self_count=self_count,
+                   trusted_ca_count=trusted_count,
+                   self_signed_count=self_count,
+                   other_ssl_count=other_ssl_count,
+                   successful_count=successful_count,
+                   unsuccessful_count=unsuccessful_count,
+                   error_count=error_count,
                    path_to_trusted=ssl_cert_err_filename,
                    path_to_self=ssl_self_sign_err_filename,
-                   list_of_request_error=request_errors_filename,
-                   list_of_successful=successful_request_filename,
-                   list_of_unsuccessful=unsuccessful_requests_filename,
+                   path_to_other_ssl=ssl_other_cert_err_filename,
+                   path_to_successful=successful_request_filename,
+                   path_to_unsuccessful=unsuccessful_requests_filename,
+                   path_to_request_errors=request_errors_filename,
                    is_new_dataset=is_dataset_updated)
     logger.logger.info(f'Results successfully saved to db: {db_name}')
 

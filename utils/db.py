@@ -23,11 +23,16 @@ def create_db_with_name(db_name):
         total_ds_size INTEGER NOT NULL,
         trusted_ca_count INTEGER NOT NULL,
         self_signed_count INTEGER NOT NULL,
+        other_ssl_count INTEGER NOT NULL,
+        successful_count INTEGER NOT NULL,
+        unsuccessful_count INTEGER NOT NULL,
+        error_count INTEGER NOT NULL,
         list_of_trusted_ca TEXT NOT NULL,
         list_of_self_sign TEXT NOT NULL,
-        list_of_request_error TEXT NOT NULL,
+        list_of_other_ssl_error TEXT NOT NULL,
         list_of_successful TEXT NOT NULL,
         list_of_unsuccessful TEXT NOT NULL,
+        list_of_request_error TEXT NOT NULL,
         is_dataset_updated INTEGER NOT NULL
     )
     '''
@@ -38,9 +43,10 @@ def create_db_with_name(db_name):
     connection.close
 
 
-def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
-                path_to_trusted, path_to_self, list_of_request_error,
-                list_of_successful, list_of_unsuccessful, is_new_dataset=False):
+def write_batch(db_name, timeout, total_ds_size, trusted_ca_count, self_signed_count,
+                other_ssl_count, successful_count, unsuccessful_count, error_count,
+                path_to_trusted, path_to_self, path_to_other_ssl, path_to_successful,
+                path_to_unsuccessful, path_to_request_errors, is_new_dataset=False):
 
     connection = sqlite3.connect(db_name)
     cursor = connection.cursor()
@@ -62,55 +68,79 @@ def write_batch(db_name, timeout, total_ds_size, trusted_count, self_count,
         logger.logger.warn(f'No such file or directory: {path_to_self}')
         self_entries = []
 
+    # Read the contents of the other ssl error text files into string arrays
+    try:
+        with open(path_to_other_ssl, 'r') as self_signed:
+            other_ssl_entries = [line.strip()
+                                 for line in self_signed.readlines()]
+    except FileNotFoundError:
+        logger.logger.warn(f'No such file or directory: {path_to_other_ssl}')
+        other_ssl_entries = []
+
     # Read the contents of the request errors text files into string arrays
     try:
-        with open(list_of_request_error, 'r') as self_signed:
+        with open(path_to_request_errors, 'r') as self_signed:
             request_errors_entries = [line.strip()
                                       for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warn(
-            f'No such file or directory: {list_of_request_error}')
+            f'No such file or directory: {path_to_request_errors}')
         request_errors_entries = []
 
      # Read the contents of the successful request text files into string arrays
     try:
-        with open(list_of_successful, 'r') as self_signed:
+        with open(path_to_successful, 'r') as self_signed:
             successful_entries = [line.strip()
                                   for line in self_signed.readlines()]
     except FileNotFoundError:
-        logger.logger.warn(f'No such file or directory: {list_of_successful}')
+        logger.logger.warn(
+            f'No such file or directory: {path_to_successful}')
         successful_entries = []
 
     # Read the contents of the unsuccessful request text files into string arrays
     try:
-        with open(list_of_unsuccessful, 'r') as self_signed:
+        with open(path_to_unsuccessful, 'r') as self_signed:
             unsuccessful_entries = [line.strip()
                                     for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warn(
-            f'No such file or directory: {list_of_unsuccessful}')
+            f'No such file or directory: {path_to_unsuccessful}')
         unsuccessful_entries = []
 
     # Convert the string arrays to comma-separated strings
-    trusted_entries_str = ','.join(trusted_entries)
-    self_entries_str = ','.join(self_entries)
-    request_error_entries_str = ','.join(request_errors_entries)
+    list_of_trusted_ca_entries_str = ','.join(trusted_entries)
+    list_of_self_sign_entries_std = ','.join(self_entries)
+    list_of_other_ssl_error_entries_str = ','.join(other_ssl_entries)
+
     list_of_successful_entries_str = ','.join(successful_entries)
     list_of_unsuccessful_entries_str = ','.join(unsuccessful_entries)
+    request_error_entries_str = ','.join(request_errors_entries)
 
     # Add entries to database
     insert_query = '''
         INSERT INTO statistic_table (date_time, timeout, total_ds_size, trusted_ca_count, 
-        self_signed_count, list_of_trusted_ca, list_of_self_sign, list_of_request_error, 
-        list_of_successful, list_of_unsuccessful, is_dataset_updated)
-        VALUES (DATETIME('now'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        self_signed_count, other_ssl_count, successful_count, unsuccessful_count, 
+        error_count, list_of_trusted_ca, list_of_self_sign, list_of_other_ssl_error, 
+        list_of_successful, list_of_unsuccessful, list_of_request_error, is_dataset_updated)
+        VALUES (DATETIME('now'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     '''
 
     try:
-        cursor.execute(insert_query, (timeout, total_ds_size, trusted_count, self_count,
-                                      trusted_entries_str, self_entries_str, request_error_entries_str,
-                                      list_of_successful_entries_str, list_of_unsuccessful_entries_str,
-                                      int(is_new_dataset == 'True')))
+        cursor.execute(insert_query, (timeout,
+                                      total_ds_size,
+                                      trusted_ca_count,
+                                      self_signed_count,
+                                      other_ssl_count,
+                                      successful_count,
+                                      unsuccessful_count,
+                                      error_count,
+                                      list_of_trusted_ca_entries_str,
+                                      list_of_self_sign_entries_std,
+                                      list_of_other_ssl_error_entries_str,
+                                      list_of_successful_entries_str,
+                                      list_of_unsuccessful_entries_str,
+                                      request_error_entries_str,
+                                      int(is_new_dataset == 'True' or is_new_dataset == 'true')))
         connection.commit()
     except sqlite3.Error as e:
         logger.logger.error(f'Error executing SQL statement: {e}')

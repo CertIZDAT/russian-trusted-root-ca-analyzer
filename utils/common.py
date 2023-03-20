@@ -4,6 +4,8 @@ from utils import logger
 
 
 def count_strings_in_file(file_path):
+    if not path.exists(file_path):
+        return 0
     try:
         full_path = path.abspath(path.expanduser(file_path))
         count = 0
