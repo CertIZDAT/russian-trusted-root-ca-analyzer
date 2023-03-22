@@ -1,6 +1,5 @@
 import sys
 
-from utils import logger
 
 # Check if the correct number of arguments were provided
 if len(sys.argv) != 3:
@@ -27,5 +26,5 @@ with open(output_file_name, 'w') as output_file:
     for link in unique_links:
         output_file.write(link)
 
-logger.logger.info(
+print(
     f'Deduplication of the {input_file_name} completed successfully')
