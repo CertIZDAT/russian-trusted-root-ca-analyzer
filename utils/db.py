@@ -37,10 +37,23 @@ def create_db_with_name(db_name):
     )
     '''
 
-    cursor.execute(create_table)
+    try:
+        cursor.execute(create_table)
+    except sqlite3.Error as e:
+        logger.logger.error(
+            f'Error can\'t execute SQL query for table creation: {e}')
+        connection.close()
+        exit(1)
 
-    connection.commit()
-    connection.close
+    try:
+        connection.commit()
+    except sqlite3.Error as e:
+        logger.logger.error(
+            f'Error can\'t execute SQL query for table creation: {e}')
+        connection.close()
+        exit(1)
+    finally:
+        connection.close()
 
 
 def write_batch(db_name, timeout, total_ds_size, trusted_ca_count, self_signed_count,
