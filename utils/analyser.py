@@ -4,21 +4,12 @@ from time import sleep
 import requests
 from OpenSSL import crypto
 
-from utils import logger, threading
+from utils import logger, threading, lists
 
 
 def _check_link(link, index, website_links, timeout, batch_idx, total_batch):
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
-                      'Chrome/58.0.3029.110 Safari/537.3'
-    }
-
-    untrusted = ['Russian Trusted']
-
-    self_signed = ['SberCA', 'St. Petersburg', 'VTB Group', 'Bank GPB', 'Администрация Партизанского городского округа',
-                   'Kaliningrad', 'Sigma-REZERV', 'Moscow', 'Stavrolop', 'Saint Petersburg', 'Petrozavodsk', 'Bryansk',
-                   'sklif', 'SAMARA', 'Samara', 'SPb', 'Vladimir', 's-t-ORK', 'Donetsk', 'Karelia', 'favr.ru', 'Plesk',
-                   'Stavropol']
+    untrusted = lists.untrusted
+    self_signed = lists.self_signed
 
     link = link.strip()
     if link == '':
@@ -27,7 +18,7 @@ def _check_link(link, index, website_links, timeout, batch_idx, total_batch):
     if not link.startswith('http'):
         link = f'https://{link}'
     try:
-        response = requests.get(link, headers=headers, timeout=timeout)
+        response = requests.get(link, headers=lists.headers, timeout=timeout)
         if response.status_code == 200:
             with open('successful.txt', 'a') as f:
                 f.write(link + '\n')
@@ -70,7 +61,8 @@ def _check_link(link, index, website_links, timeout, batch_idx, total_batch):
             error_message = 'Other SSL certificate error'
 
         logger.logger.info(
-            f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: {error_message} – {issuer}')
+            f'\n\tTO: {timeout}, B: {batch_idx}/{total_batch},\t{index}/{len(website_links)}:\t{link}: {error_message} '
+            f'– {issuer}')
         with open(file_name, 'a') as f:
             f.write(f'{link} – CA: {issuer}\n')
         return

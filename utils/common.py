@@ -12,7 +12,7 @@ def count_strings_in_file(file_path):
         count = 0
         with open(full_path, 'r') as f:
             for line in f:
-                if line.strip() and not line == '\n' and not line.startswith('#'):
+                if line.strip() and not line.startswith('#'):
                     count += 1
         return count
     except FileNotFoundError as e:
