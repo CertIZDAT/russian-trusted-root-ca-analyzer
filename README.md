@@ -58,14 +58,12 @@ deactivate                          # to deactivate python environment
 - `--timeout`, default=30, timeout for each web request, in seconds.
 - `--name`, default='statistics.db', type=str, database name, if it does not exist - it will be created.
 - `--updated`, default=False, flag signalling that the dataset has been updated. This flag must be set to true if the dataset has been.
-- `--delete`, type=str, delete existed database with name.
 
 #### Examples
 
 - Run analysis with standard params (db name: `statistic.db`, `timeout`: 30 secs) – `python3 check.py`
 - Run analysis with custom db name and timeout – `python3 check.py --name=test.db --timeout=5`
 - Run analysis with standard params, set dataset was updated before run – `python3 check.py --updated=True`
-- Delete db with custom name – `python3 check.py  --delete=test_db.db`
 - Get help – python3 check.py --help
 
 ## Contributions

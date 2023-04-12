@@ -11,7 +11,7 @@ def count_strings_in_file(file_path):
         count = 0
         with open(full_path, 'r') as f:
             for line in f:
-                if line.strip() and not line == '\n':
+                if line.strip() and not line == '\n' and not line.startswith('#'):
                     count += 1
         logger.logger.info(f'{full_path} – total lines: {str(count)}')
         return count
@@ -43,6 +43,8 @@ def read_links(filename):
     link_groups = []
     current_group = []
     for link in website_links:
+        if link.startswith('#'):
+            continue
         current_group.append(link.strip())
         if len(current_group) == max_batch_size:
             link_groups.append(current_group)
