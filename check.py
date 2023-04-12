@@ -21,10 +21,6 @@ def main():
                         help='Flag signalling that the dataset has been updated.')
     args = parser.parse_args()
 
-    # Check is db should be deleted
-    need_to_del_db = args.delete
-    db.need_to_del_db(need_to_del_db)
-
     # Get values for all args
     timeout = int(args.timeout)
     if args.timeout <= 0:
@@ -34,8 +30,6 @@ def main():
         timeout = 30
     db_name = args.name
     is_dataset_updated = args.updated
-
-    common.delete_old_res()
 
     link_batches = common.read_links('tls_list_cleaned.txt')
 

@@ -1,6 +1,5 @@
 import sqlite3
 from os import path, remove
-from os.path import abspath, exists, expanduser
 
 from utils import logger
 
@@ -173,17 +172,3 @@ def delete_db_with_name(db_name):
 
 class __InvalidDataBaseProvided(Exception):
     'Can\'t find database!'
-
-
-def need_to_del_db(need_to_del_db):
-    '''This function deletes the database with the specified name. After deletion, this function sends an exit code of 0 or 1.'''
-    if need_to_del_db:
-        full_path_to_db = abspath(expanduser(need_to_del_db))
-        if exists(full_path_to_db):
-            remove(full_path_to_db)
-            logger.logger.info(f'Database at {full_path_to_db} deleted')
-        else:
-            logger.logger.error(
-                f'Can\'t delete database at {full_path_to_db}!')
-            exit(1)
-        exit(0)
