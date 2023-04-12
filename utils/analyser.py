@@ -1,12 +1,13 @@
 import ssl
+from time import sleep
 
 import requests
 from OpenSSL import crypto
 
-from utils import logger
+from utils import logger, threading
 
 
-def check_link(link, index, website_links, timeout, batch_idx, total_batch):
+def _check_link(link, index, website_links, timeout, batch_idx, total_batch):
     headers = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                       'Chrome/58.0.3029.110 Safari/537.3'
@@ -91,3 +92,25 @@ def check_link(link, index, website_links, timeout, batch_idx, total_batch):
         with open('request_errors.txt', 'a') as f:
             f.write(f'{link} FATAL ERROR: {e}\n')
         return
+
+
+def analyse(link_batches, timeout):
+    last_idx = len(link_batches)
+    for idx, content in enumerate(link_batches):
+        logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
+        sleep(1)
+
+        # process batch with multiprocessing
+        results = threading.process_batch(target_func=_check_link,
+                                          batch=content,
+                                          timeout=timeout,
+                                          batch_idx=idx + 1,
+                                          total_batch=last_idx)
+
+        # process completed and not completed tasks
+        for future in results:
+            try:
+                # get result of task (not used in this case)
+                _ = future.get(timeout=timeout)
+            except Exception as e:
+                logger.logger.error(f'Error: {e}')

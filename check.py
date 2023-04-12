@@ -2,7 +2,7 @@ import argparse
 import signal
 from time import sleep, time
 
-from utils import common, db, logger, threading, analyser
+from utils import common, db, logger, analyser
 
 
 def main():
@@ -33,25 +33,7 @@ def main():
 
     link_batches = common.read_links('tls_list_cleaned.txt')
 
-    last_idx = len(link_batches)
-    for idx, content in enumerate(link_batches):
-        logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
-        sleep(1)
-
-        # process batch with multiprocessing
-        results = threading.process_batch(target_func=analyser.check_link,
-                                          batch=content,
-                                          timeout=timeout,
-                                          batch_idx=idx + 1,
-                                          total_batch=last_idx)
-
-        # process completed and not completed tasks
-        for future in results:
-            try:
-                # get result of task (not used in this case)
-                _ = future.get(timeout=timeout)
-            except Exception as e:
-                logger.logger.error(f'Error: {e}')
+    analyser.analyse(link_batches=link_batches, timeout=timeout)
 
     # Save results to sqlite database
     db.create_db_with_name(db_name)
