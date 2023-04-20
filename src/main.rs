@@ -18,7 +18,7 @@ fn main() {
     })
         .expect("Error setting Ctrl-C handler");
 
-    let gov_path = Path::new("dataset/govdomains_latest.txt");
+    let gov_path = Path::new("dataset/government_domains_latest.txt");
     let gov_contents_result = common::read_file_lines(gov_path);
     let mut gov_contents = match gov_contents_result {
         Ok(file) => file,
