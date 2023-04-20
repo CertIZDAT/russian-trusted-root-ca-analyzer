@@ -20,7 +20,7 @@ fn main() {
 
     let gov_path = Path::new("dataset/government_domains_latest.txt");
     let gov_contents_result = common::read_file_lines(gov_path);
-    let mut gov_contents = match gov_contents_result {
+    let gov_contents = match gov_contents_result {
         Ok(file) => file,
         Err(error) => panic!("Problem opening the file: {:?}", error),
     };

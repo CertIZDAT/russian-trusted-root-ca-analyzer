@@ -1,5 +1,4 @@
 use openssl::ssl::{SslConnector, SslMethod};
-use std::collections::HashMap;
 use std::error::Error;
 use std::net::{SocketAddr, TcpStream, ToSocketAddrs};
 use std::result::Result;
