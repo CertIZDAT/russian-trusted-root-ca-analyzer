@@ -27,12 +27,14 @@ fn main() {
 
     for url in gov_contents.iter() {
         println!("url: {:?}", url);
-        if let Ok(issuer) = ssl::get_issuer_for(url) {
-            let url_issuer = format!("{}: {}", url, issuer);
-            println!("{}", url_issuer);
-        } else {
-            println!("Failed to get SSL issuer for {}", url);
-        }
+        let _ = ssl::get_issuer_for(url);
+
+        // if let Ok(issuer) = ssl::get_issuer_for(url)) {
+        //     let url_issuer = format!("{}: {}", url, issuer);
+        //     println!("{}", url_issuer);
+        // } else {
+        //     println!("Failed to get SSL issuer for {}", url);
+        // }
     }
 
     while running.load(Ordering::SeqCst) {
