@@ -16,7 +16,6 @@ pub(crate) fn read_file_lines(path: &Path) -> Result<Vec<String>, Box<dyn Error>
             continue;
         }
 
-        let line = format!("https://{}", line.trim());
         lines.push(line);
     }
 

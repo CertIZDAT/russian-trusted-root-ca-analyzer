@@ -16,7 +16,7 @@ fn main() {
     ctrlc::set_handler(move || {
         r.store(false, Ordering::SeqCst);
     })
-        .expect("Error setting Ctrl-C handler");
+    .expect("Error setting Ctrl-C handler");
 
     let gov_path = Path::new("dataset/government_domains_latest.txt");
     let gov_contents_result = common::read_file_lines(gov_path);
@@ -25,8 +25,8 @@ fn main() {
         Err(error) => panic!("Problem opening the file: {:?}", error),
     };
 
-    gov_contents = vec!["google.com".to_string()];
     for url in gov_contents.iter() {
+        println!("url: {:?}", url);
         if let Ok(issuer) = ssl::get_issuer_for(url) {
             let url_issuer = format!("{}: {}", url, issuer);
             println!("{}", url_issuer);
