@@ -5,6 +5,7 @@ use std::net::{SocketAddr, TcpStream, ToSocketAddrs};
 use std::result::Result;
 use std::time::Duration;
 
+
 const HEADER: &[(&str, &str)] = &[("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")];
 
 pub(crate) fn get_issuer_for(url: &str) -> Result<String, Box<dyn Error>> {
@@ -22,21 +23,27 @@ pub(crate) fn get_issuer_for(url: &str) -> Result<String, Box<dyn Error>> {
     let timeout = Duration::from_secs(5);
     match TcpStream::connect_timeout(&socket_addr, timeout) {
         Ok(stream) => {
-            let ssl_stream = connector.connect(&url, stream).unwrap();
-            let cert = ssl_stream.ssl().peer_certificate().unwrap();
+            match connector.connect(&url, stream) {
+                Ok(ssl_stream) => {
+                    let cert = ssl_stream.ssl().peer_certificate().unwrap();
 
-            // Extract the SSL issuer from the certificate
-            let issuer = cert
-                .issuer_name()
-                .entries()
-                .find(|entry| entry.object().nid() == openssl::nid::Nid::COMMONNAME)
-                .unwrap()
-                .data()
-                .as_utf8()
-                .unwrap()
-                .to_string();
+                    // Extract the SSL issuer from the certificate
+                    let issuer = cert
+                        .issuer_name()
+                        .entries()
+                        .find(|entry| entry.object().nid() == openssl::nid::Nid::COMMONNAME)
+                        .unwrap()
+                        .data()
+                        .as_utf8()
+                        .unwrap()
+                        .to_string();
 
-            Ok(issuer)
+                    Ok(issuer)
+                }
+                Err(err) => {
+                    return Err(Box::new(err));
+                }
+            }
         }
         Err(e) => {
             eprintln!("Error connecting to {}: {:?}", url, e);

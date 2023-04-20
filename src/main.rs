@@ -20,18 +20,20 @@ fn main() {
 
     let gov_path = Path::new("dataset/govdomains_latest.txt");
     let gov_contents_result = common::read_file_lines(gov_path);
-    let gov_contents = match gov_contents_result {
+    let mut gov_contents = match gov_contents_result {
         Ok(file) => file,
         Err(error) => panic!("Problem opening the file: {:?}", error),
     };
 
-    let url = "google.com";
-    let res = ssl::get_issuer_for(url);
-    println!(
-        "issuer for {} is: {:?}",
-        url,
-        res.unwrap_or(format!("Error unwrapping issuer for url: {url}"))
-    );
+    gov_contents = vec!["google.com".to_string()];
+    for url in gov_contents.iter() {
+        if let Ok(issuer) = ssl::get_issuer_for(url) {
+            let url_issuer = format!("{}: {}", url, issuer);
+            println!("{}", url_issuer);
+        } else {
+            println!("Failed to get SSL issuer for {}", url);
+        }
+    }
 
     while running.load(Ordering::SeqCst) {
         thread::sleep(Duration::from_millis(100));
