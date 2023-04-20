@@ -1,0 +1,27 @@
+// const UNTRUSTED_CA: &str = "Russian Trusted";
+
+// const SELF_SIGNED_ISSUERS: [&str; 23] = [
+//     "SberCA",
+//     "St. Petersburg",
+//     "VTB Group",
+//     "Bank GPB",
+//     "Администрация Партизанского городского округа",
+//     "Kaliningrad",
+//     "Sigma-REZERV",
+//     "Moscow",
+//     "Stavrolop",
+//     "Saint Petersburg",
+//     "Petrozavodsk",
+//     "Bryansk",
+//     "sklif",
+//     "SAMARA",
+//     "Samara",
+//     "SPb",
+//     "Vladimir",
+//     "s-t-ORK",
+//     "Donetsk",
+//     "Karelia",
+//     "favr.ru",
+//     "Plesk",
+//     "Stavropol",
+// ];
