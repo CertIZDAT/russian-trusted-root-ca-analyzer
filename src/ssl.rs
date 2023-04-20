@@ -8,25 +8,27 @@ use std::time::Instant;
 // const HEADER: &[(&str, &str)] = &[("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3")];
 
 pub(crate) fn get_issuer_for(url: &str) -> Result<String, Box<dyn Error>> {
-    const TIMEOUT_IN_SEC: u64 = 5;
+    const FUNC_TIMEOUT_IN_SEC: u64 = 3;
     // let headers = HEADER.iter().map(|(k, v)| (*k, *v)).collect::<HashMap<_, _>>();
 
     let connector = SslConnector::builder(SslMethod::tls()).unwrap().build();
     let host = format!("{}:{}", url, 443);
+    // FIXME: thread 'main' panicked at 'called `Result::unwrap()` on an `Err` value: Custom { kind: Uncategorized, error: "failed to lookup address information: nodename nor servname provided, or not known" }', src/ssl.rs:16:44
+    // url: "devutils.edu.mos.ru"
     let mut addrs = host.to_socket_addrs().unwrap();
 
     // Get the first address from the vector
     let socket_data = addrs.next().unwrap();
     let socket_addr = SocketAddr::new(socket_data.ip(), socket_data.port());
 
-    let timeout = Duration::from_secs(5);
+    let ssl_timeout = Duration::from_secs(5);
     let start = Instant::now(); // Start timer
-    match TcpStream::connect_timeout(&socket_addr, timeout) {
+    match TcpStream::connect_timeout(&socket_addr, ssl_timeout) {
         Ok(stream) => {
             match connector.connect(&url, stream) {
                 Ok(ssl_stream) => {
                     let cert = ssl_stream.ssl().peer_certificate().unwrap();
-
+                    // TODO: Strange timeout behavior: tula.vybory.izbirkom.ru etc...
                     // Extract the SSL issuer from the certificate
                     let issuer = cert
                         .issuer_name()
@@ -39,7 +41,7 @@ pub(crate) fn get_issuer_for(url: &str) -> Result<String, Box<dyn Error>> {
                         .to_string();
 
                     let duration = start.elapsed(); // Stop timer
-                    if duration.as_secs() >= TIMEOUT_IN_SEC {
+                    if duration.as_secs() >= FUNC_TIMEOUT_IN_SEC {
                         return Err(format!("Timeout error").into());
                     }
 
