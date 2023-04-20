@@ -1,5 +1,3 @@
-// const UNTRUSTED_CA: &str = "Russian Trusted";
-
 // const SELF_SIGNED_ISSUERS: [&str; 23] = [
 //     "SberCA",
 //     "St. Petersburg",

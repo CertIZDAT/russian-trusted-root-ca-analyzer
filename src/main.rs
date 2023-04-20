@@ -1,8 +1,6 @@
 use std::path::Path;
 use std::sync::atomic::{AtomicBool, Ordering};
 use std::sync::Arc;
-use std::thread;
-use std::time::Duration;
 
 mod common;
 mod consts;
@@ -25,20 +23,10 @@ fn main() {
         Err(error) => panic!("Problem opening the file: {:?}", error),
     };
 
-    for url in gov_contents.iter() {
-        println!("url: {:?}", url);
-        let _ = ssl::get_issuer_for(url);
-
-        // if let Ok(issuer) = ssl::get_issuer_for(url)) {
-        //     let url_issuer = format!("{}: {}", url, issuer);
-        //     println!("{}", url_issuer);
-        // } else {
-        //     println!("Failed to get SSL issuer for {}", url);
-        // }
-    }
-
     while running.load(Ordering::SeqCst) {
-        thread::sleep(Duration::from_millis(100));
+        for url in gov_contents.iter() {
+            println!("{:?}", ssl::get_issuer_for(url))
+        }
         break;
     }
 }
