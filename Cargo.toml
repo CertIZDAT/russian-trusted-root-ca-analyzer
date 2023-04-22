@@ -4,8 +4,9 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-ctrlc = "3.2.5"
+num_threads = "0.1.6"
 openssl = "0.10.50"
+threadpool = "1.8.1"
 
 [profile.release]
 opt-level = "z"
