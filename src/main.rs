@@ -46,7 +46,7 @@ fn main() {
                 return;
             }
             if url_stats[1].contains("Russian Trusted") {
-                println!("{} – {}", url_clone, url_stats[1])
+                println!("\x1b[93m{} – {}\x1b[0m", url_clone, url_stats[1])
             } else {
                 println!("{} skipped", url_clone)
             }
