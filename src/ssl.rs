@@ -29,7 +29,6 @@ pub(crate) fn get_issuer_for(url: &str) -> Result<String, Box<dyn Error>> {
         });
 
     // Connect to the remote host and negotiate the SSL handshake
-    // TODO: Handle timeout err – return error(url, "timed out");
     let stream = TcpStream::connect_timeout(&socket_addr, SSL_TIMEOUT)?;
     let ssl_stream = ssl_connector_builder
         .build()

@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-num_threads = "0.1.6"
+num_cpus = "1.15.0"
 openssl = "0.10.50"
 threadpool = "1.8.1"
 
