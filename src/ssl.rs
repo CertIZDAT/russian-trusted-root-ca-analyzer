@@ -44,5 +44,5 @@ pub(crate) fn get_issuer_for(url: &str) -> Result<String, Box<dyn Error>> {
         .map(|entry| entry.data().as_utf8().unwrap().to_string())
         .collect();
 
-    Ok(format!("url: {}, name: {}", url, issuer_name[2]).to_string())
+    Ok(format!("{};{}", url, issuer_name[2]).to_string())
 }

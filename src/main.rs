@@ -25,7 +25,18 @@ fn main() {
 
     while running.load(Ordering::SeqCst) {
         for url in gov_contents.iter() {
-            println!("{:?}", ssl::get_issuer_for(url))
+            let info_result = ssl::get_issuer_for(url);
+            let res = match info_result {
+                Ok(info) => info,
+                Err(error) => {
+                    format!("Error getting the issuer for {}, err: {}", url, error);
+                    continue;
+                }
+            };
+            let url_stats: Vec<String> = res.split(';').map(String::from).collect();
+            if url_stats[1].contains("Russian") {
+                println!("{} – {}", url, url_stats[1])
+            }
         }
         break;
     }
