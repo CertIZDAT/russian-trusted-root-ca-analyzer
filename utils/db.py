@@ -1,5 +1,5 @@
 import sqlite3
-from os import path, remove
+from os import path
 from sqlite3 import Connection, Cursor
 
 from utils import logger
@@ -57,10 +57,10 @@ def create_db_with_name(db_name: str) -> None:
         connection.close()
 
 
-def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count: int, self_signed_count: int,
-                other_ssl_count: int, successful_count: int, unsuccessful_count: int, error_count: int,
-                path_to_trusted: str, path_to_self: str, path_to_other_ssl: str, path_to_successful: str,
-                path_to_unsuccessful: str, path_to_request_errors: str, is_new_dataset: bool = False) -> None:
+def save_res_to_db(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count: int, self_signed_count: int,
+                   other_ssl_count: int, successful_count: int, unsuccessful_count: int, error_count: int,
+                   path_to_trusted: str, path_to_self: str, path_to_other_ssl: str, path_to_successful: str,
+                   path_to_unsuccessful: str, path_to_request_errors: str, is_new_dataset: bool = False) -> None:
     connection: Connection = sqlite3.connect(db_name)
     cursor: Cursor = connection.cursor()
 
@@ -70,7 +70,7 @@ def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count
         with open(path_to_trusted, 'r') as trusted_ca:
             trusted_entries = [line.strip() for line in trusted_ca.readlines()]
     except FileNotFoundError:
-        logger.logger.warn(f'No such file or directory: {path_to_trusted}')
+        logger.logger.warning(f'No such file or directory: {path_to_trusted}')
         trusted_entries: list[str] = []
 
     # Read the contents of the self-signed text files into string arrays
@@ -78,7 +78,7 @@ def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count
         with open(path_to_self, 'r') as self_signed:
             self_entries: list[str] = [line.strip() for line in self_signed.readlines()]
     except FileNotFoundError:
-        logger.logger.warn(f'No such file or directory: {path_to_self}')
+        logger.logger.warning(f'No such file or directory: {path_to_self}')
         self_entries: list[None] = []
 
     # Read the contents of the other ssl error text files into string arrays
@@ -87,7 +87,7 @@ def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count
             other_ssl_entries: list[str] = [line.strip()
                                             for line in self_signed.readlines()]
     except FileNotFoundError:
-        logger.logger.warn(f'No such file or directory: {path_to_other_ssl}')
+        logger.logger.warning(f'No such file or directory: {path_to_other_ssl}')
         other_ssl_entries: list[None] = []
 
     # Read the contents of the request errors text files into string arrays
@@ -96,7 +96,7 @@ def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count
             request_errors_entries: list[str] = [line.strip()
                                                  for line in self_signed.readlines()]
     except FileNotFoundError:
-        logger.logger.warn(
+        logger.logger.warning(
             f'No such file or directory: {path_to_request_errors}')
         request_errors_entries: list[None] = []
 
@@ -106,7 +106,7 @@ def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count
             successful_entries: list[str] = [line.strip()
                                              for line in self_signed.readlines()]
     except FileNotFoundError:
-        logger.logger.warn(
+        logger.logger.warning(
             f'No such file or directory: {path_to_successful}')
         successful_entries: list[None] = []
 
@@ -116,7 +116,7 @@ def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count
             unsuccessful_entries: list[str] = [line.strip()
                                                for line in self_signed.readlines()]
     except FileNotFoundError:
-        logger.logger.warn(
+        logger.logger.warning(
             f'No such file or directory: {path_to_unsuccessful}')
         unsuccessful_entries: list[None] = []
 

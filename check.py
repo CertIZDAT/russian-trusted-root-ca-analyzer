@@ -70,22 +70,22 @@ def main() -> None:
         unsuccessful_requests_filename)
     error_count = common.count_strings_in_file(request_errors_filename)
 
-    db.write_batch(db_name=db_name,
-                   timeout=timeout,
-                   total_ds_size=total_ds_size,
-                   trusted_ca_count=trusted_count,
-                   self_signed_count=self_count,
-                   other_ssl_count=other_ssl_count,
-                   successful_count=successful_count,
-                   unsuccessful_count=unsuccessful_count,
-                   error_count=error_count,
-                   path_to_trusted=ssl_cert_err_filename,
-                   path_to_self=ssl_self_sign_err_filename,
-                   path_to_other_ssl=ssl_other_cert_err_filename,
-                   path_to_successful=successful_request_filename,
-                   path_to_unsuccessful=unsuccessful_requests_filename,
-                   path_to_request_errors=request_errors_filename,
-                   is_new_dataset=is_dataset_updated)
+    db.save_res_to_db(db_name=db_name,
+                      timeout=timeout,
+                      total_ds_size=total_ds_size,
+                      trusted_ca_count=trusted_count,
+                      self_signed_count=self_count,
+                      other_ssl_count=other_ssl_count,
+                      successful_count=successful_count,
+                      unsuccessful_count=unsuccessful_count,
+                      error_count=error_count,
+                      path_to_trusted=ssl_cert_err_filename,
+                      path_to_self=ssl_self_sign_err_filename,
+                      path_to_other_ssl=ssl_other_cert_err_filename,
+                      path_to_successful=successful_request_filename,
+                      path_to_unsuccessful=unsuccessful_requests_filename,
+                      path_to_request_errors=request_errors_filename,
+                      is_new_dataset=is_dataset_updated)
     logger.logger.info(f'Results successfully saved to db: {db_name}')
 
 
