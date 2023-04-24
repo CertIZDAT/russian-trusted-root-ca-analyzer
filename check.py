@@ -5,8 +5,8 @@ from time import sleep, time
 from utils import common, db, logger, analyser
 
 db_name: str = ''
-is_dataset_updated: bool = False
 timeout: int = 30
+is_dataset_updated: bool = False
 
 
 def main() -> None:
@@ -46,6 +46,7 @@ def main() -> None:
 
     analyser.analyse(link_batches=link_batches)
 
+    exit(0)
     # Save results to sqlite database
     db.create_db_with_name(db_name)
 
