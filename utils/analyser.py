@@ -61,7 +61,7 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
         logger.logger.info(
             f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: '
             f'Request timed out\n')
-        with open('results/unsuccessful.txt', 'a') as f:
+        with open('results/timeout_err.txt', 'a') as f:
             f.write(
                 link + ' – Request timed out' + '\n')
             return

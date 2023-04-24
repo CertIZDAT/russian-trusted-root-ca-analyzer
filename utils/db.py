@@ -161,16 +161,3 @@ def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count
         exit(1)
     finally:
         connection.close()
-
-
-# TODO: Read db_name from global
-def delete_db_with_name(db_name: str) -> None:
-    full_path_to_db: str = path.abspath(path.expanduser(db_name))
-    if path.exists(full_path_to_db):
-        remove(full_path_to_db)
-    else:
-        raise __InvalidDataBaseProvided
-
-
-class __InvalidDataBaseProvided(Exception):
-    'Can\'t find database!'
