@@ -20,13 +20,13 @@ def count_strings_in_file(file_path: str):
         return 0
 
 
-def read_links(filename: str):
+def read_links(filename: str) -> list[list[str]]:
     MAX_BATCH_SIZE: int = 8000
     with open(filename, 'r') as f:
         website_links: list = f.readlines()
 
-    link_groups: list = []
-    current_group: list = []
+    link_groups: list[list[str]] = []
+    current_group: list[str] = []
     for link in website_links:
         if link.startswith('#'):
             continue

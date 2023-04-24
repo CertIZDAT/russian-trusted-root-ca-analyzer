@@ -40,9 +40,11 @@ def main() -> None:
     global is_dataset_updated
     is_dataset_updated = args.updated
 
-    link_batches = common.read_links('tls_list_cleaned.txt')
+    link_batches: tuple = (common.read_links('dataset/govdomains.txt'),
+                           common.read_links('dataset/social.txt'),
+                           common.read_links('dataset/top-100.txt'))
 
-    analyser.analyse(link_batches=link_batches, timeout=timeout)
+    analyser.analyse(link_batches=link_batches)
 
     # Save results to sqlite database
     db.create_db_with_name(db_name)
