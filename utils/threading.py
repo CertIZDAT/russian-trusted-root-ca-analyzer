@@ -1,7 +1,7 @@
 import multiprocessing as mp
 
 
-def process_batch(target_func, batch, batch_idx, total_batch) -> list:
+def process_batch(target_func, batch, batch_idx: int, total_batch) -> list:
     results: list = []
     thread_multiplier: int = 8
     with mp.Pool(mp.cpu_count() * thread_multiplier) as pool:

@@ -9,7 +9,7 @@ from utils import logger, threading, lists
 from check import timeout
 
 
-def _check_link(link: str, index: int, website_links, batch_idx: int, total_batch: int):
+def _check_link(link: str, index: int, website_links, batch_idx: int, total_batch: int) -> None:
     untrusted: list[str] = lists.untrusted
     self_signed: list[str] = lists.self_signed
 
@@ -90,20 +90,23 @@ def _check_link(link: str, index: int, website_links, batch_idx: int, total_batc
 
 def analyse(link_batches: tuple):
     last_idx: int = len(link_batches)
-    for idx, content in enumerate(link_batches):
-        logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
-        sleep(1)
+    idx: int = 0
+    for tup in link_batches:
+        for _, content in enumerate(tup):
+            logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
+            sleep(1)
 
-        # process batch with multiprocessing
-        results: list = threading.process_batch(target_func=_check_link,
-                                                batch=content,
-                                                batch_idx=idx + 1,
-                                                total_batch=last_idx)
+            # process batch with multiprocessing
+            results: list = threading.process_batch(target_func=_check_link,
+                                                    batch=content,
+                                                    batch_idx=idx + 1,
+                                                    total_batch=last_idx)
 
-        # process completed and not completed tasks
-        for future in results:
-            try:
-                # get result of task (not used in this case)
-                _ = future.get()
-            except Exception as e:
-                logger.logger.error(f'Error: {e}')
+            # process completed and not completed tasks
+            for future in results:
+                try:
+                    # get result of task (not used in this case)
+                    _ = future.get()
+                except Exception as e:
+                    logger.logger.error(f'Error: {e}')
+        idx += 1
