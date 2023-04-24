@@ -1,4 +1,5 @@
 import ssl
+from os import path, mkdir
 from time import sleep
 
 import requests
@@ -36,14 +37,17 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
         # get issuer of the certificate
         issuer = x509.get_issuer().get_components()[2][1].decode()
 
+        if not path.exists('results'):
+            mkdir('results')
+
         if any(untrust in issuer for untrust in untrusted):
-            file_name = 'russian_trusted_ca.txt'
+            file_name = 'results/russian_trusted_ca.txt'
             error_message = 'Russian affiliated certificate error'
         elif any(untrust in issuer for untrust in self_signed):
-            file_name = 'ru_self_sign.txt'
+            file_name = 'results/ru_self_sign.txt'
             error_message = 'Russian self signed certificate error'
         else:
-            file_name = 'other_ssl_err.txt'
+            file_name = 'results/other_ssl_err.txt'
             error_message = 'Other SSL certificate error'
 
         logger.logger.info(
@@ -57,13 +61,13 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
         logger.logger.info(
             f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: '
             f'Request timed out\n')
-        with open('unsuccessful.txt', 'a') as f:
+        with open('results/unsuccessful.txt', 'a') as f:
             f.write(
                 link + ' – Request timed out' + '\n')
             return
 
     except Exception as e:
-        with open('request_errors.txt', 'a') as f:
+        with open('results/request_errors.txt', 'a') as f:
             f.write(f'{link} – request error: {e}\n')
         logger.logger.error(f'{link} – request errors: {e}')
         return
