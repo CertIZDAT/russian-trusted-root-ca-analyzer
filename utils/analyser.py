@@ -3,22 +3,23 @@ from time import sleep
 
 import requests
 from OpenSSL import crypto
+from requests import Response
 
 from utils import logger, threading, lists
 
 
-def _check_link(link, index, website_links, timeout, batch_idx, total_batch):
-    untrusted = lists.untrusted
-    self_signed = lists.self_signed
+def _check_link(link: str, index: int, website_links, timeout: int, batch_idx: int, total_batch: int):
+    untrusted: list[str] = lists.untrusted
+    self_signed: list[str] = lists.self_signed
 
-    link = link.strip()
+    link: str = link.strip()
     if link == '':
         return
 
     if not link.startswith('http'):
         link = f'https://{link}'
     try:
-        response = requests.get(link, headers=lists.headers, timeout=timeout)
+        response: Response = requests.get(link, headers=lists.headers, timeout=timeout)
         if response.status_code == 200:
             with open('successful.txt', 'a') as f:
                 f.write(link + '\n')
@@ -86,18 +87,18 @@ def _check_link(link, index, website_links, timeout, batch_idx, total_batch):
         return
 
 
-def analyse(link_batches, timeout):
-    last_idx = len(link_batches)
+def analyse(link_batches: list[str], timeout: int):
+    last_idx: int = len(link_batches)
     for idx, content in enumerate(link_batches):
         logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
         sleep(1)
 
         # process batch with multiprocessing
-        results = threading.process_batch(target_func=_check_link,
-                                          batch=content,
-                                          timeout=timeout,
-                                          batch_idx=idx + 1,
-                                          total_batch=last_idx)
+        results: list = threading.process_batch(target_func=_check_link,
+                                                batch=content,
+                                                timeout=timeout,
+                                                batch_idx=idx + 1,
+                                                total_batch=last_idx)
 
         # process completed and not completed tasks
         for future in results:

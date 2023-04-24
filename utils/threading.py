@@ -1,9 +1,9 @@
 import multiprocessing as mp
 
 
-def process_batch(target_func, batch, timeout, batch_idx, total_batch):
-    results = []
-    thread_multiplier = 8
+def process_batch(target_func, batch, timeout, batch_idx, total_batch) -> list:
+    results: list = []
+    thread_multiplier: int = 8
     with mp.Pool(mp.cpu_count() * thread_multiplier) as pool:
         for i, link in enumerate(batch):
             results.append(pool.apply_async(

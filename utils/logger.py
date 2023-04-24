@@ -47,12 +47,12 @@ filename = datetime.now().strftime(
 
 file_handler = logging.FileHandler(f'logs/{filename}')
 file_handler.setLevel(logging.INFO)
-file_handler.setFormatter(__RemoveNewlineFormatter(formatter._fmt))
+file_handler.setFormatter(__RemoveNewlineFormatter(formatter.fmt))
 
 # create console handler and set level to INFO
 console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setLevel(logging.INFO)
-console_handler.setFormatter(__RemoveNewlineFormatter(formatter._fmt))
+console_handler.setFormatter(__RemoveNewlineFormatter(formatter.fmt))
 
 # add handlers to logger
 logger.addHandler(file_handler)
@@ -61,5 +61,5 @@ sys.stdout = __StdoutToLogger(logger)
 
 
 def signal_handler(sig, _):
-    logger.warn('Signal %s received, exiting...', sig)
+    logger.warning('Signal %s received, exiting...', sig)
     exit(0)

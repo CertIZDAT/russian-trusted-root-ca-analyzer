@@ -7,17 +7,17 @@ if len(sys.argv) != 3:
     sys.exit()
 
 # Get the input and output file names from the command line arguments
-input_file_name = sys.argv[1]
-output_file_name = sys.argv[2]
+input_file_name: str = sys.argv[1]
+output_file_name: str = sys.argv[2]
 
 # Open the input file for reading
 with open(input_file_name, 'r') as input_file:
 
     # Read the contents of the input file into a list
-    links = input_file.readlines()
+    links: list[str] = input_file.readlines()
 
 # Use a set to remove duplicates from the list of links
-unique_links = set(links)
+unique_links: set[str] = set(links)
 
 # Open the output file for writing
 with open(output_file_name, 'w') as output_file:

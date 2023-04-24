@@ -4,8 +4,11 @@ from time import sleep, time
 
 from utils import common, db, logger, analyser
 
+db_name: str = ''
+is_dataset_updated: bool = False
 
-def main():
+
+def main() -> None:
     # Register SIGINT signal handler
     signal.signal(signal.SIGINT, logger.signal_handler)
 
@@ -22,13 +25,17 @@ def main():
     args = parser.parse_args()
 
     # Get values for all args
-    timeout = int(args.timeout)
+    timeout: int = int(args.timeout)
     if args.timeout <= 0:
         logger.logger.warn(
             f'WARN: provided timeout – {timeout} lees or equals to zero')
         sleep(3)
         timeout = 30
+
+    global db_name
     db_name = args.name
+
+    global is_dataset_updated
     is_dataset_updated = args.updated
 
     link_batches = common.read_links('tls_list_cleaned.txt')
@@ -78,14 +85,14 @@ def main():
 
 
 if __name__ == '__main__':
-    start_time = time()
+    start_time: float = time()
 
     logger.logger.info('Starting analysis pipeline...')
     main()
     logger.logger.info('Analysis pipeline done')
 
-    end_time = time()
-    execution_time = end_time - start_time
+    end_time: float = time()
+    execution_time: float = end_time - start_time
 
     logger.logger.info(f'Execution time:\n\
         {execution_time:.2f} seconds,\n\

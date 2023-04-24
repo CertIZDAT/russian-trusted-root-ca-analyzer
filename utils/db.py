@@ -1,20 +1,22 @@
 import sqlite3
 from os import path, remove
+from sqlite3 import Connection, Cursor
 
 from utils import logger
 
 
-def create_db_with_name(db_name):
-    full_path_to_db = path.abspath(path.expanduser(db_name))
+# TODO: Read db_name from global
+def create_db_with_name(db_name: str) -> None:
+    full_path_to_db: str = path.abspath(path.expanduser(db_name))
     if path.exists(full_path_to_db):
         logger.logger.info(f'Database with name {db_name} already exists')
         return
 
-    connection = sqlite3.connect(db_name)
-    cursor = connection.cursor()
+    connection: Connection = sqlite3.connect(db_name)
+    cursor: Cursor = connection.cursor()
 
     # Define the schema for the table
-    create_table = '''
+    create_table: str = '''
     CREATE TABLE IF NOT EXISTS statistic_table (
         id INTEGER PRIMARY KEY,
         date_time TEXT NOT NULL,
@@ -55,13 +57,12 @@ def create_db_with_name(db_name):
         connection.close()
 
 
-def write_batch(db_name, timeout, total_ds_size, trusted_ca_count, self_signed_count,
-                other_ssl_count, successful_count, unsuccessful_count, error_count,
-                path_to_trusted, path_to_self, path_to_other_ssl, path_to_successful,
-                path_to_unsuccessful, path_to_request_errors, is_new_dataset=False):
-
-    connection = sqlite3.connect(db_name)
-    cursor = connection.cursor()
+def write_batch(db_name: str, timeout: int, total_ds_size: int, trusted_ca_count: int, self_signed_count: int,
+                other_ssl_count: int, successful_count: int, unsuccessful_count: int, error_count: int,
+                path_to_trusted: str, path_to_self: str, path_to_other_ssl: str, path_to_successful: str,
+                path_to_unsuccessful: str, path_to_request_errors: str, is_new_dataset: bool = False) -> None:
+    connection: Connection = sqlite3.connect(db_name)
+    cursor: Cursor = connection.cursor()
 
     # Read the data from the analysis pipeline
     # Read the contents of the trusted text files into string arrays
@@ -70,66 +71,66 @@ def write_batch(db_name, timeout, total_ds_size, trusted_ca_count, self_signed_c
             trusted_entries = [line.strip() for line in trusted_ca.readlines()]
     except FileNotFoundError:
         logger.logger.warn(f'No such file or directory: {path_to_trusted}')
-        trusted_entries = []
+        trusted_entries: list[str] = []
 
-    # Read the contents of the self signed text files into string arrays
+    # Read the contents of the self-signed text files into string arrays
     try:
         with open(path_to_self, 'r') as self_signed:
-            self_entries = [line.strip() for line in self_signed.readlines()]
+            self_entries: list[str] = [line.strip() for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warn(f'No such file or directory: {path_to_self}')
-        self_entries = []
+        self_entries: list[None] = []
 
     # Read the contents of the other ssl error text files into string arrays
     try:
         with open(path_to_other_ssl, 'r') as self_signed:
-            other_ssl_entries = [line.strip()
-                                 for line in self_signed.readlines()]
+            other_ssl_entries: list[str] = [line.strip()
+                                            for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warn(f'No such file or directory: {path_to_other_ssl}')
-        other_ssl_entries = []
+        other_ssl_entries: list[None] = []
 
     # Read the contents of the request errors text files into string arrays
     try:
         with open(path_to_request_errors, 'r') as self_signed:
-            request_errors_entries = [line.strip()
-                                      for line in self_signed.readlines()]
+            request_errors_entries: list[str] = [line.strip()
+                                                 for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warn(
             f'No such file or directory: {path_to_request_errors}')
-        request_errors_entries = []
+        request_errors_entries: list[None] = []
 
-     # Read the contents of the successful request text files into string arrays
+    # Read the contents of the successful request text files into string arrays
     try:
         with open(path_to_successful, 'r') as self_signed:
-            successful_entries = [line.strip()
-                                  for line in self_signed.readlines()]
+            successful_entries: list[str] = [line.strip()
+                                             for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warn(
             f'No such file or directory: {path_to_successful}')
-        successful_entries = []
+        successful_entries: list[None] = []
 
     # Read the contents of the unsuccessful request text files into string arrays
     try:
         with open(path_to_unsuccessful, 'r') as self_signed:
-            unsuccessful_entries = [line.strip()
-                                    for line in self_signed.readlines()]
+            unsuccessful_entries: list[str] = [line.strip()
+                                               for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warn(
             f'No such file or directory: {path_to_unsuccessful}')
-        unsuccessful_entries = []
+        unsuccessful_entries: list[None] = []
 
     # Convert the string arrays to comma-separated strings
-    list_of_trusted_ca_entries_str = ','.join(trusted_entries)
-    list_of_self_sign_entries_std = ','.join(self_entries)
-    list_of_other_ssl_error_entries_str = ','.join(other_ssl_entries)
+    list_of_trusted_ca_entries_str: str = ','.join(trusted_entries)
+    list_of_self_sign_entries_std: str = ','.join(self_entries)
+    list_of_other_ssl_error_entries_str: str = ','.join(other_ssl_entries)
 
-    list_of_successful_entries_str = ','.join(successful_entries)
-    list_of_unsuccessful_entries_str = ','.join(unsuccessful_entries)
-    request_error_entries_str = ','.join(request_errors_entries)
+    list_of_successful_entries_str: str = ','.join(successful_entries)
+    list_of_unsuccessful_entries_str: str = ','.join(unsuccessful_entries)
+    request_error_entries_str: str = ','.join(request_errors_entries)
 
     # Add entries to database
-    insert_query = '''
+    insert_query: str = '''
         INSERT INTO statistic_table (date_time, timeout, total_ds_size, trusted_ca_count, 
         self_signed_count, other_ssl_count, successful_count, unsuccessful_count, 
         error_count, list_of_trusted_ca, list_of_self_sign, list_of_other_ssl_error, 
@@ -162,8 +163,9 @@ def write_batch(db_name, timeout, total_ds_size, trusted_ca_count, self_signed_c
         connection.close()
 
 
-def delete_db_with_name(db_name):
-    full_path_to_db = path.abspath(path.expanduser(db_name))
+# TODO: Read db_name from global
+def delete_db_with_name(db_name: str) -> None:
+    full_path_to_db: str = path.abspath(path.expanduser(db_name))
     if path.exists(full_path_to_db):
         remove(full_path_to_db)
     else:
