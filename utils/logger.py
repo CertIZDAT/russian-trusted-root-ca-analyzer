@@ -47,12 +47,13 @@ filename = datetime.now().strftime(
 
 file_handler = logging.FileHandler(f'logs/{filename}')
 file_handler.setLevel(logging.INFO)
-file_handler.setFormatter(__RemoveNewlineFormatter(formatter.fmt))
+# TODO: Research .fmt and _fmt
+file_handler.setFormatter(__RemoveNewlineFormatter(formatter._fmt))
 
 # create console handler and set level to INFO
 console_handler = logging.StreamHandler(sys.stdout)
 console_handler.setLevel(logging.INFO)
-console_handler.setFormatter(__RemoveNewlineFormatter(formatter.fmt))
+console_handler.setFormatter(__RemoveNewlineFormatter(formatter._fmt))
 
 # add handlers to logger
 logger.addHandler(file_handler)

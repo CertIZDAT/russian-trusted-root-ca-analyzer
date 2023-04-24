@@ -6,6 +6,7 @@ from utils import common, db, logger, analyser
 
 db_name: str = ''
 is_dataset_updated: bool = False
+timeout: int = 30
 
 
 def main() -> None:
@@ -25,6 +26,7 @@ def main() -> None:
     args = parser.parse_args()
 
     # Get values for all args
+    global timeout
     timeout: int = int(args.timeout)
     if args.timeout <= 0:
         logger.logger.warn(

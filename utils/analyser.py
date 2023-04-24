@@ -6,9 +6,10 @@ from OpenSSL import crypto
 from requests import Response
 
 from utils import logger, threading, lists
+from check import timeout
 
 
-def _check_link(link: str, index: int, website_links, timeout: int, batch_idx: int, total_batch: int):
+def _check_link(link: str, index: int, website_links, batch_idx: int, total_batch: int):
     untrusted: list[str] = lists.untrusted
     self_signed: list[str] = lists.self_signed
 
@@ -87,7 +88,7 @@ def _check_link(link: str, index: int, website_links, timeout: int, batch_idx: i
         return
 
 
-def analyse(link_batches: list[str], timeout: int):
+def analyse(link_batches: tuple):
     last_idx: int = len(link_batches)
     for idx, content in enumerate(link_batches):
         logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
@@ -96,7 +97,6 @@ def analyse(link_batches: list[str], timeout: int):
         # process batch with multiprocessing
         results: list = threading.process_batch(target_func=_check_link,
                                                 batch=content,
-                                                timeout=timeout,
                                                 batch_idx=idx + 1,
                                                 total_batch=last_idx)
 
@@ -104,6 +104,6 @@ def analyse(link_batches: list[str], timeout: int):
         for future in results:
             try:
                 # get result of task (not used in this case)
-                _ = future.get(timeout=timeout)
+                _ = future.get()
             except Exception as e:
                 logger.logger.error(f'Error: {e}')
