@@ -27,7 +27,7 @@ def main() -> None:
 
     # Get values for all args
     global timeout
-    timeout: int = int(args.timeout)
+    timeout = int(args.timeout)
     if args.timeout <= 0:
         logger.logger.warn(
             f'WARN: provided timeout – {timeout} lees or equals to zero')
