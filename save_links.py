@@ -5,14 +5,14 @@ import sys
 from urllib.parse import urlparse
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, ResultSet
 
 # Get the URL from the command-line argument
 if len(sys.argv) < 2:
     print('Usage: python script.py url')
     sys.exit(1)
 
-url = sys.argv[1]
+url: str = sys.argv[1]
 
 # Make a request to the webpage
 response = requests.get(url)
@@ -21,7 +21,7 @@ response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
 # Find all the links on the webpage
-links = soup.find_all('a')
+links: ResultSet = soup.find_all('a')
 
 # Save the href attribute of each link to a text file
 with open('links.txt', 'w') as file:
