@@ -23,7 +23,7 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
     try:
         response: Response = requests.get(link, headers=lists.headers, timeout=timeout)
         if not response.status_code == 200:
-            with open('unsuccessful.txt', 'a') as f:
+            with open('results/unsuccessful.txt', 'a') as f:
                 f.write(
                     f'{link} – status code: {response.status_code}\n')
             logger.logger.info(
@@ -36,9 +36,6 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
         x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
         # get issuer of the certificate
         issuer = x509.get_issuer().get_components()[2][1].decode()
-
-        if not path.exists('results'):
-            mkdir('results')
 
         if any(untrust in issuer for untrust in untrusted):
             file_name = 'results/russian_trusted_ca.txt'
@@ -69,13 +66,17 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
     except Exception as e:
         with open('results/request_errors.txt', 'a') as f:
             f.write(f'{link} – request error: {e}\n')
-        logger.logger.error(f'{link} – request errors: {e}')
+        logger.logger.error(f'{link} – request error')
         return
 
 
-def analyse(link_batches: tuple):
+def run_pipeline(link_batches: tuple):
     last_idx: int = len(link_batches)
     idx: int = 0
+
+    if not path.exists('results'):
+        mkdir('results')
+
     for tup in link_batches:
         for _, content in enumerate(tup):
             logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
