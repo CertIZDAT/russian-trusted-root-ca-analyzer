@@ -2,7 +2,7 @@ import argparse
 import signal
 from time import sleep, time
 
-from utils import common, db, logger, analyser
+from utils import common, logger, analyser, db
 
 db_name: str = ''
 timeout: int = 30
@@ -29,7 +29,7 @@ def main() -> None:
     global timeout
     timeout = int(args.timeout)
     if args.timeout <= 0:
-        logger.logger.warn(
+        logger.logger.warning(
             f'WARN: provided timeout – {timeout} lees or equals to zero')
         sleep(3)
         timeout = 30
@@ -40,16 +40,15 @@ def main() -> None:
     global is_dataset_updated
     is_dataset_updated = args.updated
 
-    link_batches: tuple = (common.read_links('dataset/govdomains.txt'),
+    link_batches: tuple = (common.read_links('dataset/government_domains.txt'),
                            common.read_links('dataset/social.txt'),
                            common.read_links('dataset/top-100.txt'))
 
     analyser.analyse(link_batches=link_batches)
 
-    exit(0)
     # Save results to sqlite database
     db.create_db_with_name(db_name)
-
+    exit(0)
     total_ds_size = common.count_strings_in_file('tls_list_cleaned.txt')
 
     ssl_cert_err_filename = 'ssl_cert_err.txt'

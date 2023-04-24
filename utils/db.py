@@ -9,7 +9,6 @@ from utils import logger
 def create_db_with_name(db_name: str) -> None:
     full_path_to_db: str = path.abspath(path.expanduser(db_name))
     if path.exists(full_path_to_db):
-        logger.logger.info(f'Database with name {db_name} already exists')
         return
 
     connection: Connection = sqlite3.connect(db_name)
