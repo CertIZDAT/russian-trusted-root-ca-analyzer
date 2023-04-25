@@ -11,8 +11,8 @@ def create_db_with_name(db_name: str) -> None:
     if path.exists(full_path_to_db):
         return
 
-    connection: Connection = sqlite3.connect(db_name)
-    cursor: Cursor = connection.cursor()
+    connection = sqlite3.connect(db_name)
+    cursor = connection.cursor()
 
     # Define the schema for the table
     create_table: str = '''
@@ -57,29 +57,29 @@ def save_res_to_db(db_name: str,
 
     # Read the data from the analysis pipeline
     # Read the contents of the trusted text files into string arrays
+    trusted_entries: list[str] = []
     try:
         with open(trusted_ca_path, 'r') as trusted_ca:
             trusted_entries = [line.strip() for line in trusted_ca.readlines()]
     except FileNotFoundError:
         logger.logger.warning(f'No such file or directory: {trusted_ca_path}')
-        trusted_entries: list[str] = []
 
     # Read the contents of the self-signed text files into string arrays
+    self_entries: list[str] = []
     try:
         with open(self_sign_path, 'r') as self_signed:
-            self_entries: list[str] = [line.strip() for line in self_signed.readlines()]
+            self_entries = [line.strip() for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warning(f'No such file or directory: {self_sign_path}')
-        self_entries: list[None] = []
 
     # Read the contents of the other ssl error text files into string arrays
+    other_ssl_entries: list[str] = []
     try:
         with open(other_ssl_err_path, 'r') as self_signed:
-            other_ssl_entries: list[str] = [line.strip()
-                                            for line in self_signed.readlines()]
+            other_ssl_entries = [line.strip()
+                                 for line in self_signed.readlines()]
     except FileNotFoundError:
         logger.logger.warning(f'No such file or directory: {other_ssl_err_path}')
-        other_ssl_entries: list[None] = []
 
     # Convert the string arrays to comma-separated strings
     list_of_trusted_ca_entries: str = ','.join(trusted_entries)

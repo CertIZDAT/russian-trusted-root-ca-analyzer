@@ -4,24 +4,23 @@ from time import sleep
 
 import requests
 from OpenSSL import crypto
-from requests import Response
 
-from check import timeout, trusted_ca_path, other_ssl_err_path, timeout_err_path, request_err_path
+from check import timeout, trusted_ca_path, self_sign_path, other_ssl_err_path, timeout_err_path, request_err_path
 from utils import logger, threading, lists
 
 
-def _check_link(link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int) -> None:
+def _check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int) -> None:
     untrusted: list[str] = lists.untrusted
     self_signed: list[str] = lists.self_signed
 
-    link: str = link.strip()
+    link: str = source_link.strip()
     if link == '':
         return
 
     if not link.startswith('http'):
         link = f'https://{link}'
     try:
-        response: Response = requests.get(link, headers=lists.headers, timeout=timeout)
+        response = requests.get(link, headers=lists.headers, timeout=timeout)
         if not response.status_code == 200:
             with open('results/unsuccessful.txt', 'a') as f:
                 f.write(
@@ -38,14 +37,14 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
         issuer = x509.get_issuer().get_components()[2][1].decode()
 
         if any(untrust in issuer for untrust in untrusted):
-            file_name = trusted_ca_path
-            error_message = 'Russian affiliated certificate error'
+            file_name: str = trusted_ca_path
+            error_message: str = 'Russian affiliated certificate error'
         elif any(untrust in issuer for untrust in self_signed):
-            file_name = self_signed
-            error_message = 'Russian self signed certificate error'
+            file_name: str = self_sign_path
+            error_message: str = 'Russian self signed certificate error'
         else:
-            file_name = other_ssl_err_path
-            error_message = 'Other SSL certificate error'
+            file_name: str = other_ssl_err_path
+            error_message: str = 'Other SSL certificate error'
 
         logger.logger.info(
             f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: {error_message} '
@@ -70,7 +69,7 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
         return
 
 
-def run_pipeline(link_batches: tuple):
+def run_pipeline(link_batches: tuple) -> None:
     last_idx: int = len(link_batches)
     idx: int = 0
 

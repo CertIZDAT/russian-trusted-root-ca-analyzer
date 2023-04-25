@@ -21,7 +21,7 @@ response = requests.get(url)
 soup = BeautifulSoup(response.content, 'html.parser')
 
 # Find all the links on the webpage
-links: ResultSet = soup.find_all('a')
+links = soup.find_all('a')
 
 # Save the href attribute of each link to a text file
 with open('links.txt', 'w') as file:

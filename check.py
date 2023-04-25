@@ -8,11 +8,11 @@ db_name: str = ''
 timeout: int = 30
 is_dataset_updated: bool = False
 
-trusted_ca_path = 'results/russian_trusted_ca.txt'
-self_sign_path = 'results/ru_self_sign.txt'
-other_ssl_err_path = 'results/other_ssl_err.txt'
-timeout_err_path = 'results/timeout_err.txt'
-request_err_path = 'results/request_errors.txt'
+trusted_ca_path: str = 'results/russian_trusted_ca.txt'
+self_sign_path: str = 'results/ru_self_sign.txt'
+other_ssl_err_path: str = 'results/other_ssl_err.txt'
+timeout_err_path: str = 'results/timeout_err.txt'
+request_err_path: str = 'results/request_errors.txt'
 
 
 def main() -> None:
