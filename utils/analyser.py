@@ -9,6 +9,34 @@ from check import timeout, trusted_ca_path, self_sign_path, other_ssl_err_path, 
 from utils import logger, threading, lists
 
 
+def _get_root_cert(link: str):
+    cert = ssl.get_server_certificate((link.split('//')[1], 443))
+    x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
+    # FIXME: Fix cert chain detection
+    # get issuer of the certificate
+    return x509.get_issuer().get_components()[2][1].decode()
+
+    # cert = ssl.get_server_certificate((link.split('//')[1], 443))
+    # x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
+    # issuer_cert = x509.get_issuer()
+    # issuer_name = issuer_cert.CN
+
+    # print(f'i: {issuer_cert}')
+    # print(f'CN: {issuer_cert.CN}')
+    # print(f'C: {issuer_cert.C}')
+    # print(f'commonName: {issuer_cert.commonName}')
+    # print(f'L: {issuer_cert.L}')
+    # print(f'localityName: {issuer_cert.localityName}')
+    # print(f'O: {issuer_cert.O}')
+    # print(f'orgUnitName: {issuer_cert.organizationalUnitName}')
+    # print(f'orgName: {issuer_cert.organizationName}')
+    # print(f'OU: {issuer_cert.OU}')
+    # print(f'ST: {issuer_cert.ST}')
+    # print(f'stateOrProvinceName: {issuer_cert.stateOrProvinceName}')
+
+    # return issuer_name
+
+
 def _check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int) -> None:
     untrusted: list[str] = lists.untrusted
     self_signed: list[str] = lists.self_signed
@@ -31,11 +59,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
             return
 
     except requests.exceptions.SSLError:
-        cert = ssl.get_server_certificate((link.split('//')[1], 443))
-        x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
-        # FIXME: Fix cert chain detection
-        # get issuer of the certificate
-        issuer = x509.get_issuer().get_components()[2][1].decode()
+        issuer = _get_root_cert(link)
 
         if any(untrust in issuer for untrust in untrusted):
             file_name: str = trusted_ca_path
