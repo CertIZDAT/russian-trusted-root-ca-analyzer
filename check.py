@@ -47,44 +47,19 @@ def main() -> None:
 
     analyser.run_pipeline(link_batches=link_batches)
 
-    # Save results to sqlite database
-    db.create_db_with_name(db_name)
-
     exit(0)
 
     ssl_cert_err_filename = 'ssl_cert_err.txt'
     ssl_self_sign_err_filename = 'ssl_self_sign_err.txt'
     ssl_other_cert_err_filename = 'other_ssl_cert_err.txt'
 
-    successful_request_filename = 'successful.txt'
-    unsuccessful_requests_filename = 'unsuccessful.txt'
-    request_errors_filename = 'request_errors.txt'
-
-    trusted_count = common.get_dataset_size(ssl_cert_err_filename)
-    self_count = common.get_dataset_size(ssl_self_sign_err_filename)
-    other_ssl_count = common.get_dataset_size(ssl_other_cert_err_filename)
-
-    successful_count = common.get_dataset_size(
-        successful_request_filename)
-    unsuccessful_count = common.get_dataset_size(
-        unsuccessful_requests_filename)
-    error_count = common.get_dataset_size(request_errors_filename)
-
+    # Save results to sqlite database
+    db.create_db_with_name(db_name)
     db.save_res_to_db(db_name=db_name,
                       timeout=timeout,
-                      total_ds_size=total_ds_size,
-                      trusted_ca_count=trusted_count,
-                      self_signed_count=self_count,
-                      other_ssl_count=other_ssl_count,
-                      successful_count=successful_count,
-                      unsuccessful_count=unsuccessful_count,
-                      error_count=error_count,
                       trusted_ca_path=ssl_cert_err_filename,
                       self_sign_path=ssl_self_sign_err_filename,
                       other_ssl_err_path=ssl_other_cert_err_filename,
-                      path_to_successful=successful_request_filename,
-                      path_to_unsuccessful=unsuccessful_requests_filename,
-                      path_to_request_errors=request_errors_filename,
                       is_new_dataset=is_dataset_updated)
     logger.logger.info(f'Results successfully saved to db: {db_name}')
 
