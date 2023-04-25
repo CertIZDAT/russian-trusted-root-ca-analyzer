@@ -44,7 +44,8 @@ ozon.ru
 ok.ru
 t.me
 ria.ru
-mail.ru	news.mail.ru
+mail.ru
+news.mail.ru
 turbopages.org
 fandom.com
 auto.ru
@@ -77,7 +78,7 @@ consultant.ru
 aliexpress.com
 beeline.ru
 youtube.com
-vk.com	Социальная сеть
+vk.com
 pochta.ru
 youla.ru
 mk.ru
