@@ -8,6 +8,12 @@ db_name: str = ''
 timeout: int = 30
 is_dataset_updated: bool = False
 
+trusted_ca_path = 'results/russian_trusted_ca.txt'
+self_sign_path = 'results/ru_self_sign.txt'
+other_ssl_err_path = 'results/other_ssl_err.txt'
+timeout_err_path = 'results/timeout_err.txt'
+request_err_path = 'results/request_errors.txt'
+
 
 def main() -> None:
     # Register SIGINT signal handler
@@ -47,19 +53,13 @@ def main() -> None:
 
     analyser.run_pipeline(link_batches=link_batches)
 
-    exit(0)
-
-    ssl_cert_err_filename = 'ssl_cert_err.txt'
-    ssl_self_sign_err_filename = 'ssl_self_sign_err.txt'
-    ssl_other_cert_err_filename = 'other_ssl_cert_err.txt'
-
     # Save results to sqlite database
     db.create_db_with_name(db_name)
     db.save_res_to_db(db_name=db_name,
                       timeout=timeout,
-                      trusted_ca_path=ssl_cert_err_filename,
-                      self_sign_path=ssl_self_sign_err_filename,
-                      other_ssl_err_path=ssl_other_cert_err_filename,
+                      trusted_ca_path=trusted_ca_path,
+                      self_sign_path=self_sign_path,
+                      other_ssl_err_path=other_ssl_err_path,
                       is_new_dataset=is_dataset_updated)
     logger.logger.info(f'Results successfully saved to db: {db_name}')
 

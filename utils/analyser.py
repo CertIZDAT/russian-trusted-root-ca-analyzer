@@ -6,7 +6,7 @@ import requests
 from OpenSSL import crypto
 from requests import Response
 
-from check import timeout
+from check import timeout, trusted_ca_path, other_ssl_err_path, timeout_err_path, request_err_path
 from utils import logger, threading, lists
 
 
@@ -38,13 +38,13 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
         issuer = x509.get_issuer().get_components()[2][1].decode()
 
         if any(untrust in issuer for untrust in untrusted):
-            file_name = 'results/russian_trusted_ca.txt'
+            file_name = trusted_ca_path
             error_message = 'Russian affiliated certificate error'
         elif any(untrust in issuer for untrust in self_signed):
-            file_name = 'results/ru_self_sign.txt'
+            file_name = self_signed
             error_message = 'Russian self signed certificate error'
         else:
-            file_name = 'results/other_ssl_err.txt'
+            file_name = other_ssl_err_path
             error_message = 'Other SSL certificate error'
 
         logger.logger.info(
@@ -58,13 +58,13 @@ def _check_link(link: str, index: int, website_links: list[str], batch_idx: int,
         logger.logger.info(
             f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: '
             f'Request timed out\n')
-        with open('results/timeout_err.txt', 'a') as f:
+        with open(timeout_err_path, 'a') as f:
             f.write(
                 link + ' – Request timed out' + '\n')
             return
 
     except Exception as e:
-        with open('results/request_errors.txt', 'a') as f:
+        with open(request_err_path, 'a') as f:
             f.write(f'{link} – request error: {e}\n')
         logger.logger.error(f'{link} – request error')
         return
