@@ -5,7 +5,6 @@ from sqlite3 import Connection, Cursor
 from utils import logger
 
 
-# TODO: Read db_name from global
 def create_db_with_name(db_name: str) -> None:
     full_path_to_db: str = path.abspath(path.expanduser(db_name))
     if path.exists(full_path_to_db):
