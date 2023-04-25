@@ -1,25 +1,3 @@
-from os import path
-
-from utils import logger
-
-
-def count_strings_in_file(file_path: str):
-    if not path.exists(file_path):
-        logger.logger.error(f'No such file or directory: {file_path}')
-        return 0
-    full_path: str = path.abspath(path.expanduser(file_path))
-    try:
-        count: int = 0
-        with open(full_path, 'r') as f:
-            for line in f:
-                if line.strip() and not line.startswith('#'):
-                    count += 1
-        return count
-    except FileNotFoundError as e:
-        logger.logger.error(f'No such file or directory: {full_path}\n{e}')
-        return 0
-
-
 def read_links(filename: str) -> list[list[str]]:
     MAX_BATCH_SIZE: int = 8000
     with open(filename, 'r') as f:

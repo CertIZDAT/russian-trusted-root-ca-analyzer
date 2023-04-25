@@ -40,16 +40,17 @@ def main() -> None:
     global is_dataset_updated
     is_dataset_updated = args.updated
 
-    link_batches: tuple = (common.read_links('dataset/government_domains.txt'),
-                           common.read_links('dataset/social.txt'),
-                           common.read_links('dataset/top-100.txt'))
+    link_batches: tuple = (
+        common.read_links('dataset/government_domains.txt'),
+        common.read_links('dataset/social.txt'),
+        common.read_links('dataset/top-100.txt'))
 
     analyser.run_pipeline(link_batches=link_batches)
 
     # Save results to sqlite database
     db.create_db_with_name(db_name)
+
     exit(0)
-    total_ds_size = common.count_strings_in_file('tls_list_cleaned.txt')
 
     ssl_cert_err_filename = 'ssl_cert_err.txt'
     ssl_self_sign_err_filename = 'ssl_self_sign_err.txt'
@@ -59,15 +60,15 @@ def main() -> None:
     unsuccessful_requests_filename = 'unsuccessful.txt'
     request_errors_filename = 'request_errors.txt'
 
-    trusted_count = common.count_strings_in_file(ssl_cert_err_filename)
-    self_count = common.count_strings_in_file(ssl_self_sign_err_filename)
-    other_ssl_count = common.count_strings_in_file(ssl_other_cert_err_filename)
+    trusted_count = common.get_dataset_size(ssl_cert_err_filename)
+    self_count = common.get_dataset_size(ssl_self_sign_err_filename)
+    other_ssl_count = common.get_dataset_size(ssl_other_cert_err_filename)
 
-    successful_count = common.count_strings_in_file(
+    successful_count = common.get_dataset_size(
         successful_request_filename)
-    unsuccessful_count = common.count_strings_in_file(
+    unsuccessful_count = common.get_dataset_size(
         unsuccessful_requests_filename)
-    error_count = common.count_strings_in_file(request_errors_filename)
+    error_count = common.get_dataset_size(request_errors_filename)
 
     db.save_res_to_db(db_name=db_name,
                       timeout=timeout,

@@ -20,7 +20,6 @@ def create_db_with_name(db_name: str) -> None:
         id INTEGER PRIMARY KEY,
         date_time TEXT NOT NULL,
         timeout INTEGER NOT NULL,
-        total_ds_size INTEGER NOT NULL,
         list_of_trusted_ca TEXT NOT NULL,
         list_of_self_sign TEXT NOT NULL,
         list_of_other_ssl_error TEXT NOT NULL,
@@ -49,7 +48,6 @@ def create_db_with_name(db_name: str) -> None:
 
 def save_res_to_db(db_name: str,
                    timeout: int,
-                   total_ds_size: int,
                    trusted_ca_path: str,
                    self_sign_path: str,
                    other_ssl_err_path: str,
@@ -90,14 +88,13 @@ def save_res_to_db(db_name: str,
 
     # Add entries to database
     insert_query: str = '''
-        INSERT INTO statistic_table (date_time, timeout, total_ds_size, list_of_trusted_ca, 
+        INSERT INTO statistic_table (date_time, timeout, list_of_trusted_ca, 
         list_of_self_sign, list_of_other_ssl_error, is_dataset_updated)
-        VALUES (DATETIME('now'), ?, ?, ?, ?, ?, ?)
+        VALUES (DATETIME('now'), ?, ?, ?, ?, ?)
     '''
 
     try:
         cursor.execute(insert_query, (timeout,
-                                      total_ds_size,
                                       list_of_trusted_ca_entries,
                                       list_of_self_sign_entries,
                                       list_of_other_ssl_error_entries,
