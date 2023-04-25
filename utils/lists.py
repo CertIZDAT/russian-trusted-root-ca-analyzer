@@ -3,7 +3,7 @@ headers: dict = {
                   'Chrome/58.0.3029.110 Safari/537.3'
 }
 
-untrusted: list[str] = ['Russian Trusted']
+untrusted: list[str] = ['Russian Trusted', 'No-Sni']
 
 self_signed: list[str] = ['SberCA', 'St. Petersburg', 'VTB Group', 'Bank GPB',
                           'Администрация Партизанского городского округа', 'Kaliningrad', 'Sigma-REZERV', 'Moscow',
