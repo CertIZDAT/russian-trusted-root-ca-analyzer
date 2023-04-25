@@ -1,5 +1,5 @@
 import ssl
-from os import path, mkdir
+from os import path, mkdir, remove, listdir
 from time import sleep
 
 import requests
@@ -76,6 +76,10 @@ def run_pipeline(link_batches: tuple):
 
     if not path.exists('results'):
         mkdir('results')
+    else:
+        files = listdir('results/')
+        for file in files:
+            remove(path.join('results/', file))
 
     for tup in link_batches:
         for _, content in enumerate(tup):
