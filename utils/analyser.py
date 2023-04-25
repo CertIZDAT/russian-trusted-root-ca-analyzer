@@ -53,7 +53,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
             with open('results/unsuccessful.txt', 'a') as f:
                 f.write(
                     f'{link} – status code: {response.status_code}\n')
-            logger.logger.info(
+            logger.logger.error(
                 f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: HTTPS '
                 f'request failed – code={response.status_code}\n')
             return
@@ -79,7 +79,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
         return
 
     except (requests.exceptions.Timeout, requests.exceptions.ConnectTimeout):
-        logger.logger.info(
+        logger.logger.error(
             f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: '
             f'Request timed out\n')
         with open(timeout_err_path, 'a') as f:
