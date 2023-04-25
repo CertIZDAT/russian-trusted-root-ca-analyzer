@@ -105,7 +105,10 @@ def run_pipeline(link_batches: tuple) -> None:
         for file in files:
             remove(path.join('results/', file))
 
+    tuple_idx: int = 1
     for tup in link_batches:
+        print(f'Running at {tuple_idx} file')
+        sleep(3)
         for _, content in enumerate(tup):
             logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
             sleep(1)
@@ -124,3 +127,4 @@ def run_pipeline(link_batches: tuple) -> None:
                 except Exception as e:
                     logger.logger.error(f'Error: {e}')
         idx += 1
+    tuple_idx += 1
