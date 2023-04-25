@@ -33,6 +33,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     except requests.exceptions.SSLError:
         cert = ssl.get_server_certificate((link.split('//')[1], 443))
         x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
+        # FIXME: Fix cert chain detection
         # get issuer of the certificate
         issuer = x509.get_issuer().get_components()[2][1].decode()
 

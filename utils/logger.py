@@ -32,7 +32,7 @@ def __create_logs_folder() -> None:
 
 
 # create logger
-logger = logging.getLogger('CA-LOGGER')
+logger = logging.getLogger('LOGGER')
 logger.setLevel(logging.DEBUG)
 
 __create_logs_folder()
