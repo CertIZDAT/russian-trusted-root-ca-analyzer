@@ -1,5 +1,5 @@
 import ssl
-from os import path, mkdir, remove, listdir
+from os import path, mkdir, remove, listdir, rmdir
 from time import sleep
 
 import requests
@@ -41,6 +41,17 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     untrusted: list[str] = lists.untrusted
     self_signed: list[str] = lists.self_signed
 
+    sub_path: str = ''
+    if batch_idx == 1:
+        sub_path = path.join('results/', 'government')
+    elif batch_idx == 2:
+        sub_path = path.join('results/', 'social')
+    elif batch_idx == 3:
+        sub_path = path.join('results/', 'top')
+    else:
+        logger.logger.error(f'FATAL batch_idx error! idx = {batch_idx}')
+        exit(1)
+
     link: str = source_link.strip()
     if link == '':
         return
@@ -50,7 +61,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     try:
         response = requests.get(link, headers=lists.headers, timeout=timeout)
         if not response.status_code == 200:
-            with open('results/unsuccessful.txt', 'a') as f:
+            with open(f'{sub_path}/unsuccessful.txt', 'a') as f:
                 f.write(
                     f'{link} – status code: {response.status_code}\n')
             logger.logger.error(
@@ -98,12 +109,19 @@ def run_pipeline(link_batches: tuple) -> None:
     last_idx: int = len(link_batches)
     idx: int = 0
 
-    if not path.exists('results'):
-        mkdir('results')
+    if path.exists('results'):
+        for content in listdir('results/'):
+            content_path = path.join('results/', content)
+            if path.isfile(content_path):
+                remove(content_path)
+            else:
+                rmdir(content_path)
     else:
-        files = listdir('results/')
-        for file in files:
-            remove(path.join('results/', file))
+        mkdir('results')
+
+    mkdir('results/government')
+    mkdir('results/social')
+    mkdir('results/top')
 
     tuple_idx: int = 1
     for tup in link_batches:
@@ -116,6 +134,9 @@ def run_pipeline(link_batches: tuple) -> None:
             # process batch with multiprocessing
             results: list = threading.process_batch(target_func=_check_link,
                                                     batch=content,
+                                                    # idx == 1 means government associated sites
+                                                    # idx == 2 means social list sites
+                                                    # idx == 3 means top-100 sites
                                                     batch_idx=idx + 1,
                                                     total_batch=last_idx)
 
