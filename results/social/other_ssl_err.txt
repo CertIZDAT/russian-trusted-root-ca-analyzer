@@ -1,5 +1,0 @@
-https://rosminzdrav.ru – CA: Salford
-https://e-katalog.ru – CA: Salford
-https://gaso.ru – CA: AlphaSSL CA - SHA256 - G2
-https://minobrnauki.ru – CA: AlphaSSL CA - SHA256 - G4
-https://fmbaros.ru – CA: R3
