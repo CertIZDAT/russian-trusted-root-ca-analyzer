@@ -6,7 +6,6 @@ from time import sleep
 import requests
 from OpenSSL import crypto
 
-from check import timeout
 from utils import threading
 from utils.lists import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 from utils.logger import logger
@@ -41,7 +40,8 @@ def _get_root_cert(link: str):
     # return issuer_name
 
 
-def _check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int) -> None:
+def _check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int,
+                timeout: int) -> None:
     if batch_idx == 1:
         sub_path: str = path.join('results/', 'government')
     elif batch_idx == 2:
@@ -111,7 +111,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
         return
 
 
-def run_pipeline(link_batches: tuple) -> None:
+def run_pipeline(link_batches: tuple, timeout: int) -> None:
     last_idx: int = len(link_batches)
     idx: int = 0
 
@@ -144,7 +144,8 @@ def run_pipeline(link_batches: tuple) -> None:
                                                     # idx == 2 means social list sites
                                                     # idx == 3 means top-100 sites
                                                     batch_idx=idx + 1,
-                                                    total_batch=last_idx)
+                                                    total_batch=last_idx,
+                                                    timeout=timeout)
 
             # process completed and not completed tasks
             for future in results:
