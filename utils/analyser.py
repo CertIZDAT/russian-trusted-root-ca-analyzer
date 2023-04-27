@@ -2,6 +2,7 @@ import ssl
 from os import path, mkdir, remove, listdir
 from shutil import rmtree
 from time import sleep
+from urllib.parse import quote
 
 import requests
 from OpenSSL import crypto
@@ -11,7 +12,6 @@ from utils.lists import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 from utils.logger import logger
 
 
-# TODO: Add ability to parse links like https://онлайнинспекция.рф
 def _get_root_cert(link: str):
     cert = ssl.get_server_certificate((link.split('//')[1], 443))
     x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
@@ -64,6 +64,10 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
 
     if not link.startswith('http'):
         link = f'https://{link}'
+
+    if link.endswith('.рф'):
+        link = quote(link, safe=':/')
+
     try:
         response = requests.get(link, headers=HEADER, timeout=timeout)
         if not response.status_code == 200:
