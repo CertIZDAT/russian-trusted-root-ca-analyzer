@@ -31,34 +31,62 @@ as the FSB, etc.
 ### TLDR;
 
 A dataset of 21697 sites was analysed.
-1039 sites require a Russian Trusted CA.
-206 sites use self-signed certificates issued in Russia.
+
+- Government associated sites:
+    - 1027 sites require a Russian Trusted CA.
+    - 200 sites use self-signed certificates issued in Russia.
+- Social important sites:
+    - 1 site require a Russian Trusted CA.
+    - 206 sites use self-signed certificates issued in Russia.
+- Top-100 sites in Russia:
+    - 1 site require a Russian Trusted CA.
+    - 0 sites use self-signed certificates issued in Russia.
 
 ## Results
 
-There are several files in the `results` directory:
+There are several directories in the `results/`:
 
-- [russian_trusted_ca](results/russian_trusted_ca.txt) – list of sites requiring Russian Trusted CA;
-- [ru_self_sign.txt](results/ru_self_sign.txt) – list of sites using self-signed certificate issued in Russia;
-- [other_ssl_err.txt](results/other_ssl_err.txt) – list of requests that failed due to any other SSL errors;
-- [request_errors.txt](results/request_errors.txt) – list of failed requests (due to Python exception);
-- [unsuccessful.txt](results/unsuccessful.txt) – list of failed requests with their status codes;
-- [timeout_err.txt](results/timeout_err.txt) – list of requests closed due to timeout.
+- [results/government](results/government) – list of results for russian government associated sites;
+- [results/social](results/social) – list of results for russian government associated sites;
+- [results/top](results/top) – list of results for russian government associated sites.
+
+There are several files in each directory:
+
+- `russian_trusted_ca.txt` – list of sites requiring Russian Trusted CA;
+- `ru_self_sign.txt` – list of sites using self-signed certificate issued in Russia;
+- `other_ssl_err.txt` – list of requests that failed due to any other SSL errors;
+- `request_errors.txt` – list of failed requests (due to Python exception);
+- `unsuccessful.txt` – list of failed requests with their status codes;
+- `timeout_err.txt` – list of requests closed due to timeout.
 
 ### Database
 
 The results of each run are stored in a SQLite database [statistics.db](statistics.db). You can easily access the
 statistics with SQL queries.
 
+#### Some useful SQL queries
+
+- `SELECT * FROM statistic_table WHERE date_time = (SELECT MAX(date_time) FROM statistic_table);` – get all results for
+  last analysis date;
+- `SELECT * FROM statistic_table WHERE date_time LIKE '2023-04-27%';` – get all results for specific date;
+- `SELECT gov_ca_list, COUNT(*) AS count FROM statistic_table GROUP BY gov_ca_list ORDER BY count DESC;` – get all-time
+  statistic for specific column, `gov_ca_list` for example.
+
 #### Database scheme
 
-    id INTEGER PRIMARY KEY,                 # primary key;
-    date_time TEXT NOT NULL,                # current date and time (UTC);
-    timeout INTEGER NOT NULL                # timeout value for each exec;
-    list_of_trusted_ca TEXT NOT NULL,       # list of links containing sites with a Russian trusted CA;
-    list_of_self_sign TEXT NOT NULL,        # list of links containing sites with self-signed certificates;
-    list_of_other_ssl_error TEXT NOT NULL,  # list of other SSL errors;
-    is_dataset_updated INTEGER NOT NULL     # boolean flag set to true when dataset has been updated.
+    id INTEGER PRIMARY KEY,                   # primary key;
+    date_time TEXT NOT NULL,                  # current date and time (UTC);
+    timeout INTEGER NOT NULL                  # timeout value for each exec;
+    gov_ca_list TEXT NOT NULL,                # list of gov sites with a Russian trusted CA;
+    gov_ss_list TEXT NOT NULL,                # list of gov sites with self-signed certificates;
+    gov_other_ssl_err_list TEXT NOT NULL,     # list of gov sites with other SSL errors;
+    social_ca_list TEXT NOT NULL,             # list of social sites with a Russian trusted CA;
+    social_ss_list TEXT NOT NULL,             # list of social sites with self-signed certificates;
+    social_other_ssl_err_list TEXT NOT NULL,  # list of social sites with other SSL errors;
+    top_ca_list TEXT NOT NULL,                # list of top-100 sites with a Russian trusted CA;
+    top_ss_list TEXT NOT NULL,                # list of top-100 sites with self-signed certificates;
+    top_other_ssl_err TEXT NOT NULL,          # list of top-100 sites with other SSL errors;
+    is_dataset_updated INTEGER NOT NULL       # boolean flag set to true when dataset has been updated.
 
 ## Running
 
@@ -117,7 +145,7 @@ Usage:
 
 ### Deduplication
 
-[dedup.py](dedup.py)
+[dedup.py](dedup.py) – this script can perform deduplication of dataset files.
 
 Usage:
 `python3 dedup.py <source_file> <deduplicated_file>`
