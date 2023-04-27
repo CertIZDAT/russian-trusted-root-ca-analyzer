@@ -5,14 +5,14 @@ import sys
 from urllib.parse import urlparse
 
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, ResultSet
 
 # Get the URL from the command-line argument
 if len(sys.argv) < 2:
     print('Usage: python script.py url')
     sys.exit(1)
 
-url = sys.argv[1]
+url: str = sys.argv[1]
 
 # Make a request to the webpage
 response = requests.get(url)

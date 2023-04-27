@@ -137,5 +137,4 @@ dmypy.json
 .Spotlight-V100
 
 # Project
-env/
 logs/

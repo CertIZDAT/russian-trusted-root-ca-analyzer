@@ -1,112 +1,157 @@
-# Russian sites what require Russian Trusted CA
+# Russian sites that require a Russian Trusted CA to be installed
 
-IN ACTIVE DEVELOPMENT: SOME RESULTS ARE OUTDATED!
+This script allows you to analyse which sites require a Russian root certificate to work correctly.
+It also checks for the presence of some self-signed certificates issued by companies associated with Russia.
+The results of each run are stored in the `results` directory and in the SQlite3 [statistics.db](statistics.db) database
+at the end of the analysis.
+analysis.
 
-This script allows you to analyze which sites require a Russian Trusted CA certificate to work properly. Also checks for strange certificates issued by Russia.
-Results of each run saved to sqlite database at end of the analysis.
-
-[tls_list_cleaned.txt](tls_list_cleaned.txt) list is definitely not complete yet, PR's are welcome.
+note: the dataset is certainly not complete yet, pull requests are welcome. Especially for the dump of actual government
+domains.
 
 ## Summary
 
-Russian banks and other companies, including Sberbank, are facing severe sanctions causing reputable companies to avoid receiving or paying money to/from companies banks to avoid being investigated for circumventing sanctions. Certification authorities (CAs), which issue encryption keys to websites, are among the companies that have refused to work with Sberbank due to the sanctions. As a result, Sberbank had to use a self-signed certificate from the Ministry of Communications, which no browser outside of Russia accepts. Using Russian certificates is risky as it is unclear if they meet the standards for a normal CA, and they may create additional private keys for authorities like FSB.
+Many Russian companies face severe sanctions, forcing reputable companies to avoid receiving or paying money to/from
+Russian companies in order to avoid investigations into sanctions bypass.
 
-### TLDR
+Certification Authorities (CA), which issue encryption keys for websites, are among the companies that have refused to
+work with Russian companies because of the sanctions policy.
 
-~~A dataset of 24163 sites was examined. Of these, 851 sites were found to require a Russian Trusted CA. In addition, 137 sites were found to be using self-signed certificates.~~
+As a result, some websites have been forced to use a certificate from the Russian Ministry of Communications, which is
+not accepted by any browser outside of Russia.
+
+In addition, the Russian authorities, in another rush to censor the Internet, have taken advantage of this situation and
+have begun to force all government (and not just government) websites to use such a certificate. This raises some
+concerns.
+
+Using Russian certificates is risky, because it is not clear whether they meet the standards of a trusted Certificate
+Authority. There are concerns that Russian Certificate Authorities may issue additional private keys for agencies such
+as the FSB, etc.
+
+### TLDR;
+
+A dataset of 21697 sites was analysed.
+
+- Government associated sites:
+    - 1027 sites require a Russian Trusted CA.
+    - 200 sites use self-signed certificates issued in Russia.
+- Social important sites:
+    - 1 site require a Russian Trusted CA.
+    - 206 sites use self-signed certificates issued in Russia.
+- Top-100 sites in Russia:
+    - 1 site require a Russian Trusted CA.
+    - 0 sites use self-signed certificates issued in Russia.
 
 ## Results
 
-Note: You should only run the analysis from Russian IP's.
+There are several directories in the `results/`:
 
-There are five files with results:
+- [results/government](results/government) – list of results for russian government associated sites;
+- [results/social](results/social) – list of results for russian government associated sites;
+- [results/top](results/top) – list of results for russian government associated sites.
 
-- [ssl_cert_err.txt](ssl_cert_err.txt) – Failed request due to Russian Trusted Sub CA requirement;
-- [ssl_self_sign_err.txt](ssl_self_sign_err.txt) – Failed request due to Russian self signed certificate;
-- [request_errors.txt](request_errors.txt) – Unsuccessful requests (Python RequestException);
-- [unsuccessful.txt](unsuccessful.txt) – Unsuccessful requests and their status codes;
-- [successful.txt](successful.txt) – List of successful requests;
-- [other_ssl_cert_err.txt](other_ssl_cert_err.txt) – Failed request due to any SSL error.
+There are several files in each directory:
 
-### Get total count of all sites with Russian Trusted CA
+- `russian_trusted_ca.txt` – list of sites requiring Russian Trusted CA;
+- `ru_self_sign.txt` – list of sites using self-signed certificate issued in Russia;
+- `other_ssl_err.txt` – list of requests that failed due to any other SSL errors;
+- `request_errors.txt` – list of failed requests (due to Python exception);
+- `unsuccessful.txt` – list of failed requests with their status codes;
+- `timeout_err.txt` – list of requests closed due to timeout.
 
-    cat ssl_cert_err.txt | wc -l
+### Database
+
+The results of each run are stored in a SQLite database [statistics.db](statistics.db). You can easily access the
+statistics with SQL queries.
+
+#### Some useful SQL queries
+
+- `SELECT * FROM statistic_table WHERE date_time = (SELECT MAX(date_time) FROM statistic_table);` – get all results for
+  last analysis date;
+- `SELECT * FROM statistic_table WHERE date_time LIKE '2023-04-27%';` – get all results for specific date;
+- `SELECT gov_ca_list, COUNT(*) AS count FROM statistic_table GROUP BY gov_ca_list ORDER BY count DESC;` – get all-time
+  statistic for specific column, `gov_ca_list` for example.
+
+#### Database scheme
+
+    id INTEGER PRIMARY KEY,                   # primary key;
+    date_time TEXT NOT NULL,                  # current date and time (UTC);
+    timeout INTEGER NOT NULL                  # timeout value for each exec;
+    gov_ca_list TEXT NOT NULL,                # list of gov sites with a Russian trusted CA;
+    gov_ss_list TEXT NOT NULL,                # list of gov sites with self-signed certificates;
+    gov_other_ssl_err_list TEXT NOT NULL,     # list of gov sites with other SSL errors;
+    social_ca_list TEXT NOT NULL,             # list of social sites with a Russian trusted CA;
+    social_ss_list TEXT NOT NULL,             # list of social sites with self-signed certificates;
+    social_other_ssl_err_list TEXT NOT NULL,  # list of social sites with other SSL errors;
+    top_ca_list TEXT NOT NULL,                # list of top-100 sites with a Russian trusted CA;
+    top_ss_list TEXT NOT NULL,                # list of top-100 sites with self-signed certificates;
+    top_other_ssl_err TEXT NOT NULL,          # list of top-100 sites with other SSL errors;
+    is_dataset_updated INTEGER NOT NULL       # boolean flag set to true when dataset has been updated.
 
 ## Running
 
-Before running you should understand that many resources allow income traffic only from Russian IP's addresses.
+Before running, be aware that many resources only allow incoming traffic from Russian IP addresses.
 
-Note: Approximate analysis time with 8 cores, `timeout=30` and fast VPN is 40 minutes. Note: The higher the timeout value, the more accurate but slower the analysis.
+Note: with a higher timeout valueA higher timeout value will give more accurate results, but the speed of the analysis
+will be significantly reduced.
 
-### Analysis
+### Perform the analysis
 
-Run the following commands in terminal:
+Run the following commands in the terminal:
 
 ```bash
-python3 -m venv env                 # create virtual python environment;
-source env/bin/activate             # start virtual python environment;
-pip3 install -r requirements.txt    # install necessary packages;
+python3 -m venv env               # create virtual python environment;
+source env/bin/activate           # activate virtual python environment;
+pip3 install -r requirements.txt  # install dependencies;
 
-# Default param value is 15 seconds;
-python3 check.py [--param=<val> --param...]  # start analysis with specified timeout param, see "Parameters" and "Examples" sections;
+python3 check.py                  # run the analysis (use statistics.db and timeout=30 seconds by default);
 
-deactivate                          # to deactivate python environment
+deactivate                        # deactivate python environment.
+
 ```
 
-### Parameters
+### Command line arguments
 
-- `--timeout`, default=30, timeout for each web request, in seconds.
-- `--name`, default='statistics.db', type=str, database name, if it does not exist - it will be created.
-- `--updated`, default=False, flag signalling that the dataset has been updated. This flag must be set to true if the dataset has been.
-- `--delete`, type=str, delete existed database with name.
+- `--timeout`, `default=30`, timeout for each web request, in seconds;
+- `--name`, `default=statistics.db`, database name with `.db` extension, if it does not exist – it will be created;
+- `--updated`, `default=False`, flag indicating that the dataset has been updated. This flag must be set to `True` if
+  dataset has been updated.
 
-#### Examples
+### Examples
 
-- Run analysis with standard params (db name: `statistic.db`, `timeout`: 30 secs) – `python3 check.py`
-- Run analysis with custom db name and timeout – `python3 check.py --name=test.db --timeout=5`
-- Run analysis with standard params, set dataset was updated before run – `python3 check.py --updated=True`
-- Delete db with custom name – `python3 check.py  --delete=test_db.db`
-- Get help – python3 check.py --help
+- Perform analysis with default parameters (db name: `statistic.db`, `timeout`: 30 secs) – `python3 check.py`
+- Perform analysis with custom database name and timeout – `python3 check.py --name=test.db --timeout=5`
+- Perform analysis with default parameters, but set that the dataset has been updated before
+  running – `python3 check.py --updated=True`
+- Get help – `python3 check.py --help`
 
 ## Contributions
 
-The input is really valuable, especially if you can add relevant sites for analysis.
-Links format:
+Your contribution will be very valuable, especially if you can add relevant sites for analysis.
 
-- without `http://` or `https://` or `www.`;
-- without `/` or any additional path at the end of the link.
+Dataset format:
 
-## sqlite database scheme
-
-    id INTEGER PRIMARY KEY,                 # primary key
-    date_time TEXT NOT NULL,                # current date and time (UTC)
-    timeout INTEGER NOT NULL                # timeout value for each run
-    total_ds_size INTEGER NOT NULL,         # total size of the dataset
-    trusted_ca_count INTEGER NOT NULL,      # total sites count with Russian Trusted CA
-    self_signed_count INTEGER NOT NULL,     # total sites count with self signed certificates
-    list_of_trusted_ca TEXT NOT NULL,       # list of links contains sites with Russian Trusted CA
-    list_of_self_sign TEXT NOT NULL,        # list of links contains sites with self signed certificates
-    list_of_request_error TEXT NOT NULL,    # list of request errors
-    list_of_successful TEXT NOT NULL,       # list of successful requests
-    list_of_unsuccessful TEXT NOT NULL      # list of unsuccessful requests
-    is_dataset_updated INTEGER NOT NULL     # bool flag, which must be set to true if the dataset has been updated
+- without the leading `http://`, `https://` or `www.`;
+- without `/` or any additional path at the end of the primary domain.
 
 ## Additional tools
 
 ### Save links
 
-[save_links.py](save_links.py) – this script can parse any links at provided url
+[save_links.py](save_links.py) – this script can parse and store any links at a provided url.
 
+Usage:
 `python3 save_links.py <url>`
 
 ### Deduplication
 
-[dedup.py](dedup.py)
+[dedup.py](dedup.py) – this script can perform deduplication of dataset files.
 
+Usage:
 `python3 dedup.py <source_file> <deduplicated_file>`
 
 ## Used resources
 
-- The initial [list](tls_list_cleaned.txt) of sites to check was taken (and slightly updated) from [koenrh's repository](https://github.com/koenrh/russian-trusted-root-ca).
-- Big government associated domains was taken from [govdomains](https://github.com/infoculture/govdomains)
-- LIST OF SOCIALLY IMPORTANT INFORMATION RESOURCES ON THE INTERNET [consultant.ru](http://www.consultant.ru/document/cons_doc_LAW_349660/5715f8a0641b857e9e101510d765f9671e6b716a/)
+- Big government associated domains was taken from [govdomains](https://github.com/infoculture/govdomains) repo;
+- LIST OF SOCIALLY IMPORTANT INFORMATION RESOURCES ON THE
+  INTERNET [consultant.ru](http://www.consultant.ru/document/cons_doc_LAW_349660/5715f8a0641b857e9e101510d765f9671e6b716a/)
