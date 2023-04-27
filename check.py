@@ -47,15 +47,10 @@ def main() -> None:
 
     analyser.run_pipeline(link_batches=link_batches, timeout=timeout)
 
-    exit(0)
-
     # Save results to sqlite database
     db.create_db_with_name(db_name)
     db.save_res_to_db(db_name=db_name,
                       timeout=timeout,
-                      trusted_ca_path=trusted_ca_path,
-                      self_sign_path=self_sign_path,
-                      other_ssl_err_path=other_ssl_err_path,
                       is_new_dataset=is_dataset_updated)
     logger.info(f'Results successfully saved to db: {db_name}')
 
