@@ -72,17 +72,10 @@ def save_res_to_db(db_name: str,
 
         entries[i] = (_read_entries(ca_path), _read_entries(ss_path), _read_entries(ssl_path))
 
-    gov_ca_entries = ','.join(entries[0][0])
-    gov_ss_entries = ','.join(entries[0][1])
-    gov_ssl_entries = ','.join(entries[0][2])
-
-    social_ca_entries = ','.join(entries[1][0])
-    social_ss_entries = ','.join(entries[1][1])
-    social_ssl_entries = ','.join(entries[1][2])
-
-    top_ca_entries = ','.join(entries[2][0])
-    top_ss_entries = ','.join(entries[2][1])
-    top_ssl_entries = ','.join(entries[2][2])
+    #                          ↓ ca entries            ↓ self-signed entries   ↓ other ssl entries
+    gov_entries = [','.join(entries[0][0]), ','.join(entries[0][1]), ','.join(entries[0][2])]
+    social_entries = [','.join(entries[1][0]), ','.join(entries[1][1]), ','.join(entries[2][2])]
+    top_entries = [','.join(entries[2][0]), ','.join(entries[2][1]), ','.join(entries[2][2])]
 
     # Add entries to database
     insert_query: str = '''
@@ -96,9 +89,9 @@ def save_res_to_db(db_name: str,
 
     try:
         cursor.execute(insert_query, (timeout,
-                                      gov_ca_entries, gov_ss_entries, gov_ssl_entries,
-                                      social_ca_entries, social_ss_entries, social_ssl_entries,
-                                      top_ca_entries, top_ss_entries, top_ssl_entries,
+                                      gov_entries[0], gov_entries[1], gov_entries[2],
+                                      social_entries[0], social_entries[1], social_entries[2],
+                                      top_entries[1], top_entries[1], top_entries[2],
                                       int(is_new_dataset == 'True' or is_new_dataset == 'true')))
         connection.commit()
     except sqlite3.Error as e:
