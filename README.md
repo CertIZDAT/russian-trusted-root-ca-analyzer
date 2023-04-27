@@ -1,15 +1,28 @@
-# Russian sites that require a Russian Trusted CA to be installed
+# Research into the use of Ministry of Digital Development root certificates and self-signed SSL certificates on the Runet.
 
 This script allows you to analyse which sites require a Russian root certificate to work correctly.
 It also checks for the presence of some self-signed certificates issued by companies associated with Russia.
 The results of each run are stored in the `results` directory and in the SQlite3 [statistics.db](statistics.db) database
 at the end of the analysis.
-analysis.
 
-note: the dataset is certainly not complete yet, pull requests are welcome. Especially for the dump of actual government
+Note: the dataset is certainly not complete yet, pull requests are welcome. Especially for the dump of actual government
 domains.
 
-## Summary
+## TLDR;
+
+A dataset of 21697 sites was analysed.
+
+- Government associated sites:
+  - 1027 sites require a Russian Trusted CA.
+  - 200 sites use self-signed certificates issued in Russia.
+- Social important sites:
+  - 1 site require a Russian Trusted CA.
+  - 206 sites use self-signed certificates issued in Russia.
+- Top-100 sites in Russia:
+  - 1 site require a Russian Trusted CA.
+  - 0 sites use self-signed certificates issued in Russia.
+
+## About Russian Trusted CA
 
 Many Russian companies face severe sanctions, forcing reputable companies to avoid receiving or paying money to/from
 Russian companies in order to avoid investigations into sanctions bypass.
@@ -28,27 +41,13 @@ Using Russian certificates is risky, because it is not clear whether they meet t
 Authority. There are concerns that Russian Certificate Authorities may issue additional private keys for agencies such
 as the FSB, etc.
 
-### TLDR;
-
-A dataset of 21697 sites was analysed.
-
-- Government associated sites:
-    - 1027 sites require a Russian Trusted CA.
-    - 200 sites use self-signed certificates issued in Russia.
-- Social important sites:
-    - 1 site require a Russian Trusted CA.
-    - 206 sites use self-signed certificates issued in Russia.
-- Top-100 sites in Russia:
-    - 1 site require a Russian Trusted CA.
-    - 0 sites use self-signed certificates issued in Russia.
-
 ## Results
 
 There are several directories in the `results/`:
 
-- [results/government](results/government) – list of results for russian government associated sites;
-- [results/social](results/social) – list of results for russian government associated sites;
-- [results/top](results/top) – list of results for russian government associated sites.
+- [results/government/](results/government) – list of results for russian government associated sites;
+- [results/social/](results/social) – list of results for russian government associated sites;
+- [results/top/](results/top) – list of results for russian government associated sites.
 
 There are several files in each directory:
 
@@ -110,14 +109,14 @@ deactivate                        # deactivate python environment.
 
 ```
 
-### Command line arguments
+#### Command line arguments
 
 - `--timeout`, `default=30`, timeout for each web request, in seconds;
 - `--name`, `default=statistics.db`, database name with `.db` extension, if it does not exist – it will be created;
 - `--updated`, `default=False`, flag indicating that the dataset has been updated. This flag must be set to `True` if
   dataset has been updated.
 
-### Examples
+#### Examples
 
 - Perform analysis with default parameters (db name: `statistic.db`, `timeout`: 30 secs) – `python3 check.py`
 - Perform analysis with custom database name and timeout – `python3 check.py --name=test.db --timeout=5`
