@@ -1,0 +1,6 @@
+https://rosreestr.ru – CA: Russian Trusted Sub CA
+https://rusarchives.ru – CA: Russian Trusted Sub CA
+https://pkk.rosreestr.ru – CA: Russian Trusted Sub CA
+https://sberbank.ru – CA: Russian Trusted Sub CA
+https://roszdravnadzor.ru – CA: Russian Trusted Sub CA
+https://arbitr.ru – CA: Russian Trusted Sub CA
