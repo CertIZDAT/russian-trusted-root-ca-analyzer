@@ -6,7 +6,9 @@ import requests
 from OpenSSL import crypto
 
 from check import timeout
-from utils import logger, threading, lists
+from utils import threading
+from utils.logger import logger
+from utils.lists import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 
 
 def _get_root_cert(link: str):
@@ -38,9 +40,6 @@ def _get_root_cert(link: str):
 
 
 def _check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int) -> None:
-    untrusted: list[str] = lists.untrusted
-    self_signed: list[str] = lists.self_signed
-
     if batch_idx == 1:
         sub_path: str = path.join('results/', 'government')
     elif batch_idx == 2:
@@ -48,7 +47,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     elif batch_idx == 3:
         sub_path: str = path.join('results/', 'top')
     else:
-        logger.logger.error(f'FATAL batch_idx error! idx = {batch_idx}')
+        logger.error(f'FATAL batch_idx error! idx = {batch_idx}')
         exit(1)
 
     trusted_ca_path: str = f'{sub_path}/russian_trusted_ca.txt'
@@ -64,12 +63,12 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     if not link.startswith('http'):
         link = f'https://{link}'
     try:
-        response = requests.get(link, headers=lists.headers, timeout=timeout)
+        response = requests.get(link, headers=HEADER, timeout=timeout)
         if not response.status_code == 200:
             with open(f'{sub_path}/unsuccessful.txt', 'a') as f:
                 f.write(
                     f'{link} – status code: {response.status_code}\n')
-            logger.logger.error(
+            logger.error(
                 f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: HTTPS '
                 f'request failed – code={response.status_code}\n')
             return
@@ -77,17 +76,17 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     except requests.exceptions.SSLError:
         issuer = _get_root_cert(link)
 
-        if any(untrust in issuer for untrust in untrusted):
+        if any(cert in issuer for cert in UNTRUSTED_CERTS):
             file_name: str = trusted_ca_path
             error_message: str = 'Russian affiliated certificate error'
-        elif any(untrust in issuer for untrust in self_signed):
+        elif any(cert in issuer for cert in SELF_SIGNED_CERTS):
             file_name: str = self_sign_path
             error_message: str = 'Russian self signed certificate error'
         else:
             file_name: str = other_ssl_err_path
             error_message: str = 'Other SSL certificate error'
 
-        logger.logger.info(
+        logger.info(
             f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: {error_message} '
             f'– {issuer}\n')
         with open(file_name, 'a') as f:
@@ -95,7 +94,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
         return
 
     except (requests.exceptions.Timeout, requests.exceptions.ConnectTimeout):
-        logger.logger.error(
+        logger.error(
             f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: '
             f'Request timed out\n')
         with open(timeout_err_path, 'a') as f:
@@ -106,7 +105,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     except Exception as e:
         with open(request_err_path, 'a') as f:
             f.write(f'{link} – request error: {e}\n')
-        logger.logger.error(f'{link} – request error')
+        logger.error(f'{link} – request error')
         return
 
 
@@ -133,7 +132,7 @@ def run_pipeline(link_batches: tuple) -> None:
         print(f'Running at {tuple_idx} file')
         sleep(3)
         for _, content in enumerate(tup):
-            logger.logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
+            logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
             sleep(1)
 
             # process batch with multiprocessing
@@ -151,6 +150,6 @@ def run_pipeline(link_batches: tuple) -> None:
                     # get result of task (not used in this case)
                     _ = future.get()
                 except Exception as e:
-                    logger.logger.error(f'Error: {e}')
+                    logger.error(f'Error: {e}')
         idx += 1
     tuple_idx += 1

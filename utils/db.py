@@ -2,7 +2,7 @@ import sqlite3
 from os import path
 from sqlite3 import Connection, Cursor
 
-from utils import logger
+from utils.logger import logger
 
 
 def create_db_with_name(db_name: str) -> None:
@@ -29,7 +29,7 @@ def create_db_with_name(db_name: str) -> None:
     try:
         cursor.execute(create_table)
     except sqlite3.Error as e:
-        logger.logger.error(
+        logger.error(
             f'Error can\'t execute SQL query for table creation: {e}')
         connection.close()
         exit(1)
@@ -37,7 +37,7 @@ def create_db_with_name(db_name: str) -> None:
     try:
         connection.commit()
     except sqlite3.Error as e:
-        logger.logger.error(
+        logger.error(
             f'Error can\'t execute SQL query for table creation: {e}')
         connection.close()
         exit(1)
@@ -61,7 +61,7 @@ def save_res_to_db(db_name: str,
         with open(trusted_ca_path, 'r') as trusted_ca:
             trusted_entries = [line.strip() for line in trusted_ca.readlines()]
     except FileNotFoundError:
-        logger.logger.warning(f'No such file or directory: {trusted_ca_path}')
+        logger.warning(f'No such file or directory: {trusted_ca_path}')
 
     # Read the contents of the self-signed text files into string arrays
     self_entries: list[str] = []
@@ -69,7 +69,7 @@ def save_res_to_db(db_name: str,
         with open(self_sign_path, 'r') as self_signed:
             self_entries = [line.strip() for line in self_signed.readlines()]
     except FileNotFoundError:
-        logger.logger.warning(f'No such file or directory: {self_sign_path}')
+        logger.warning(f'No such file or directory: {self_sign_path}')
 
     # Read the contents of the other ssl error text files into string arrays
     other_ssl_entries: list[str] = []
@@ -78,7 +78,7 @@ def save_res_to_db(db_name: str,
             other_ssl_entries = [line.strip()
                                  for line in self_signed.readlines()]
     except FileNotFoundError:
-        logger.logger.warning(f'No such file or directory: {other_ssl_err_path}')
+        logger.warning(f'No such file or directory: {other_ssl_err_path}')
 
     # Convert the string arrays to comma-separated strings
     list_of_trusted_ca_entries: str = ','.join(trusted_entries)
@@ -100,7 +100,7 @@ def save_res_to_db(db_name: str,
                                       int(is_new_dataset == 'True' or is_new_dataset == 'true')))
         connection.commit()
     except sqlite3.Error as e:
-        logger.logger.error(f'Error executing SQL statement: {e}')
+        logger.error(f'Error executing SQL statement: {e}')
         connection.close()
         exit(1)
     finally:

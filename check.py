@@ -2,7 +2,9 @@ import argparse
 import signal
 from time import sleep, time
 
-from utils import common, logger, analyser, db
+from utils import common, analyser, db
+from utils import logger as main_logger
+from utils.logger import logger
 
 db_name: str = ''
 timeout: int = 30
@@ -11,7 +13,7 @@ is_dataset_updated: bool = False
 
 def main() -> None:
     # Register SIGINT signal handler
-    signal.signal(signal.SIGINT, logger.signal_handler)
+    signal.signal(signal.SIGINT, main_logger.signal_handler)
 
     # Parse args
     parser = argparse.ArgumentParser(
@@ -29,7 +31,7 @@ def main() -> None:
     global timeout
     timeout = int(args.timeout)
     if args.timeout <= 0:
-        logger.logger.warning(
+        logger.warning(
             f'WARN: provided timeout – {timeout} lees or equals to zero')
         sleep(3)
         timeout = 30
@@ -55,20 +57,20 @@ def main() -> None:
                       self_sign_path=self_sign_path,
                       other_ssl_err_path=other_ssl_err_path,
                       is_new_dataset=is_dataset_updated)
-    logger.logger.info(f'Results successfully saved to db: {db_name}')
+    logger.info(f'Results successfully saved to db: {db_name}')
 
 
 if __name__ == '__main__':
     start_time: float = time()
 
-    logger.logger.info('Starting analysis pipeline...')
+    logger.info('Starting analysis pipeline...')
     main()
-    logger.logger.info('Analysis pipeline done')
+    logger.info('Analysis pipeline done')
 
     end_time: float = time()
     execution_time: float = end_time - start_time
 
-    logger.logger.info(f'Execution time:\n\
+    logger.info(f'Execution time:\n\
         {execution_time:.2f} seconds,\n\
         {execution_time / 60:.2f} minutes, \n\
         {execution_time / 60 / 60:.2f} hours.')
