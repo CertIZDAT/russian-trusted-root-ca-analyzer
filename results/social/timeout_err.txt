@@ -5,6 +5,7 @@ https://professionali.ru – Request timed out
 https://council.gov.ru – Request timed out
 https://duma.gov.ru – Request timed out
 https://government.ru – Request timed out
+https://free.ntv.ru – Request timed out
 https://domashniy.ru – Request timed out
 https://ctc.ru – Request timed out
 https://bilet.worldskills.ru – Request timed out

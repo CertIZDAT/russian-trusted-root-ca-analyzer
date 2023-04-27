@@ -1,12 +1,12 @@
+https://aliexpress.ru – status code: 429
 https://kp.ru – status code: 403
-https://cian.ru – status code: 403
 https://weather.com – status code: 403
-https://dns-shop.ru – status code: 403
 https://ozon.ru – status code: 403
+https://dns-shop.ru – status code: 403
+https://cian.ru – status code: 403
 https://primpress.ru – status code: 444
 https://vseinstrumenti.ru – status code: 403
 https://leroymerlin.ru – status code: 401
-https://aliexpress.ru – status code: 429
 https://ficbook.net – status code: 403
 https://publish-film.site – status code: 403
 https://vsetam.net – status code: 403

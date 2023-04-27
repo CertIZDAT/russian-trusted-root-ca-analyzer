@@ -3,8 +3,8 @@ https://geo.stavregion.ru – CA: Stavropol
 https://ksp-orel.ru – CA: Moscow
 https://fond.karelia.ru – CA: Petrozavodsk
 https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
-https://my.krskstate.ru – CA: Moscow
 https://oprm.e-mordovia.ru – CA: Saransk
+https://my.krskstate.ru – CA: Moscow
 https://ingushavtodor.ru – CA: SPb
 https://reestr.stavregion.ru – CA: Stavropol
 https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
@@ -27,7 +27,6 @@ https://nest.cs.karelia.ru – CA: Karelia
 https://agroamur.ru – CA: SPb
 https://filarmonia.pskov.ru – CA: SPb
 https://cvmir3.kalin.gov.spb.ru – CA: SPb
-https://26.rospotrebnadzor.ru – CA: Plesk
 https://fort.belgorod-archive.ru – CA: SPb
 https://mathem.krc.karelia.ru – CA: Petrozavodsk
 https://nsi.eirc.mos.ru – CA: 77 г. Москва
@@ -57,9 +56,9 @@ https://razlivmuseum.kurort.gov.spb.ru – CA: Plesk
 https://mcx.ru – CA: Moscow
 https://ucnt.gfu.vrn.ru – CA: voronezh
 https://okn53.ru – CA: SPb
-https://mail.ookn.ru – CA: Moscow
 https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://sip.gtn.govrb.ru – CA: GTN-SRV-CA
+https://mail.ookn.ru – CA: Moscow
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://dou3spb.kalin.gov.spb.ru – CA: Moscow
 https://agdumin.ru – CA: TULA
@@ -82,13 +81,12 @@ https://law.zsnso.ru – CA: sovet-nso.ru
 https://mail.rostobr.ru – CA: rostobr-SRV-DHCP-VLAN-CA
 https://feed.stavregion.ru – CA: Stavropol
 https://cev-k.kalin.gov.spb.ru – CA: Moscow
-https://msudro.ru – CA: Rostov-on-Don
 https://document.archive.pskov.ru – CA: Pskov
+https://msudro.ru – CA: Rostov-on-Don
 https://ioasaf.belgorod-archive.ru – CA: SPb
-https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
+https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://arhiv.minfin-samara.ru – CA: Samara
-https://transactions.krc.karelia.ru – CA: Petrozavodsk
 https://mingkhsk.ru – CA: Stavropol
 https://mintourism26.ru – CA: Stavropol
 https://grr.fish.gov.ru – CA: Moscow
@@ -141,7 +139,6 @@ https://special.mintrans.ru – CA: Certum Certification Authority
 https://host30.gov39.ru – CA: Moscow
 https://piccana.karelia.ru – CA: Karelia
 https://vtorres.samregion.ru – CA: SAMARA
-https://26.rospotrebnadzor.ru – CA: Plesk
 https://xn--h1acdfggnhdg.xn--p1ai – CA: Stavropol
 https://stokehold.test.dvinaland.ru – CA: Kaliningrad
 https://karchiv.gov.spb.ru – CA: Moscow
