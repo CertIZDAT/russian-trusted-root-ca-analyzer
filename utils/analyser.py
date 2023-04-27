@@ -5,7 +5,7 @@ from time import sleep
 import requests
 from OpenSSL import crypto
 
-from check import timeout, trusted_ca_path, self_sign_path, other_ssl_err_path, timeout_err_path, request_err_path
+from check import timeout
 from utils import logger, threading, lists
 
 
@@ -41,16 +41,21 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     untrusted: list[str] = lists.untrusted
     self_signed: list[str] = lists.self_signed
 
-    sub_path: str = ''
     if batch_idx == 1:
-        sub_path = path.join('results/', 'government')
+        sub_path: str = path.join('results/', 'government')
     elif batch_idx == 2:
-        sub_path = path.join('results/', 'social')
+        sub_path: str = path.join('results/', 'social')
     elif batch_idx == 3:
-        sub_path = path.join('results/', 'top')
+        sub_path: str = path.join('results/', 'top')
     else:
         logger.logger.error(f'FATAL batch_idx error! idx = {batch_idx}')
         exit(1)
+
+    trusted_ca_path: str = f'{sub_path}/russian_trusted_ca.txt'
+    self_sign_path: str = f'{sub_path}/ru_self_sign.txt'
+    other_ssl_err_path: str = f'{sub_path}/other_ssl_err.txt'
+    timeout_err_path: str = f'{sub_path}/timeout_err.txt'
+    request_err_path: str = f'{sub_path}/request_errors.txt'
 
     link: str = source_link.strip()
     if link == '':
