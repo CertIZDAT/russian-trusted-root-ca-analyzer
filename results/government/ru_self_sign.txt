@@ -3,8 +3,8 @@ https://geo.stavregion.ru – CA: Stavropol
 https://ksp-orel.ru – CA: Moscow
 https://fond.karelia.ru – CA: Petrozavodsk
 https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
-https://oprm.e-mordovia.ru – CA: Saransk
 https://my.krskstate.ru – CA: Moscow
+https://oprm.e-mordovia.ru – CA: Saransk
 https://ingushavtodor.ru – CA: SPb
 https://reestr.stavregion.ru – CA: Stavropol
 https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
@@ -43,8 +43,8 @@ https://detstvo.gokrk.ru – CA: Kaliningrad
 https://post.eao.ru – CA: jarnet-DCEAOS-CA
 https://stavinvest.ru – CA: Stavropol
 https://tulagid71.ru – CA: TULA
-https://mz26.ru – CA: Stavropol
 https://economy.krc.karelia.ru – CA: Petrozavodsk
+https://mz26.ru – CA: Stavropol
 https://suotacis.krc.karelia.ru – CA: Petrozavodsk
 https://maliachkino.shigony.samregion.ru – CA: SAMARA
 https://calcrtk.stavregion.ru – CA: Stavropol
@@ -57,8 +57,8 @@ https://razlivmuseum.kurort.gov.spb.ru – CA: Plesk
 https://mcx.ru – CA: Moscow
 https://ucnt.gfu.vrn.ru – CA: voronezh
 https://okn53.ru – CA: SPb
-https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://mail.ookn.ru – CA: Moscow
+https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://sip.gtn.govrb.ru – CA: GTN-SRV-CA
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://dou3spb.kalin.gov.spb.ru – CA: Moscow
@@ -74,8 +74,8 @@ https://create.karelia.ru – CA: Petrozavodsk
 https://strategy29.test.dvinaland.ru – CA: Kaliningrad
 https://sv.stavminobr.ru – CA: Stavropol
 https://pravitelstvori.ru – CA: Kaliningrad
-https://agdumin.ru – CA: TULA
 https://lk.expert.tmbreg.ru – CA: Internet Widgits Pty Ltd
+https://agdumin.ru – CA: TULA
 https://guzgp76om.kalin.gov.spb.ru – CA: Saint Petersburg
 https://geobotany.krc.karelia.ru – CA: Petrozavodsk
 https://law.zsnso.ru – CA: sovet-nso.ru
@@ -85,8 +85,8 @@ https://cev-k.kalin.gov.spb.ru – CA: Moscow
 https://msudro.ru – CA: Rostov-on-Don
 https://document.archive.pskov.ru – CA: Pskov
 https://ioasaf.belgorod-archive.ru – CA: SPb
-https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
 https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
+https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
 https://arhiv.minfin-samara.ru – CA: Samara
 https://transactions.krc.karelia.ru – CA: Petrozavodsk
 https://mingkhsk.ru – CA: Stavropol
@@ -102,9 +102,8 @@ https://g.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://dsreda.stavregion.ru – CA: Stavropol
 https://tarif26.ru – CA: Stavropol
 https://test.epsh.mos.ru – CA: RU
-https://wwwold.zsnso.ru – CA: sovet-nso.ru
 https://portal.mingkhsk.ru – CA: Stavropol
-https://printcom.karelia.ru – CA: Petrozavodsk
+https://wwwold.zsnso.ru – CA: sovet-nso.ru
 https://prokuror.chukotka.ru – CA: Plesk
 https://map.stavinvest.ru – CA: Stavropol
 https://stavzags.ru – CA: Stavropol
@@ -132,11 +131,9 @@ https://dsbrobl.ru – CA: SPb
 https://calendar.zsnso.ru – CA: sovet-nso.ru
 https://cluster.krc.karelia.ru – CA: Petrozavodsk
 https://site1.test.dvinaland.ru – CA: Kaliningrad
-https://mx.all.culture.ru – CA: mx.all.culture.ru
 https://old.stavinvest.ru – CA: Stavropol
 https://duma39.ru – CA: SPb
 https://sites-delo.cap.ru – CA: CAP root CA
-https://10.rospotrebnadzor.ru – CA: Kaliningrad
 https://biz.stavinvest.ru – CA: Stavropol
 https://predvo.ru – CA: Internet Widgits Pty Ltd
 https://dom.mingkhsk.ru – CA: Stavropol
@@ -203,4 +200,3 @@ https://sc588.kolp.gov.spb.ru – CA: Moscow
 https://smb.e-mordovia.ru – CA: Saransk
 https://fcpkultura.ru – CA: Kaliningrad
 https://mfc.e-mordovia.ru – CA: Saransk
-https://pochtabank.ru – CA: ddos-guard

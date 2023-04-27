@@ -1,0 +1,6 @@
+https://rosminzdrav.ru – CA: Salford
+https://gaso.ru – CA: AlphaSSL CA - SHA256 - G2
+https://e-katalog.ru – CA: Salford
+https://minobrnauki.ru – CA: AlphaSSL CA - SHA256 - G4
+https://fmbaros.ru – CA: R3
+https://free.ntv.ru – CA: GlobalSign RSA OV SSL CA 2018

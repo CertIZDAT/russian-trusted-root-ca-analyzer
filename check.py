@@ -28,6 +28,7 @@ def main() -> None:
     args = parser.parse_args()
 
     # Get values for all args
+    # FIXME: timeout doesn't change from arg
     global timeout
     timeout = int(args.timeout)
     if args.timeout <= 0:

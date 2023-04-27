@@ -12,6 +12,7 @@ from utils.lists import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 from utils.logger import logger
 
 
+# TODO: Add ability to parse links like https://онлайнинспекция.рф
 def _get_root_cert(link: str):
     cert = ssl.get_server_certificate((link.split('//')[1], 443))
     x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
