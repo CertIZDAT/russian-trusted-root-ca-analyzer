@@ -65,11 +65,13 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
     if not link.startswith('http'):
         link = f'https://{link}'
 
-    if link.endswith('.рф'):
-        link = quote(link, safe=':/')
+    encoded_link: str = ''
+    is_non_ascii_link: bool = link.endswith('.рф')
+    if is_non_ascii_link:
+        encoded_link = quote(link, safe=':/')
 
     try:
-        response = requests.get(link, headers=HEADER, timeout=timeout)
+        response = requests.get(encoded_link, headers=HEADER, timeout=timeout)
         if not response.status_code == 200:
             with open(f'{sub_path}/unsuccessful.txt', 'a') as f:
                 f.write(
@@ -80,7 +82,10 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
             return
 
     except requests.exceptions.SSLError:
-        issuer = _get_root_cert(link)
+        if is_non_ascii_link:
+            issuer = _get_root_cert(encoded_link)
+        else:
+            issuer = _get_root_cert(link)
 
         if any(cert in issuer for cert in UNTRUSTED_CERTS):
             file_name: str = trusted_ca_path
