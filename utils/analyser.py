@@ -1,4 +1,5 @@
 import ssl
+import subprocess
 from os import path, mkdir, remove, listdir
 from shutil import rmtree
 from time import sleep
@@ -12,32 +13,27 @@ from utils.lists import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 from utils.logger import logger
 
 
-def _get_root_cert(link: str):
+def _deep_certificate_check(link: str, timeout: int):
+    link = link.split('//')[1]
+    echo_command = 'echo Q'
+    openssl_command = f'openssl s_client -showcerts -verify 15 -connect {link}:443 -servername {link}'
+    echo_output = subprocess.check_output(echo_command, shell=True,
+                                          stderr=subprocess.DEVNULL,
+                                          universal_newlines=True)
+    openssl_output = subprocess.check_output(openssl_command, shell=True, input=echo_output,
+                                             stderr=subprocess.DEVNULL, universal_newlines=True, timeout=timeout)
+
+    for line in openssl_output.split('\n'):
+        if UNTRUSTED_CERTS[0] in line:
+            return True
+        else:
+            return False
+
+
+def _get_root_cert(link: str) -> str:
     cert = ssl.get_server_certificate((link.split('//')[1], 443))
     x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
-    # FIXME: Fix cert chain detection
-    # get issuer of the certificate
     return x509.get_issuer().get_components()[2][1].decode()
-
-    # cert = ssl.get_server_certificate((link.split('//')[1], 443))
-    # x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
-    # issuer_cert = x509.get_issuer()
-    # issuer_name = issuer_cert.CN
-
-    # print(f'i: {issuer_cert}')
-    # print(f'CN: {issuer_cert.CN}')
-    # print(f'C: {issuer_cert.C}')
-    # print(f'commonName: {issuer_cert.commonName}')
-    # print(f'L: {issuer_cert.L}')
-    # print(f'localityName: {issuer_cert.localityName}')
-    # print(f'O: {issuer_cert.O}')
-    # print(f'orgUnitName: {issuer_cert.organizationalUnitName}')
-    # print(f'orgName: {issuer_cert.organizationName}')
-    # print(f'OU: {issuer_cert.OU}')
-    # print(f'ST: {issuer_cert.ST}')
-    # print(f'stateOrProvinceName: {issuer_cert.stateOrProvinceName}')
-
-    # return issuer_name
 
 
 def _check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int,
@@ -82,6 +78,9 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
 
     except requests.exceptions.SSLError:
         issuer = _get_root_cert(link)
+        if issuer not in UNTRUSTED_CERTS:
+            if _deep_certificate_check(link, timeout):
+                issuer = UNTRUSTED_CERTS[0] + ' No-Snig'
 
         if any(cert in issuer for cert in UNTRUSTED_CERTS):
             file_name: str = trusted_ca_path
