@@ -75,7 +75,7 @@ def save_res_to_db(db_name: str,
         ss_path: str = path.join(res_folder, category, self_sign_file)
         ssl_path: str = path.join(res_folder, category, other_ssl_err_file)
 
-        entries[i] = (_read_entries(ca_path), _read_entries(ss_path), _read_entries(ssl_path))
+        entries[i] = (__read_entries(ca_path), __read_entries(ss_path), __read_entries(ssl_path))
 
     #                          ↓ ca entries            ↓ self-signed entries   ↓ other ssl entries
     gov_entries = [','.join(entries[0][0]), ','.join(entries[0][1]), ','.join(entries[0][2])]
@@ -110,7 +110,7 @@ def save_res_to_db(db_name: str,
         connection.close()
 
 
-def _read_entries(file_path) -> list[str]:
+def __read_entries(file_path) -> list[str]:
     try:
         with open(file_path, 'r') as f:
             return [line.strip() for line in f.readlines()]
