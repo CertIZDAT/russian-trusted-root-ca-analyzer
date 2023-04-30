@@ -8,7 +8,7 @@ import requests
 from OpenSSL import crypto
 
 from utils import threading
-from utils.lists import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
+from utils.web_consts import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 from utils.logger import logger
 
 
