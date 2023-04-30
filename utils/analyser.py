@@ -45,7 +45,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
         link = f'https://{link}'
 
     old_link: str = link
-    if link.isascii():
+    if not link.isascii():
         link = quote(link, safe=':/')
 
     try:
