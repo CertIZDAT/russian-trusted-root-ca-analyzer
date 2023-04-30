@@ -2,6 +2,7 @@ import sqlite3
 from os import path
 from sqlite3 import Connection, Cursor
 
+from utils.common import get_lines_count_in
 from utils.logger import logger
 
 
@@ -19,12 +20,15 @@ def create_db_with_name(db_name: str) -> None:
         id INTEGER PRIMARY KEY,
         date_time TEXT NOT NULL,
         timeout INTEGER NOT NULL,
+        gov_count INTEGER NOT NULL,
         gov_ca_list TEXT NOT NULL,
         gov_ss_list TEXT NOT NULL,
         gov_other_ssl_err_list TEXT NOT NULL,
+        social_count INTEGER NOT NULL,
         social_ca_list TEXT NOT NULL,
         social_ss_list TEXT NOT NULL,
-        social_other_ssl_err_list TEXT NOT NULL,    
+        social_other_ssl_err_list TEXT NOT NULL,
+        top_count INTEGER NOT NULL,
         top_ca_list TEXT NOT NULL,
         top_ss_list TEXT NOT NULL,
         top_other_ssl_err TEXT NOT NULL,
@@ -62,6 +66,8 @@ def save_res_to_db(db_name: str,
     self_sign_file: str = 'ru_self_sign.txt'
     other_ssl_err_file: str = 'other_ssl_err.txt'
 
+    dataset_folder: str = 'dataset'
+
     categories: list[str] = ['government', 'social', 'top']
     entries: list = [[] for _ in range(3)]
 
@@ -80,17 +86,20 @@ def save_res_to_db(db_name: str,
     # Add entries to database
     insert_query: str = '''
         INSERT INTO statistic_table (date_time, timeout, 
-        gov_ca_list, gov_ss_list, gov_other_ssl_err_list,
-        social_ca_list, social_ss_list, social_other_ssl_err_list, 
-        top_ca_list, top_ss_list, top_other_ssl_err, 
+        gov_count, gov_ca_list, gov_ss_list, gov_other_ssl_err_list,
+        social_count, social_ca_list, social_ss_list, social_other_ssl_err_list, 
+        top_count, top_ca_list, top_ss_list, top_other_ssl_err, 
         is_dataset_updated)
-        VALUES (DATETIME('now'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        VALUES (DATETIME('now'), ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
     '''
 
     try:
         cursor.execute(insert_query, (timeout,
+                                      get_lines_count_in(path.join(dataset_folder, 'government_domains.txt')),
                                       gov_entries[0], gov_entries[1], gov_entries[2],
+                                      get_lines_count_in(path.join(dataset_folder, 'social.txt')),
                                       social_entries[0], social_entries[1], social_entries[2],
+                                      get_lines_count_in(path.join(dataset_folder, 'top-100.txt')),
                                       top_entries[1], top_entries[1], top_entries[2],
                                       int(is_new_dataset == 'True' or is_new_dataset == 'true')))
         connection.commit()
