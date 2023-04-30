@@ -11,4 +11,3 @@ https://bilet.worldskills.ru – Request timed out
 https://free.friday.ru – Request timed out
 https://cikrf.ru – Request timed out
 https://agroserver.ru – Request timed out
-https://доступвсем.рф – Request timed out

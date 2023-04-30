@@ -40,8 +40,8 @@ https://arhitektura32.ru – CA: Bryansk
 https://sonko.samregion.ru – CA: SAMARA
 https://ucnt.gfu.vrn.ru – CA: voronezh
 https://okn53.ru – CA: SPb
-https://mail.ookn.ru – CA: Moscow
 https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
+https://mail.ookn.ru – CA: Moscow
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://dou3spb.kalin.gov.spb.ru – CA: Moscow
 https://agdumin.ru – CA: TULA
@@ -143,10 +143,10 @@ https://spb21.aptrg.gov.spb.ru – CA: Moscow
 https://mincultsk.ru – CA: Stavropol
 https://gb2-bsk.zdravalt.ru – CA: Kaliningrad
 https://arhdeti.test.dvinaland.ru – CA: Kaliningrad
-https://tarif29.test.dvinaland.ru – CA: Kaliningrad
 https://school466.kurort.gov.spb.ru – CA: SPb
-https://dvinainvest2.test.dvinaland.ru – CA: Kaliningrad
+https://tarif29.test.dvinaland.ru – CA: Kaliningrad
 https://en.welcome2penza.ru – CA: Plesk
+https://dvinainvest2.test.dvinaland.ru – CA: Kaliningrad
 https://ladoga.krc.karelia.ru – CA: Petrozavodsk
 https://sc588.kolp.gov.spb.ru – CA: Moscow
 https://fcpkultura.ru – CA: Kaliningrad
