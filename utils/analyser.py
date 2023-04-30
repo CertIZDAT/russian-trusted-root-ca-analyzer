@@ -90,8 +90,8 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
 
     except Exception as e:
         with open(request_err_path, 'a') as f:
-            f.write(f'{link} – request error: {e}\n')
-        logger.error(f'{link} – request error')
+            f.write(f'{link} - {old_link} – request error: {e}\n')
+        logger.error(f'{link} – {old_link} – request error')
         return
 
 
