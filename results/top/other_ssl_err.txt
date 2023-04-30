@@ -1,1 +1,3 @@
 https://lordfilm.lu – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://publish-film.site – CA: Cloudflare Inc ECC CA-3
+https://lordserial.site – CA: Cloudflare Inc ECC CA-3

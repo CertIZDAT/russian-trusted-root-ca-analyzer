@@ -13,11 +13,11 @@ domains.
 A dataset of 21697 sites was analysed.
 
 - Government associated sites:
-  - 1027 sites require a Russian Trusted CA.
-  - 200 sites use self-signed certificates issued in Russia.
+  - 905 sites require a Russian Trusted CA.
+  - 152 sites use self-signed certificates issued in Russia.
 - Social important sites:
-  - 1 site require a Russian Trusted CA.
-  - 206 sites use self-signed certificates issued in Russia.
+  - 5 site require a Russian Trusted CA.
+  - 0 sites use self-signed certificates issued in Russia.
 - Top-100 sites in Russia:
   - 1 site require a Russian Trusted CA.
   - 0 sites use self-signed certificates issued in Russia.
@@ -76,12 +76,15 @@ statistics with SQL queries.
     id INTEGER PRIMARY KEY,                   # primary key;
     date_time TEXT NOT NULL,                  # current date and time (UTC);
     timeout INTEGER NOT NULL                  # timeout value for each exec;
+    gov_count INTEGER NOT NULL,               # government dataset size;
     gov_ca_list TEXT NOT NULL,                # list of gov sites with a Russian trusted CA;
     gov_ss_list TEXT NOT NULL,                # list of gov sites with self-signed certificates;
     gov_other_ssl_err_list TEXT NOT NULL,     # list of gov sites with other SSL errors;
+    social_count INTEGER NOT NULL,            # social dataset size;
     social_ca_list TEXT NOT NULL,             # list of social sites with a Russian trusted CA;
     social_ss_list TEXT NOT NULL,             # list of social sites with self-signed certificates;
     social_other_ssl_err_list TEXT NOT NULL,  # list of social sites with other SSL errors;
+    top_count INTEGER NOT NULL,               # top-100 dataset size;
     top_ca_list TEXT NOT NULL,                # list of top-100 sites with a Russian trusted CA;
     top_ss_list TEXT NOT NULL,                # list of top-100 sites with self-signed certificates;
     top_other_ssl_err TEXT NOT NULL,          # list of top-100 sites with other SSL errors;
