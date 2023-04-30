@@ -12,15 +12,15 @@ from utils.logger import logger
 from utils.web_consts import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 
 
-def _get_root_cert(link: str):
+def __get_root_cert(link: str):
     cert = ssl.get_server_certificate((link.split('//')[1], 443))
     x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
     # FIXME: Fix cert chain detection
     return x509.get_issuer().get_components()[2][1].decode()
 
 
-def _check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int,
-                timeout: int) -> None:
+def __check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int,
+                 timeout: int) -> None:
     if batch_idx == 1:
         sub_path: str = path.join('results/', 'government')
     elif batch_idx == 2:
@@ -60,7 +60,7 @@ def _check_link(source_link: str, index: int, website_links: list[str], batch_id
             return
 
     except requests.exceptions.SSLError:
-        issuer = _get_root_cert(link)
+        issuer = __get_root_cert(link)
 
         if any(cert in issuer for cert in UNTRUSTED_CERTS):
             file_name: str = trusted_ca_path
@@ -119,7 +119,7 @@ def run_pipeline(link_batches: tuple, timeout: int) -> None:
             sleep(1)
 
             # process batch with multiprocessing
-            results: list = threading.process_batch(target_func=_check_link,
+            results: list = threading.process_batch(target_func=__check_link,
                                                     batch=content,
                                                     # idx == 1 means government associated sites
                                                     # idx == 2 means social list sites
