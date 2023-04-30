@@ -8,36 +8,15 @@ import requests
 from OpenSSL import crypto
 
 from utils import threading
-from utils.web_consts import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 from utils.logger import logger
+from utils.web_consts import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 
 
 def _get_root_cert(link: str):
     cert = ssl.get_server_certificate((link.split('//')[1], 443))
     x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
     # FIXME: Fix cert chain detection
-    # get issuer of the certificate
     return x509.get_issuer().get_components()[2][1].decode()
-
-    # cert = ssl.get_server_certificate((link.split('//')[1], 443))
-    # x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
-    # issuer_cert = x509.get_issuer()
-    # issuer_name = issuer_cert.CN
-
-    # print(f'i: {issuer_cert}')
-    # print(f'CN: {issuer_cert.CN}')
-    # print(f'C: {issuer_cert.C}')
-    # print(f'commonName: {issuer_cert.commonName}')
-    # print(f'L: {issuer_cert.L}')
-    # print(f'localityName: {issuer_cert.localityName}')
-    # print(f'O: {issuer_cert.O}')
-    # print(f'orgUnitName: {issuer_cert.organizationalUnitName}')
-    # print(f'orgName: {issuer_cert.organizationName}')
-    # print(f'OU: {issuer_cert.OU}')
-    # print(f'ST: {issuer_cert.ST}')
-    # print(f'stateOrProvinceName: {issuer_cert.stateOrProvinceName}')
-
-    # return issuer_name
 
 
 def _check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int,

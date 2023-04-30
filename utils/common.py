@@ -20,7 +20,7 @@ def read_links(filename: str) -> list[list[str]]:
 
 
 def get_lines_count_in(file: str) -> int:
-    count = 0
+    count: int = 0
     try:
         with open(file, 'r') as f:
             for line in f:

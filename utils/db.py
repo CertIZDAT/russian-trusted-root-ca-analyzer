@@ -1,6 +1,5 @@
 import sqlite3
 from os import path
-from sqlite3 import Connection, Cursor
 
 from utils.common import get_lines_count_in
 from utils.logger import logger
@@ -58,8 +57,8 @@ def create_db_with_name(db_name: str) -> None:
 def save_res_to_db(db_name: str,
                    timeout: int,
                    is_new_dataset: bool = False) -> None:
-    connection: Connection = sqlite3.connect(db_name)
-    cursor: Cursor = connection.cursor()
+    connection = sqlite3.connect(db_name)
+    cursor = connection.cursor()
 
     res_folder: str = 'results'
     ca_file: str = 'russian_trusted_ca.txt'
@@ -111,7 +110,7 @@ def save_res_to_db(db_name: str,
         connection.close()
 
 
-def _read_entries(file_path):
+def _read_entries(file_path) -> list[str]:
     try:
         with open(file_path, 'r') as f:
             return [line.strip() for line in f.readlines()]
