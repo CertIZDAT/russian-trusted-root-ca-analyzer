@@ -23,13 +23,13 @@ https://cvmir3.kalin.gov.spb.ru – CA: SPb
 https://fort.belgorod-archive.ru – CA: SPb
 https://mathem.krc.karelia.ru – CA: Petrozavodsk
 https://mail.it.krskstate.ru – CA: KRSK
-https://duma39.ru – CA: SPb
 https://kspstav.ru – CA: Stavropol
+https://duma39.ru – CA: SPb
 https://inform.pskov.ru – CA: ddos-guard
 https://guktcbskar.kalin.gov.spb.ru – CA: SPb
 https://elibrary.krc.karelia.ru – CA: Petrozavodsk
-https://sh21.voadm.gov.spb.ru – CA: SPb
 https://detstvo.gokrk.ru – CA: Kaliningrad
+https://sh21.voadm.gov.spb.ru – CA: SPb
 https://economy.krc.karelia.ru – CA: Petrozavodsk
 https://suotacis.krc.karelia.ru – CA: Petrozavodsk
 https://maliachkino.shigony.samregion.ru – CA: SAMARA
@@ -40,15 +40,15 @@ https://arhitektura32.ru – CA: Bryansk
 https://sonko.samregion.ru – CA: SAMARA
 https://ucnt.gfu.vrn.ru – CA: voronezh
 https://okn53.ru – CA: SPb
-https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://mail.ookn.ru – CA: Moscow
+https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://dou3spb.kalin.gov.spb.ru – CA: Moscow
 https://agdumin.ru – CA: TULA
 https://press.cap.ru – CA: CAP root CA
 https://dolschiki.admhmao.ru – CA: Kaliningrad
-https://school466.kurort.gov.spb.ru – CA: SPb
 https://mail.favr.ru – CA: mail.favr.ru
+https://school466.kurort.gov.spb.ru – CA: SPb
 https://create.karelia.ru – CA: Petrozavodsk
 https://sv.stavminobr.ru – CA: Stavropol
 https://pravitelstvori.ru – CA: Kaliningrad
@@ -58,11 +58,11 @@ https://geobotany.krc.karelia.ru – CA: Petrozavodsk
 https://law.zsnso.ru – CA: sovet-nso.ru
 https://feed.stavregion.ru – CA: Stavropol
 https://cev-k.kalin.gov.spb.ru – CA: Moscow
-https://msudro.ru – CA: Rostov-on-Don
 https://document.archive.pskov.ru – CA: Pskov
+https://msudro.ru – CA: Rostov-on-Don
 https://ioasaf.belgorod-archive.ru – CA: SPb
-https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
 https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
+https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
 https://arhiv.minfin-samara.ru – CA: Samara
 https://transactions.krc.karelia.ru – CA: Petrozavodsk
 https://oldpv.samregion.ru – CA: SAMARA
@@ -89,14 +89,13 @@ https://dev.regul.test.dvinaland.ru – CA: Kaliningrad
 https://pln.pskov.ru – CA: ddos-guard
 https://inform.pskov.ru – CA: ddos-guard
 https://goug343nr.tunev.gov.spb.ru – CA: SPb
-https://dsbrobl.ru – CA: SPb
 https://spec.msudro.ru – CA: Rostov-on-Don
 https://forestry.krc.karelia.ru – CA: Petrozavodsk
 https://muetacis.krc.karelia.ru – CA: Petrozavodsk
+https://dsbrobl.ru – CA: SPb
 https://mio26.ru – CA: Stavropol
 https://pravitelstvori.ru – CA: Kaliningrad
 https://mpr73.ru – CA: SPb
-https://upload.new.tech.mos.ru – CA: Moscow
 https://dsbrobl.ru – CA: SPb
 https://calendar.zsnso.ru – CA: sovet-nso.ru
 https://cluster.krc.karelia.ru – CA: Petrozavodsk
@@ -106,8 +105,8 @@ https://duma39.ru – CA: SPb
 https://biz.stavinvest.ru – CA: Stavropol
 https://predvo.ru – CA: Internet Widgits Pty Ltd
 https://special.mintrans.ru – CA: Certum Certification Authority
-https://piccana.karelia.ru – CA: Karelia
 https://vtorres.samregion.ru – CA: SAMARA
+https://piccana.karelia.ru – CA: Karelia
 https://stokehold.test.dvinaland.ru – CA: Kaliningrad
 https://karchiv.gov.spb.ru – CA: Moscow
 https://bag.test.dvinaland.ru – CA: Kaliningrad
@@ -135,18 +134,18 @@ https://tuvasport.ru – CA: Internet Widgits Pty Ltd
 https://old.beldepfin.ru – CA: SPb
 https://khbr.meteorf.ru – CA: mail.khbr.meteorf.ru
 https://tarif26.ru – CA: Stavropol
-https://sh382.krsl.gov.spb.ru – CA: SPb
 https://water.krc.karelia.ru – CA: Petrozavodsk
+https://sh382.krsl.gov.spb.ru – CA: SPb
 https://rgis.stavregion.ru – CA: Stavropol
 https://agro-ul.ru – CA: SPb
 https://spb21.aptrg.gov.spb.ru – CA: Moscow
 https://mincultsk.ru – CA: Stavropol
 https://gb2-bsk.zdravalt.ru – CA: Kaliningrad
 https://arhdeti.test.dvinaland.ru – CA: Kaliningrad
-https://school466.kurort.gov.spb.ru – CA: SPb
 https://tarif29.test.dvinaland.ru – CA: Kaliningrad
-https://en.welcome2penza.ru – CA: Plesk
+https://school466.kurort.gov.spb.ru – CA: SPb
 https://dvinainvest2.test.dvinaland.ru – CA: Kaliningrad
+https://en.welcome2penza.ru – CA: Plesk
 https://ladoga.krc.karelia.ru – CA: Petrozavodsk
 https://sc588.kolp.gov.spb.ru – CA: Moscow
 https://fcpkultura.ru – CA: Kaliningrad
