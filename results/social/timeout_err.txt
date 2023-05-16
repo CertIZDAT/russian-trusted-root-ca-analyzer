@@ -1,3 +1,4 @@
+https://pravo.gov.ru – Request timed out
 https://kremlin.ru – Request timed out
 https://ekovolga.com – Request timed out
 https://professionali.ru – Request timed out

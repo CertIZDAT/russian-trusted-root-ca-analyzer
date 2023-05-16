@@ -13,10 +13,10 @@ domains.
 A dataset of 21697 sites was analysed.
 
 - Government associated sites:
-  - 921 sites require a Russian Trusted CA.
-  - 151 sites use self-signed certificates issued in Russia.
+  - 935 sites require a Russian Trusted CA.
+  - 232 sites use self-signed certificates issued in Russia.
 - Social important sites:
-  - 6 site require a Russian Trusted CA.
+  - 5 site require a Russian Trusted CA.
   - 0 sites use self-signed certificates issued in Russia.
 - Top-100 sites in Russia:
   - 1 site require a Russian Trusted CA.
@@ -91,6 +91,13 @@ statistics with SQL queries.
     is_dataset_updated INTEGER NOT NULL       # boolean flag set to true when dataset/self-sign list has been updated.
 
 ## Running
+
+### Prerequisites
+
+Python3 compatibility:
+ - python3.11 – tested, works ✅;
+ - python3.9-3.10 – not tested, might work;
+ - python3.8 and earlier – doesn't work 🛑.
 
 Before running, be aware that many resources only allow incoming traffic from Russian IP addresses.
 
