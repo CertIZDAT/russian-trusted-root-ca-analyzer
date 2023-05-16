@@ -88,7 +88,7 @@ statistics with SQL queries.
     top_ca_list TEXT NOT NULL,                # list of top-100 sites with a Russian trusted CA;
     top_ss_list TEXT NOT NULL,                # list of top-100 sites with self-signed certificates;
     top_other_ssl_err TEXT NOT NULL,          # list of top-100 sites with other SSL errors;
-    is_dataset_updated INTEGER NOT NULL       # boolean flag set to true when dataset has been updated.
+    is_dataset_updated INTEGER NOT NULL       # boolean flag set to true when dataset/self-sign list has been updated.
 
 ## Running
 
@@ -116,14 +116,14 @@ deactivate                        # deactivate python environment.
 
 - `--timeout`, `default=30`, timeout for each web request, in seconds;
 - `--name`, `default=statistics.db`, database name with `.db` extension, if it does not exist – it will be created;
-- `--updated`, `default=False`, flag indicating that the dataset has been updated. This flag must be set to `True` if
+- `--updated`, `default=False`, flag indicating that the dataset/self-sign list has been updated. This flag must be set to `True` if
   dataset has been updated.
 
 #### Examples
 
 - Perform analysis with default parameters (db name: `statistic.db`, `timeout`: 30 secs) – `python3 check.py`
 - Perform analysis with custom database name and timeout – `python3 check.py --name=test.db --timeout=5`
-- Perform analysis with default parameters, but set that the dataset has been updated before
+- Perform analysis with default parameters, but set that the dataset/self-sign list has been updated before
   running – `python3 check.py --updated=True`
 - Get help – `python3 check.py --help`
 
