@@ -79,7 +79,7 @@ def save_res_to_db(db_name: str,
 
     #                          ↓ ca entries            ↓ self-signed entries   ↓ other ssl entries
     gov_entries = [','.join(entries[0][0]), ','.join(entries[0][1]), ','.join(entries[0][2])]
-    social_entries = [','.join(entries[1][0]), ','.join(entries[1][1]), ','.join(entries[2][2])]
+    social_entries = [','.join(entries[1][0]), ','.join(entries[1][1]), ','.join(entries[1][2])]
     top_entries = [','.join(entries[2][0]), ','.join(entries[2][1]), ','.join(entries[2][2])]
 
     # Add entries to database
@@ -99,7 +99,7 @@ def save_res_to_db(db_name: str,
                                       get_lines_count_in(path.join(dataset_folder, 'social.txt')),
                                       social_entries[0], social_entries[1], social_entries[2],
                                       get_lines_count_in(path.join(dataset_folder, 'top-100.txt')),
-                                      top_entries[1], top_entries[1], top_entries[2],
+                                      top_entries[0], top_entries[1], top_entries[2],
                                       int(is_new_dataset == 'True' or is_new_dataset == 'true')))
         connection.commit()
     except sqlite3.Error as e:
