@@ -12,11 +12,11 @@ pyasn1==0.5.0
 pycodestyle==2.10.0
 pycparser==2.21
 pyOpenSSL==23.1.1
-requests==2.30.0
+requests==2.31.0
 soupsieve==2.4.1
 tomli==2.0.1
 types-pyOpenSSL==23.1.0.3
 types-requests==2.30.0.0
 types-urllib3==1.26.25.13
-typing_extensions==4.5.0
+typing_extensions==4.6.0
 urllib3==2.0.2
