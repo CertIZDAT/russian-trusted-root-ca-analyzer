@@ -1,17 +1,16 @@
 https://journals.krc.karelia.ru – CA: Petrozavodsk
-https://redmine.tomsk.gov.ru – CA: UserGate
 https://geo.stavregion.ru – CA: Stavropol
 https://ksp-orel.ru – CA: Moscow
 https://fond.karelia.ru – CA: Petrozavodsk
 https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
-https://my.krskstate.ru – CA: Kaliningrad
 https://rar.gov.ru – CA: UserGate
+https://my.krskstate.ru – CA: Kaliningrad
 https://ingushavtodor.ru – CA: SPb
 https://240717.kuzbass-zags.ru – CA: XX
 https://pnc-dz.zdrav-nnov.ru – CA: XX
 https://reestr.stavregion.ru – CA: Stavropol
-https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://mail.fmkk.ru – CA: ИТ
+https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://liskovo-crb.zdrav-nnov.ru – CA: XX
 https://ds.kbr.ru – CA: SomeCity
 https://ipdisout.adm.yar.ru – CA: Yaroslavl
@@ -27,7 +26,6 @@ https://dzer-pnd.zdrav-nnov.ru – CA: XX
 https://dgb42.zdrav-nnov.ru – CA: XX
 https://crafts.karelia.ru – CA: Petrozavodsk
 https://gkb34.zdrav-nnov.ru – CA: XX
-https://mpgs.tomsk.gov.ru – CA: UserGate
 https://predvo.ru – CA: Internet Widgits Pty Ltd
 https://agroamur.ru – CA: SPb
 https://gp31.zdrav-nnov.ru – CA: XX
@@ -35,9 +33,7 @@ https://filarmonia.pskov.ru – CA: SPb
 https://cvmir3.kalin.gov.spb.ru – CA: SPb
 https://fort.belgorod-archive.ru – CA: SPb
 https://mathem.krc.karelia.ru – CA: Petrozavodsk
-https://mail.it.krskstate.ru – CA: KRSK
 https://36sport.ru – CA: XX
-https://gkuko.ru – CA: UserGate
 https://karelia.ru – CA: XX
 https://duma39.ru – CA: SPb
 https://kspstav.ru – CA: Stavropol
@@ -48,9 +44,7 @@ https://sh21.voadm.gov.spb.ru – CA: SPb
 https://detstvo.gokrk.ru – CA: Kaliningrad
 https://economy.krc.karelia.ru – CA: Petrozavodsk
 https://ombudsman57.ru – CA: XX
-https://mflash.samregion.ru – CA: UserGate
 https://suotacis.krc.karelia.ru – CA: Petrozavodsk
-https://maliachkino.shigony.samregion.ru – CA: SAMARA
 https://calcrtk.stavregion.ru – CA: Stavropol
 https://vepsian.krc.karelia.ru – CA: Petrozavodsk
 https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
@@ -67,7 +61,6 @@ https://ucnt.gfu.vrn.ru – CA: voronezh
 https://gkb34.zdrav-nnov.ru – CA: XX
 https://ombudsman57.ru – CA: XX
 https://okn53.ru – CA: SPb
-https://mail.ookn.ru – CA: Moscow
 https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://volga-clinic.zdrav-nnov.ru – CA: XX
@@ -104,21 +97,17 @@ https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
 https://gb37.zdrav-nnov.ru – CA: XX
 https://transactions.krc.karelia.ru – CA: Petrozavodsk
-https://ns1.tomsk.gov.ru – CA: UserGate
 https://oldpv.samregion.ru – CA: SAMARA
 https://test.test.dvinaland.ru – CA: Kaliningrad
 https://car.pskov.ru – CA: Oldestatehotel
 https://vetluga-crb.zdrav-nnov.ru – CA: XX
-https://info.krc.karelia.ru – CA: Petrozavodsk
 https://it.kreml.nnov.ru – CA: N.Novgorod
+https://info.krc.karelia.ru – CA: Petrozavodsk
 https://ingushavtodor.ru – CA: SPb
-https://sro.gosnadzor.ru – CA: Kaliningrad
 https://g.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://ugz.kurganobl.ru – CA: SomeCity
 https://dsreda.stavregion.ru – CA: Stavropol
-https://mpgs.tomsk.gov.ru – CA: UserGate
 https://tarif26.ru – CA: Stavropol
-https://gkuko.ru – CA: UserGate
 https://portal.mingkhsk.ru – CA: XX
 https://wwwold.zsnso.ru – CA: sovet-nso.ru
 https://gp30.zdrav-nnov.ru – CA: XX
@@ -177,7 +166,6 @@ https://biochemistry.krc.karelia.ru – CA: Petrozavodsk
 https://roads.test.dvinaland.ru – CA: Kaliningrad
 https://edu.msudro.ru – CA: Rostov-on-Don
 https://illhportal.krc.karelia.ru – CA: Petrozavodsk
-https://gts.permkrai.ru – CA: SomeCity
 https://dorogisk.ru – CA: Stavropol
 https://portal.stavinvest.ru – CA: Stavropol
 https://ib.krc.karelia.ru – CA: Petrozavodsk
@@ -229,4 +217,5 @@ https://ladoga.krc.karelia.ru – CA: Petrozavodsk
 https://sc588.kolp.gov.spb.ru – CA: Moscow
 https://dzer-gvv.zdrav-nnov.ru – CA: XX
 https://fcpkultura.ru – CA: Kaliningrad
+https://yar.udmurt.ru – CA: XX
 https://volodarsk-crb.zdrav-nnov.ru – CA: XX
