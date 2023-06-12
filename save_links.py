@@ -5,7 +5,7 @@ import sys
 from urllib.parse import urlparse
 
 import requests
-from bs4 import BeautifulSoup, ResultSet
+from bs4 import BeautifulSoup
 
 # Get the URL from the command-line argument
 if len(sys.argv) < 2:
