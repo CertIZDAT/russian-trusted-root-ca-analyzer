@@ -3,7 +3,7 @@ HEADER: dict = {
                   'Chrome/58.0.3029.110 Safari/537.3'
 }
 
-UNTRUSTED_CERTS: list[str] = ['Russian Trusted', 'No-Sni']
+UNTRUSTED_CERTS: list[str] = ['Russian Trusted']
 
 SELF_SIGNED_CERTS: list[str] = ['SberCA', 'St. Petersburg', 'VTB Group', 'Bank GPB',
                                 'Администрация Партизанского городского округа', 'Kaliningrad', 'Sigma-REZERV',
@@ -15,6 +15,6 @@ SELF_SIGNED_CERTS: list[str] = ['SberCA', 'St. Petersburg', 'VTB Group', 'Bank G
                                 'SUB.CA.GOVRB.RU', 'N.Novgorod', 'RU', 'sovet-nso.ru', 'mx.all.culture.ru',
                                 'CAP root CA', 'Certum Certification Authority', 'Khanty-Mansiysk',
                                 'mail.khbr.meteorf.ru', 'Saransk', 'ИТ', 'SomeCity', 'krs', 'UserGate', 'XX',
-                                'Finance Dept', 'Oldestatehotel', 'Axelname LLC', 'IT-Group Certificate Authority']
+                                'Finance Dept', 'Oldestatehotel', 'Axelname LLC', 'IT-Group Certificate Authority', 'No-Sni']
 
-# 'XX' – this certificate looks like a self-signed one, by the way.
+# 'XX' and 'No-Sni' looks like a self-signed ones, by the way.
