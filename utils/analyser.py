@@ -2,20 +2,21 @@ import ssl
 from os import path, mkdir, remove, listdir
 from shutil import rmtree
 from time import sleep
-from urllib.parse import quote
+from urllib.parse import quote, urlparse
 
 import requests
 from OpenSSL import crypto
 
 from utils import threading
 from utils.logger import logger
-from utils.web_consts import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
+from utils.const import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 
 
 def __get_root_cert(link: str):
-    cert = ssl.get_server_certificate((link.split('//')[1], 443))
+    parsed_url = urlparse(link)
+    hostname = parsed_url.netloc
+    cert = ssl.get_server_certificate((hostname, 443))
     x509 = crypto.load_certificate(crypto.FILETYPE_PEM, cert.encode())
-    # FIXME: Fix cert chain detection
     return x509.get_issuer().get_components()[2][1].decode()
 
 
