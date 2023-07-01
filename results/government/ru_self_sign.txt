@@ -4,7 +4,6 @@ https://ksp-orel.ru – CA: Moscow
 https://fond.karelia.ru – CA: Petrozavodsk
 https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
 https://rar.gov.ru – CA: UserGate
-https://my.krskstate.ru – CA: Kaliningrad
 https://ingushavtodor.ru – CA: SPb
 https://240717.kuzbass-zags.ru – CA: XX
 https://pnc-dz.zdrav-nnov.ru – CA: XX
@@ -12,11 +11,10 @@ https://reestr.stavregion.ru – CA: Stavropol
 https://mail.fmkk.ru – CA: ИТ
 https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://liskovo-crb.zdrav-nnov.ru – CA: XX
-https://ds.kbr.ru – CA: SomeCity
 https://ipdisout.adm.yar.ru – CA: Yaroslavl
+https://minsport18.udmurt.ru – CA: XX
 https://dl.krc.karelia.ru – CA: Petrozavodsk
 https://zagschr.ru – CA: Saint Petersburg
-https://my.krskstate.ru – CA: Kaliningrad
 https://old.fcpkultura.ru – CA: Kaliningrad
 https://mincultsk.stavregion.ru – CA: Stavropol
 https://fcpkultura.ru – CA: Kaliningrad
@@ -33,7 +31,8 @@ https://filarmonia.pskov.ru – CA: SPb
 https://cvmir3.kalin.gov.spb.ru – CA: SPb
 https://fort.belgorod-archive.ru – CA: SPb
 https://mathem.krc.karelia.ru – CA: Petrozavodsk
-https://36sport.ru – CA: XX
+https://mail.it.krskstate.ru – CA: KRSK
+https://36sport.ru – CA: ddos-guard
 https://karelia.ru – CA: XX
 https://duma39.ru – CA: SPb
 https://kspstav.ru – CA: Stavropol
@@ -61,6 +60,7 @@ https://ucnt.gfu.vrn.ru – CA: voronezh
 https://gkb34.zdrav-nnov.ru – CA: XX
 https://ombudsman57.ru – CA: XX
 https://okn53.ru – CA: SPb
+https://mail.ookn.ru – CA: Moscow
 https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://volga-clinic.zdrav-nnov.ru – CA: XX
@@ -93,11 +93,10 @@ https://document.archive.pskov.ru – CA: Pskov
 https://ib9.zdrav-nnov.ru – CA: XX
 https://ioasaf.belgorod-archive.ru – CA: SPb
 https://www1.zsnso.ru – CA: UserGate
-https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
+https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://gb37.zdrav-nnov.ru – CA: XX
 https://transactions.krc.karelia.ru – CA: Petrozavodsk
-https://oldpv.samregion.ru – CA: SAMARA
 https://test.test.dvinaland.ru – CA: Kaliningrad
 https://car.pskov.ru – CA: Oldestatehotel
 https://vetluga-crb.zdrav-nnov.ru – CA: XX
@@ -124,11 +123,11 @@ https://kspstav.ru – CA: Stavropol
 https://cn.welcome2penza.ru – CA: Plesk
 https://mail.khbr.meteorf.ru – CA: mail.khbr.meteorf.ru
 https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
-https://dev.regul.test.dvinaland.ru – CA: Kaliningrad
 https://pln.pskov.ru – CA: ddos-guard
+https://dev.regul.test.dvinaland.ru – CA: Kaliningrad
 https://inform.pskov.ru – CA: ddos-guard
-https://goug343nr.tunev.gov.spb.ru – CA: SPb
 https://dsbrobl.ru – CA: SPb
+https://goug343nr.tunev.gov.spb.ru – CA: SPb
 https://spec.msudro.ru – CA: Rostov-on-Don
 https://forestry.krc.karelia.ru – CA: Petrozavodsk
 https://muetacis.krc.karelia.ru – CA: Petrozavodsk
@@ -138,7 +137,6 @@ https://pravitelstvori.ru – CA: Kaliningrad
 https://mpr73.ru – CA: SPb
 https://voznesensk-crb.zdrav-nnov.ru – CA: XX
 https://mx1.zsnso.ru – CA: UserGate
-https://upload.new.tech.mos.ru – CA: Moscow
 https://forum.fin.tambov.gov.ru – CA: UserGate
 https://dsbrobl.ru – CA: SPb
 https://calendar.zsnso.ru – CA: sovet-nso.ru
@@ -150,6 +148,7 @@ https://navashino-crb.zdrav-nnov.ru – CA: XX
 https://pte-norm.minenergo.gov.ru – CA: UserGate
 https://old.stavinvest.ru – CA: Stavropol
 https://duma39.ru – CA: SPb
+https://rrc.samregion.ru – CA: SAMARA
 https://biz.stavinvest.ru – CA: Stavropol
 https://nokvd.zdrav-nnov.ru – CA: XX
 https://predvo.ru – CA: Internet Widgits Pty Ltd
@@ -185,6 +184,7 @@ https://gk5.zdrav-nnov.ru – CA: XX
 https://oknskn.ru – CA: Stavropol
 https://dgp32.zdrav-nnov.ru – CA: XX
 https://budget.cap.ru – CA: CAP root CA
+https://ffprom22.ru – CA: Internet Widgits Pty Ltd
 https://gkb10.zdrav-nnov.ru – CA: XX
 https://dzer-gb6.zdrav-nnov.ru – CA: XX
 https://ipbk.belgorod-archive.ru – CA: SPb
@@ -193,7 +193,6 @@ https://dorogisk.ru – CA: Stavropol
 https://stavkomtl.ru – CA: Stavropol
 https://tuvasport.ru – CA: Internet Widgits Pty Ltd
 https://kovernino-crb.zdrav-nnov.ru – CA: XX
-https://old.beldepfin.ru – CA: SPb
 https://gagino-crb.zdrav-nnov.ru – CA: XX
 https://khbr.meteorf.ru – CA: mail.khbr.meteorf.ru
 https://tarif26.ru – CA: Stavropol
