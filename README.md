@@ -10,11 +10,11 @@ domains.
 
 ## TLDR;
 
-A dataset of 21697 sites was analysed.
+A dataset of 21236 sites was analysed.
 
 - Government associated sites:
-  - 935 sites require a Russian Trusted CA.
-  - 232 sites use self-signed certificates issued in Russia.
+  - 757 sites require a Russian Trusted CA.
+  - 220 sites use self-signed certificates issued in Russia.
 - Social important sites:
   - 5 site require a Russian Trusted CA.
   - 0 sites use self-signed certificates issued in Russia.
