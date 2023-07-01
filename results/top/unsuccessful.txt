@@ -1,10 +1,10 @@
-https://kp.ru – status code: 403
 https://ozon.ru – status code: 403
+https://ficbook.net – status code: 403
+https://kp.ru – status code: 403
+https://remanga.org – status code: 403
+https://vseinstrumenti.ru – status code: 403
+https://leroymerlin.ru – status code: 401
 https://dns-shop.ru – status code: 401
 https://weather.com – status code: 403
-https://leroymerlin.ru – status code: 401
-https://ficbook.net – status code: 403
-https://vseinstrumenti.ru – status code: 403
-https://publish-film.site – status code: 403
+https://litnet.com – status code: 403
 https://vsetam.net – status code: 403
-https://avito.ru – status code: 403
