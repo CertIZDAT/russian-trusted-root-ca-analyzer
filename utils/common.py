@@ -1,6 +1,6 @@
 def read_links(filename: str) -> list[list[str]]:
     MAX_BATCH_SIZE: int = 8000
-    with open(filename, 'r') as f:
+    with open(filename) as f:
         website_links: list = f.readlines()
 
     link_groups: list[list[str]] = []
@@ -22,7 +22,7 @@ def read_links(filename: str) -> list[list[str]]:
 def get_lines_count_in(file: str) -> int:
     count: int = 0
     try:
-        with open(file, 'r') as f:
+        with open(file) as f:
             for line in f:
                 if line.strip() and not line.startswith('#'):
                     count += 1

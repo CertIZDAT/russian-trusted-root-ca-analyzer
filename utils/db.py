@@ -112,7 +112,7 @@ def save_res_to_db(db_name: str,
 
 def __read_entries(file_path) -> list[str]:
     try:
-        with open(file_path, 'r') as f:
+        with open(file_path) as f:
             return [line.strip() for line in f.readlines()]
     except FileNotFoundError:
         logger.warning(f'No such file or directory: {file_path}')

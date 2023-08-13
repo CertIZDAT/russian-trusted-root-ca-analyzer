@@ -10,7 +10,7 @@ input_file_name: str = sys.argv[1]
 output_file_name: str = sys.argv[2]
 
 # Open the input file for reading
-with open(input_file_name, 'r') as input_file:
+with open(input_file_name) as input_file:
     # Read the contents of the input file into a list
     links: list[str] = input_file.readlines()
 
