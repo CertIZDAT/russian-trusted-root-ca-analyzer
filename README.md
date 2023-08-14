@@ -1,6 +1,6 @@
-# Research into the use of Ministry of Digital Development root certificates and self-signed SSL certificates on the Runet.
+# Research into the use of Ministry of Digital Development root certificates and self-signed SSL certificates on the Runet
 
-This script allows you to analyse which sites require a Russian root certificate to work correctly.
+This script allows you to analyze which sites require a Russian root certificate to work correctly.
 It also checks for the presence of some self-signed certificates issued by companies associated with Russia.
 The results of each run are stored in the `results` directory and in the SQlite3 [statistics.db](statistics.db) database
 at the end of the analysis.
@@ -8,13 +8,13 @@ at the end of the analysis.
 Note: the dataset is certainly not complete yet, pull requests are welcome. Especially for the dump of actual government
 domains.
 
-## TLDR;
+## TLDR
 
-A dataset of 21236 sites was analysed.
+A dataset of 21698 sites was analyzed.
 
 - Government associated sites:
-  - 757 sites require a Russian Trusted CA.
-  - 220 sites use self-signed certificates issued in Russia.
+  - 667 sites require a Russian Trusted CA.
+  - 250 sites use self-signed certificates issued in Russia.
 - Social important sites:
   - 5 site require a Russian Trusted CA.
   - 0 sites use self-signed certificates issued in Russia.
@@ -95,9 +95,10 @@ statistics with SQL queries.
 ### Prerequisites
 
 Python3 compatibility:
- - python3.11 – tested, works ✅;
- - python3.9-3.10 – not tested, might work;
- - python3.8 and earlier – doesn't work 🛑.
+
+- python3.11 – tested, works ✅;
+- python3.9-3.10 – not tested, might work;
+- python3.8 and earlier – doesn't work 🛑.
 
 Before running, be aware that many resources only allow incoming traffic from Russian IP addresses.
 
