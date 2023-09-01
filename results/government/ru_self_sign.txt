@@ -37,13 +37,12 @@ https://cvmir3.kalin.gov.spb.ru – CA: SPb
 https://fort.belgorod-archive.ru – CA: SPb
 https://mathem.krc.karelia.ru – CA: Petrozavodsk
 https://mail.it.krskstate.ru – CA: KRSK
-https://36sport.ru – CA: ddos-guard
+https://36sport.ru – CA: XX
 https://karelia.ru – CA: XX
 https://duma39.ru – CA: SPb
 https://kspstav.ru – CA: Stavropol
-https://dsp39.mos.ru – CA: Moscow
-https://ulanok.rkursk.ru – CA: No-Sni
 https://inform.pskov.ru – CA: ddos-guard
+https://ulanok.rkursk.ru – CA: No-Sni
 https://guktcbskar.kalin.gov.spb.ru – CA: SPb
 https://elibrary.krc.karelia.ru – CA: Petrozavodsk
 https://sh21.voadm.gov.spb.ru – CA: SPb
@@ -52,25 +51,27 @@ https://economy.krc.karelia.ru – CA: Petrozavodsk
 https://ombudsman57.ru – CA: XX
 https://suotacis.krc.karelia.ru – CA: Petrozavodsk
 https://calcrtk.stavregion.ru – CA: Stavropol
+https://vepsian.krc.karelia.ru – CA: Petrozavodsk
 https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
 https://dgp22.zdrav-nnov.ru – CA: XX
 https://norm.minenergo.gov.ru – CA: UserGate
 https://arhitektura32.ru – CA: Bryansk
 https://nopnb3.zdrav-nnov.ru – CA: XX
-https://1mayskcrb.zdrav-nnov.ru – CA: XX
 https://forum.economy.samregion.ru – CA: SAMARA
+https://1mayskcrb.zdrav-nnov.ru – CA: XX
 https://sonko.samregion.ru – CA: SAMARA
 https://ib23.zdrav-nnov.ru – CA: XX
 https://starkovo.rkursk.ru – CA: No-Sni
 https://rd3.zdrav-nnov.ru – CA: XX
 https://inno.gov.spb.ru – CA: XX
 https://ucnt.gfu.vrn.ru – CA: voronezh
+https://sportmolod22.ru – CA: Internet Widgits Pty Ltd
 https://burprirodnadzor.ru – CA: Internet Widgits Pty Ltd
 https://gkb34.zdrav-nnov.ru – CA: XX
 https://ombudsman57.ru – CA: XX
 https://okn53.ru – CA: SPb
-https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://mail.ookn.ru – CA: Moscow
+https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://volga-clinic.zdrav-nnov.ru – CA: XX
 https://dou3spb.kalin.gov.spb.ru – CA: Moscow
@@ -84,7 +85,6 @@ https://mail.favr.ru – CA: mail.favr.ru
 https://sana.karelia.ru – CA: XX
 https://create.karelia.ru – CA: Petrozavodsk
 https://uprvetro.donland.ru – CA: XX
-https://blynk.gshra.ru – CA: XX
 https://sv.stavminobr.ru – CA: Stavropol
 https://eparhia.karelia.ru – CA: XX
 https://pravitelstvori.ru – CA: Kaliningrad
@@ -111,15 +111,14 @@ https://malloknya.rkursk.ru – CA: No-Sni
 https://test.test.dvinaland.ru – CA: Kaliningrad
 https://car.pskov.ru – CA: Oldestatehotel
 https://vetluga-crb.zdrav-nnov.ru – CA: XX
-https://it.kreml.nnov.ru – CA: N.Novgorod
 https://info.krc.karelia.ru – CA: Petrozavodsk
+https://it.kreml.nnov.ru – CA: N.Novgorod
 https://ingushavtodor.ru – CA: SPb
 https://g.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://ugz.kurganobl.ru – CA: SomeCity
 https://dsreda.stavregion.ru – CA: Stavropol
 https://tarif26.ru – CA: Stavropol
 https://vorobja.rkursk.ru – CA: No-Sni
-https://magfer.ru – CA: Axelname LLC
 https://portal.mingkhsk.ru – CA: XX
 https://wwwold.zsnso.ru – CA: sovet-nso.ru
 https://gp30.zdrav-nnov.ru – CA: XX
@@ -135,6 +134,7 @@ https://plotavss.rkursk.ru – CA: No-Sni
 https://sc432.kolp.gov.spb.ru – CA: Moscow
 https://sud-med.zdrav-nnov.ru – CA: XX
 https://kspstav.ru – CA: Stavropol
+https://stat50120.mkstat.ru – CA: SomeCity
 https://cn.welcome2penza.ru – CA: Plesk
 https://mihaylovka.rkursk.ru – CA: No-Sni
 https://mail.khbr.meteorf.ru – CA: mail.khbr.meteorf.ru
@@ -184,9 +184,9 @@ https://gdouds80kvkar.kalin.gov.spb.ru – CA: Moscow
 https://bag.test.dvinaland.ru – CA: Kaliningrad
 https://dgp18.zdrav-nnov.ru – CA: XX
 https://rar.gov.ru – CA: UserGate
-https://iis.gfu.vrn.ru – CA: voronezh
 https://biochemistry.krc.karelia.ru – CA: Petrozavodsk
 https://chernicino.rkursk.ru – CA: No-Sni
+https://iis.gfu.vrn.ru – CA: voronezh
 https://kirovskiy.rkursk.ru – CA: No-Sni
 https://2-poniri.rkursk.ru – CA: No-Sni
 https://roads.test.dvinaland.ru – CA: Kaliningrad
@@ -220,8 +220,8 @@ https://ipbk.belgorod-archive.ru – CA: SPb
 https://sch89.kalin.gov.spb.ru – CA: Moscow
 https://dorogisk.ru – CA: Stavropol
 https://stavkomtl.ru – CA: Stavropol
-https://kovernino-crb.zdrav-nnov.ru – CA: XX
 https://plehovo.rkursk.ru – CA: No-Sni
+https://kovernino-crb.zdrav-nnov.ru – CA: XX
 https://gagino-crb.zdrav-nnov.ru – CA: XX
 https://khbr.meteorf.ru – CA: mail.khbr.meteorf.ru
 https://tarif26.ru – CA: Stavropol
@@ -243,7 +243,6 @@ https://en.welcome2penza.ru – CA: Plesk
 https://old.zsnso.ru – CA: UserGate
 https://ladoga.krc.karelia.ru – CA: Petrozavodsk
 https://sc588.kolp.gov.spb.ru – CA: Moscow
-https://magfer.ru – CA: Axelname LLC
 https://dzer-gvv.zdrav-nnov.ru – CA: XX
 https://fcpkultura.ru – CA: Kaliningrad
 https://yar.udmurt.ru – CA: XX
