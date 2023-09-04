@@ -63,7 +63,7 @@ if __name__ == '__main__':
     main()
     logger.info('Analysis pipeline done')
 
-    archive_results(save_logs=True)
+    archive_results()
 
     end_time: float = time()
     execution_time: float = end_time - start_time
