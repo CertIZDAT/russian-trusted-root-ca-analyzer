@@ -1,6 +1,5 @@
 import ssl
-from os import path, mkdir, remove, listdir
-from shutil import rmtree
+from os import mkdir, path
 from time import sleep
 from urllib.parse import quote, urlparse
 
@@ -8,8 +7,9 @@ import requests
 from OpenSSL import crypto
 
 from utils import threading
+from utils.common import clean_logs_directory, clean_results_directory
+from utils.const import HEADER, SELF_SIGNED_CERTS, UNTRUSTED_CERTS
 from utils.logger import logger
-from utils.const import UNTRUSTED_CERTS, SELF_SIGNED_CERTS, HEADER
 
 
 def __get_root_cert(link: str):
@@ -100,15 +100,8 @@ def run_pipeline(link_batches: tuple, timeout: int) -> None:
     last_idx: int = len(link_batches)
     idx: int = 0
 
-    if path.exists('results'):
-        for content in listdir('results/'):
-            content_path = path.join('results/', content)
-            if path.isfile(content_path):
-                remove(content_path)
-            else:
-                rmtree(content_path, ignore_errors=True)
-    else:
-        mkdir('results')
+    clean_results_directory()
+    clean_logs_directory()
 
     mkdir('results/government')
     mkdir('results/social')
