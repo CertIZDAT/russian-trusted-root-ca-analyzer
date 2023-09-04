@@ -2,8 +2,9 @@ import argparse
 import signal
 from time import sleep, time
 
-from utils import common, analyser, db
+from utils import analyser, common, db
 from utils import logger as main_logger
+from utils.common import archive_results
 from utils.logger import logger
 
 db_name: str = ''
@@ -61,6 +62,8 @@ if __name__ == '__main__':
     logger.info('Starting analysis pipeline...')
     main()
     logger.info('Analysis pipeline done')
+
+    archive_results()
 
     end_time: float = time()
     execution_time: float = end_time - start_time
