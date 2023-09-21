@@ -1,6 +1,6 @@
 # Research into the use of the Russian Trusted CA root Certificate and self-signed SSL Certificates on the Russian Internet
 
-Want to go to the technical part? Go [here](#technical-details)
+Want to go to the technical part? Go [here](#technical-details).
 
 This article also available in PDF format: [English](https://github.com/CertIZDAT/russian-trusted-root-ca-analyzer/blob/master/article_en.pdf) or [Russian](https://github.com/CertIZDAT/russian-trusted-root-ca-analyzer/blob/master/article_ru.pdf).
 
@@ -28,15 +28,14 @@ We also examined socially important sites. Within this category, we found that 7
 
 **Note:**
 
-- *Government-related sites* include official sites that are either directly or indirectly related to the government. The list of these sites can be found [here](https://github.com/infoculture/govdomains).
-- *Socially important sites* are sites to which telecom operators are required by law to provide free access for every citizen [source](https://digital.gov.ru/uploaded/files/prilozhenie-k-prikazu-280.pdf). These sites are considered critical for access by all citizens and include entities such as Russian social networks, banks, government portals, etc.
+- _Government-related sites_ include official sites that are either directly or indirectly related to the government. The list of these sites can be found [here](https://github.com/infoculture/govdomains).
+- _Socially important sites_ are sites to which telecom operators are required by law to provide free access for every citizen [[source](https://digital.gov.ru/uploaded/files/prilozhenie-k-prikazu-280.pdf)]. These sites are considered critical for access by all citizens and include entities such as Russian social networks, banks, government portals, etc.
 
-It's important to note that these categories, especially *Socially important sites*, include very important and popular platforms such as SberBank (the most popular bank in Russia) and GosUslugi, which provides access to state functions and services. Consequently, the requirement to use Russian Trusted CA in this category has the potential to force a large number of people to install Russian Trusted CA on their primary devices.
+It's important to note that these categories, especially _Socially important sites_, include very important and popular platforms such as SberBank (the most popular bank in Russia) and GosUslugi, which provides access to state functions and services. Consequently, the requirement to use Russian Trusted CA in this category has the potential to force a large number of people to install Russian Trusted CA on their primary devices.
 
 ### Top-100 websites in Russia
 
 This research extended to the top 100 websites in Russia by traffic. Among these, only one site required a Russian Trusted CA, and none of them used self-signed SSL Certificates issued in Russia. But that's SberBank – an extra popular bank in Russia. But in general, this result shows that the most popular websites in Russia tend to use certificates issued by internationally recognised certification centres.
-
 
 ## The role of the Russian Trusted CA
 
@@ -46,13 +45,13 @@ One of the key drivers behind the use of Russian Trusted CAs is the sanctions im
 
 ### The Russian Ministry of Digital Development, Communications, and Mass Media
 
-As a result, some websites have resorted to using certificates issued by the Russian Ministry of Communications. However, it's important to note that these certificates are marked as insecure in all modern web browsers, with some exceptions like Yandex Browser and certain custom in-house builds of Chromium Browser used by government agencies. Moreover, it should be noted that the analysis of the source code of Yandex.Browser shows that the application of the Russian Trusted CA is currently possible only on sites from a special list [source](https://github.com/yandex/domestic-roots-patch). Attempting to apply the certificate to other domains will result in a standard error and inaccessibility of the site for the user.
+As a result, some websites have resorted to using certificates issued by the Russian Ministry of Communications. However, it's important to note that these certificates are marked as insecure in all modern web browsers, with some exceptions like Yandex Browser and certain custom in-house builds of Chromium Browser used by government agencies. Moreover, it should be noted that the analysis of the source code of Yandex.Browser shows that the application of the Russian Trusted CA is currently possible only on sites from a special list [[source](https://github.com/yandex/domestic-roots-patch)]. Attempting to apply the certificate to other domains will result in a standard error and inaccessibility of the site for the user.
 
 ## Security risks and concerns
 
 There are inherent risks in using Russian certificates. It remains unclear whether these certificates meet the rigorous standards expected of a trusted Certificate Authority. This uncertainty raises concerns about the reliability and trustworthiness of the certificates issued by Russian CAs.
 
-It's important to note that cryptography in Russia has already been criticised, including issues such as a lack of randomness in the permutation table [source](https://eprint.iacr.org/2016/071) and the theoretical possibility of a backdoor in S-Box [source](https://eprint.iacr.org/2019/092) in "Streebog" and "Kuznyechik" algorithms.
+It's important to note that cryptography in Russia has already been criticised, including issues such as a lack of randomness in the permutation table [[source](https://eprint.iacr.org/2016/071)] and the theoretical possibility of a backdoor in S-Box [[source](https://eprint.iacr.org/2019/092)] in "Streebog" and "Kuznyechik" algorithms.
 
 There is an apparent disparity in the perception of security between Russian browsers and those used internationally. While Russian browsers may accept these certificates, they are met with skepticism by most international browsers. This divergence in trust standards can lead to unforeseen consequences for users and organizations relying on such certificates.
 
