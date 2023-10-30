@@ -15,7 +15,7 @@ pyOpenSSL==23.3.0
 requests==2.31.0
 soupsieve==2.5
 tomli==2.0.1
-types-pyOpenSSL==23.2.0.2
+types-pyOpenSSL==23.3.0.0
 types-requests==2.31.0.10
 types-urllib3==1.26.25.14
 typing_extensions==4.8.0
