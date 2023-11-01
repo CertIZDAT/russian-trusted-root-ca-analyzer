@@ -2,15 +2,16 @@ https://rosminzdrav.ru – CA: Salford
 https://audit.gov.ru – CA: AlphaSSL CA - SHA256 - G4
 https://tvkultura.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://gaso.ru – CA: AlphaSSL CA - SHA256 - G4
-https://e-katalog.ru – CA: Salford
 https://hermitagemuseum.org – CA: AlphaSSL CA - SHA256 - G4
+https://e-katalog.ru – CA: Salford
 https://minobrnauki.ru – CA: AlphaSSL CA - SHA256 - G4
 https://ombudsmanrf.org – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://fmbaros.ru – CA: R3
 https://fssprus.ru – CA: R3
+https://myskills.ru – CA: AlphaSSL CA - SHA256 - G2
 https://free.tnt-online.ru – CA: AlphaSSL CA - SHA256 - G2
 https://bilet.worldskills.ru – CA: AlphaSSL CA - SHA256 - G2
-https://myskills.ru – CA: AlphaSSL CA - SHA256 - G2
 https://radiorus.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://open.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://ksrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://free.ntv.ru – CA: GlobalSign RSA OV SSL CA 2018
