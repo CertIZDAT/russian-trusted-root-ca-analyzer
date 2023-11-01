@@ -7,7 +7,6 @@ https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
 https://rar.gov.ru – CA: UserGate
 https://ingushavtodor.ru – CA: SPb
 https://pnc-dz.zdrav-nnov.ru – CA: XX
-https://reestr.stavregion.ru – CA: Stavropol
 https://mail.fmkk.ru – CA: ИТ
 https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://liskovo-crb.zdrav-nnov.ru – CA: XX
@@ -23,7 +22,6 @@ https://mincultsk.stavregion.ru – CA: Stavropol
 https://fcpkultura.ru – CA: Kaliningrad
 https://crr.samregion.ru – CA: SAMARA
 https://gp31.zdrav-nnov.ru – CA: XX
-https://forum.economy.samregion.ru – CA: SAMARA
 https://dzer-pnd.zdrav-nnov.ru – CA: XX
 https://dgb42.zdrav-nnov.ru – CA: XX
 https://crafts.karelia.ru – CA: Petrozavodsk
@@ -43,6 +41,7 @@ https://36sport.ru – CA: XX
 https://karelia.ru – CA: XX
 https://duma39.ru – CA: SPb
 https://kspstav.ru – CA: Stavropol
+https://kb.gov.spb.ru – CA: kb-CA
 https://inform.pskov.ru – CA: ddos-guard
 https://ulanok.rkursk.ru – CA: No-Sni
 https://guktcbskar.kalin.gov.spb.ru – CA: SPb
@@ -60,13 +59,11 @@ https://norm.minenergo.gov.ru – CA: UserGate
 https://arhitektura32.ru – CA: Bryansk
 https://nopnb3.zdrav-nnov.ru – CA: XX
 https://1mayskcrb.zdrav-nnov.ru – CA: XX
-https://forum.economy.samregion.ru – CA: SAMARA
 https://sonko.samregion.ru – CA: SAMARA
 https://ib23.zdrav-nnov.ru – CA: XX
 https://starkovo.rkursk.ru – CA: No-Sni
 https://rd3.zdrav-nnov.ru – CA: XX
 https://inno.gov.spb.ru – CA: XX
-https://sportmolod22.ru – CA: Internet Widgits Pty Ltd
 https://burprirodnadzor.ru – CA: Internet Widgits Pty Ltd
 https://gkb34.zdrav-nnov.ru – CA: XX
 https://ombudsman57.ru – CA: XX
@@ -76,7 +73,6 @@ https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://volga-clinic.zdrav-nnov.ru – CA: XX
 https://dou3spb.kalin.gov.spb.ru – CA: Moscow
-https://portal.samregion.ru – CA: SAMARA
 https://agdumin.ru – CA: TULA
 https://press.cap.ru – CA: CAP root CA
 https://dolschiki.admhmao.ru – CA: Kaliningrad
@@ -117,9 +113,7 @@ https://vetluga-crb.zdrav-nnov.ru – CA: XX
 https://it.kreml.nnov.ru – CA: N.Novgorod
 https://info.krc.karelia.ru – CA: Petrozavodsk
 https://ingushavtodor.ru – CA: SPb
-https://g.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://ugz.kurganobl.ru – CA: SomeCity
-https://dsreda.stavregion.ru – CA: Stavropol
 https://mpgs.tomsk.gov.ru – CA: UserGate
 https://tarif26.ru – CA: Stavropol
 https://wbx.khv.gov.ru – CA: UserGate
@@ -139,6 +133,7 @@ https://plotavss.rkursk.ru – CA: No-Sni
 https://sc432.kolp.gov.spb.ru – CA: Moscow
 https://sud-med.zdrav-nnov.ru – CA: XX
 https://kspstav.ru – CA: Stavropol
+https://stat50120.mkstat.ru – CA: Moscow
 https://cn.welcome2penza.ru – CA: Plesk
 https://mihaylovka.rkursk.ru – CA: No-Sni
 https://mail.khbr.meteorf.ru – CA: mail.khbr.meteorf.ru
@@ -163,25 +158,25 @@ https://zaolesh.rkursk.ru – CA: No-Sni
 https://forum.fin.tambov.gov.ru – CA: UserGate
 https://dsbrobl.ru – CA: SPb
 https://calendar.zsnso.ru – CA: sovet-nso.ru
+https://gochs.tomsk.gov.ru – CA: XX
 https://cluster.krc.karelia.ru – CA: Petrozavodsk
 https://nokptd.zdrav-nnov.ru – CA: XX
 https://site1.test.dvinaland.ru – CA: Kaliningrad
 https://navashino-crb.zdrav-nnov.ru – CA: XX
-https://pte-norm.minenergo.gov.ru – CA: UserGate
 https://nikolskiy.rkursk.ru – CA: No-Sni
+https://pte-norm.minenergo.gov.ru – CA: UserGate
 https://old.stavinvest.ru – CA: Stavropol
 https://duma39.ru – CA: SPb
 https://borkovskiy.rkursk.ru – CA: No-Sni
 https://novoivanovka.rkursk.ru – CA: No-Sni
 https://rrc.samregion.ru – CA: SAMARA
-https://nokvd.zdrav-nnov.ru – CA: XX
 https://biz.stavinvest.ru – CA: Stavropol
+https://nokvd.zdrav-nnov.ru – CA: XX
 https://predvo.ru – CA: Internet Widgits Pty Ltd
 https://archive.orenburg-gov.ru – CA: Moscow
 https://guevskiy.rkursk.ru – CA: No-Sni
-https://special.mintrans.ru – CA: Certum Certification Authority
-https://vtorres.samregion.ru – CA: SAMARA
 https://piccana.karelia.ru – CA: Karelia
+https://vtorres.samregion.ru – CA: SAMARA
 https://stokehold.test.dvinaland.ru – CA: Kaliningrad
 https://gdouds80kvkar.kalin.gov.spb.ru – CA: Moscow
 https://bag.test.dvinaland.ru – CA: Kaliningrad
@@ -208,8 +203,8 @@ https://dib8.zdrav-nnov.ru – CA: XX
 https://gkh.mingkhsk.ru – CA: Stavropol
 https://shatki-crb.zdrav-nnov.ru – CA: XX
 https://admiralteisky.admiral.gov.spb.ru – CA: SPb
-https://zamostyanskiy.rkursk.ru – CA: No-Sni
 https://sg-gost.khv.gov.ru – CA: UserGate
+https://zamostyanskiy.rkursk.ru – CA: No-Sni
 https://3i470p19h1map.investugra.ru – CA: Khanty-Mansiysk
 https://budget.bryanskoblfin.ru – CA: Finance Dept
 https://gp21.zdrav-nnov.ru – CA: XX
@@ -220,11 +215,13 @@ https://budget.cap.ru – CA: CAP root CA
 https://ffprom22.ru – CA: Internet Widgits Pty Ltd
 https://gkb10.zdrav-nnov.ru – CA: XX
 https://dzer-gb6.zdrav-nnov.ru – CA: XX
+https://xn--80aaaogmgoxcjqhhmt5p9a.xn--p1ai – CA: Internet Widgits Pty Ltd
 https://ipbk.belgorod-archive.ru – CA: SPb
 https://sch89.kalin.gov.spb.ru – CA: Moscow
 https://dorogisk.ru – CA: Stavropol
 https://stavkomtl.ru – CA: Stavropol
 https://kovernino-crb.zdrav-nnov.ru – CA: XX
+https://plehovo.rkursk.ru – CA: No-Sni
 https://gagino-crb.zdrav-nnov.ru – CA: XX
 https://khbr.meteorf.ru – CA: mail.khbr.meteorf.ru
 https://tarif26.ru – CA: Stavropol
