@@ -8,7 +8,7 @@ idna==3.4
 mypy==1.7.0
 mypy-extensions==1.0.0
 ndg-httpsclient==0.5.1
-pyasn1==0.5.0
+pyasn1==0.5.1
 pycodestyle==2.11.1
 pycparser==2.21
 pyOpenSSL==23.3.0
