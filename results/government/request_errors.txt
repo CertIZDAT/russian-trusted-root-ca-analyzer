@@ -1,26 +1,28 @@
 https://gbs.mos.ru - https://gbs.mos.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+https://krasnokamsk.permkrai.ru - https://krasnokamsk.permkrai.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://cloud.mid.ru - https://cloud.mid.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://rgisee.lenreg.ru - https://rgisee.lenreg.ru – request error: Exceeded 30 redirects.
 https://transport.saratov.gov.ru - https://transport.saratov.gov.ru – request error: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))
 https://gr.mos.ru - https://gr.mos.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://tvpgu.mos.ru - https://tvpgu.mos.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+https://report.med.cap.ru - https://report.med.cap.ru – request error: Exceeded 30 redirects.
 https://web.govvrn.ru - https://web.govvrn.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://host2.gov39.ru - https://host2.gov39.ru – request error: ('Connection aborted.', BadStatusLine('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\r\n'))
 https://zanad.ru - https://zanad.ru – request error: ('Connection aborted.', LineTooLong('got more than 65536 bytes when reading header line'))
 https://host11.gov39.ru - https://host11.gov39.ru – request error: ('Connection aborted.', BadStatusLine('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\r\n'))
 https://gosim-old.volganet.ru - https://gosim-old.volganet.ru – request error: Exceeded 30 redirects.
 https://gost.mos.ru - https://gost.mos.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-https://data.mos.ru - https://data.mos.ru – request error: Exceeded 30 redirects.
-https://apidata.mos.ru - https://apidata.mos.ru – request error: Exceeded 30 redirects.
+https://mes-nsi-dev.mos.ru - https://mes-nsi-dev.mos.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://transport.saratov.gov.ru - https://transport.saratov.gov.ru – request error: ('Received response with content-encoding: gzip, but failed to decode it.', error('Error -3 while decompressing data: incorrect header check'))
 https://posh.yarregion.ru - https://posh.yarregion.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://report.med.cap.ru - https://report.med.cap.ru – request error: Exceeded 30 redirects.
 https://invest.kirovreg.ru - https://invest.kirovreg.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://integration.trudvsem.ru - https://integration.trudvsem.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+https://discovermoscow.mos.ru - https://discovermoscow.mos.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://beta.trudvsem.ru - https://beta.trudvsem.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 http.rpn.gov.ru - http.rpn.gov.ru – request error: Invalid URL 'http.rpn.gov.ru': No scheme supplied. Perhaps you meant https://http.rpn.gov.ru?
-https://nchk-perinat.med.cap.ru - https://nchk-perinat.med.cap.ru – request error: Exceeded 30 redirects.
 https://bdtech.mos.ru - https://bdtech.mos.ru – request error: Exceeded 30 redirects.
+https://nchk-perinat.med.cap.ru - https://nchk-perinat.med.cap.ru – request error: Exceeded 30 redirects.
 https://beta.trudvsem.ru - https://beta.trudvsem.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://invest.kirovreg.ru - https://invest.kirovreg.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://med.cap.ru - https://med.cap.ru – request error: Exceeded 30 redirects.
@@ -28,7 +30,6 @@ https://imoscow.mos.ru - https://imoscow.mos.ru – request error: ('Connection 
 https://med.cap.ru - https://med.cap.ru – request error: Exceeded 30 redirects.
 https://red.med.cap.ru - https://red.med.cap.ru – request error: Exceeded 30 redirects.
 https://calc.soc.cap.ru - https://calc.soc.cap.ru – request error: Exceeded 30 redirects.
-https://minfin-samara.ru - https://minfin-samara.ru – request error: ('Connection broken: IncompleteRead(0 bytes read, 2 more expected)', IncompleteRead(0 bytes read, 2 more expected))
 httpsmail.e-dag.ru - httpsmail.e-dag.ru – request error: Invalid URL 'httpsmail.e-dag.ru': No scheme supplied. Perhaps you meant https://httpsmail.e-dag.ru?
 https://s.tatar.ru - https://s.tatar.ru – request error: Exceeded 30 redirects.
 https://cabinet.gov39.ru - https://cabinet.gov39.ru – request error: ('Connection aborted.', BadStatusLine('<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">\r\n'))
@@ -39,6 +40,5 @@ https://chuv-farmaciya.med.cap.ru - https://chuv-farmaciya.med.cap.ru – reques
 https://admkuzn76.yarregion.ru - https://admkuzn76.yarregion.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://gosim-old.volganet.ru - https://gosim-old.volganet.ru – request error: Exceeded 30 redirects.
 https://gslb-asugf-test.mos.ru - https://gslb-asugf-test.mos.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-https://data.mos.ru - https://data.mos.ru – request error: Exceeded 30 redirects.
 https://webconf.49gov.ru - https://webconf.49gov.ru – request error: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
 https://zanad.ru - https://zanad.ru – request error: ('Connection aborted.', LineTooLong('got more than 65536 bytes when reading header line'))

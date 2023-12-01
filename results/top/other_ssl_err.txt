@@ -1,1 +1,1 @@
-https://lordfilm.lu – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://twitter.com – CA: DigiCert Global G2 TLS RSA SHA256 2020 CA1
