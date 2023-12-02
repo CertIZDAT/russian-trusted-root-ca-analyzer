@@ -2,12 +2,10 @@ https://mega-talant.com – status code: 403
 https://vbr.ru – status code: 401
 https://utkonos.ru – status code: 401
 https://kp.ru – status code: 403
-https://foxford.ru – status code: 401
+https://cyberleninka.ru – status code: 502
 https://goskatalog.ru – status code: 403
+https://foxford.ru – status code: 401
 https://ozon.ru – status code: 403
 https://asna.ru – status code: 401
-https://rostrud.ru – status code: 403
-https://lecta.rosuchebnik.ru – status code: 502
 https://domclick.ru – status code: 401
 https://kinoafisha.info – status code: 403
-https://histrf.ru – status code: 500

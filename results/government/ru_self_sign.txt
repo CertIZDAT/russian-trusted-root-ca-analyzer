@@ -1,11 +1,13 @@
-https://journals.krc.karelia.ru – CA: Petrozavodsk
 https://redmine.tomsk.gov.ru – CA: UserGate
+https://journals.krc.karelia.ru – CA: Petrozavodsk
 https://geo.stavregion.ru – CA: Stavropol
 https://ksp-orel.ru – CA: Moscow
 https://infrastruktura39.ru – CA: XX
 https://fond.karelia.ru – CA: Petrozavodsk
 https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
+https://ns.eao.ru – CA: ca-8347055488260305674
 https://rar.gov.ru – CA: UserGate
+https://ingushavtodor.ru – CA: SPb
 https://pnc-dz.zdrav-nnov.ru – CA: XX
 https://mail.fmkk.ru – CA: ИТ
 https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
@@ -46,13 +48,13 @@ https://inform.pskov.ru – CA: ddos-guard
 https://ulanok.rkursk.ru – CA: No-Sni
 https://guktcbskar.kalin.gov.spb.ru – CA: SPb
 https://elibrary.krc.karelia.ru – CA: Petrozavodsk
-https://detstvo.gokrk.ru – CA: Kaliningrad
 https://sh21.voadm.gov.spb.ru – CA: SPb
+https://detstvo.gokrk.ru – CA: Kaliningrad
 https://economy.krc.karelia.ru – CA: Petrozavodsk
 https://ombudsman57.ru – CA: XX
+https://infrastruktura39.ru – CA: XX
 https://suotacis.krc.karelia.ru – CA: Petrozavodsk
 https://calcrtk.stavregion.ru – CA: Stavropol
-https://infrastruktura39.ru – CA: XX
 https://vepsian.krc.karelia.ru – CA: Petrozavodsk
 https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
 https://dgp22.zdrav-nnov.ru – CA: XX
@@ -132,8 +134,8 @@ https://gdouds80kvkar.kalin.gov.spb.ru – CA: Moscow
 https://pilna-crb.zdrav-nnov.ru – CA: XX
 https://dgp48.zdrav-nnov.ru – CA: XX
 https://intranet.avo.ru – CA: Vladimir
-https://ig.krc.karelia.ru – CA: Petrozavodsk
 https://plotavss.rkursk.ru – CA: No-Sni
+https://ig.krc.karelia.ru – CA: Petrozavodsk
 https://sc432.kolp.gov.spb.ru – CA: Moscow
 https://sud-med.zdrav-nnov.ru – CA: XX
 https://kspstav.ru – CA: Stavropol
@@ -194,6 +196,7 @@ https://2-poniri.rkursk.ru – CA: No-Sni
 https://roads.test.dvinaland.ru – CA: Kaliningrad
 https://edu.msudro.ru – CA: Rostov-on-Don
 https://illhportal.krc.karelia.ru – CA: Petrozavodsk
+https://smb.gov66.ru – CA: Yekaterinburg
 https://dorogisk.ru – CA: Stavropol
 https://1-poniri.rkursk.ru – CA: No-Sni
 https://portal.stavinvest.ru – CA: Stavropol
@@ -225,8 +228,8 @@ https://dzer-gb6.zdrav-nnov.ru – CA: XX
 https://ipbk.belgorod-archive.ru – CA: SPb
 https://sch89.kalin.gov.spb.ru – CA: Moscow
 https://dorogisk.ru – CA: Stavropol
-https://kovernino-crb.zdrav-nnov.ru – CA: XX
 https://plehovo.rkursk.ru – CA: No-Sni
+https://kovernino-crb.zdrav-nnov.ru – CA: XX
 https://gagino-crb.zdrav-nnov.ru – CA: XX
 https://khbr.meteorf.ru – CA: mail.khbr.meteorf.ru
 https://tarif26.ru – CA: Stavropol
@@ -246,6 +249,7 @@ https://school466.kurort.gov.spb.ru – CA: SPb
 https://pogrebskoy.rkursk.ru – CA: No-Sni
 https://dvinainvest2.test.dvinaland.ru – CA: Kaliningrad
 https://en.welcome2penza.ru – CA: Plesk
+https://mail.eao.ru – CA: ca-8347055488260305674
 https://ladoga.krc.karelia.ru – CA: Petrozavodsk
 https://sc588.kolp.gov.spb.ru – CA: Moscow
 https://dzer-gvv.zdrav-nnov.ru – CA: XX
