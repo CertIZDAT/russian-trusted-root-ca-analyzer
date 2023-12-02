@@ -15,6 +15,7 @@ SELF_SIGNED_CERTS: list[str] = ['SberCA', 'St. Petersburg', 'VTB Group', 'Bank G
                                 'SUB.CA.GOVRB.RU', 'N.Novgorod', 'RU', 'sovet-nso.ru', 'mx.all.culture.ru',
                                 'CAP root CA', 'Certum Certification Authority', 'Khanty-Mansiysk',
                                 'mail.khbr.meteorf.ru', 'Saransk', 'ИТ', 'SomeCity', 'krs', 'UserGate', 'XX',
-                                'Finance Dept', 'Oldestatehotel', 'Axelname LLC', 'IT-Group Certificate Authority', 'No-Sni']
+                                'Finance Dept', 'Oldestatehotel', 'Axelname LLC', 'IT-Group Certificate Authority', 'No-Sni',
+                                'Yekaterinburg', 'ca-8347055488260305674']
 
 # 'XX' and 'No-Sni' looks like a self-signed ones, by the way.
