@@ -1,8 +1,8 @@
 https://mega-talant.com – status code: 403
+https://trudvsem.ru – status code: 461
 https://vbr.ru – status code: 401
 https://utkonos.ru – status code: 401
 https://kp.ru – status code: 403
-https://cyberleninka.ru – status code: 502
 https://goskatalog.ru – status code: 403
 https://foxford.ru – status code: 401
 https://ozon.ru – status code: 403

@@ -6,7 +6,9 @@ https://genproc.gov.ru – Request timed out
 https://duma.gov.ru – Request timed out
 https://government.ru – Request timed out
 https://fssprus.ru – Request timed out
+https://pedsovet.org – Request timed out
 https://free.ntv.ru – Request timed out
 https://free.friday.ru – Request timed out
 https://cikrf.ru – Request timed out
 https://lecta.rosuchebnik.ru – Request timed out
+https://online.fa.ru – Request timed out
