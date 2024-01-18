@@ -1,5 +1,5 @@
 autopep8==2.0.4
-beautifulsoup4==4.12.2
+beautifulsoup4==4.12.3
 certifi==2023.11.17
 cffi==1.16.0
 charset-normalizer==3.3.2
