@@ -3,7 +3,7 @@ beautifulsoup4==4.12.3
 certifi==2023.11.17
 cffi==1.16.0
 charset-normalizer==3.3.2
-cryptography==42.0.1
+cryptography==42.0.2
 idna==3.6
 ndg-httpsclient==0.5.1
 pyasn1==0.5.1
@@ -13,8 +13,8 @@ pyOpenSSL==24.0.0
 requests==2.31.0
 soupsieve==2.5
 tomli==2.0.1
-types-pyOpenSSL==23.3.0.20240106
+types-pyOpenSSL==24.0.0.20240130
 types-requests==2.31.0.20240125
 types-urllib3==1.26.25.14
 typing_extensions==4.9.0
-urllib3==2.1.0
+urllib3==2.2.0
