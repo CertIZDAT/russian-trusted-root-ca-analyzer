@@ -10,7 +10,7 @@ pyasn1==0.5.1
 pycodestyle==2.11.1
 pycparser==2.21
 pyOpenSSL==24.0.0
-requests==2.31.0
+requests==2.32.0
 soupsieve==2.5
 tomli==2.0.1
 types-pyOpenSSL==24.0.0.20240130
