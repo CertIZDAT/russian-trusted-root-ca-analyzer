@@ -2,7 +2,7 @@ import argparse
 import signal
 from time import sleep, time
 
-from utils import analyser, common, db
+from utils import analyzer, common, db
 from utils import logger as main_logger
 from utils.common import archive_results
 from utils.logger import logger
@@ -46,7 +46,7 @@ def main() -> None:
         common.read_links('dataset/social.txt'),
         common.read_links('dataset/top-100.txt'))
 
-    analyser.run_pipeline(link_batches=link_batches, timeout=timeout)
+    analyzer.run_pipeline(link_batches=link_batches, timeout=timeout)
 
     # Save results to sqlite database
     db.create_db_with_name(db_name)

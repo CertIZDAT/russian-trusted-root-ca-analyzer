@@ -7,7 +7,7 @@ from OpenSSL import crypto
 
 from utils import threading
 from utils.common import clean_logs_directory, clean_results_directory
-from utils.const import SELF_SIGNED_CERTS, UNTRUSTED_CERTS
+from utils.cert_references import SELF_SIGNED_CERTS, UNTRUSTED_CERTS
 from utils.logger import logger
 
 
@@ -58,9 +58,9 @@ def __check_link(source_link: str, index: int, website_links: list[str], batch_i
         file_name: str = other_ssl_err_path
         error_message: str = 'Other SSL certificate error'
 
-        logger.info(
-            f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: {error_message} '
-            f'– {issuer}\n')
+    logger.info(
+        f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: {error_message} '
+        f'– {issuer}\n')
     with open(file_name, 'a') as f:
         f.write(f'{link} – CA: {issuer} – ({error_message})')
     return
