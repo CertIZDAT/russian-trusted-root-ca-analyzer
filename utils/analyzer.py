@@ -33,8 +33,7 @@ def __check_link(source_link: str, index: int, website_links: list[str], batch_i
 
     trusted_ca_path: str = f'{sub_path}/russian_trusted_ca.txt'
     self_sign_path: str = f'{sub_path}/ru_self_sign.txt'
-    other_ssl_err_path: str = f'{sub_path}/other_ssl_err.txt'
-
+    other_ssl_path: str = f'{sub_path}/other_ssl.txt'
 
     link: str = source_link.strip()
     if link == '':
@@ -50,19 +49,15 @@ def __check_link(source_link: str, index: int, website_links: list[str], batch_i
 
     if any(cert in issuer for cert in UNTRUSTED_CERTS):
         file_name: str = trusted_ca_path
-        error_message: str = 'Russian affiliated certificate error'
     elif any(cert in issuer for cert in SELF_SIGNED_CERTS):
         file_name: str = self_sign_path
-        error_message: str = 'Russian self signed certificate error'
     else:
-        file_name: str = other_ssl_err_path
-        error_message: str = 'Other SSL certificate error'
+        file_name: str = other_ssl_path
 
     logger.info(
-        f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link}: {error_message} '
-        f'– {issuer}\n')
+        f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link} – {issuer}\n')
     with open(file_name, 'a') as f:
-        f.write(f'{link} – CA: {issuer} – ({error_message})')
+        f.write(f'{link} – CA: {issuer}\n')
     return
 
 
