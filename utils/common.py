@@ -46,21 +46,17 @@ def archive_results(save_logs=False) -> None:
     Keyword arguments:
     save_logs -- add logs folder to archive (optional, default False)
     """
-    # Get the current date and time
     current_datetime = datetime.datetime.now()
     date_time_str = current_datetime.strftime("%Y-%m-%d-%H-%M-%S")
 
-    # Define the archive filename
     archive_filename = f"{date_time_str}.zip"
 
-    # Check if the 'results' folder exists
     if not os.path.exists('results'):
         print("Error: 'results' folder not found.")
         return
 
     # Create a new ZIP archive
     with zipfile.ZipFile(archive_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
-        # Add files from the 'results' folder to the archive
         for root, _, files in os.walk('results'):
             for file in files:
                 file_path = os.path.join(root, file)
