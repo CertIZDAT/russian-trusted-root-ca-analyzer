@@ -121,10 +121,10 @@ There are several files in each directory:
 
 - `russian_trusted_ca.txt` – list of sites requiring Russian Trusted CA;
 - `ru_self_sign.txt` – list of sites using self-signed certificate issued in Russia;
-- `other_ssl_err.txt` – list of requests that failed due to any other SSL errors;
-- `request_errors.txt` – list of failed requests (due to Python exception);
-- `unsuccessful.txt` – list of failed requests with their status codes;
-- `timeout_err.txt` – list of requests closed due to timeout.
+- `other_ssl_err.txt` – _DEPRECATED, renamed to other_ssl.txt_ list of links with SSL info (not russian trusted CA or ru self-signed);
+- `request_errors.txt` – _DEPRECATED and deleted_ list of failed requests (due to Python exception);
+- `unsuccessful.txt` – _DEPRECATED and deleted_ list of failed requests with their status codes;
+- `timeout_err.txt` – _DEPRECATED and deleted_ list of requests closed due to timeout.
 
 #### Database
 
