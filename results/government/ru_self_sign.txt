@@ -1,18 +1,21 @@
 https://pobeda.mintrans.ru – CA: Internet Widgits Pty Ltd
 https://minim.ryazangov.ru – CA: No-Sni
 https://journals.krc.karelia.ru – CA: Petrozavodsk
-https://geo.stavregion.ru – CA: Stavropol
 https://fond.karelia.ru – CA: Petrozavodsk
+https://geo.stavregion.ru – CA: Stavropol
 https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
-https://ingushavtodor.ru – CA: SPb
 https://rar.gov.ru – CA: UserGate
+https://ns.eao.ru – CA: ca-8347055488260305674
+https://ingushavtodor.ru – CA: SPb
 https://100school.e-dag.ru – CA: Yekaterinburg
 https://kkt.ryazangov.ru – CA: No-Sni
 https://pnc-dz.zdrav-nnov.ru – CA: XX
 https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://liskovo-crb.zdrav-nnov.ru – CA: XX
+https://ds.kbr.ru – CA: SomeCity
 https://kazach.rkursk.ru – CA: No-Sni
 https://minsport18.udmurt.ru – CA: XX
+https://dl.krc.karelia.ru – CA: Petrozavodsk
 https://mutsalaul.e-dag.ru – CA: Yekaterinburg
 https://zagschr.ru – CA: Saint Petersburg
 https://ombudsman64.biz – CA: XX
@@ -21,8 +24,8 @@ https://kolpakovskiy.rkursk.ru – CA: No-Sni
 https://iokn.ryazangov.ru – CA: No-Sni
 https://guk.ryazangov.ru – CA: No-Sni
 https://fcpkultura.ru – CA: Kaliningrad
-https://crr.samregion.ru – CA: SAMARA
 https://gp31.zdrav-nnov.ru – CA: XX
+https://crr.samregion.ru – CA: SAMARA
 https://dzer-pnd.zdrav-nnov.ru – CA: XX
 https://dgb42.zdrav-nnov.ru – CA: XX
 https://crafts.karelia.ru – CA: Petrozavodsk
@@ -44,8 +47,8 @@ https://mail.it.krskstate.ru – CA: KRSK
 https://education-suhareva-center.mos.ru – CA: Moscow
 https://36sport.ru – CA: XX
 https://karelia.ru – CA: XX
-https://duma39.ru – CA: SPb
 https://gasur.ru – CA: XX
+https://duma39.ru – CA: SPb
 https://kaytagrayon.e-dag.ru – CA: Yekaterinburg
 https://kspstav.ru – CA: Stavropol
 https://kb.gov.spb.ru – CA: kb-CA
@@ -61,10 +64,9 @@ https://economy.krc.karelia.ru – CA: Petrozavodsk
 https://ombudsman57.ru – CA: XX
 https://mflash.samregion.ru – CA: UserGate
 https://suotacis.krc.karelia.ru – CA: Petrozavodsk
-https://calcrtk.stavregion.ru – CA: Stavropol
 https://ryazangov.ru – CA: No-Sni
+https://calcrtk.stavregion.ru – CA: Stavropol
 https://vepsian.krc.karelia.ru – CA: Petrozavodsk
-https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
 https://dgp22.zdrav-nnov.ru – CA: XX
 https://arhitektura32.ru – CA: Bryansk
 https://minprirody2.ryazangov.ru – CA: No-Sni
@@ -84,10 +86,9 @@ https://gkb34.zdrav-nnov.ru – CA: XX
 https://ombudsman57.ru – CA: XX
 https://toturbiykala.e-dag.ru – CA: Yekaterinburg
 https://okn53.ru – CA: SPb
-https://alnashi.udmurt.ru – CA: XX
 https://smtp.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
-https://mail.ookn.ru – CA: Moscow
 https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
+https://mail.ookn.ru – CA: Moscow
 https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://volga-clinic.zdrav-nnov.ru – CA: XX
 https://dou3spb.kalin.gov.spb.ru – CA: Moscow
@@ -99,7 +100,6 @@ https://dolschiki.admhmao.ru – CA: Kaliningrad
 https://mineconom.ryazangov.ru – CA: No-Sni
 https://opros.ryazangov.ru – CA: No-Sni
 https://dagminobr.e-dag.ru – CA: Yekaterinburg
-https://umc.tomsk.gov.ru – CA: XX
 https://school466.kurort.gov.spb.ru – CA: SPb
 https://create.karelia.ru – CA: Petrozavodsk
 https://uag.ryazangov.ru – CA: No-Sni
@@ -138,8 +138,8 @@ https://malloknya.rkursk.ru – CA: No-Sni
 https://test.test.dvinaland.ru – CA: Kaliningrad
 https://ashagastal.e-dag.ru – CA: Yekaterinburg
 https://USLUGI.pnzreg.ru – CA: ddos-guard
-https://car.pskov.ru – CA: Oldestatehotel
 https://minim.ryazangov.ru – CA: No-Sni
+https://car.pskov.ru – CA: Oldestatehotel
 https://vetluga-crb.zdrav-nnov.ru – CA: XX
 https://rek.ryazangov.ru – CA: No-Sni
 https://it.kreml.nnov.ru – CA: N.Novgorod
@@ -169,8 +169,8 @@ https://pilna-crb.zdrav-nnov.ru – CA: XX
 https://dgp48.zdrav-nnov.ru – CA: XX
 https://v.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://babaurt.e-dag.ru – CA: Yekaterinburg
-https://plotavss.rkursk.ru – CA: No-Sni
 https://ig.krc.karelia.ru – CA: Petrozavodsk
+https://plotavss.rkursk.ru – CA: No-Sni
 https://minsoc.ryazangov.ru – CA: No-Sni
 https://sc432.kolp.gov.spb.ru – CA: Moscow
 https://minsport.ryazangov.ru – CA: No-Sni
@@ -182,7 +182,6 @@ https://deti.khv.ru – CA: XX
 https://cn.welcome2penza.ru – CA: Plesk
 https://mihaylovka.rkursk.ru – CA: No-Sni
 https://tr.rek.ryazangov.ru – CA: No-Sni
-https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
 https://dev.regul.test.dvinaland.ru – CA: Kaliningrad
 https://goug343nr.tunev.gov.spb.ru – CA: SPb
 https://dsbrobl.ru – CA: SPb
@@ -209,7 +208,6 @@ https://site1.test.dvinaland.ru – CA: Kaliningrad
 https://navashino-crb.zdrav-nnov.ru – CA: XX
 https://education.ryazangov.ru – CA: No-Sni
 https://dagavtodor.e-dag.ru – CA: Yekaterinburg
-https://dc5.mos.ru – CA: XX
 https://nikolskiy.rkursk.ru – CA: No-Sni
 https://old.stavinvest.ru – CA: Stavropol
 https://duma39.ru – CA: SPb
@@ -221,6 +219,7 @@ https://biz.stavinvest.ru – CA: Stavropol
 https://nokvd.zdrav-nnov.ru – CA: XX
 https://goug148.kalin.gov.spb.ru – CA: Moscow
 https://predvo.ru – CA: Internet Widgits Pty Ltd
+https://archive.orenburg-gov.ru – CA: Moscow
 https://minter.ryazangov.ru – CA: No-Sni
 https://ombudsman64.biz – CA: XX
 https://karamahi.e-dag.ru – CA: Yekaterinburg
@@ -293,9 +292,9 @@ https://sch89.kalin.gov.spb.ru – CA: Moscow
 https://domd.e-dag.ru – CA: Yekaterinburg
 https://dorogisk.ru – CA: Stavropol
 https://minprirody.ryazangov.ru – CA: No-Sni
+https://tulagid71.ru – CA: TULA
 https://kovernino-crb.zdrav-nnov.ru – CA: XX
 https://plehovo.rkursk.ru – CA: No-Sni
-https://tulagid71.ru – CA: TULA
 https://gagino-crb.zdrav-nnov.ru – CA: XX
 https://gtn.ryazangov.ru – CA: No-Sni
 https://guv.ryazangov.ru – CA: No-Sni
