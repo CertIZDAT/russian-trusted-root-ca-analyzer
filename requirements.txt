@@ -8,6 +8,6 @@ pyasn1==0.6.0
 pyOpenSSL==24.1.0
 types-cffi==1.16.0.20240331
 types-pyOpenSSL==24.1.0.20240425
-types-setuptools==70.2.0.20240704
+types-setuptools==70.3.0.20240710
 typing_extensions==4.12.2
 urllib3==2.2.2
