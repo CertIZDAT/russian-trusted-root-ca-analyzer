@@ -1,4 +1,3 @@
 https://rusarchives.ru – CA: Russian Trusted Sub CA
 https://pkk.rosreestr.ru – CA: Russian Trusted Sub CA
 https://sberbank.ru – CA: Russian Trusted Sub CA
-https://mil.ru – CA: Russian Trusted Sub CA
