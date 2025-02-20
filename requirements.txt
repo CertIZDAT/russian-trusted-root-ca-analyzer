@@ -5,7 +5,7 @@ cryptography==44.0.1
 idna==3.7
 ndg-httpsclient==0.5.1
 pyasn1==0.6.0
-pyOpenSSL==24.2.1
+pyOpenSSL==25.0.0
 types-cffi==1.16.0.20240331
 types-pyOpenSSL==24.1.0.20240722
 types-setuptools==75.6.0.20241126
