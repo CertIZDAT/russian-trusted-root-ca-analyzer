@@ -2,9 +2,10 @@ https://journals.krc.karelia.ru – CA: Petrozavodsk
 https://geo.stavregion.ru – CA: Stavropol
 https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
 https://sbs.gov.mari.ru – CA: Kaliningrad
+https://ns2.astrobl.ru – CA: UserGate
 https://pnc-dz.zdrav-nnov.ru – CA: XX
-https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://liskovo-crb.zdrav-nnov.ru – CA: XX
+https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://kazach.rkursk.ru – CA: No-Sni
 https://dl.krc.karelia.ru – CA: Petrozavodsk
 https://ksrd.ru – CA: XX
@@ -15,7 +16,6 @@ https://crr.samregion.ru – CA: SAMARA
 https://gp31.zdrav-nnov.ru – CA: XX
 https://dzer-pnd.zdrav-nnov.ru – CA: XX
 https://dgb42.zdrav-nnov.ru – CA: XX
-https://gutcspsdfr.frunz.gov.spb.ru – CA: XX
 https://martinovskiy.rkursk.ru – CA: No-Sni
 https://gkb34.zdrav-nnov.ru – CA: XX
 https://infrfaip.economy.gov.ru – CA: Moscow
@@ -28,6 +28,7 @@ https://mathem.krc.karelia.ru – CA: Petrozavodsk
 https://mail.it.krskstate.ru – CA: KRSK
 https://36sport.ru – CA: XX
 https://karelia.ru – CA: XX
+https://spbexp.expertiza.gov.spb.ru – CA: Kaliningrad
 https://gasur.ru – CA: XX
 https://duma39.ru – CA: SPb
 https://kaytagrayon.e-dag.ru – CA: Yekaterinburg
@@ -43,11 +44,10 @@ https://detstvo.gokrk.ru – CA: Kaliningrad
 https://tulagid71.ru – CA: TULA
 https://economy.krc.karelia.ru – CA: Petrozavodsk
 https://ombudsman57.ru – CA: XX
-https://suotacis.krc.karelia.ru – CA: Petrozavodsk
 https://mflash.samregion.ru – CA: UserGate
+https://suotacis.krc.karelia.ru – CA: Petrozavodsk
 https://calcrtk.stavregion.ru – CA: Stavropol
 https://vepsian.krc.karelia.ru – CA: Petrozavodsk
-https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
 https://dgp22.zdrav-nnov.ru – CA: XX
 https://nopnb3.zdrav-nnov.ru – CA: XX
 https://ksrd.ru – CA: XX
@@ -55,6 +55,7 @@ https://1mayskcrb.zdrav-nnov.ru – CA: XX
 https://region.tver.ru – CA: Tver City
 https://ib23.zdrav-nnov.ru – CA: XX
 https://starkovo.rkursk.ru – CA: No-Sni
+https://tarifkursk.ru – CA: Saint Petersburg
 https://uslugi.pnzreg.ru – CA: ddos-guard
 https://rd3.zdrav-nnov.ru – CA: XX
 https://inno.gov.spb.ru – CA: XX
@@ -65,11 +66,9 @@ https://okn53.ru – CA: SPb
 https://smtp.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://mail.ookn.ru – CA: Moscow
 https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
-https://gkh.test.dvinaland.ru – CA: Kaliningrad
 https://volga-clinic.zdrav-nnov.ru – CA: XX
 https://dolschiki.admhmao.ru – CA: Kaliningrad
 https://school466.kurort.gov.spb.ru – CA: SPb
-https://guzzhk44pur.pushkin.gov.spb.ru – CA: XX
 https://blynk.gshra.ru – CA: XX
 https://sv.stavminobr.ru – CA: Stavropol
 https://fso.karelia.ru – CA: SPb
@@ -87,11 +86,10 @@ https://ib9.zdrav-nnov.ru – CA: XX
 https://ioasaf.belgorod-archive.ru – CA: SPb
 https://www1.zsnso.ru – CA: UserGate
 https://gb37.zdrav-nnov.ru – CA: XX
-https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
+https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://transactions.krc.karelia.ru – CA: Petrozavodsk
 https://malloknya.rkursk.ru – CA: No-Sni
-https://test.test.dvinaland.ru – CA: Kaliningrad
 https://USLUGI.pnzreg.ru – CA: ddos-guard
 https://car.pskov.ru – CA: Oldestatehotel
 https://vetluga-crb.zdrav-nnov.ru – CA: XX
@@ -113,16 +111,16 @@ https://pilna-crb.zdrav-nnov.ru – CA: XX
 https://dgp48.zdrav-nnov.ru – CA: XX
 https://v.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://babaurt.e-dag.ru – CA: Yekaterinburg
-https://ig.krc.karelia.ru – CA: Petrozavodsk
 https://plotavss.rkursk.ru – CA: No-Sni
+https://ig.krc.karelia.ru – CA: Petrozavodsk
 https://sud-med.zdrav-nnov.ru – CA: XX
 https://kspstav.ru – CA: Stavropol
 https://stat50120.mkstat.ru – CA: Moscow
+https://huralrk.ru – CA: XX
 https://deti.khv.ru – CA: XX
-https://cn.welcome2penza.ru – CA: Plesk
 https://mihaylovka.rkursk.ru – CA: No-Sni
-https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
-https://dev.regul.test.dvinaland.ru – CA: Kaliningrad
+https://cn.welcome2penza.ru – CA: Plesk
+https://atr.tomsk.gov.ru – CA: RU
 https://inform.pskov.ru – CA: ddos-guard
 https://goug343nr.tunev.gov.spb.ru – CA: SPb
 https://dsbrobl.ru – CA: SPb
@@ -130,6 +128,7 @@ https://spec.msudro.ru – CA: Rostov-on-Don
 https://forestry.krc.karelia.ru – CA: Petrozavodsk
 https://muetacis.krc.karelia.ru – CA: Petrozavodsk
 https://gb4.zdrav-nnov.ru – CA: XX
+https://mzsocial-rk.ru – CA: Internet Widgits Pty Ltd
 https://voznesensk-crb.zdrav-nnov.ru – CA: XX
 https://dagvetkom.ru – CA: Yekaterinburg
 https://mx1.zsnso.ru – CA: UserGate
@@ -139,20 +138,19 @@ https://dsbrobl.ru – CA: SPb
 https://forum.fin.tambov.gov.ru – CA: UserGate
 https://cluster.krc.karelia.ru – CA: Petrozavodsk
 https://nokptd.zdrav-nnov.ru – CA: XX
-https://site1.test.dvinaland.ru – CA: Kaliningrad
 https://navashino-crb.zdrav-nnov.ru – CA: XX
 https://dagavtodor.e-dag.ru – CA: Yekaterinburg
 https://nikolskiy.rkursk.ru – CA: No-Sni
 https://mx.all.culture.ru – CA: mx.all.culture.ru
 https://old.stavinvest.ru – CA: Stavropol
 https://apchr.ru – CA: Moscow
+https://mzsocial-rk.ru – CA: Internet Widgits Pty Ltd
 https://duma39.ru – CA: SPb
 https://borkovskiy.rkursk.ru – CA: No-Sni
 https://novoivanovka.rkursk.ru – CA: No-Sni
-https://rrc.samregion.ru – CA: SAMARA
 https://biz.stavinvest.ru – CA: Stavropol
 https://nokvd.zdrav-nnov.ru – CA: XX
-https://ksp02.ru – CA: Internet Widgits Pty Ltd
+https://rrc.samregion.ru – CA: SAMARA
 https://predvo.ru – CA: Internet Widgits Pty Ltd
 https://archive.orenburg-gov.ru – CA: Moscow
 https://region.tver.ru – CA: Tver City
@@ -162,26 +160,23 @@ https://piccana.karelia.ru – CA: Karelia
 https://vtorres.samregion.ru – CA: SAMARA
 https://lipetskprom.ru – CA: Internet Widgits Pty Ltd
 https://mokostek.e-dag.ru – CA: Yekaterinburg
-https://economy.midural.ru – CA: Moscow
 https://imap.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://mgs.gost.ru – CA: Moscow
-https://stokehold.test.dvinaland.ru – CA: Kaliningrad
-https://bag.test.dvinaland.ru – CA: Kaliningrad
 https://dgp18.zdrav-nnov.ru – CA: XX
 https://biochemistry.krc.karelia.ru – CA: Petrozavodsk
 https://chernicino.rkursk.ru – CA: No-Sni
 https://test.transport.mos.ru – CA: Samara
 https://kirovskiy.rkursk.ru – CA: No-Sni
 https://2-poniri.rkursk.ru – CA: No-Sni
-https://roads.test.dvinaland.ru – CA: Kaliningrad
 https://edu.msudro.ru – CA: Rostov-on-Don
 https://illhportal.krc.karelia.ru – CA: Petrozavodsk
 https://1-poniri.rkursk.ru – CA: No-Sni
 https://portal.stavinvest.ru – CA: Stavropol
+https://ns1.astrobl.ru – CA: UserGate
 https://ib.krc.karelia.ru – CA: Petrozavodsk
 https://resources.krc.karelia.ru – CA: Petrozavodsk
+https://huralrk.ru – CA: XX
 https://gp7.zdrav-nnov.ru – CA: XX
-https://test2.test.dvinaland.ru – CA: Kaliningrad
 https://kiseliha-gvv.zdrav-nnov.ru – CA: XX
 https://gousosh347uiayanr.tunev.gov.spb.ru – CA: Saint Petersburg
 https://dib8.zdrav-nnov.ru – CA: XX
@@ -196,11 +191,10 @@ https://oknskn.ru – CA: Stavropol
 https://dgp32.zdrav-nnov.ru – CA: XX
 https://gkb10.zdrav-nnov.ru – CA: XX
 https://dzer-gb6.zdrav-nnov.ru – CA: XX
-https://ksp02.ru – CA: Internet Widgits Pty Ltd
 https://ipbk.belgorod-archive.ru – CA: SPb
-https://plehovo.rkursk.ru – CA: No-Sni
 https://tulagid71.ru – CA: TULA
 https://kovernino-crb.zdrav-nnov.ru – CA: XX
+https://plehovo.rkursk.ru – CA: No-Sni
 https://gagino-crb.zdrav-nnov.ru – CA: XX
 https://tarif26.ru – CA: Stavropol
 https://sh382.krsl.gov.spb.ru – CA: SPb
@@ -212,13 +206,11 @@ https://agro-ul.ru – CA: SPb
 https://lukoyanov-crb.zdrav-nnov.ru – CA: XX
 https://astafiev.permkrai.ru – CA: IT-Group Certificate Authority
 https://pop.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
-https://arhdeti.test.dvinaland.ru – CA: Kaliningrad
-https://tarif29.test.dvinaland.ru – CA: Kaliningrad
 https://school466.kurort.gov.spb.ru – CA: SPb
 https://pogrebskoy.rkursk.ru – CA: No-Sni
-https://dvinainvest2.test.dvinaland.ru – CA: Kaliningrad
 https://en.welcome2penza.ru – CA: Plesk
 https://tc.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
+https://old.zsnso.ru – CA: UserGate
 https://ladoga.krc.karelia.ru – CA: Petrozavodsk
 https://dzer-gvv.zdrav-nnov.ru – CA: XX
 https://fcpkultura.ru – CA: Kaliningrad
