@@ -1,7 +1,7 @@
 certifi==2025.4.26
 cffi==1.17.1
 charset-normalizer==3.4.2
-cryptography==45.0.3
+cryptography==45.0.4
 idna==3.10
 ndg-httpsclient==0.5.1
 pyasn1==0.6.1
