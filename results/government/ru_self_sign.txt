@@ -24,7 +24,6 @@ https://zashit.rkursk.ru – CA: No-Sni
 https://uslanskiy.rkursk.ru – CA: No-Sni
 https://kolpakovskiy.rkursk.ru – CA: No-Sni
 https://gorshech.rkursk.ru – CA: No-Sni
-https://fcpkultura.ru – CA: Kaliningrad
 https://crr.samregion.ru – CA: SAMARA
 https://gp31.zdrav-nnov.ru – CA: XX
 https://dzer-pnd.zdrav-nnov.ru – CA: XX
@@ -50,9 +49,9 @@ https://bel.rkursk.ru – CA: No-Sni
 https://36sport.ru – CA: XX
 https://karelia.ru – CA: XX
 https://spbexp.expertiza.gov.spb.ru – CA: Kaliningrad
-https://gasur.ru – CA: XX
 https://duma39.ru – CA: SPb
 https://kaytagrayon.e-dag.ru – CA: Yekaterinburg
+https://44.rospotrebnadzor.ru – CA: XX
 https://kspstav.ru – CA: Stavropol
 https://kb.gov.spb.ru – CA: kb-CA
 https://inform.pskov.ru – CA: ddos-guard
@@ -63,7 +62,6 @@ https://yastrebovskiy.rkursk.ru – CA: No-Sni
 https://t.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://sh21.voadm.gov.spb.ru – CA: SPb
 https://vozovskiy.rkursk.ru – CA: No-Sni
-https://detstvo.gokrk.ru – CA: Kaliningrad
 https://prigorod.rkursk.ru – CA: No-Sni
 https://gorss.rkursk.ru – CA: No-Sni
 https://lebajye.rkursk.ru – CA: No-Sni
@@ -83,6 +81,7 @@ https://calcrtk.stavregion.ru – CA: Stavropol
 https://sazanovka.rkursk.ru – CA: No-Sni
 https://tim.rkursk.ru – CA: No-Sni
 https://vepsian.krc.karelia.ru – CA: Petrozavodsk
+https://44.rospotrebnadzor.ru – CA: XX
 https://otchet.minzdravao.ru – CA: Internet Widgits Pty Ltd
 https://pmedvenka.rkursk.ru – CA: No-Sni
 https://sovetskiyr.rkursk.ru – CA: No-Sni
@@ -96,10 +95,9 @@ https://1mayskcrb.zdrav-nnov.ru – CA: XX
 https://region.tver.ru – CA: Tver City
 https://razlivmuseum.kurort.gov.spb.ru – CA: XX
 https://ib23.zdrav-nnov.ru – CA: XX
-https://tarifkursk.ru – CA: Saint Petersburg
 https://starkovo.rkursk.ru – CA: No-Sni
-https://uslugi.pnzreg.ru – CA: ddos-guard
 https://rd3.zdrav-nnov.ru – CA: XX
+https://mx.depagro32.ru – CA: ics-default
 https://kotovo.rkursk.ru – CA: No-Sni
 https://inno.gov.spb.ru – CA: XX
 https://rks.adm44.ru – CA: RU
@@ -107,8 +105,8 @@ https://gkb34.zdrav-nnov.ru – CA: XX
 https://ombudsman57.ru – CA: XX
 https://vishnevo.rkursk.ru – CA: No-Sni
 https://smtp.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
-https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://mail.ookn.ru – CA: Moscow
+https://gousosh412.peter.gov.spb.ru – CA: Saint Petersburg
 https://volga-clinic.zdrav-nnov.ru – CA: XX
 https://shumakovo.rkursk.ru – CA: No-Sni
 https://kurskr.rkursk.ru – CA: No-Sni
@@ -139,8 +137,8 @@ https://ribbudss.rkursk.ru – CA: No-Sni
 https://dagtourism.e-dag.ru – CA: Yekaterinburg
 https://ib9.zdrav-nnov.ru – CA: XX
 https://ioasaf.belgorod-archive.ru – CA: SPb
-https://dmitriev.rkursk.ru – CA: No-Sni
 https://www1.zsnso.ru – CA: UserGate
+https://dmitriev.rkursk.ru – CA: No-Sni
 https://gb37.zdrav-nnov.ru – CA: XX
 https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
@@ -150,12 +148,10 @@ https://kosorzh.rkursk.ru – CA: No-Sni
 https://sudgar.rkursk.ru – CA: No-Sni
 https://pkorenevo.rkursk.ru – CA: No-Sni
 https://malloknya.rkursk.ru – CA: No-Sni
-https://USLUGI.pnzreg.ru – CA: ddos-guard
-https://car.pskov.ru – CA: Oldestatehotel
-https://vetluga-crb.zdrav-nnov.ru – CA: XX
 https://it.kreml.nnov.ru – CA: N.Novgorod
 https://info.krc.karelia.ru – CA: Petrozavodsk
-https://pgu.pnzreg.ru – CA: ddos-guard
+https://car.pskov.ru – CA: Oldestatehotel
+https://vetluga-crb.zdrav-nnov.ru – CA: XX
 https://urichs.ru – CA: Internet Widgits Pty Ltd
 https://rgu33.avo.ru – CA: Vladimir
 https://vinnikovo.rkursk.ru – CA: No-Sni
@@ -170,9 +166,8 @@ https://portal.mingkhsk.ru – CA: XX
 https://kasinovo.rkursk.ru – CA: No-Sni
 https://klukva.rkursk.ru – CA: No-Sni
 https://gp30.zdrav-nnov.ru – CA: XX
-https://uslugi.pnzreg.ru – CA: ddos-guard
-https://prokuror.chukotka.ru – CA: Plesk
 https://klibneht.rkursk.ru – CA: No-Sni
+https://prokuror.chukotka.ru – CA: Plesk
 https://map.stavinvest.ru – CA: Stavropol
 https://oktiabr.rkursk.ru – CA: No-Sni
 https://deti.khv.ru – CA: XX
@@ -214,6 +209,7 @@ https://manturovo.rkursk.ru – CA: No-Sni
 https://voznesensk-crb.zdrav-nnov.ru – CA: XX
 https://dagvetkom.ru – CA: Yekaterinburg
 https://mx1.zsnso.ru – CA: UserGate
+https://alco32.ru – CA: ics-default
 https://philipovo.rkursk.ru – CA: No-Sni
 https://zaolesh.rkursk.ru – CA: No-Sni
 https://forum.fin.tambov.gov.ru – CA: UserGate
@@ -239,8 +235,8 @@ https://nokvd.zdrav-nnov.ru – CA: XX
 https://predvo.ru – CA: Internet Widgits Pty Ltd
 https://archive.orenburg-gov.ru – CA: Moscow
 https://visholhov.rkursk.ru – CA: No-Sni
-https://guevskiy.rkursk.ru – CA: No-Sni
 https://region.tver.ru – CA: Tver City
+https://guevskiy.rkursk.ru – CA: No-Sni
 https://zdrav-novgorod.ru – CA: XX
 https://piccana.karelia.ru – CA: Karelia
 https://vtorres.samregion.ru – CA: SAMARA
@@ -282,7 +278,6 @@ https://gousosh347uiayanr.tunev.gov.spb.ru – CA: Saint Petersburg
 https://krupeckoy.rkursk.ru – CA: No-Sni
 https://dib8.zdrav-nnov.ru – CA: XX
 https://gkh.mingkhsk.ru – CA: Stavropol
-https://pgu.pnzreg.ru – CA: ddos-guard
 https://novkastornoe.rkursk.ru – CA: No-Sni
 https://shatki-crb.zdrav-nnov.ru – CA: XX
 https://homutov.rkursk.ru – CA: No-Sni
@@ -293,6 +288,7 @@ https://gk5.zdrav-nnov.ru – CA: XX
 https://oknskn.ru – CA: Stavropol
 https://terebuzh.rkursk.ru – CA: No-Sni
 https://dgp32.zdrav-nnov.ru – CA: XX
+https://alco32.ru – CA: ics-default
 https://gkb10.zdrav-nnov.ru – CA: XX
 https://cher.rkursk.ru – CA: No-Sni
 https://dzer-gb6.zdrav-nnov.ru – CA: XX
@@ -319,6 +315,7 @@ https://astafiev.permkrai.ru – CA: IT-Group Certificate Authority
 https://pop.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://school466.kurort.gov.spb.ru – CA: SPb
 https://pogrebskoy.rkursk.ru – CA: No-Sni
+https://nagolen.rkursk.ru – CA: No-Sni
 https://apk.rkursk.ru – CA: No-Sni
 https://en.welcome2penza.ru – CA: Plesk
 https://novoposel.rkursk.ru – CA: No-Sni
@@ -326,8 +323,6 @@ https://tc.sklif.mos.ru – CA: sklif-b-SERVER-DC-CA
 https://malogneush.rkursk.ru – CA: No-Sni
 https://old.zsnso.ru – CA: UserGate
 https://kitayss.rkursk.ru – CA: No-Sni
-https://nagolen.rkursk.ru – CA: No-Sni
 https://ladoga.krc.karelia.ru – CA: Petrozavodsk
 https://dzer-gvv.zdrav-nnov.ru – CA: XX
-https://fcpkultura.ru – CA: Kaliningrad
 https://volodarsk-crb.zdrav-nnov.ru – CA: XX
