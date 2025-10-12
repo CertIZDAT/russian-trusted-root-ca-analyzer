@@ -6,7 +6,7 @@ from shutil import rmtree
 
 
 def read_links(filename: str) -> list[list[str]]:
-    MAX_BATCH_SIZE: int = 8000
+    MAX_BATCH_SIZE: int = 4000
     with open(filename) as f:
         website_links: list = f.readlines()
 
