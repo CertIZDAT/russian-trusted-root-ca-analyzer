@@ -1,5 +1,6 @@
 import sqlite3
 from os import path
+from typing import List
 
 from utils.common import get_lines_count_in
 from utils.logger import logger
@@ -75,12 +76,16 @@ def save_res_to_db(db_name: str,
         ss_path: str = path.join(res_folder, category, self_sign_file)
         ssl_path: str = path.join(res_folder, category, other_ssl_err_file)
 
-        entries[i] = (__read_entries(ca_path), __read_entries(ss_path), __read_entries(ssl_path))
+        entries[i] = (__read_entries(ca_path), __read_entries(
+            ss_path), __read_entries(ssl_path))
 
     #                          ↓ ca entries            ↓ self-signed entries   ↓ other ssl entries
-    gov_entries = [','.join(entries[0][0]), ','.join(entries[0][1]), ','.join(entries[0][2])]
-    social_entries = [','.join(entries[1][0]), ','.join(entries[1][1]), ','.join(entries[1][2])]
-    top_entries = [','.join(entries[2][0]), ','.join(entries[2][1]), ','.join(entries[2][2])]
+    gov_entries = [','.join(entries[0][0]), ','.join(
+        entries[0][1]), ','.join(entries[0][2])]
+    social_entries = [','.join(entries[1][0]), ','.join(
+        entries[1][1]), ','.join(entries[1][2])]
+    top_entries = [','.join(entries[2][0]), ','.join(
+        entries[2][1]), ','.join(entries[2][2])]
 
     # Add entries to database
     insert_query: str = '''
@@ -94,11 +99,14 @@ def save_res_to_db(db_name: str,
 
     try:
         cursor.execute(insert_query, (timeout,
-                                      get_lines_count_in(path.join(dataset_folder, 'government_domains.txt')),
+                                      get_lines_count_in(
+                                          path.join(dataset_folder, 'government_domains.txt')),
                                       gov_entries[0], gov_entries[1], gov_entries[2],
-                                      get_lines_count_in(path.join(dataset_folder, 'social.txt')),
+                                      get_lines_count_in(
+                                          path.join(dataset_folder, 'social.txt')),
                                       social_entries[0], social_entries[1], social_entries[2],
-                                      get_lines_count_in(path.join(dataset_folder, 'top-100.txt')),
+                                      get_lines_count_in(
+                                          path.join(dataset_folder, 'top-100.txt')),
                                       top_entries[0], top_entries[1], top_entries[2],
                                       int(is_new_dataset == 'True' or is_new_dataset == 'true')))
         connection.commit()
@@ -110,7 +118,7 @@ def save_res_to_db(db_name: str,
         connection.close()
 
 
-def __read_entries(file_path) -> list[str]:
+def __read_entries(file_path: str) -> List[str]:
     try:
         with open(file_path) as f:
             return [line.strip() for line in f.readlines()]

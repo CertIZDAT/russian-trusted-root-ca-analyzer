@@ -1,5 +1,6 @@
 import datetime
 import os
+from typing import List
 import zipfile
 from os import listdir, mkdir, path, remove
 from shutil import rmtree
@@ -8,7 +9,7 @@ from shutil import rmtree
 def read_links(filename: str) -> list[list[str]]:
     MAX_BATCH_SIZE: int = 4000
     with open(filename) as f:
-        website_links: list = f.readlines()
+        website_links: List[str] = f.readlines()
 
     link_groups: list[list[str]] = []
     current_group: list[str] = []
@@ -40,7 +41,7 @@ def get_lines_count_in(file: str) -> int:
     return count
 
 
-def archive_results(save_logs=False) -> None:
+def archive_results(save_logs: bool = False) -> None:
     """Save results of the analysis to <date-time>.zip archive.
 
     Keyword arguments:

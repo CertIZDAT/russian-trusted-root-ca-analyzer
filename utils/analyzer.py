@@ -22,7 +22,8 @@ def __get_root_cert(link: str, timeout: int):
 
 def __check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int,
                  timeout: int) -> None:
-    logger.debug(f"Checking link: {source_link}, index: {index}, batch_idx: {batch_idx}, total_batch: {total_batch}, timeout: {timeout}")
+    logger.debug(
+        f"Checking link: {source_link}, index: {index}, batch_idx: {batch_idx}, total_batch: {total_batch}, timeout: {timeout}")
     if batch_idx == 1:
         sub_path: str = path.join('results/', 'government')
     elif batch_idx == 2:
