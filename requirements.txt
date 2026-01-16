@@ -4,7 +4,7 @@ charset-normalizer==3.4.4
 cryptography==46.0.3
 idna==3.11
 ndg-httpsclient==0.5.1
-pyasn1==0.6.1
+pyasn1==0.6.2
 pyOpenSSL==25.3.0
 types-cffi==1.17.0.20250915
 types-pyOpenSSL==24.1.0.20240722
