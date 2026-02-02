@@ -1,323 +1,320 @@
 https://kino-teatr.ru – CA: R13
-https://vk.com – CA: GlobalSign ECC OV SSL CA 2018
+https://mediametrics.ru – CA: E8
 https://ped-kopilka.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://rosminzdrav.ru – CA: Salford
-https://videouroki.net – CA: WE1
-https://5-tv.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://habr.com – CA: Sectigo Public Server Authentication CA DV E36
-https://rosuchebnik.ru – CA: R13
 https://metro.yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
 https://fipi.ru – CA: R13
-https://distant.msu.ru – CA: R13
 https://yaklass.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://selfpub.ru – CA: R13
-https://yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
+https://5-tv.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://rosminzdrav.ru – CA: Salford
 https://youla.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://blizko.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://mediametrics.ru – CA: E7
+https://habr.com – CA: Sectigo Public Server Authentication CA DV E36
 https://rsl.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://datalesson.ru – CA: E7
+https://rosuchebnik.ru – CA: R13
+https://vk.com – CA: GlobalSign ECC OV SSL CA 2018
+https://selfpub.ru – CA: R13
+https://blizko.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://videouroki.net – CA: WE1
+https://distant.msu.ru – CA: R13
 https://infourok.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://dop.edu.ru – CA: E8
+https://yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
 https://radiovesti.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://fantlab.ru – CA: R12
-https://tvkultura.ru – CA: E8
+https://datalesson.ru – CA: E7
 https://mkb.ru – CA: HARICA DV TLS RSA
-https://sravni.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://arhangelskoe.su – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://netology.ru – CA: R13
-https://aliexpress.ru – CA: GlobalSign GCC R3 OV TLS CA 2024
+https://fantlab.ru – CA: R12
+https://tvkultura.ru – CA: R13
 https://app.matchtv.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://sovsport.ru – CA: R13
-https://gazeta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://indicator.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://pulscen.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://championat.com – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://360tv.ru – CA: WE1
+https://dop.edu.ru – CA: R12
 https://profi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://mkrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://zoon.ru – CA: R12
-https://sibac.info – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://arhangelskoe.su – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://sravni.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://pulscen.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://netology.ru – CA: R13
+https://sovsport.ru – CA: R13
 https://elducation.ru – CA: WE1
+https://barahla.net – CA: E7
+https://championat.com – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://irecommend.ru – CA: R13
+https://sibac.info – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://gazeta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://aliexpress.ru – CA: GlobalSign GCC R3 OV TLS CA 2024
+https://audit.gov.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://kad.arbitr.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://market.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://barahla.net – CA: R12
-https://ria.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://novideo.rbc.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://rshb.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://sportsdaily.ru – CA: R13
-https://tass.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://edimdoma.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://realty.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://baby.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://zoon.ru – CA: R12
+https://indicator.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://edu.gov.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://kipmu.ru – CA: R13
-https://unicreditbank.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://allhockey.ru – CA: E8
-https://mega-talant.com – CA: WE1
-https://vashurok.ru – CA: AlphaSSL CA - SHA256 - G2
-https://gaso.ru – CA: E7
-https://pushkinmuseum.art – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://mosmetod.ru – CA: E6
-https://local.yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
-https://sdamgia.ru – CA: E7
-https://mail.rambler.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://mirtesen.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://hermitagemuseum.org – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://apteka.ru – CA: E7
+https://tass.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://novideo.rbc.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://sportsdaily.ru – CA: R13
+https://baby.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://market.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://mariinsky.ru – CA: R12
+https://ria.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mail.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rshb.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://pushkinmuseum.art – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://postupi.online – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://apteka.ru – CA: E7
+https://edimdoma.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://digital.prosv.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://gaso.ru – CA: E7
+https://sdamgia.ru – CA: E7
+https://vsrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mosmetod.ru – CA: E8
+https://livejournal.com – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mail.rambler.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://360tv.ru – CA: WE1
+https://mirtesen.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mkrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://local.yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
+https://nukadeti.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://ok.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://zakon.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://sport.ru – CA: R13
-https://f1news.ru – CA: R12
-https://worldskills.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://health.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://rusmuseum.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://vsrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://mail.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://mchs.gov.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://fitseven.ru – CA: R12
-https://livejournal.com – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://trudvsem.ru – CA: E8
-https://postupi.online – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://digital.prosv.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://dnevnik.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://media.prosv.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://delivery-club.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://nukadeti.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://sledcom.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://mob-edu.ru – CA: R12
-https://auto.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://babyblog.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://wikireading.ru – CA: R13
-https://cosmo.ru – CA: E7
-https://litres.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://edu.dobro.ru – CA: R12
-https://school.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://realty.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://delivery-club.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sport.ru – CA: R13
+https://allhockey.ru – CA: E7
+https://unicreditbank.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://trudvsem.ru – CA: E8
+https://mchs.gov.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://edu.dobro.ru – CA: R13
+https://f1news.ru – CA: R12
+https://fitseven.ru – CA: R12
+https://mega-talant.com – CA: WE1
 https://uchitelya.com – CA: WE1
+https://rusmuseum.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mob-edu.ru – CA: R12
+https://media.prosv.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://cosmo.ru – CA: E8
+https://wikireading.ru – CA: R13
+https://health.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://vashurok.ru – CA: AlphaSSL CA - SHA256 - G2
+https://auto.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://worldskills.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://litres.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://school.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://dnevnik.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://in-space.ru – CA: R13
+https://sirius.online – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://interneturok.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://rabota.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://1tv.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://babyblog.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://culture.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
 https://pochtabank.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://russian.rt.com – CA: R13
-https://7dach.ru – CA: R12
-https://in-space.ru – CA: R13
-https://raiffeisen.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://ilibrary.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://lms.spbstu.ru – CA: R13
-https://vbr.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://uchportal.ru – CA: R13
-https://maam.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://roscongress.org – CA: E7
-https://livesport.ru – CA: E8
-https://education.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://e.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://sirius.online – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://rusneb.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://vesti.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://kreml.ru – CA: R13
-https://7days.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://aif.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://ren.tv – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://pochta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://consultant.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://nevasport.ru – CA: R13
-https://utkonos.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://gosuslugi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://author.today – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://oprf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://professionali.ru – CA: R11
-https://rospotrebnadzor.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://minobrnauki.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://news.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://sudrf.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://fmbaros.ru – CA: R12
-https://teleprogramma.pro – CA: R13
-https://free.sportbox.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://rusbiathlon.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://khl.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://livelib.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://kp.ru – CA: R12
-https://sberbank.ru – CA: HARICA DV TLS RSA
-https://edu.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://openedu.ru – CA: R13
-https://stihi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://proza.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://hh.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://pablic.tvzvezda.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://eapteka.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://news.rambler.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://gazprombank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://oum.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://lady.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://nat-geo.ru – CA: R12
-https://m24.ru – CA: R12
-https://health.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://hermitagemuseum.org – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://ilibrary.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://lms.spbstu.ru – CA: R12
+https://vbr.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://muz-tv.ru – CA: R12
-https://myskills.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://ombudsmanrf.org – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://bolshoi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://oprf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://e.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://kreml.ru – CA: R13
+https://rabota.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://consultant.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://russian.rt.com – CA: R12
+https://livesport.ru – CA: E7
+https://maam.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://education.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://vesti.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://uchportal.ru – CA: R13
+https://professionali.ru – CA: R11
+https://7dach.ru – CA: R13
+https://pochta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://utkonos.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sportmail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://aif.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://raiffeisen.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://nevasport.ru – CA: R12
+https://author.today – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://minobrnauki.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://7days.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://news.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rusneb.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://ren.tv – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://teleprogramma.pro – CA: R13
+https://gosuslugi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://free.sportbox.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://rospotrebnadzor.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://sberbank.ru – CA: HARICA DV TLS RSA
+https://fmbaros.ru – CA: R12
+https://edu.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://rusbiathlon.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://pablic.tvzvezda.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://livelib.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://khl.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://hh.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://stihi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://kp.ru – CA: R12
+https://proza.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://news.rambler.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://eapteka.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://openedu.ru – CA: R13
+https://nat-geo.ru – CA: R12
+https://oum.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
 https://may9.ru – CA: R12
-https://mvd.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://gazprombank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://lady.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sudrf.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://nauka.club – CA: R13
 https://gismeteo.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://rabota.yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
-https://otzovik.com – CA: Sectigo Public Server Authentication CA DV R36
-https://edadeal.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://rzd.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://chitalnya.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://icq.com – CA: R12
-https://popmech.ru – CA: R12
-https://alfabank.ru – CA: JPRS Domain Validation Authority - G4
-https://nlr.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://roszdravnadzor.ru – CA: R13
-https://olimpium.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://cyberleninka.ru – CA: WE1
 https://iz.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://ar.culture.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://olimpiada.ru – CA: R13
+https://m24.ru – CA: R12
+https://health.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://myskills.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://edadeal.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://popmech.ru – CA: R12
+https://rabota.yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
+https://nlr.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mvd.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://alfabank.ru – CA: JPRS Domain Validation Authority - G4
 https://cbr.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://sport-express.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://start.skillbox.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://chitalnya.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://otzovik.com – CA: Sectigo Public Server Authentication CA DV R36
+https://fssprus.ru – CA: R3
+https://bolshoi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://tamtam.chat – CA: GlobalSign ECC OV SSL CA 2018
-https://spacegid.com – CA: R13
+https://sport-express.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://pfrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://russkiiyazyk.ru – CA: R12
-https://cloud.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://rgo.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://olimpium.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://cloud.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://rg.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://pedsovet.org – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://01math.com – CA: R13
-https://nauka.club – CA: R13
-https://elementy.ru – CA: E8
-https://ucheba.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://ombudsmanrf.org – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://roszdravnadzor.ru – CA: R13
+https://kommersant.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://interfax.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://dobro.ru – CA: R12
-https://vtb.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://aptekamos.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://multiurok.ru – CA: WE1
-https://avtovzglyad.ru – CA: R13
+https://olimpiada.ru – CA: R13
 https://sportrbc.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://nsportal.ru – CA: R13
-https://domashniy.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://eda.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://ekovolga.com – CA: ZeroSSL ECC Domain Secure Site CA
+https://icq.com – CA: R12
+https://dobro.ru – CA: R13
+https://vtb.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://01math.com – CA: R13
+https://start.skillbox.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://cyberleninka.ru – CA: WE1
+https://autonews.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://elementy.ru – CA: E8
 https://goskatalog.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://life.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://autonews.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://vz.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://smi2.ru – CA: E7
-https://deti.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://obr.nd.ru – CA: E7
-https://ohotniki.ru – CA: R12
-https://banki.ru – CA: GlobalSign GCC R3 EV TLS CA 2025
-https://notariat.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://foxford.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://russia.tv – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://lite.mir24.tv – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://aptekamos.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://pedsovet.org – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://spacegid.com – CA: R13
+https://avtovzglyad.ru – CA: R13
+https://ucheba.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://domashniy.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://ctc.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://sport24.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://obr.nd.ru – CA: E7
+https://multiurok.ru – CA: WE1
+https://nsportal.ru – CA: R12
+https://ohotniki.ru – CA: R12
 https://zdravcity.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://karusel-tv.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://banki.ru – CA: GlobalSign GCC R3 EV TLS CA 2025
+https://russia.tv – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://knigogid.ru – CA: E8
-https://rosbank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://radiomayak.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://letidor.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://lenta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://mil.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://autorambler.ru – CA: R12
+https://notariat.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://arbitr.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://sport24.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://skyeng.ru – CA: R12
-https://free.tnt-online.ru – CA: AlphaSSL CA - SHA256 - G2
-https://kreml-alexandrov.ru – CA: R12
-https://mel.fm – CA: R12
-https://sbermarket.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://kommersant.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rzd.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://deti.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://autorambler.ru – CA: R13
+https://rosbank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://foxford.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://smi2.ru – CA: E7
+https://mil.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
+https://letidor.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://fighttime.ru – CA: R12
+https://eda.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://radiomayak.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://garant.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://spastv.ru – CA: E7
+https://sbermarket.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://skyeng.ru – CA: R12
+https://vz.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://nalog.ru – CA: R12
 https://uchebnik.mos.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://uteka.ru – CA: R13
-https://resh.edu.ru – CA: R13
-https://znaika.ru – CA: R12
-https://povar.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://fighttime.ru – CA: R12
-https://drom.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://lenta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://uteka.ru – CA: R12
 https://otr-online.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://drom.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://woman.ru – CA: R13
+https://mel.fm – CA: R12
 https://radiorus.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://xumuk.ru – CA: R12
+https://znaika.ru – CA: R13
+https://cian.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://resh.edu.ru – CA: R13
 https://samlib.ru – CA: E7
 https://tvc.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://open.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://free.tnt-online.ru – CA: AlphaSSL CA - SHA256 - G2
+https://spastv.ru – CA: E7
 https://mybook.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://mk.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://cian.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://lib.ru – CA: E7
 https://histrf.ru – CA: E8
-https://9111.ru – CA: E7
-https://afisha.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://vm.ru – CA: R13
-https://drive2.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://wildberries.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://online.fa.ru – CA: R13
-https://superjob.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://ozon.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://piluli.ru – CA: R12
-https://2gis.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://kolesa.ru – CA: R12
-https://nplus1.ru – CA: WE1
-https://gosfilmofond.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://rustih.ru – CA: R13
-https://rasp.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://afisha.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://piluli.ru – CA: R13
+https://mk.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://vm.ru – CA: R13
 https://tretyakovgallery.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://xumuk.ru – CA: R12
-https://lecta.rosuchebnik.ru – CA: R12
-https://obr.1c.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://doverie-tv.ru – CA: R13
+https://wildberries.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://drive2.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://9111.ru – CA: E7
+https://nplus1.ru – CA: WE1
+https://ozon.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://open.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://Shm.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://taxi.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://kopilkaurokov.ru – CA: WE1
-https://inlearno.ru – CA: R12
-https://otvet.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://rostrud.ru – CA: R12
-https://russianfood.com – CA: R13
-https://obrazovaka.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://free.tv3.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://superjob.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://obr.1c.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://asna.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rustih.ru – CA: R13
+https://lecta.rosuchebnik.ru – CA: R12
+https://online.fa.ru – CA: R13
+https://taxi.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://lib.ru – CA: E7
+https://gosfilmofond.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://cifra.school – CA: R13
+https://hi-news.ru – CA: E7
+https://vokrugsveta.ru – CA: R12
+https://rostrud.ru – CA: R12
+https://obrazovaka.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://doverie-tv.ru – CA: R13
 https://forumhouse.ru – CA: R12
 https://pnp.ru – CA: R13
-https://cifra.school – CA: R13
 https://rambler.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://hi-news.ru – CA: E7
-https://psbank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://onlinetrade.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://proektoria.online – CA: R12
-https://nkj.ru – CA: R12
+https://rasp.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://disk.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://film.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://uchi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://proektoria.online – CA: R13
 https://youdo.com – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://domclick.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
-https://uchi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://prlib.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://soccer.ru – CA: R13
+https://otvet.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://free.tv3.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://agroserver.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2023
 https://mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://artchive.ru – CA: R12
-https://disk.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://naked-science.ru – CA: R12
+https://inlearno.ru – CA: R13
+https://psbank.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://soccer.ru – CA: R12
 https://borodino.ru – CA: R12
+https://prlib.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://nkj.ru – CA: R12
 https://4ege.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://2gis.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://kinoafisha.info – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://ksrf.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://woman.ru – CA: R13
-https://naked-science.ru – CA: WE1
-https://arzamas.academy – CA: R12
-https://moluch.ru – CA: R13
-https://bso.ru – CA: R13
-https://vokrugsveta.ru – CA: R12
+https://povar.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://artchive.ru – CA: R12
+https://arzamas.academy – CA: R13
 https://moodle.tsu.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://moluch.ru – CA: R13
+https://russianfood.com – CA: R13
+https://kopilkaurokov.ru – CA: WE1
 https://vseonauke.com – CA: Salford
-https://audit.gov.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://sportmail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://fssprus.ru – CA: R3
+https://bso.ru – CA: R12
 https://money.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://my.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://lite.mir24.tv – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://ekovolga.com – CA: test
 https://lektorium.tv – CA: R13
