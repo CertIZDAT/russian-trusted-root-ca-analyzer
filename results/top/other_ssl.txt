@@ -1,80 +1,81 @@
+https://gosuslugi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://rambler.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://drive2.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sport-express.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://wildberries.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://championat.com – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://vk.com – CA: GlobalSign ECC OV SSL CA 2018
+https://sberbank.ru – CA: HARICA DV TLS RSA
+https://aliexpress.ru – CA: GlobalSign GCC R3 OV TLS CA 2024
+https://lenta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://mail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://gismeteo.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://booking.com – CA: DigiCert Global G2 TLS RSA SHA256 2020 CA1
 https://yaplakal.com – CA: WE1
-https://yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
-https://otzovik.com – CA: Sectigo Public Server Authentication CA DV R36
-https://drom.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://hh.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://drive2.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://remanga.org – CA: GlobalSign RSA OV SSL CA 2018
-https://sport-express.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://pornhub.com – CA: DigiCert Global G3 TLS ECC SHA384 2020 CA1
-https://dns-shop.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://wikipedia.org – CA: E8
-https://weather.com – CA: DigiCert Global G3 TLS ECC SHA384 2020 CA1
-https://kp.ru – CA: R13
-https://aliexpress.ru – CA: GlobalSign GCC R3 OV TLS CA 2024
-https://sportbox.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://music.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://cian.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://avito.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://mos.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://ikea.com – CA: WE1
 https://tinkoff.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://rbc.ru – CA: E7
-https://google.com – CA: WE2
-https://pikabu.ru – CA: R13
-https://roblox.com – CA: Sectigo Public Server Authentication CA OV R36
+https://dns-shop.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://ok.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://lenta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://gismeteo.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://mts.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://fishki.net – CA: E7
-https://ozon.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://sportbox.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://kp.ru – CA: R13
+https://rbc.ru – CA: E7
 https://ria.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://journals.ru – CA: WE1
-https://mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://vz.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://primpress.ru – CA: R13
-https://tutu.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
 https://auto.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://fandom.com – CA: WE1
-https://vseinstrumenti.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://kommersant.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://turbopages.org – CA: GlobalSign RSA OV SSL CA 2018
+https://music.yandex.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://mos.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://ozon.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://yandex.ru – CA: GlobalSign ECC OV SSL CA 2018
+https://pikabu.ru – CA: R13
+https://primpress.ru – CA: R12
+https://fishki.net – CA: E8
+https://tutu.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://avito.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://cian.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://weather.com – CA: DigiCert Global G3 TLS ECC SHA384 2020 CA1
+https://ikea.com – CA: WE1
+https://google.com – CA: WE2
 https://news.mail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://twitch.tv – CA: GlobalSign Atlas R3 DV TLS CA 2025 Q2
-https://vk.com – CA: GlobalSign ECC OV SSL CA 2018
-https://rambler.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://2gis.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://consultant.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://tass.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://wildberries.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://vz.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://drom.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://mts.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://mvideo.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://vseinstrumenti.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://turbopages.org – CA: GlobalSign RSA OV SSL CA 2018
+https://otzovik.com – CA: Sectigo Public Server Authentication CA DV R36
+https://fandom.com – CA: WE1
+https://wikipedia.org – CA: E7
+https://journals.ru – CA: WE1
+https://twitch.tv – CA: GlobalSign Atlas R3 DV TLS CA 2026 Q2
 https://rt.com – CA: R12
 https://ivi.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://kommersant.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://tass.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://kinopoisk.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rutube.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://livejournal.com – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://consultant.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://rg.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
 https://beeline.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://leroymerlin.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://pinterest.ru – CA: R12
-https://tiktok.com – CA: www.digicert.com
-https://mvideo.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://rg.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://mintmanga.live – CA: E7
-https://manhwaindo.id – CA: WE1
-https://youla.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://gazeta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://sberbank.ru – CA: HARICA DV TLS RSA
-https://livejournal.com – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://rus-tv.su – CA: GlobalSign GCC R6 AlphaSSL CA 2023
 https://google.ru – CA: WE2
-https://litnet.com – CA: WE1
-https://mk.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://championat.com – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://pochta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://rp5.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://gazeta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://youla.ru – CA: GlobalSign RSA OV SSL CA 2018
 https://sports.ru – CA: R13
-https://rutube.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
-https://kinopoisk.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://rus-tv.su – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://tiktok.com – CA: www.digicert.com
+https://rp5.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://manhwaindo.id – CA: WE1
+https://litnet.com – CA: E7
 https://news.sportbox.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
-https://sportmail.ru – CA: GlobalSign RSA OV SSL CA 2018
-https://samsung.com – CA: Salford
+https://2gis.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://pochta.ru – CA: GlobalSign GCC R3 DV TLS CA 2020
+https://pinterest.ru – CA: R12
+https://mintmanga.live – CA: E7
+https://mk.ru – CA: GlobalSign GCC R6 AlphaSSL CA 2025
+https://roblox.com – CA: Sectigo Public Server Authentication CA OV R36
+https://samsung.com – CA: Sectigo Public Server Authentication CA OV R36
 https://aliexpress.com – CA: GlobalSign GCC R3 OV TLS CA 2024
+https://sportmail.ru – CA: GlobalSign RSA OV SSL CA 2018
+https://pornhub.com – CA: DigiCert Global G3 TLS ECC SHA384 2020 CA1
