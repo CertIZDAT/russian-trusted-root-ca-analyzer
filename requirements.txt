@@ -10,4 +10,4 @@ types-cffi==2.0.0.20260504
 types-pyOpenSSL==24.1.0.20240722
 types-setuptools==82.0.0.20260408
 typing_extensions==4.15.0
-urllib3==2.6.3
+urllib3==2.7.0
