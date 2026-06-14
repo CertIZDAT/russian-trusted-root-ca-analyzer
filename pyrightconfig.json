@@ -1,0 +1,10 @@
+{
+  "typeCheckingMode": "strict",
+  "reportMissingTypeStubs": true,
+  "reportUnknownVariableType": true,
+  "reportUnknownArgumentType": true,
+  "reportUnknownMemberType": true,
+  "reportUnknownParameterType": true,
+  "reportUnknownLambdaType": true,
+  "reportUnknownReturnType": true
+}

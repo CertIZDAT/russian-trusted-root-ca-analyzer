@@ -1,0 +1,70 @@
+// default universal development environment
+
+{
+	"name": "Alpine",
+	"image": "mcr.microsoft.com/devcontainers/base:alpine-3.22",
+	"postCreateCommand": "sudo apk add --no-cache py3-pip ruff",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.analysis.typeCheckingMode": "strict"
+			},
+			"extensions": [
+				"formulahendry.auto-close-tag",
+				"formulahendry.auto-rename-tag",
+				"ms-python.autopep8",
+				"rogalmic.bash-debug",
+				"aaron-bond.better-comments",
+				"ms-python.black-formatter",
+				"ms-vscode.cpptools-themes",
+				"ms-vscode-remote.remote-containers",
+				"usernamehw.errorlens",
+				"ms-vscode-remote.remote-ssh",
+				"ms-vscode-remote.remote-ssh-edit",
+				"semanticdiff.semanticdiff",
+				"SimonSiefke.svg-preview",
+				"wayou.vscode-todo-highlight",
+				"ms-vscode.cpptools",
+				"ms-vscode.cpp-devtools",
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.cmake-tools",
+				"streetsidesoftware.code-spell-checker",
+				"openai.chatgpt",
+				"ms-azuretools.vscode-containers",
+				"fill-labs.dependi",
+				"ms-azuretools.vscode-docker",
+				"docker.docker",
+				"eamodio.gitlens",
+				"ecmel.vscode-html-css",
+				"Zignd.html-css-class-completion",
+				"ms-python.isort",
+				"betwo.vscode-linux-binary-preview",
+				"nico-castell.linux-desktop-file",
+				"llvm-vs-code-extensions.lldb-dap",
+				"ms-vscode.makefile-tools",
+				"yzhang.markdown-all-in-one",
+				"DavidAnson.vscode-markdownlint",
+				"josee9988.minifyall",
+				"christian-kohler.path-intellisense",
+				"esbenp.prettier-vscode",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"ms-python.debugpy",
+				"donjayamanne.python-environment-manager",
+				"ms-python.vscode-python-envs",
+				"streetsidesoftware.code-spell-checker-russian",
+				"rust-lang.rust-analyzer",
+				"foxundermoon.shell-format",
+				"timonwong.shellcheck",
+				"rangav.vscode-thunder-client",
+				"rcore.rcore-unused-css-classes",
+				"CelianRiboulet.webvalidator",
+				"MaxvanderSchee.web-accessibility",
+				"DotJoshJohnson.xml",
+				"redhat.vscode-yaml",
+				"charliermarsh.ruff"
+			]
+		}
+	},
+	"remoteUser": "vscode"
+}
