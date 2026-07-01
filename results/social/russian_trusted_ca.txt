@@ -1,3 +1,5 @@
+https://edu.gov.ru – CA: Russian Trusted Sub CA
 https://gks.ru – CA: Russian Trusted Sub CA
 https://rusarchives.ru – CA: Russian Trusted Sub CA
 https://pkk.rosreestr.ru – CA: Russian Trusted Sub CA
+https://open.ru – CA: Russian Trusted Sub CA
