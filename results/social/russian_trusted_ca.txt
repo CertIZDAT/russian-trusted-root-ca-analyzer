@@ -1,5 +1,10 @@
+https://mkb.ru – CA: Russian Trusted Sub CA
 https://edu.gov.ru – CA: Russian Trusted Sub CA
 https://gks.ru – CA: Russian Trusted Sub CA
+https://pochtabank.ru – CA: Russian Trusted Sub CA
 https://rusarchives.ru – CA: Russian Trusted Sub CA
 https://pkk.rosreestr.ru – CA: Russian Trusted Sub CA
+https://alfabank.ru – CA: Russian Trusted Sub CA
+https://mil.ru – CA: Russian Trusted Sub CA
 https://open.ru – CA: Russian Trusted Sub CA
+https://ksrf.ru – CA: Russian Trusted Sub CA
