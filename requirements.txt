@@ -1,13 +1,13 @@
 certifi==2026.7.22
 cffi==2.1.1
-charset-normalizer==3.4.9
+charset-normalizer==3.5.1
 cryptography==50.0.0
-idna==3.18
+idna==3.19
 ndg-httpsclient==0.5.1
 pyasn1==0.6.4
 pyOpenSSL==26.4.0
 types-cffi==2.0.0.20260518
 types-pyOpenSSL==24.1.0.20240722
-types-setuptools==83.0.0.20260807
+types-setuptools==84.0.0.20260812
 typing_extensions==4.16.0
 urllib3==2.7.0
