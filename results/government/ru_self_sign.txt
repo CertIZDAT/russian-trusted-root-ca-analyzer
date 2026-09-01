@@ -2,22 +2,22 @@ https://bolzmey.rkursk.ru – CA: No-Sni
 https://journals.krc.karelia.ru – CA: Petrozavodsk
 https://yaroslavl.roskazna.ru – CA: Moscow
 https://druzhn.rkursk.ru – CA: No-Sni
+https://geo.stavregion.ru – CA: Stavropol
 https://infrastruktura39.ru – CA: Internet Widgits Pty Ltd
 https://monitoring.zspk.gov.ru – CA: No-Sni
-https://geo.stavregion.ru – CA: Stavropol
 https://timr.rkursk.ru – CA: No-Sni
-https://kamchatka.roskazna.ru – CA: Moscow
 https://rcdl2001.krc.karelia.ru – CA: Petrozavodsk
+https://kamchatka.roskazna.ru – CA: Moscow
 https://sbs.gov.mari.ru – CA: Kaliningrad
 https://adygeya.roskazna.ru – CA: Moscow
 https://makarovskiy.rkursk.ru – CA: No-Sni
 https://pristenp.rkursk.ru – CA: No-Sni
-https://pnc-dz.zdrav-nnov.ru – CA: XX
 https://sahalin.roskazna.ru – CA: Moscow
+https://pnc-dz.zdrav-nnov.ru – CA: XX
 https://mail.fmkk.ru – CA: Moscow
 https://shigry.rkursk.ru – CA: No-Sni
-https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://liskovo-crb.zdrav-nnov.ru – CA: XX
+https://ddt.aptrg.gov.spb.ru – CA: Saint Petersburg
 https://kazach.rkursk.ru – CA: No-Sni
 https://kazanka2.rkursk.ru – CA: No-Sni
 https://dl.krc.karelia.ru – CA: Petrozavodsk
@@ -69,9 +69,9 @@ https://inform.pskov.ru – CA: ddos-guard
 https://ulanok.rkursk.ru – CA: No-Sni
 https://elibrary.krc.karelia.ru – CA: Petrozavodsk
 https://yastrebovskiy.rkursk.ru – CA: No-Sni
-https://vozovskiy.rkursk.ru – CA: No-Sni
 https://sh21.voadm.gov.spb.ru – CA: SPb
 https://detstvo.gokrk.ru – CA: Kaliningrad
+https://vozovskiy.rkursk.ru – CA: No-Sni
 https://prigorod.rkursk.ru – CA: No-Sni
 https://gorss.rkursk.ru – CA: No-Sni
 https://lebajye.rkursk.ru – CA: No-Sni
@@ -81,12 +81,13 @@ https://znamenka.rkursk.ru – CA: No-Sni
 https://ombudsman57.ru – CA: XX
 https://economy.krc.karelia.ru – CA: Petrozavodsk
 https://voroshnevo.rkursk.ru – CA: No-Sni
+https://infrastruktura39.ru – CA: Internet Widgits Pty Ltd
 https://tolpino.rkursk.ru – CA: No-Sni
 https://suotacis.krc.karelia.ru – CA: Petrozavodsk
-https://infrastruktura39.ru – CA: Internet Widgits Pty Ltd
 https://bol.rkursk.ru – CA: No-Sni
 https://sheptuhovka.rkursk.ru – CA: No-Sni
 https://calcrtk.stavregion.ru – CA: Stavropol
+https://mx.depagro32.ru – CA: ics-default
 https://sazanovka.rkursk.ru – CA: No-Sni
 https://tim.rkursk.ru – CA: No-Sni
 https://vepsian.krc.karelia.ru – CA: Petrozavodsk
@@ -98,8 +99,8 @@ https://dgp22.zdrav-nnov.ru – CA: XX
 https://man.rkursk.ru – CA: No-Sni
 https://nopnb3.zdrav-nnov.ru – CA: XX
 https://pristen.rkursk.ru – CA: No-Sni
-https://region.tver.ru – CA: Tver City
 https://1mayskcrb.zdrav-nnov.ru – CA: XX
+https://region.tver.ru – CA: Tver City
 https://ib23.zdrav-nnov.ru – CA: XX
 https://starkovo.rkursk.ru – CA: No-Sni
 https://ingushetia.roskazna.ru – CA: Moscow
@@ -129,8 +130,8 @@ https://sv.stavminobr.ru – CA: Stavropol
 https://fso.karelia.ru – CA: SPb
 https://eparhia.karelia.ru – CA: XX
 https://dmitriev4605.rkursk.ru – CA: No-Sni
-https://nongvv.zdrav-nnov.ru – CA: XX
 https://kaliningrad.roskazna.ru – CA: Moscow
+https://nongvv.zdrav-nnov.ru – CA: XX
 https://repec.rkursk.ru – CA: No-Sni
 https://nizhegorodskaya.roskazna.ru – CA: Moscow
 https://krym.roskazna.ru – CA: Moscow
@@ -138,8 +139,8 @@ https://pgtm.rkursk.ru – CA: No-Sni
 https://kemerovskaya.roskazna.ru – CA: Moscow
 https://ufa.roskazna.ru – CA: Moscow
 https://shevelevo.rkursk.ru – CA: No-Sni
-https://guzgp76om.kalin.gov.spb.ru – CA: Saint Petersburg
 https://geobotany.krc.karelia.ru – CA: Petrozavodsk
+https://guzgp76om.kalin.gov.spb.ru – CA: Saint Petersburg
 https://budget.bryanskoblfin.ru – CA: Finance Dept
 https://panikiss.rkursk.ru – CA: No-Sni
 https://feed.stavregion.ru – CA: Stavropol
@@ -148,16 +149,14 @@ https://dzer-pnd.zdrav-nnov.ru – CA: XX
 https://ribbudss.rkursk.ru – CA: No-Sni
 https://ivanovskaya.roskazna.ru – CA: Moscow
 https://chukotka.roskazna.ru – CA: Moscow
-https://dagtourism.e-dag.ru – CA: Yekaterinburg
 https://ib9.zdrav-nnov.ru – CA: XX
 https://ioasaf.belgorod-archive.ru – CA: SPb
 https://dmitriev.rkursk.ru – CA: No-Sni
-https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
 https://detpoliklinik68.krgv.gov.spb.ru – CA: Saint Petersburg
 https://pskov.roskazna.ru – CA: Moscow
 https://gb37.zdrav-nnov.ru – CA: XX
+https://cas.govrb.ru – CA: SUB.CA.GOVRB.RU
 https://transactions.krc.karelia.ru – CA: Petrozavodsk
-https://nko.economy.gov.ru – CA: Moscow
 https://konishovskiyr.rkursk.ru – CA: No-Sni
 https://kosorzh.rkursk.ru – CA: No-Sni
 https://sudgar.rkursk.ru – CA: No-Sni
@@ -174,8 +173,8 @@ https://r-altay.roskazna.ru – CA: Moscow
 https://moufk.roskazna.ru – CA: Moscow
 https://mordovia.roskazna.ru – CA: Moscow
 https://rgu33.avo.ru – CA: Vladimir
-https://kobilki.rkursk.ru – CA: No-Sni
 https://vinnikovo.rkursk.ru – CA: No-Sni
+https://kobilki.rkursk.ru – CA: No-Sni
 https://s081m.081.pfr.ru – CA: MON.SFR.RU
 https://poniri.rkursk.ru – CA: No-Sni
 https://tarif26.ru – CA: XX
@@ -246,11 +245,9 @@ https://cluster.krc.karelia.ru – CA: Petrozavodsk
 https://tatarstan.roskazna.ru – CA: Moscow
 https://ar.gov.ru – CA: Moscow
 https://saratov.roskazna.ru – CA: Moscow
-https://ar.economy.gov.ru – CA: Moscow
 https://nokptd.zdrav-nnov.ru – CA: XX
 https://ukn22.ru – CA: Internet Widgits Pty Ltd
 https://navashino-crb.zdrav-nnov.ru – CA: XX
-https://dagavtodor.e-dag.ru – CA: Yekaterinburg
 https://sevastopol.roskazna.ru – CA: Moscow
 https://nikolskiy.rkursk.ru – CA: No-Sni
 https://mx.all.culture.ru – CA: mx.all.culture.ru
@@ -264,11 +261,12 @@ https://glushkovo.rkursk.ru – CA: No-Sni
 https://borkovskiy.rkursk.ru – CA: No-Sni
 https://novoivanovka.rkursk.ru – CA: No-Sni
 https://rrc.samregion.ru – CA: SAMARA
-https://nokvd.zdrav-nnov.ru – CA: XX
 https://biz.stavinvest.ru – CA: Stavropol
+https://nokvd.zdrav-nnov.ru – CA: XX
 https://tver.roskazna.ru – CA: Moscow
 https://predvo.ru – CA: Internet Widgits Pty Ltd
 https://archive.orenburg-gov.ru – CA: Moscow
+https://dom.mingkhsk.ru – CA: Stavropol
 https://visholhov.rkursk.ru – CA: No-Sni
 https://region.tver.ru – CA: Tver City
 https://guevskiy.rkursk.ru – CA: No-Sni
@@ -281,7 +279,6 @@ https://rishkovo.rkursk.ru – CA: No-Sni
 https://kiyasovo.udmurt.ru – CA: XX
 https://ozorsk.rkursk.ru – CA: No-Sni
 https://shetin.rkursk.ru – CA: No-Sni
-https://nko.economy.gov.ru – CA: Moscow
 https://gorshechr.rkursk.ru – CA: No-Sni
 https://gokrk.ru – CA: Kaliningrad
 https://penza.roskazna.ru – CA: Moscow
@@ -304,8 +301,8 @@ https://chechnya.roskazna.ru – CA: Moscow
 https://voronezh.roskazna.ru – CA: Moscow
 https://gshigry.rkursk.ru – CA: No-Sni
 https://vologodskaya.roskazna.ru – CA: Moscow
-https://krutov.rkursk.ru – CA: No-Sni
 https://do.rmat.pskov.ru – CA: SPb
+https://krutov.rkursk.ru – CA: No-Sni
 https://illhportal.krc.karelia.ru – CA: Petrozavodsk
 https://chita.roskazna.ru – CA: Moscow
 https://1-poniri.rkursk.ru – CA: No-Sni
@@ -357,9 +354,9 @@ https://pr.rkursk.ru – CA: No-Sni
 https://svoboda.rkursk.ru – CA: No-Sni
 https://pristenss.rkursk.ru – CA: No-Sni
 https://olimskiyss.rkursk.ru – CA: No-Sni
-https://plehovo.rkursk.ru – CA: No-Sni
 https://karelia.roskazna.ru – CA: Moscow
 https://kovernino-crb.zdrav-nnov.ru – CA: XX
+https://plehovo.rkursk.ru – CA: No-Sni
 https://gagino-crb.zdrav-nnov.ru – CA: XX
 https://tambov.roskazna.ru – CA: Moscow
 https://ivanino.rkursk.ru – CA: No-Sni
@@ -380,9 +377,9 @@ https://lukoyanov-crb.zdrav-nnov.ru – CA: XX
 https://irkutsk.roskazna.ru – CA: Moscow
 https://vladivostok.roskazna.ru – CA: Moscow
 https://dagestan.roskazna.ru – CA: Moscow
+https://astafiev.permkrai.ru – CA: IT-Group Certificate Authority
 https://webmail.kizhi.karelia.ru – CA: Petrozavodsk
 https://novgorod.roskazna.ru – CA: Moscow
-https://astafiev.permkrai.ru – CA: IT-Group Certificate Authority
 https://school466.kurort.gov.spb.ru – CA: SPb
 https://pogrebskoy.rkursk.ru – CA: No-Sni
 https://nagolen.rkursk.ru – CA: No-Sni
