@@ -1,14 +1,16 @@
 https://mkb.ru – CA: Russian Trusted Sub CA
 https://rosreestr.ru – CA: Russian Trusted Sub CA
+https://pkk.rosreestr.ru – CA: Russian Trusted Sub CA
 https://edu.gov.ru – CA: Russian Trusted Sub CA
 https://rshb.ru – CA: Russian Trusted Sub CA
 https://gks.ru – CA: Russian Trusted Sub CA
+https://rosstat.gov.ru – CA: Russian Trusted Sub CA
 https://pochtabank.ru – CA: Russian Trusted Sub CA
+https://pchtbnk.ru – CA: Russian Trusted Sub CA
 https://rusarchives.ru – CA: Russian Trusted Sub CA
 https://sberbank.ru – CA: Russian Trusted Sub CA
 https://sberbank.com – CA: Russian Trusted Sub CA
 https://sbrf.ru – CA: Russian Trusted Sub CA
-https://pkk.rosreestr.ru – CA: Russian Trusted Sub CA
 https://alfabank.ru – CA: Russian Trusted Sub CA
 https://rzd.ru – CA: Russian Trusted Sub CA
 https://vtb.ru – CA: Russian Trusted Sub CA
@@ -34,3 +36,5 @@ https://expobank.ru – CA: Russian Trusted Sub CA
 https://rosneft.ru – CA: Russian Trusted Sub CA
 https://surgutneftegas.ru – CA: Russian Trusted Sub CA
 https://fstec.ru – CA: Russian Trusted Sub CA
+https://fstec.gov.ru – CA: Russian Trusted Sub CA
+https://xn--j1andg1c.xn--p1ai – CA: Russian Trusted Sub CA
