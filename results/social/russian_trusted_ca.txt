@@ -5,6 +5,7 @@ https://edu.gov.ru – CA: Russian Trusted Sub CA
 https://rshb.ru – CA: Russian Trusted Sub CA
 https://gks.ru – CA: Russian Trusted Sub CA
 https://rosstat.gov.ru – CA: Russian Trusted Sub CA
+https://nspd.gov.ru – CA: Russian Trusted Sub CA
 https://pochtabank.ru – CA: Russian Trusted Sub CA
 https://pchtbnk.ru – CA: Russian Trusted Sub CA
 https://rusarchives.ru – CA: Russian Trusted Sub CA
@@ -38,3 +39,5 @@ https://surgutneftegas.ru – CA: Russian Trusted Sub CA
 https://fstec.ru – CA: Russian Trusted Sub CA
 https://fstec.gov.ru – CA: Russian Trusted Sub CA
 https://xn--j1andg1c.xn--p1ai – CA: Russian Trusted Sub CA
+https://nspk.ru – CA: Russian Trusted Sub CA
+https://ptsecurity.com – CA: Russian Trusted Sub CA
