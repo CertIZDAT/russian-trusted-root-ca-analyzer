@@ -6,8 +6,8 @@ from urllib.parse import quote, urlparse
 from OpenSSL import crypto
 
 from utils import threading
-from utils.common import clean_logs_directory, clean_results_directory
 from utils.cert_references import SELF_SIGNED_CERTS, UNTRUSTED_CERTS
+from utils.common import clean_logs_directory, clean_results_directory
 from utils.logger import logger
 
 
@@ -20,33 +20,40 @@ def __get_root_cert(link: str, timeout: int):
     return x509.get_issuer().get_components()[2][1].decode()
 
 
-def __check_link(source_link: str, index: int, website_links: list[str], batch_idx: int, total_batch: int,
-                 timeout: int) -> None:
+def __check_link(
+    source_link: str,
+    index: int,
+    website_links: list[str],
+    batch_idx: int,
+    total_batch: int,
+    timeout: int,
+) -> None:
     logger.debug(
-        f"Checking link: {source_link}, index: {index}, batch_idx: {batch_idx}, total_batch: {total_batch}, timeout: {timeout}")
+        f"Checking link: {source_link}, index: {index}, batch_idx: {batch_idx}, total_batch: {total_batch}, timeout: {timeout}"
+    )
     if batch_idx == 1:
-        sub_path: str = path.join('results/', 'government')
+        sub_path: str = path.join("results/", "government")
     elif batch_idx == 2:
-        sub_path: str = path.join('results/', 'social')
+        sub_path: str = path.join("results/", "social")
     elif batch_idx == 3:
-        sub_path: str = path.join('results/', 'top')
+        sub_path: str = path.join("results/", "top")
     else:
-        logger.error(f'FATAL batch_idx error! idx = {batch_idx}')
+        logger.error(f"FATAL batch_idx error! idx = {batch_idx}")
         exit(1)
 
-    trusted_ca_path: str = f'{sub_path}/russian_trusted_ca.txt'
-    self_sign_path: str = f'{sub_path}/ru_self_sign.txt'
-    other_ssl_path: str = f'{sub_path}/other_ssl.txt'
+    trusted_ca_path: str = f"{sub_path}/russian_trusted_ca.txt"
+    self_sign_path: str = f"{sub_path}/ru_self_sign.txt"
+    other_ssl_path: str = f"{sub_path}/other_ssl.txt"
 
     link: str = source_link.strip()
-    if link == '':
+    if link == "":
         return
 
-    if not link.startswith('http'):
-        link = f'https://{link}'
+    if not link.startswith("http"):
+        link = f"https://{link}"
 
     if not link.isascii():
-        link = quote(link, safe=':/')
+        link = quote(link, safe=":/")
 
     issuer = __get_root_cert(link, timeout=timeout)
 
@@ -58,9 +65,10 @@ def __check_link(source_link: str, index: int, website_links: list[str], batch_i
         file_name: str = other_ssl_path
 
     logger.info(
-        f'TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link} – {issuer}\n')
-    with open(file_name, 'a') as f:
-        f.write(f'{link} – CA: {issuer}\n')
+        f"TO: {timeout}, B: {batch_idx}/{total_batch}, {index}/{len(website_links)} – {link} – {issuer}\n"
+    )
+    with open(file_name, "a") as f:
+        f.write(f"{link} – CA: {issuer}\n")
     return
 
 
@@ -71,24 +79,26 @@ def run_pipeline(link_batches: tuple, timeout: int) -> None:
     clean_results_directory()
     clean_logs_directory()
 
-    mkdir('results/government')
-    mkdir('results/social')
-    mkdir('results/top')
+    mkdir("results/government")
+    mkdir("results/social")
+    mkdir("results/top")
 
     for tup in link_batches:
         for _, content in enumerate(tup):
-            logger.info(f'\nProcessing: {idx + 1}/{last_idx} batch')
+            logger.info(f"\nProcessing: {idx + 1}/{last_idx} batch")
             sleep(1)
 
             # process batch with multiprocessing
-            results: list = threading.process_batch(target_func=__check_link,
-                                                    batch=content,
-                                                    # idx == 1 means government associated sites
-                                                    # idx == 2 means social list sites
-                                                    # idx == 3 means top-100 sites
-                                                    batch_idx=idx + 1,
-                                                    total_batch=last_idx,
-                                                    timeout=timeout)
+            results: list = threading.process_batch(
+                target_func=__check_link,
+                batch=content,
+                # idx == 1 means government associated sites
+                # idx == 2 means social list sites
+                # idx == 3 means top-100 sites
+                batch_idx=idx + 1,
+                total_batch=last_idx,
+                timeout=timeout,
+            )
 
             # process completed and not completed tasks
             for future in results:
@@ -96,5 +106,5 @@ def run_pipeline(link_batches: tuple, timeout: int) -> None:
                     # get result of task (not used in this case)
                     _ = future.get()
                 except Exception as e:
-                    logger.error(f'Error: {e}')
+                    logger.error(f"Error: {e}")
         idx += 1
