@@ -1,2 +1,2 @@
-https://tinkoff.ru – CA: Russian Trusted Sub CA
 https://sberbank.ru – CA: Russian Trusted Sub CA
+https://tinkoff.ru – CA: Russian Trusted Sub CA
